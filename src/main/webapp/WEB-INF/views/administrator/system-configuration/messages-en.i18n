@@ -1,0 +1,12 @@
+# i18n-en.i18n
+
+administrator.system-configuration.form.label.systemCurrency =  System currency
+administrator.system-configuration.form.label.acceptedCurrencies = Accepted currencies
+
+administrator.system-configuration.form.title.spam = Spam Words
+administrator.system-configuration.form.label.strongSpamTerms = Strong Spam Words
+administrator.system-configuration.form.label.strongSpamThreshold = Strong Spam Threshold
+administrator.system-configuration.form.label.weakSpamTerms = Weak Spam Words
+administrator.system-configuration.form.label.weakSpamThreshold = Weak Spam Threshold
+
+administrator.system-configuration.form.button.update = Update

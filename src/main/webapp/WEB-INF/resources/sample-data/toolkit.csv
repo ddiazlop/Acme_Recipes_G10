@@ -1,0 +1,7 @@
+key,code,title,description,assemblyNotes,key:inventor,info,published
+toolkit-01,ABC-123,Toolkit 1,The new Toolkit number 1,Assemble with care please,inventor-01,http://www.yourtoolkit1.com,false
+toolkit-02,ABC-123-A,Toolkit 2,The new Toolkit number 2,Assemble with care please,inventor-05,null,false
+toolkit-03,ABC-111,Toolkit 3,The new Toolkit number 3,Assemble with care please,inventor-03,http://www.yourtoolkit3.com,false
+toolkit-04,ABC-111-A,Toolkit 4,The new Toolkit number 4,Assemble with care please,inventor-01,null,false
+toolkit-05,ABC-111-B,Toolkit 5,The new Toolkit number 5,Assemble with care please,inventor-02,null,true
+toolkit-06,ABC-111-C,Toolkit 6,The new Toolkit number 6,Assemble with care please,inventor-02,http://www.yourtoolkit6.com,false

@@ -1,0 +1,8 @@
+# i18n-es.i18n
+
+authenticated.system-configuration.form.label.systemCurrency = Moneda del sistema
+authenticated.system-configuration.form.label.acceptedCurrencies = Monedas aceptadas
+
+authenticated.system-configuration.form.title.exchange = Tipo de cambio:
+authenticated.system-configuration.form.label.USDexchange = 1 EUR a USD:
+authenticated.system-configuration.form.label.GBPexchange = 1 EUR a GBP:

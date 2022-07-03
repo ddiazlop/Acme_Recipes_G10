@@ -1,0 +1,12 @@
+# i18n-es.i18n
+
+administrator.system-configuration.form.label.systemCurrency = Moneda del sistema
+administrator.system-configuration.form.label.acceptedCurrencies = Monedas aceptadas
+
+administrator.system-configuration.form.title.spam = Palabras Spam
+administrator.system-configuration.form.label.strongSpamTerms = Palabras de Spam Mayores
+administrator.system-configuration.form.label.strongSpamThreshold = Límite de Palabras de Spam Mayores
+administrator.system-configuration.form.label.weakSpamTerms = Palabras de Spam Menores
+administrator.system-configuration.form.label.weakSpamThreshold = Límite de Palabras de Spam Menores
+
+administrator.system-configuration.form.button.update = Editar

@@ -1,0 +1,11 @@
+key,enabled,identity,password,username
+user-account-patron-01,true,"UserIdentity{name: 'Patron1Name', surname: 'Patron1Surname', email: 'patron1email@acme.com'}",patron1,patron1
+user-account-patron-02,true,"UserIdentity{name: 'Patron2Name', surname: 'Patron2Surname', email: 'patron2email@acme.com'}",patron2,patron2
+user-account-patron-03,true,"UserIdentity{name: 'Patron3Name', surname: 'Patron3Surname', email: 'patron3email@acme.com'}",patron3,patron3
+user-account-patron-04,true,"UserIdentity{name: 'Patron4Name', surname: 'Patron4Surname', email: 'patron4email@acme.com'}",patron4,patron4
+user-account-patron-05,true,"UserIdentity{name: 'Patron5Name', surname: 'Patron5Surname', email: 'patron5email@acme.com'}",patron5,patron5
+user-account-inventor-01,true,"UserIdentity{name: 'Inventor1Name', surname: 'Inventor1Surname', email: 'inventor1email@acme.com'}",inventor1,inventor1
+user-account-inventor-02,true,"UserIdentity{name: 'Inventor2Name', surname: 'Inventor2Surname', email: 'inventor2email@acme.com'}",inventor2,inventor2
+user-account-inventor-03,true,"UserIdentity{name: 'Inventor3Name', surname: 'Inventor3Surname', email: 'inventor3email@acme.com'}",inventor3,inventor3
+user-account-inventor-04,true,"UserIdentity{name: 'Inventor4Name', surname: 'Inventor4Surname', email: 'inventor4email@acme.com'}",inventor4,inventor4
+user-account-inventor-05,true,"UserIdentity{name: 'Inventor5Name', surname: 'Inventor5Surname', email: 'inventor5email@acme.com'}",inventor5,inventor5

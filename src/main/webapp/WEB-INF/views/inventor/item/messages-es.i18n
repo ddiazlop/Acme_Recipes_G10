@@ -1,0 +1,20 @@
+inventor.component.list.label.code = Código
+inventor.component.list.label.name = Nombre
+inventor.component.list.label.tech = Tecnología 
+inventor.component.list.label.description = Descripción
+inventor.component.list.label.price = Precio
+inventor.component.list.label.info = Información Adicional
+inventor.item.form.button.create = Crear
+inventor.component.published = Publicado
+inventor.component.notpublished = No publicado
+inventor.component.list.label.published = Visibilidad
+inventor.item.form.button.update = Actualizar
+inventor.item.form.button.publish = Publicar
+inventor.item.form.button.publishOK = Aceptar y publicar
+inventor.component.form.publish.header = Revise su objeto u pulse en "Aceptar y publicar"
+inventor.item.form.button.delete = Eliminar
+inventor.item.form.error.retailPrice.negativeOrZero = El precio debe de ser mayor a cero
+inventor.item.form.error.retailPrice.currency-not-supported = La moneda introducida no está disponible
+inventor.component.list.label.price-system: Precio convertido
+inventor.patronage.label.budgetChanged = Precio en la moneda del sistema:
+spam.detector.error.message = Spam Detectado

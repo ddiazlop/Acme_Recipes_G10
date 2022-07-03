@@ -1,0 +1,44 @@
+# i18n-en.i18n
+#
+# Copyright (C) 2012-2022 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+inventor.patronage.label.code = Code:
+inventor.patronage.label.creationDate = Creation date:
+inventor.patronage.label.startDate = Start date:
+inventor.patronage.label.endDate= End date:
+inventor.patronage.label.status = Status:
+inventor.patronage.label.patron = Patron:
+inventor.patronage.label.inventor = Inventor:
+inventor.patronage.label.legalStuff = Legal stuff:
+inventor.patronage.label.budget = Budget:
+inventor.patronage.label.info = Info:
+
+inventor.patronage.label.patronFullName = Patron
+inventor.patronage.label.patronEmail = Patron email
+inventor.patronage.label.patronCompany = Patron company
+inventor.patronage.label.patronStatement = Patron statement
+inventor.patronage.label.patronInfo = Patron info
+
+inventor.patronage.form.button.patronage-reports = Reports
+
+
+inventor.patronage.list.title = My patronages
+
+inventor.patronage.list.label.code = Code
+inventor.patronage.list.label.status = Status
+inventor.patronage.list.label.patron = Patron
+
+inventor.patronage.errors.already-stated = This patronage has already been stated, and thus must not be changed its state.
+inventor.patronage.form.button.accept = Accept Patronage
+inventor.patronage.form.button.deny = Deny Patronage
+
+
+
+
+inventor.patronage.form.error.spam = Your application seems to contain spam 
