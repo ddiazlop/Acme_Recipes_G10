@@ -1,5 +1,9 @@
 package acme.features.inventor.itemToolkit;
 
+import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -57,8 +61,22 @@ public class InventorItemToolkitCreateService implements AbstractCreateService<I
 		assert entity != null;
 		assert model != null;
 		request.unbind(entity, model, "quantity");
-		model.setAttribute("items", this.repository.findAllPublishedItems());
-		model.setAttribute("toolkit", this.repository.findToolkitById(request.getModel().getInteger("toolkitId")));
+		
+		final Integer toolkitId = request.getModel().getInteger("toolkitId");
+		final Collection<Item> publishedItems = this.repository.findAllPublishedItems();
+		final Collection<ItemToolkit> itemToolkits = this.repository.findAllItemToolkitsByToolkitId(toolkitId);
+		final List<Item> addedItems = itemToolkits.stream().map(ItemToolkit::getItem).collect(Collectors.toList());
+		publishedItems.removeAll(addedItems);
+		
+		model.setAttribute("items", publishedItems);
+		model.setAttribute("toolkit", this.repository.findToolkitById(toolkitId));
+		try {
+			final Integer itemId = entity.getItem().getId();
+			model.setAttribute("previd", itemId);
+		} catch (final NullPointerException e) {
+			model.setAttribute("previd", "");
+		}
+			
 	}
 
 	@Override
