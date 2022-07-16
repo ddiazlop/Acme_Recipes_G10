@@ -16,7 +16,7 @@
 		<jstl:when test="${command=='create'}">		 
 			<acme:input-select code="inventor.item-toolkit.form.label.item" path="itemId">
 				<jstl:forEach items="${items}" var="item">
-					<acme:input-option code="${item.name}" value="${item.id}"/>
+					<acme:input-option selected="${item.id == previd}" code="${item.name}" value="${item.id}"/>
 				</jstl:forEach>
 			</acme:input-select>
 			

@@ -18,11 +18,11 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	
-	<name>Acme-Toolkits</name>
-	<description>This is a Acme Toolkits project for the students of Design &amp; Testing.</description>
+	<name>Acme-Recipes</name>
+	<description>This is a Acme Recipes project for the students of Design &amp; Testing.</description>
 
 	<groupId>Acme</groupId>	
-	<artifactId>Acme-Toolkits</artifactId>
+	<artifactId>Acme-Recipes</artifactId>
 	<version>22.2</version>
 	<packaging>war</packaging>
 
