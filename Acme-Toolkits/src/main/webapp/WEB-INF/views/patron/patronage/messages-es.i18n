@@ -1,0 +1,51 @@
+# i18n-es.i18n
+
+
+patron.patronage.label.code = Código:
+patron.patronage.label.creationDate = Fecha de creación:
+patron.patronage.label.startDate = Fecha de inicio:
+patron.patronage.label.endDate= Fecha final:
+patron.patronage.label.status = Estado:
+patron.patronage.label.patron = Patrón:
+patron.patronage.label.inventor = Inventor:
+patron.patronage.label.legalStuff = Cosas legales:
+patron.patronage.label.budget = Aportación:
+
+patron.patronage.label.budgetChanged = Aportación en la moneda del sistema:
+
+patron.patronage.label.info = Información:
+
+patron.patronage.label.inventorFullName = Inventor:
+patron.patronage.label.inventorEmail = Email del inventor:
+patron.patronage.label.inventorCompany = Compañía del inventor:
+patron.patronage.label.inventorStatement = Declaración del inventor:
+patron.patronage.label.inventorInfo = Información del inventor:
+
+patron.patronage.form.error.duplicated = El código debe ser único
+patron.patronage.form.error.null-inventor = El inventor no puede ser nulo
+patron.patronage.form.error.start-date = La fecha de inicio, al menos, debe ser un mes más tarde de la actual
+patron.patronage.form.error.end-date = La fecha final, al menos, debe ser un mes más tarde de la fecha de inicio
+
+
+patron.patronage.form.button.patronage-reports = Reportes
+patron.patronage.form.button.create = Crear
+patron.patronage.form.button.update = Actualizar
+
+
+patron.patronage.form.button.delete = Eliminar
+patron.patronage.form.button.publish = Publicar
+
+
+patron.patronage.list.title = Mis patrocinios
+
+patron.patronage.list.label.code = Código
+patron.patronage.list.label.status = Estado
+patron.patronage.list.label.patron = Patrón
+
+patron.patronage.list.button.create = Crear
+
+
+patron.patronage.form.error.spam = Parece que su solicitud contiene spam
+spam.detector.error.message = Spam Detectado
+
+
