@@ -6,6 +6,7 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamDetector;
 import acme.components.configuration.SystemConfiguration;
 import acme.entities.Chirp;
 import acme.features.administrator.systemConfiguration.AdministratorSystemConfigurationRepository;
@@ -14,7 +15,6 @@ import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.roles.Any;
 import acme.framework.services.AbstractCreateService;
-import notenoughspam.detector.SpamDetector;
 
 @Service
 public class AnyChirpCreateService implements AbstractCreateService<Any, Chirp> {

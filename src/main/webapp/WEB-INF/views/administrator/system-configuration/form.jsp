@@ -4,11 +4,15 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 <acme:form>	
+<acme:button code="administrator.system-configuration.button.title.accepted-currencies" action="/administrator/system-configuration/accepted-currencies"/>
+<acme:button code="administrator.system-configuration.button.title.system-currency" action="/administrator/system-configuration/system-currency"/>
+<acme:button code="administrator.system-configuration.button.title.spam" action="/administrator/system-configuration/spam"/>
+
 	<acme:input-select code="administrator.system-configuration.form.label.systemCurrency" path="systemCurrency">
                 <jstl:forEach items="${accepted}" var="acceptedCurr">
                     <acme:input-option code="${acceptedCurr}" value="${acceptedCurr}"/>
                 </jstl:forEach>
-</acme:input-select>
+	</acme:input-select>
 	
 	<acme:input-textbox code="administrator.system-configuration.form.label.acceptedCurrencies" path="acceptedCurrencies"/>
 	

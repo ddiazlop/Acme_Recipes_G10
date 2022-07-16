@@ -3,6 +3,7 @@ package acme.features.inventor.item.component;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamDetector;
 import acme.components.configuration.SystemConfiguration;
 import acme.entities.toolkits.Item;
 import acme.entities.toolkits.ItemType;
@@ -13,7 +14,6 @@ import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractCreateService;
 import acme.roles.Inventor;
-import notenoughspam.detector.SpamDetector;
 
 
 @Service

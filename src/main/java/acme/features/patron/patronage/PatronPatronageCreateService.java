@@ -7,6 +7,7 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamDetector;
 import acme.components.configuration.SystemConfiguration;
 import acme.entities.patronages.Patronage;
 import acme.entities.patronages.PatronageStatus;
@@ -17,7 +18,6 @@ import acme.framework.controllers.Request;
 import acme.framework.datatypes.Money;
 import acme.framework.services.AbstractCreateService;
 import acme.roles.Patron;
-import notenoughspam.detector.SpamDetector;
 
 
 

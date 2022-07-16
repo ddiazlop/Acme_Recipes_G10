@@ -18,6 +18,9 @@ public class AdministratorSystemConfigurationController extends AbstractControll
 	
 	@Autowired
 	protected AdministratorSystemConfigurationUpdateService	updateService;
+	
+	@Autowired
+	protected AdministratorSystemConfigurationAcceptedCurrenciesService	acceptedCurrenciesService;
 
 	// Constructors -----------------------------------------------------------
 
@@ -25,6 +28,9 @@ public class AdministratorSystemConfigurationController extends AbstractControll
 	@PostConstruct
 	protected void initialise() {
 		super.addCommand("show", this.showService);
+		super.addCommand("accepted-currencies", this.acceptedCurrenciesService);
+		super.addCommand("system-currency", this.showService);
+		super.addCommand("spam", this.showService);
 		super.addCommand("update", this.updateService);
 	}
 

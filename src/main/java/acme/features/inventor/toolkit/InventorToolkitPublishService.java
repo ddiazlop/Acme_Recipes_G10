@@ -7,6 +7,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamDetector;
 import acme.components.configuration.SystemConfiguration;
 import acme.entities.toolkits.Item;
 import acme.entities.toolkits.ItemType;
@@ -19,7 +20,6 @@ import acme.framework.controllers.Request;
 import acme.framework.datatypes.Money;
 import acme.framework.services.AbstractUpdateService;
 import acme.roles.Inventor;
-import notenoughspam.detector.SpamDetector;
 
 @Service
 public class InventorToolkitPublishService implements AbstractUpdateService<Inventor, Toolkit>{
