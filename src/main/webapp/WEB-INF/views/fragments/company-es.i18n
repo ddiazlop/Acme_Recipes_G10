@@ -10,11 +10,11 @@
 
 master.company.title = La empresa
 master.company.text = \
-	Acme Toolkits S.A. es una empresa ficticia especializada \
-	en ayudar a inventores y mecenas. Los inventores \
-	pueden publicitar sus componentes y herramientas; además, los \
-	mecenas pueden ofrecerle su patronazgo. 
-master.company.name = Acme, Inc.
+	Acme Recipes S.A.  es una organización ficticia que se especializa \
+	en ayudar a chefs y sibaritas. Por un lado, los chefs pueden publicitar \
+ 	sus ingredientes, utensilios de cocina y recetas; por otro lado, los epicúreos \
+ 	pueden solicitarles platos finos.
+master.company.name = Acme, SA.
 master.company.address = 01 Acme Drive, Wondercity, Wonderland
 master.company.phone = +1 000 111 222
 master.company.email = contact@acme.com
