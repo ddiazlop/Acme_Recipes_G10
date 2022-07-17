@@ -9,4 +9,7 @@ administrator.system-configuration.form.label.strongSpamThreshold = Strong Spam 
 administrator.system-configuration.form.label.weakSpamTerms = Weak Spam Words
 administrator.system-configuration.form.label.weakSpamThreshold = Weak Spam Threshold
 
+administrator.system-configuration.button.title.accepted-currencies = Edit Accepted Currencies
+administrator.system-configuration.button.title.system-currency = Edit Current System Currency
+administrator.system-configuration.button.title.spam = Edit Spam Words
 administrator.system-configuration.form.button.update = Update
