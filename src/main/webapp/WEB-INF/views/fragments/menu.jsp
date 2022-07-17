@@ -17,6 +17,7 @@
 			
       		<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.diedialop-favourite-link" action="http://www.stealthboats.com"/>
+			<acme:menu-suboption code="master.menu.anonymous.salparram-favourite-link" action="https://sevillafc.es"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">

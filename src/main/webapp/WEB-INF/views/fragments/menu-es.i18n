@@ -25,10 +25,7 @@ master.menu.anonymous.component.list =                  Componentes
 master.menu.anonymous.tool.list =                       Herramientas
 
 master.menu.anonymous.diedialop-favourite-link =  20060486R: Díaz López, Diego Jesús
-master.menu.anonymous.manferrod6-favourite-link= 77866123Z: Fernández Rodríguez, Manuel
-master.menu.anonymous.mansanrod4-favourite-link =  49236025V: Sánchez Rodríguez, Manuel
-master.menu.anonymous.aisqazcev-favourite-link =  77976716T: Qazza Cevallos, Aisha Doris
-master.menu.anonymous.olisanrod-favourite-link =  47538886W: Sánchez Rodríguez, Oliva
+master.menu.anonymous.salparram-favourite-link = 29552748W: Parejo Ramos, Salvador
 
 # master.menu.authenticated ###################################################
 master.menu.authenticated = Autenticado
