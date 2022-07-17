@@ -23,7 +23,7 @@
 
 	<groupId>Acme</groupId>	
 	<artifactId>Acme-Recipes</artifactId>
-	<version>22.2</version>
+	<version>22.8</version>
 	<packaging>war</packaging>
 
 	<parent>
