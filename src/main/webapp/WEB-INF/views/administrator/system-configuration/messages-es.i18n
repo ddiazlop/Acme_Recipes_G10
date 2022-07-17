@@ -9,4 +9,7 @@ administrator.system-configuration.form.label.strongSpamThreshold = Límite de P
 administrator.system-configuration.form.label.weakSpamTerms = Palabras de Spam Menores
 administrator.system-configuration.form.label.weakSpamThreshold = Límite de Palabras de Spam Menores
 
-administrator.system-configuration.form.button.update = Editar
+administrator.system-configuration.button.title.accepted-currencies = Editar Divisas Aceptadas
+administrator.system-configuration.button.title.system-currency = Editar Divisa del Sistema Actual
+administrator.system-configuration.button.title.spam = Editar Palabras de Spam
+administrator.system-configuration.form.button.update = Guardar

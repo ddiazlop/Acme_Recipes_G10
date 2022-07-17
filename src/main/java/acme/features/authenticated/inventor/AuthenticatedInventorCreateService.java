@@ -15,6 +15,7 @@ package acme.features.authenticated.inventor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamDetector;
 import acme.components.configuration.SystemConfiguration;
 import acme.features.administrator.systemConfiguration.AdministratorSystemConfigurationRepository;
 import acme.framework.components.models.Model;
@@ -28,7 +29,6 @@ import acme.framework.helpers.PrincipalHelper;
 import acme.framework.roles.Authenticated;
 import acme.framework.services.AbstractCreateService;
 import acme.roles.Inventor;
-import notenoughspam.detector.SpamDetector;
 
 @Service
 public class AuthenticatedInventorCreateService implements AbstractCreateService<Authenticated, Inventor> {
