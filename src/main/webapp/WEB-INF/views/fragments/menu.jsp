@@ -16,11 +16,7 @@
 			<acme:menu-suboption code="master.menu.anonymous.tool.list" action="/any/item/list-tool"/>
 			
       		<acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.anonymous.manferrod6-favourite-link" action="http://www.gol.gg"/>
-			<acme:menu-suboption code="master.menu.anonymous.diedialop-favourite-link" action="https://www.sanfransentinel.com/youtube998.html"/>
-			<acme:menu-suboption code="master.menu.anonymous.mansanrod4-favourite-link" action="https://defonic.com"/>
-			<acme:menu-suboption code="master.menu.anonymous.aisqazcev-favourite-link" action="https://www.netflix.com/watch/70151933?trackId=14277283&tctx=-97%2C-97%2C%2C%2C%2C%2C%2C"/>
-			<acme:menu-suboption code="master.menu.anonymous.olisanrod-favourite-link" action="https://google.com"/>
+			<acme:menu-suboption code="master.menu.anonymous.diedialop-favourite-link" action="http://www.stealthboats.com"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
