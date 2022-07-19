@@ -1,0 +1,3 @@
+key,key:user-account,organisation,assertion,link
+epicure-01,user-account-epicure-01,"epicure01-organisation","epicure01-assertion", "http://www.epicure01.com"
+epicure-02,user-account-epicure-02,"epicure02-organisation","epicure02-assertion", "http://www.epicure02.com"

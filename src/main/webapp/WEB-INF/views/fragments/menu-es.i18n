@@ -70,6 +70,16 @@ master.menu.inventor.component.list = Mis Componentes
 master.menu.inventor.tool.list = Mis herramientas
 
 
+# master.menu.chef #########################################################
+
+master.menu.chef = Chef
+
+
+# master.menu.epicure #########################################################
+
+master.menu.epicure = Epicúreo
+
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta
