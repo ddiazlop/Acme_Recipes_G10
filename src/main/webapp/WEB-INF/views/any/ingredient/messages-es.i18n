@@ -1,0 +1,21 @@
+# i18n-es.i18n
+#
+# Copyright (C) 2012-2022 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+
+any.ingredient.list.label.code = Código
+any.ingredient.list.label.name = Nombre
+any.ingredient.list.label.published = Publicado
+
+any.ingredient.form.label.code = Código
+any.ingredient.form.label.name = Nombre
+any.ingredient.form.label.description = Descripción
+any.ingredient.form.label.retail-price = Precio
+any.ingredient.form.label.info = Información
+any.ingredient.form.label.published = Publicado

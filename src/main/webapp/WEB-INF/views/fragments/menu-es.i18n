@@ -21,6 +21,7 @@ master.menu.anonymous =                                 Anónimo
 master.menu.anonymous.toolkit.list =                    Kits de herramientas
 master.menu.anonymous.user-account.list =               Cuentas de usuarios
 master.menu.anonymous.chirp.list =                      Mensajes informales
+master.menu.anonymous.ingredient.list = 				Ingredientes
 master.menu.anonymous.component.list =                  Componentes
 master.menu.anonymous.tool.list =                       Herramientas
 
@@ -36,6 +37,7 @@ master.menu.authenticated = Autenticado
 master.menu.authenticated.toolkit.list = Kit de herramientas
 master.menu.authenticated.user-account.list = Cuentas de usuarios
 master.menu.authenticated.chirp.list = Mensajes informales
+master.menu.authenticated.ingredient.list = Ingredientes
 master.menu.authenticated.announcement.list = Anuncios
 master.menu.authenticated.component.list = Componentes
 master.menu.authenticated.tool.list = Herramientas
