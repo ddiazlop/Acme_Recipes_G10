@@ -18,8 +18,9 @@
       		<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.diedialop-favourite-link" action="http://www.stealthboats.com"/>
 			<acme:menu-suboption code="master.menu.anonymous.salparram-favourite-link" action="https://sevillafc.es"/>
-			<acme:menu-suboption code="master.menu.anonymous.carcardia-favourite-link" action="https://www.casadellibro.com/"/		 
-                        <acme:menu-suboption code="master.menu.anonymous.marpedrod3-favourite-link" action="https://www.instagram.com/"/>
+			<acme:menu-suboption code="master.menu.anonymous.carcardia-favourite-link" action="https://www.casadellibro.com/"/>	 
+            <acme:menu-suboption code="master.menu.anonymous.marpedrod3-favourite-link" action="https://www.instagram.com/"/>
+            <acme:menu-suboption code="master.menu.anonymous.julnavrod-favourite-link" action="https://es.linkedin.com/"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
