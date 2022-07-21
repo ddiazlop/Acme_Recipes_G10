@@ -1,0 +1,4 @@
+key,name,code,description,retail-price,info,published
+ingredient-01,Sal,INS-000,Muy bueno,EUR 5.35,https://ev.us.es/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_29_1,false
+ingredient-02,Pimienta,INP-001,Demasiado bueno,USD 5.35,null,TRUE
+ingredient-03,Ajo,INA-002,Extremadamente bueno,EUR 8.45,https://ev.us.es/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_29_1,TRUE
