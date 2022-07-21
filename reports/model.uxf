@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="14.3.0">
+<diagram program="umlet" version="15.0.0">
   <zoom_level>6</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>780</x>
-      <y>396</y>
+      <x>660</x>
+      <y>378</y>
       <w>192</w>
       <h>60</h>
     </coordinates>
     <panel_attributes>&lt;&lt;UserRole&gt;&gt;
-Patron
+Epicure
 --
-+ company: String {NotBlank,Lenght(1,100)}
-+ statement: String {NotBlank, Lenght(1,255)}
++ organization: String {NotBlank,Lenght(1,100)}
++ assertion: String {NotBlank, Lenght(1,255)}
 + info: String {URL}
 bg=green</panel_attributes>
     <additional_attributes/>
@@ -21,18 +21,18 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>414</x>
-      <y>612</y>
+      <x>294</x>
+      <y>594</y>
       <w>258</w>
       <h>84</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Toolkit
+Recipe
 --
 + code: String {Unique, NotBlank, Pattern([A-Z]{3}-[0-9]{3}(-[A-Z]))
-+ title: String {NotBlank, Lenght(1,100)}
++ heading: String {NotBlank, Lenght(1,100)}
 + description: String {NotBlank, Lenght(1,255)}
-+ assemblyNotes: String {NotBlank, Lenght(1,255)}
++ preparationNotes: String {NotBlank, Lenght(1,255)}
 + info: String {URL}
 + published: Boolean {NotNull}
 bg=green</panel_attributes>
@@ -41,16 +41,16 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>474</x>
-      <y>444</y>
+      <x>354</x>
+      <y>426</y>
       <w>192</w>
       <h>60</h>
     </coordinates>
     <panel_attributes>&lt;&lt;UserRole&gt;&gt;
-Inventor
+Chef
 --
-+ company: String {NotBlank,Length(1,100)}
-+ statement: String {NotBlank, Lenght(1,255)}
++ organization: String {NotBlank,Length(1,100)}
++ assertion: String {NotBlank, Lenght(1,255)}
 + info: String {URL}
 bg=green</panel_attributes>
     <additional_attributes/>
@@ -58,13 +58,13 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>162</x>
-      <y>630</y>
+      <x>42</x>
+      <y>612</y>
       <w>156</w>
       <h>48</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
-ItemToolkit
+ItemRecipe
 --
 + quantity: Integer {Positive, NotNull}
 bg=green</panel_attributes>
@@ -73,8 +73,8 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>312</x>
-      <y>642</y>
+      <x>192</x>
+      <y>624</y>
       <w>114</w>
       <h>30</h>
     </coordinates>
@@ -87,8 +87,8 @@ compone &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>204</x>
-      <y>546</y>
+      <x>84</x>
+      <y>528</y>
       <w>60</w>
       <h>96</h>
     </coordinates>
@@ -101,8 +101,8 @@ cuantifica ^</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>798</x>
-      <y>306</y>
+      <x>678</x>
+      <y>288</y>
       <w>90</w>
       <h>102</h>
     </coordinates>
@@ -115,8 +115,8 @@ m2=*
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>516</x>
-      <y>306</y>
+      <x>396</x>
+      <y>288</y>
       <w>48</w>
       <h>150</h>
     </coordinates>
@@ -129,32 +129,32 @@ recibe &gt;</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>294</x>
-      <y>18</y>
+      <x>174</x>
+      <y>0</y>
       <w>96</w>
       <h>66</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Enum&gt;&gt;
 ItemType
 --
-+ TOOL
-+ COMPONENT
++ KITCHEN_UTENSIL
++ INGREDIENT
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>564</x>
-      <y>84</y>
+      <x>444</x>
+      <y>66</y>
       <w>240</w>
       <h>78</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
-PatronageReport
+Memorandum
 --
-+ moment: Date {NotNull, Temporal(TIMESTAMP), Past}
-+ memorandum: String {NotBlank, Length(1,255)}
++ instantiationMoment: Date {NotNull, Temporal(TIMESTAMP), Past}
++ report: String {NotBlank, Length(1,255)}
 + info: String {URL}
 + secuenceNumber: String {NotBlank, UNIQUE}
 
@@ -164,8 +164,8 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>672</x>
-      <y>156</y>
+      <x>552</x>
+      <y>138</y>
       <w>60</w>
       <h>78</h>
     </coordinates>
@@ -180,18 +180,18 @@ describe ^
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1032</x>
-      <y>108</y>
+      <x>912</x>
+      <y>90</y>
       <w>252</w>
       <h>84</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Chirp
+Peep
 --
-+ moment: Date {NotNull, Temporal(TIMESTAMP), Past}
-+ title: String {NotBlank, Length(1,100)}
-+ author: String {NotBlank, Length(1,100)}
-+ body: String {NotBlank, Length(1,255)}
++ instantiationMoment: Date {NotNull, Temporal(TIMESTAMP), Past}
++ heading: String {NotBlank, Length(1,100)}
++ writer: String {NotBlank, Length(1,100)}
++ pieceOfText: String {NotBlank, Length(1,255)}
 + email: String {Email}
 bg=green</panel_attributes>
     <additional_attributes/>
@@ -199,8 +199,8 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>120</x>
-      <y>450</y>
+      <x>0</x>
+      <y>432</y>
       <w>258</w>
       <h>102</h>
     </coordinates>
@@ -210,7 +210,6 @@ Item
 + code: String {Unique, NotBlank, Pattern([A-Z]{3}-[0-9]{3}(-[A-Z]))
 + name: String {NotBlank, Length(1,101)}
 + itemType: ItemType {NotNull}
-+ technology: String {NotBlank, Lenght(1,100)}
 + description: String {NotBlank, Lenght(1,255)}
 + retailPrice: Money {NotNull}
 + info: String {URL}
@@ -221,12 +220,12 @@ bg=green</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>276</x>
-      <y>576</y>
+      <x>156</x>
+      <y>558</y>
       <w>120</w>
       <h>42</h>
     </coordinates>
-    <panel_attributes>Si el Item es de tipo Tool, 
+    <panel_attributes>Si el Item es de tipo KitchenUtensil, 
 el atributo quantity de 
 Quantity solo puede ser 1.
 bg=blue</panel_attributes>
@@ -235,8 +234,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>252</x>
-      <y>612</y>
+      <x>132</x>
+      <y>594</y>
       <w>36</w>
       <h>30</h>
     </coordinates>
@@ -246,8 +245,8 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>174</x>
-      <y>18</y>
+      <x>54</x>
+      <y>0</y>
       <w>108</w>
       <h>66</h>
     </coordinates>
@@ -263,17 +262,17 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1032</x>
-      <y>216</y>
+      <x>912</x>
+      <y>198</y>
       <w>258</w>
       <h>78</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Announcement
+Bulletin
 --
 + moment: Date {NotNull, Temporal(TIMESTAMP), Past}
-+ title: String {NotBlank, Length(1,100)}
-+ body: String {NotBlank, Length(1,255)}
++ heading: String {NotBlank, Length(1,100)}
++ pieceOfText: String {NotBlank, Length(1,255)}
 + critical: boolean 
 + info: String {URL}
 bg=green</panel_attributes>
@@ -282,17 +281,17 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>552</x>
-      <y>222</y>
+      <x>432</x>
+      <y>204</y>
       <w>252</w>
       <h>120</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Patronage
+FineDish
 --
 + status: Status
 + code: String {NotBlank, Unique, Pattern([A-Z]{3}-[0-9]{3}(-[A-Z])}
-+ legal_stuff: String {NotBlank, Length(1,255)}
++ request: String {NotBlank, Length(1,255)}
 + budget: Money {NotNull}
 + creationDate: Date {NotNull, Temporal(TIMESTAMP), Past}
 + startDate: Date {NotNull, Temporal(TIMESTAMP)}
@@ -305,8 +304,8 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>906</x>
-      <y>510</y>
+      <x>786</x>
+      <y>492</y>
       <w>222</w>
       <h>90</h>
     </coordinates>
@@ -325,8 +324,8 @@ bg=green</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1080</x>
-      <y>450</y>
+      <x>960</x>
+      <y>432</y>
       <w>132</w>
       <h>48</h>
     </coordinates>
@@ -340,8 +339,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1032</x>
-      <y>468</y>
+      <x>912</x>
+      <y>450</y>
       <w>60</w>
       <h>54</h>
     </coordinates>
@@ -351,8 +350,8 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>858</x>
-      <y>624</y>
+      <x>738</x>
+      <y>606</y>
       <w>288</w>
       <h>72</h>
     </coordinates>
@@ -370,8 +369,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>996</x>
-      <y>594</y>
+      <x>876</x>
+      <y>576</y>
       <w>30</w>
       <h>42</h>
     </coordinates>
@@ -381,27 +380,27 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>174</x>
-      <y>336</y>
+      <x>54</x>
+      <y>318</y>
       <w>294</w>
       <h>96</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Form&gt;&gt;
-PatronDashboard
+EpicureDashboard
 --
-+ numPatronagesByStatus: Map&lt;PatronageStatus, Integer&gt;
-+ averageBudgetsByStatus: Map&lt;Pair&lt;PatronageStatus,String&gt;,Double&gt;
-+ diviationBudgetsByStatus: Map&lt;Pair&lt;PatronageStatus, String&gt;,Double&gt;
-+ minBudgetByStatus: Map&lt;Pair&lt;PatronageStatus,String&gt;,Double&gt;
-+ maxBudgetByStatus: Map&lt;Pair&lt;PatronageStatus,String&gt;,Double&gt;
++ numPatronagesByStatus: Map&lt;FineDishStatus, Integer&gt;
++ averageBudgetsByStatus: Map&lt;Pair&lt;FineDishStatus,String&gt;,Double&gt;
++ diviationBudgetsByStatus: Map&lt;Pair&lt;FineDishStatus, String&gt;,Double&gt;
++ minBudgetByStatus: Map&lt;Pair&lt;FineDishStatus,String&gt;,Double&gt;
++ maxBudgetByStatus: Map&lt;Pair&lt;FineDishStatus,String&gt;,Double&gt;
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>174</x>
-      <y>96</y>
+      <x>54</x>
+      <y>78</y>
       <w>282</w>
       <h>72</h>
     </coordinates>
@@ -419,8 +418,8 @@ bg=green</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>864</x>
-      <y>222</y>
+      <x>744</x>
+      <y>204</y>
       <w>126</w>
       <h>72</h>
     </coordinates>
@@ -436,8 +435,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>798</x>
-      <y>240</y>
+      <x>678</x>
+      <y>222</y>
       <w>78</w>
       <h>24</h>
     </coordinates>
@@ -447,23 +446,23 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>834</x>
-      <y>36</y>
+      <x>714</x>
+      <y>18</y>
       <w>168</w>
       <h>54</h>
     </coordinates>
     <panel_attributes>El secuence number toma el 
-patronage-code y el serial-number 
+fine dish-code y el serial-number 
 para formar una string con el formato:
-"〈patronage-code〉:〈serial-number〉"
+"〈fine dish-code〉:〈serial-number〉"
 bg=blue</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>798</x>
-      <y>54</y>
+      <x>678</x>
+      <y>36</y>
       <w>48</w>
       <h>60</h>
     </coordinates>
@@ -473,8 +472,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>558</x>
-      <y>498</y>
+      <x>438</x>
+      <y>480</y>
       <w>72</w>
       <h>126</h>
     </coordinates>
@@ -487,8 +486,8 @@ pertenece a ^</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>372</x>
-      <y>474</y>
+      <x>252</x>
+      <y>456</y>
       <w>114</w>
       <h>30</h>
     </coordinates>
@@ -501,25 +500,25 @@ está creado por &gt;</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>174</x>
-      <y>180</y>
+      <x>54</x>
+      <y>162</y>
       <w>282</w>
       <h>144</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Form&gt;&gt;
 AdminDashboard
 --
-+ numComponents: Integer
-+ numTools: Integer 
-+ numPatronageRequested: Integer 
-+ numPatronageAccepted: Integer 
-+ numPatronageDenied: Integer 
++ numIngredients: Integer
++ numKitchenUtensil: Integer 
++ numFineDishRequested: Integer 
++ numFineDishAccepted: Integer 
++ numFineDishDenied: Integer 
 
-+ componentsDataByCurrency: Map&lt;String, StatData&gt;
-+ componentsDataByTechnology: Map&lt;Pair&lt;String,String&gt;, StatData&gt;
-+ toolsDataByCurrency: Map&lt;String, StatData&gt;
-+ toolsDataByTechnology: Map&lt;Pair&lt;String,String&gt;,StatData&gt;
-+ patronageBudgetData: Map&lt;Pair&lt;PatronageStatus,String&gt;, StatData&gt;
++ ingredientsDataByCurrency: Map&lt;String, StatData&gt;
++ ingredientsDataByTechnology: Map&lt;Pair&lt;String,String&gt;, StatData&gt;
++ kitchenUtensilDataByCurrency: Map&lt;String, StatData&gt;
++ kitchenUtensilDataByTechnology: Map&lt;Pair&lt;String,String&gt;,StatData&gt;
++ fineDishBudgetData: Map&lt;Pair&lt;FineDishStatus,String&gt;, StatData&gt;
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
