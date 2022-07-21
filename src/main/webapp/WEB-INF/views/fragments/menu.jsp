@@ -63,7 +63,7 @@
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.chef" access="hasRole('Chef')">
-		
+			<acme:menu-suboption code="master.menu.chef.ingredient.list" action="/chef/ingredient/list"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.epicure" access="hasRole('Epicure')">
