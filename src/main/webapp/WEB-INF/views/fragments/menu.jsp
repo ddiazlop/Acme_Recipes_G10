@@ -59,6 +59,15 @@
 			<acme:menu-suboption code="master.menu.inventor.tool.list" action="/inventor/item/list-tool"/>
 			<acme:menu-suboption code="master.menu.inventor.patronage.list" action="/inventor/patronage/list"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.chef" access="hasRole('Chef')">
+		
+		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.epicure" access="hasRole('Epicure')">
+		
+		</acme:menu-option>
+		
 	</acme:menu-left>
 
 	<acme:menu-right>

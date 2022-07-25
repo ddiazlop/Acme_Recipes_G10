@@ -70,6 +70,15 @@ master.menu.inventor.patronage.list = My Patronages
 master.menu.inventor.component.list = My Components
 master.menu.inventor.tool.list = My Tools
 
+# master.menu.chef #########################################################
+
+master.menu.chef = Chef
+
+
+# master.menu.epicure #########################################################
+
+master.menu.epicure = Epicure
+
 
 # master.menu.user-account ####################################################
 
