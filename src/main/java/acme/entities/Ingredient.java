@@ -2,6 +2,7 @@ package acme.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -11,6 +12,7 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.framework.datatypes.Money;
+import acme.roles.Chef;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -49,6 +51,9 @@ public class Ingredient {
 	// Derived attributes -----------------------------------------------------
 	
 	// Relationships ----------------------------------------------------------
-
+	@Valid
+    @NotNull
+    @ManyToOne
+    protected Chef chef;
 
 }
