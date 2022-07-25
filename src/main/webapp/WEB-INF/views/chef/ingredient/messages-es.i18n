@@ -1,0 +1,11 @@
+chef.ingredient.form.label.name = Nombre
+chef.ingredient.form.label.code = Código
+chef.ingredient.form.label.description = Descripción
+chef.ingredient.form.label.retailPrice = Precio
+chef.ingredient.form.label.info = Información Adicional
+
+chef.ingredient.list.label.name = Nombre
+chef.ingredient.list.label.code = Código
+chef.ingredient.list.label.description = Descripción
+chef.ingredient.list.label.retailPrice = Precio
+chef.ingredient.list.label.info = Información Adicional

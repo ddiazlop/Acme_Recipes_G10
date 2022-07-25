@@ -1,0 +1,3 @@
+key,name,code,description,retail-price,info,key:chef
+ingredient-01,"Salt","AA:TRZ-767","This is a sample ingredient",EUR 1.00,"https://www.google.es",chef-01
+ingredient-02,"Tomato","DC:GVG-229","This is another sample ingredient",EUR 2.50,"https://www.google.es",chef-01

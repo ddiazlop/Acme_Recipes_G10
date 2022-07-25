@@ -12,6 +12,7 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.framework.datatypes.Money;
+import acme.framework.entities.AbstractEntity;
 import acme.roles.Chef;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,7 +20,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Ingredient {
+public class Ingredient extends AbstractEntity{
 
 	// Serialisation identifier -----------------------------------------------
 

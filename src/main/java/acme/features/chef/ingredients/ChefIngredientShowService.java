@@ -20,11 +20,10 @@ public class ChefIngredientShowService implements AbstractShowService<Chef, Ingr
 		assert request != null;
 		boolean result;
 		
-		final int chefId = request.getPrincipal().getActiveRoleId();
 		final int ingredientId = request.getModel().getInteger("id");
 		
 		final Ingredient ingredient = this.repository.findOneIngredientById(ingredientId);
-		result = ingredient != null && ingredient.getChef().getId() == chefId;
+		result = ingredient != null && request.isPrincipal(ingredient.getChef());
 		
 		return result;
 	}

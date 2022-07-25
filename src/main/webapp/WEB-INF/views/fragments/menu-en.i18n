@@ -73,6 +73,7 @@ master.menu.inventor.tool.list = My Tools
 # master.menu.chef #########################################################
 
 master.menu.chef = Chef
+master.menu.chef.ingredient = Ingredients
 
 
 # master.menu.epicure #########################################################
