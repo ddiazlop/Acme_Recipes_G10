@@ -15,5 +15,8 @@
 	<acme:submit test="${command == 'create'}"
 		code="authenticated.chef.form.button.create"
 		action="/authenticated/chef/create" />
+	<acme:submit test="${command == 'update'}"
+		code="authenticated.chef.form.button.update"
+		action="/authenticated/chef/update" />
 		
 </acme:form>

@@ -16,6 +16,9 @@ public class AuthenticatedEpicureController extends AbstractController<Authentic
 
 	@Autowired
 	protected AuthenticatedEpicureCreateService	createService;
+	
+	@Autowired
+	protected AuthenticatedEpicureUpdateService	updateService;
 
 
 	// Constructors -----------------------------------------------------------
@@ -24,6 +27,7 @@ public class AuthenticatedEpicureController extends AbstractController<Authentic
 	@PostConstruct
 	protected void initialise() {
 		super.addCommand("create", this.createService);
+		super.addCommand("update", this.updateService);
 	}
 
 }
