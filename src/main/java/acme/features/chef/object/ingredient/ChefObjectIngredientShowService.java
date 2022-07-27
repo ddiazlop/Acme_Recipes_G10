@@ -1,26 +1,26 @@
-package acme.features.chef.ingredient;
+package acme.features.chef.object.ingredient;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.Ingredient;
+import acme.entities.Object;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractShowService;
 import acme.roles.Chef;
 
 @Service
-public class ChefIngredientShowService implements AbstractShowService<Chef, Ingredient>{
+public class ChefObjectIngredientShowService implements AbstractShowService<Chef, Object>{
 
 	@Autowired
-	protected ChefIngredientRepository repo;
+	protected ChefObjectIngredientRepository repo;
 	
 	@Override
-	public boolean authorise(final Request<Ingredient> request) {
+	public boolean authorise(final Request<Object> request) {
 		assert request != null;
 		int chefId;
 		int ingredientId;
-		Ingredient ingredient;
+		Object ingredient;
 		
 		chefId = request.getPrincipal().getActiveRoleId();
 		ingredientId = request.getModel().getInteger("id");
@@ -30,10 +30,10 @@ public class ChefIngredientShowService implements AbstractShowService<Chef, Ingr
 	}
 
 	@Override
-	public Ingredient findOne(final Request<Ingredient> request) {
+	public Object findOne(final Request<Object> request) {
 		assert request != null;
 		int id;
-		Ingredient ingredient;
+		Object ingredient;
 		id = request.getModel().getInteger("id");
 		ingredient = this.repo.findOneIngredientById(id);
 		
@@ -41,12 +41,13 @@ public class ChefIngredientShowService implements AbstractShowService<Chef, Ingr
 	}
 
 	@Override
-	public void unbind(final Request<Ingredient> request, final Ingredient entity, final Model model) {
+	public void unbind(final Request<Object> request, final Object entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "code", "name", "description", "retailPrice", "info", "published");
+		model.setAttribute("published", entity.isPublished());
+		request.unbind(entity, model, "code", "name", "objectType", "description", "retailPrice", "info", "published");
 		
 	}
 

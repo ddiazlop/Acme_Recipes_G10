@@ -9,13 +9,14 @@
 # they accept any liabilities with respect to them.
 
 
-any.ingredient.list.label.code = Código
-any.ingredient.list.label.name = Nombre
-any.ingredient.list.label.published = Publicado
+any.object.list.label.code = Código
+any.object.list.label.name = Nombre
+any.object.list.label.published = Publicado
 
-any.ingredient.form.label.code = Código
-any.ingredient.form.label.name = Nombre
-any.ingredient.form.label.description = Descripción
-any.ingredient.form.label.retail-price = Precio
-any.ingredient.form.label.info = Información
-any.ingredient.form.label.published = Publicado
+any.object.form.label.code = Código
+any.object.form.label.name = Nombre
+any.object.form.label.description = Descripción
+any.object.form.label.retail-price = Precio
+any.object.form.label.info = Información
+any.object.form.label.object-type = Tipo
+any.object.form.label.published = Publicado

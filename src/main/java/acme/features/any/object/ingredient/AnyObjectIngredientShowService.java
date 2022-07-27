@@ -1,25 +1,25 @@
-package acme.features.any.ingredient;
+package acme.features.any.object.ingredient;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.Ingredient;
+import acme.entities.Object;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.roles.Any;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AnyIngredientShowService implements AbstractShowService<Any, Ingredient>{
+public class AnyObjectIngredientShowService implements AbstractShowService<Any, Object>{
 
 	@Autowired
-	protected AnyIngredientRepository repo;
+	protected AnyObjectIngredientRepository repo;
 	
 	@Override
-	public boolean authorise(final Request<Ingredient> request) {
+	public boolean authorise(final Request<Object> request) {
 		assert request != null;
 		int ingredientId;
-		Ingredient ingredient;
+		Object ingredient;
 		boolean res;
 		
 		ingredientId = request.getModel().getInteger("id");
@@ -29,10 +29,10 @@ public class AnyIngredientShowService implements AbstractShowService<Any, Ingred
 	}
 
 	@Override
-	public Ingredient findOne(final Request<Ingredient> request) {
+	public Object findOne(final Request<Object> request) {
 		assert request != null;
 		int ingredientId;
-		Ingredient ingredient;
+		Object ingredient;
 		
 		ingredientId = request.getModel().getInteger("id");
 		ingredient = this.repo.findOneIngredientById(ingredientId);
@@ -41,12 +41,12 @@ public class AnyIngredientShowService implements AbstractShowService<Any, Ingred
 	}
 
 	@Override
-	public void unbind(final Request<Ingredient> request, final Ingredient entity, final Model model) {
+	public void unbind(final Request<Object> request, final Object entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "code", "name", "description", "retailPrice", "info", "published");
+		request.unbind(entity, model, "code", "name", "objectType", "description", "retailPrice", "info", "published");
 		
 	}
 

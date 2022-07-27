@@ -1,0 +1,31 @@
+# i18n-es.i18n
+#
+# Copyright (C) 2012-2022 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+chef.object.list.button.create = Crear
+chef.object.form.submit.create = Crear
+chef.object.form.submit.update = Actualizar
+chef.object.form.submit.publish = Publicar
+chef.object.form.submit.delete = Borrar
+
+chef.object.list.label.code = Código
+chef.object.list.label.name = Nombre
+chef.object.list.label.published = Publicado
+
+chef.object.form.label.code = Código
+chef.object.form.label.name = Nombre
+chef.object.form.label.description = Descripción
+chef.object.form.label.retail-price = Precio
+chef.object.form.label.info = Información
+chef.object.form.label.object-type = Tipo
+chef.object.form.label.published = Publicado
+
+chef.ingredient.error.duplicated = Código duplicado
+chef.ingredient.form.error.retailPrice.currency-not-supported = Moneda no soportada
+chef.ingredient.form.error.retailPrice.negativeOrZero = No puede ser ni negativo ni cero
