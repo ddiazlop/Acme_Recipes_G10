@@ -1,34 +1,34 @@
-package acme.features.chef.ingredient;
+package acme.features.chef.object.ingredient;
 
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.Ingredient;
+import acme.entities.Object;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractListService;
 import acme.roles.Chef;
 
 @Service
-public class ChefIngredientListService implements AbstractListService<Chef, Ingredient>{
+public class ChefObjectIngredientListService implements AbstractListService<Chef, Object>{
 
 	@Autowired
-	protected ChefIngredientRepository repo;
+	protected ChefObjectIngredientRepository repo;
 	
 	@Override
-	public boolean authorise(final Request<Ingredient> request) {
+	public boolean authorise(final Request<Object> request) {
 		assert request != null;
 		
 		return request.getPrincipal().hasRole(Chef.class);
 	}
 
 	@Override
-	public Collection<Ingredient> findMany(final Request<Ingredient> request) {
+	public Collection<Object> findMany(final Request<Object> request) {
 		assert request != null;
 		int chefId;
-		Collection<Ingredient> ingredients;
+		Collection<Object> ingredients;
 		
 		chefId = request.getPrincipal().getActiveRoleId();
 		ingredients = this.repo.findManyChefIngredients(chefId);
@@ -38,7 +38,7 @@ public class ChefIngredientListService implements AbstractListService<Chef, Ingr
 	}
 
 	@Override
-	public void unbind(final Request<Ingredient> request, final Ingredient entity, final Model model) {
+	public void unbind(final Request<Object> request, final Object entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;

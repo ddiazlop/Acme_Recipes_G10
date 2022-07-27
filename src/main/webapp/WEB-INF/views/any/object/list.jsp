@@ -15,10 +15,10 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 <acme:list>
-	<acme:list-column code="chef.ingredient.list.label.code" path="code"
+	<acme:list-column code="any.object.list.label.code" path="code"
 		width="20%" />
-	<acme:list-column code="chef.ingredient.list.label.name" path="name"
+	<acme:list-column code="any.object.list.label.name" path="name"
 		width="20%" />
-	<acme:list-column code="chef.ingredient.list.label.published" path="published"
+	<acme:list-column code="any.object.list.label.published" path="published"
 		width="20%" />
 </acme:list>
