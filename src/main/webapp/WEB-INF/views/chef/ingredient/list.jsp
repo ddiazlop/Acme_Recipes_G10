@@ -22,3 +22,4 @@
 	<acme:list-column code="chef.ingredient.list.label.published" path="published"
 		width="20%" />
 </acme:list>
+<acme:button code="chef.ingredient.form.button.create" action="/chef/ingredient/create" />

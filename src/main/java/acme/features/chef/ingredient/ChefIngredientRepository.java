@@ -20,5 +20,8 @@ public interface ChefIngredientRepository extends AbstractRepository{
 	
 	@Query("select c from Chef c where c.id =:id")
 	Chef findOneChefById(int id); 
+	
+	@Query("select i from Ingredient i where i.code =:code")
+	Ingredient findOneIngredientByCode(String code); 
 
 }

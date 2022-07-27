@@ -17,12 +17,16 @@ public class ChefIngredientController extends AbstractController<Chef, Ingredien
 
 	@Autowired
 	protected ChefIngredientShowService	showService;
+	
+	@Autowired
+	protected ChefIngredientCreateService createService;
 
 
 	@PostConstruct
 	protected void initialize() {
 		super.addCommand("list", this.listService);
 		super.addCommand("show", this.showService);
+		super.addCommand("create", this.createService);
 	}
 
 }
