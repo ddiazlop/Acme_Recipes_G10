@@ -20,7 +20,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Object extends AbstractEntity{
+public class Kitchenware extends AbstractEntity{
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -39,7 +39,7 @@ public class Object extends AbstractEntity{
 		
 		@NotNull
 		@Enumerated(EnumType.STRING)
-		protected ObjectType			objectType;
+		protected WareType			objectType;
 
 		@NotBlank
 		@Length(min = 1, max = 255)

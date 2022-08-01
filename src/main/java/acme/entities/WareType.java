@@ -1,7 +1,7 @@
 package acme.entities;
 
 
-public enum ObjectType {
+public enum WareType {
 	INGREDIENT, KITCHEN_UTENSIL
 
 }
