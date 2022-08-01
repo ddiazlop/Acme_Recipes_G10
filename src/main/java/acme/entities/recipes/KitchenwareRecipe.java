@@ -1,4 +1,4 @@
-package acme.entities.recipe;
+package acme.entities.recipes;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
@@ -12,7 +12,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class MaterialRecipe extends AbstractEntity {
+public class KitchenwareRecipe extends AbstractEntity {
 	protected static final long	serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
@@ -28,7 +28,7 @@ public class MaterialRecipe extends AbstractEntity {
 
 	@ManyToOne(optional = false)
 	@NotNull
-	protected Material				material;
+	protected Kitchenware				kitchenWare;
 
 	@ManyToOne(optional = false)
 	@NotNull

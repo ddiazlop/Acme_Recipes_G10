@@ -1,4 +1,4 @@
-package acme.entities.recipe;
+package acme.entities.recipes;
 
 
 public enum UnitType {

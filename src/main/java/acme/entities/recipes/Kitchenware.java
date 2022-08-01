@@ -1,4 +1,4 @@
-package acme.entities.recipe;
+package acme.entities.recipes;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -22,7 +22,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Material extends AbstractEntity{
+public class Kitchenware extends AbstractEntity{
 	// Serialisation identifier -----------------------------------------------
 
 		protected static final long	serialVersionUID	= 1L;
