@@ -18,6 +18,9 @@ import org.dom4j.tree.AbstractEntity;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.framework.datatypes.Money;
+import acme.roles.Chef;
+import acme.roles.Epicure;
 import lombok.Getter;
 import lombok.Setter;
 
