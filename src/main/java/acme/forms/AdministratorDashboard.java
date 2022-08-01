@@ -6,6 +6,7 @@ import java.util.Map;
 import org.springframework.data.util.Pair;
 
 import acme.datatypes.StatData;
+import acme.entities.fineDish.DishStatus;
 import lombok.Getter;
 import lombok.Setter;
 
