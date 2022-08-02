@@ -1,0 +1,3 @@
+recordIndex,name,code,objectType,description,retail-price,info,published
+0,Sal,INS-000,INGREDIENT,Muy bueno,EUR 5.35,https://ev.us.es/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_29_1,false
+1,Pimienta,INP-001,INGREDIENT,Demasiado bueno,USD 5.35,"",true
