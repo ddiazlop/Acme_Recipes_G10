@@ -11,6 +11,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
+import javax.validation.constraints.Pattern;
 
 import org.dom4j.tree.AbstractEntity;
 import org.hibernate.validator.constraints.Length;
@@ -35,13 +36,11 @@ public class Memorandum extends AbstractEntity{
 	@Temporal(TemporalType.TIMESTAMP)
 	protected Date				moment;
 	
-	//Me falta añadir matches pattern “〈fine dish-code〉:〈serial-number〉”,
-	//where “〈fine dish-code〉”denotes the code of corresponding fine dish
-	//and “〈serial-number〉” denotes a sequential number that starts at “0001” 
-	//and gets increased with every new memorandum
+	@NotBlank
+	@Pattern(regexp = "^[0-9]{3}(-[A-Z])?:[0-9]{4}$")
 	@Column(unique = true)
 	protected String			sequenceNumber;
-	
+		
 	@NotBlank
 	@Length(min = 1, max = 255)
 	protected String			report;
