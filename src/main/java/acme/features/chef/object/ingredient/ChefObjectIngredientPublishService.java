@@ -36,7 +36,7 @@ public class ChefObjectIngredientPublishService implements AbstractUpdateService
 		assert entity != null;
 		assert errors != null;
 		
-		request.bind(entity, errors, "code", "name", "objectType", "description", "retailPrice", "info", "published");
+		request.bind(entity, errors, "published");
 		
 	}
 
