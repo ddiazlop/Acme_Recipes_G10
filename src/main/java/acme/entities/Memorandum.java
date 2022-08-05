@@ -13,10 +13,10 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 
-import org.dom4j.tree.AbstractEntity;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.framework.entities.AbstractEntity;
 import acme.roles.Chef;
 import acme.roles.Epicure;
 import lombok.Getter;
@@ -39,7 +39,7 @@ public class Memorandum extends AbstractEntity{
 	protected Date				moment;
 	
 	@NotBlank
-	@Pattern(regexp = "^[0-9]{3}(-[A-Z])?:[0-9]{4}$")
+	@Pattern(regexp = "^[A-Z]{2}:[A-Z]{3}-[0-9]{3}:[0-9]{4}$")
 	@Column(unique = true)
 	protected String			sequenceNumber;
 		
