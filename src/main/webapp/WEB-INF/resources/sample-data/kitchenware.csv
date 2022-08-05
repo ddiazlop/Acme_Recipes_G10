@@ -1,0 +1,13 @@
+key,ware-type,name,code,description,retail-price,key:chef,info,published
+kitchen-ware-01,KITCHEN_UTENSIL,Cuchara basica,AAA-000,Muy confiable,EUR 22.3,chef-01,https://ev.us.es/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_29_1,false
+kitchen-ware-02,KITCHEN_UTENSIL,Tenedor basico,BB:AAA-000,Demasiado confiable,USD 50.3,chef-02,null,TRUE
+kitchen-ware-03,KITCHEN_UTENSIL,Cuchillo basico,BB:ABB-000,Extremadamente confiable,EUR 80.3,chef-03,https://ev.us.es/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_29_1,TRUE
+kitchen-ware-04,INGREDIENT,Sal,BBB-000,Deja la comida bien sabrosa,EUR 1.5,chef-04,null,false
+kitchen-ware-05,INGREDIENT,Pimienta,BB:BBB-000,Espero que no te mienta,USD 0.5,chef-05,https://ev.us.es/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_29_1,false
+kitchen-ware-06,INGREDIENT,Pollo,CC:BBB-000,PolloPollo,EUR 4.5,chef-03,null,false
+kitchen-ware-07,KITCHEN_UTENSIL,Sarten basica,AA:CCC-000,Muy confiable,EUR 7.0,chef-02,null,true
+kitchen-ware-08,KITCHEN_UTENSIL,Robot de cocina,CC:CCC-000,Demasiado confiable,USD 8.0,chef-02,null,true
+kitchen-ware-09,INGREDIENT,Azucar,AA:DDD-000,Para endulzar la vida,EUR 0.5,chef-02,null,true
+kitchen-ware-10,INGREDIENT,Aceite de oliva virgen extra,BB:DDD-000,Bien rico,GBP 0.25,chef-02,null,true
+kitchen-ware-11,INGREDIENT,Lechuga,CC:ZZZ-000,Lechuguita rica,EUR 4.5,chef-03,null,FALSE
+kitchen-ware-12,KITCHEN_UTENSIL,Tijeras de cocina,CC:ZZZ-001,Increiblemente confiable,EUR 44.5,chef-03,null,FALSE
