@@ -24,11 +24,7 @@ master.menu.anonymous.chirp.list =                      Mensajes informales
 master.menu.anonymous.component.list =                  Componentes
 master.menu.anonymous.tool.list =                       Herramientas
 
-master.menu.anonymous.diedialop-favourite-link =  20060486R: Díaz López, Diego Jesús
-master.menu.anonymous.salparram-favourite-link = 29552748W: Parejo Ramos, Salvador
-master.menu.anonymous.carcardia-favourite-link = 53738719R: Carrasco Díaz, Carolina
-master.menu.anonymous.marpedrod3-favourite-link = 53772352P: Pedraz Rodriguez, Maria Isabel
-master.menu.anonymous.alvsevcab-favourite-link =  45339624T: Sevilla Cabrera, Álvaro
+master.menu.anonymous.salparram-favourite-link =  29552748W: Parejo Ramos, Salvador
 
 # master.menu.authenticated ###################################################
 master.menu.authenticated = Autenticado
@@ -68,16 +64,6 @@ master.menu.inventor.toolkit.list = Mis kits de herramientas
 master.menu.inventor.patronage.list = Mis patrocinios
 master.menu.inventor.component.list = Mis Componentes
 master.menu.inventor.tool.list = Mis herramientas
-
-
-# master.menu.chef #########################################################
-
-master.menu.chef = Chef
-
-
-# master.menu.epicure #########################################################
-
-master.menu.epicure = Epicúreo
 
 
 # master.menu.user-account ####################################################
