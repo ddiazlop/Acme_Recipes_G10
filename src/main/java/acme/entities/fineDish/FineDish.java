@@ -14,11 +14,11 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
-import org.dom4j.tree.AbstractEntity;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.framework.datatypes.Money;
+import acme.framework.entities.AbstractEntity;
 import acme.roles.Chef;
 import acme.roles.Epicure;
 import lombok.Getter;
