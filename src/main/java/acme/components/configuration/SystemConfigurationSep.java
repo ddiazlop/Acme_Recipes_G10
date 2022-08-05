@@ -7,7 +7,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
-import org.dom4j.tree.AbstractEntity;
+import acme.framework.entities.AbstractEntity;
 import org.hibernate.validator.constraints.Range;
 
 import lombok.Getter;
@@ -31,7 +31,7 @@ public class SystemConfigurationSep extends AbstractEntity{
 		protected String			acceptedCurrencies;
 
 		@NotBlank
-		protected Map<String,Double>	SpamTuple;
+		protected String	SpamTuple;
 
 		//Supuestamente el rango es de 0.00 a 1.00, por comodidad de 0 a 100
 		@Range(max = 100, min = 0)
