@@ -13,7 +13,6 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
-import acme.entities.toolkits.ItemType;
 import acme.framework.datatypes.Money;
 import acme.framework.entities.AbstractEntity;
 import acme.roles.Chef;
@@ -52,7 +51,7 @@ public class Kitchenware extends AbstractEntity{
 		
 		@NotNull
 		@Enumerated(EnumType.STRING)
-		protected ItemType			itemType;
+		protected WareType			wareType;
 
 		protected boolean			published;
 
