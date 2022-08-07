@@ -5,12 +5,12 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 
 import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.URL;
 
 import acme.framework.entities.AbstractEntity;
 import lombok.Getter;
@@ -19,8 +19,8 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Peep extends AbstractEntity {
-
+public class Bulletin extends AbstractEntity {
+	
 	// Serialisation identifier 
 	protected static final long	serialVersionUID	= 1L;
 
@@ -33,23 +33,21 @@ public class Peep extends AbstractEntity {
 	@Past
 	@NotNull
 	protected Date				moment;
-	
-	@NotBlank
-	@Length(max = 100)
-	protected String			writer;
 
 	@NotBlank
 	@Length(max = 255)
 	protected String			text;
 
-	@Email
-	protected String			email;
+	protected boolean			critical;
+
+	@URL
+	protected String			link;
 
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
+
+
 	
-	// Notes ------------------------------------------------------------------
-	// The writer does not have to be the name of the principal
 
 }
