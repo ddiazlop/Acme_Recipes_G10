@@ -12,26 +12,18 @@
       		<acme:menu-suboption code="master.menu.anonymous.toolkit.list" action="/any/toolkit/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.user-account.list" action="/any/user-account/list" />
 			<acme:menu-suboption code="master.menu.anonymous.chirp.list" action="/any/chirp/list"/>
-			<acme:menu-suboption code="master.menu.anonymous.ingredient.list" action="/any/object/list-ingredient"/>
-			<acme:menu-suboption code="master.menu.anonymous.peep.list" action="/any/peep/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.component.list" action="/any/item/list-component"/>
 			<acme:menu-suboption code="master.menu.anonymous.tool.list" action="/any/item/list-tool"/>
 			
       		<acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.anonymous.diedialop-favourite-link" action="http://www.stealthboats.com"/>
-			<acme:menu-suboption code="master.menu.anonymous.salparram-favourite-link" action="https://sevillafc.es"/>
-			<acme:menu-suboption code="master.menu.anonymous.carcardia-favourite-link" action="https://www.casadellibro.com/"/>	 
-            		<acme:menu-suboption code="master.menu.anonymous.marpedrod3-favourite-link" action="https://www.instagram.com/"/>
-            		<acme:menu-suboption code="master.menu.anonymous.julnavrod-favourite-link" action="https://es.linkedin.com/"/>
-			<acme:menu-suboption code="master.menu.anonymous.alvsevcab-favourite-link" action="https://www.youtube.com/c/ElTitoJuan"/>
+				<acme:menu-suboption code="master.menu.anonymous.salparram-favourite-link" action="https://sevillafc.es/"/>
+			
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
 		    <acme:menu-suboption code="master.menu.authenticated.toolkit.list" action="/any/toolkit/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.user-account.list" action="/any/user-account/list" />
 			<acme:menu-suboption code="master.menu.authenticated.chirp.list" action="/any/chirp/list"/>
-			<acme:menu-suboption code="master.menu.authenticated.ingredient.list" action="/any/object/list-ingredient"/>
-			<acme:menu-suboption code="master.menu.authenticated.peep.list" action="/any/peep/list"/>
       		<acme:menu-suboption code="master.menu.authenticated.announcement.list" action="/authenticated/announcement/list" access="isAuthenticated()"/>
       		<acme:menu-suboption code="master.menu.authenticated.component.list" action="/any/item/list-component"/>
 			<acme:menu-suboption code="master.menu.authenticated.tool.list" action="/any/item/list-tool"/>
@@ -64,15 +56,6 @@
 			<acme:menu-suboption code="master.menu.inventor.tool.list" action="/inventor/item/list-tool"/>
 			<acme:menu-suboption code="master.menu.inventor.patronage.list" action="/inventor/patronage/list"/>
 		</acme:menu-option>
-		
-		<acme:menu-option code="master.menu.chef" access="hasRole('Chef')">
-		
-		</acme:menu-option>
-		
-		<acme:menu-option code="master.menu.epicure" access="hasRole('Epicure')">
-		
-		</acme:menu-option>
-		
 	</acme:menu-left>
 
 	<acme:menu-right>
