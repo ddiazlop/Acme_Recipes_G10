@@ -28,7 +28,7 @@ public class KitchenwareRecipe extends AbstractEntity {
 
 	@ManyToOne(optional = false)
 	@NotNull
-	protected Kitchenware				kitchenWare;
+	protected Kitchenware				kitchenware;
 
 	@ManyToOne(optional = false)
 	@NotNull
