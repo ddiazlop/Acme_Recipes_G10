@@ -9,14 +9,14 @@
 # they accept any liabilities with respect to them.
 
 
-any.object.list.label.code = Código
-any.object.list.label.name = Nombre
-any.object.list.label.published = Publicado
+any.kitchenware.list.label.code = Código
+any.kitchenware.list.label.name = Nombre
+any.kitchenware.list.label.published = Publicado
 
-any.object.form.label.code = Código
-any.object.form.label.name = Nombre
-any.object.form.label.description = Descripción
-any.object.form.label.retail-price = Precio
-any.object.form.label.info = Información
-any.object.form.label.object-type = Tipo
-any.object.form.label.published = Publicado
+any.kitchenware.form.label.code = Código
+any.kitchenware.form.label.name = Nombre
+any.kitchenware.form.label.description = Descripción
+any.kitchenware.form.label.retail-price = Precio
+any.kitchenware.form.label.info = Información
+any.kitchenware.form.label.ware-type = Tipo
+any.kitchenware.form.label.published = Publicado

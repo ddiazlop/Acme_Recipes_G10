@@ -1,22 +1,22 @@
-package acme.features.any.object.ingredient;
+package acme.features.any.kitchenware.ingredient;
 
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import acme.entities.Object;
+import acme.entities.recipes.Kitchenware;
 import acme.framework.controllers.AbstractController;
 import acme.framework.roles.Any;
 
 @Controller
-public class AnyObjectIngredientController extends AbstractController<Any, Object>{
+public class AnyKitchenwareIngredientController extends AbstractController<Any, Kitchenware>{
 	
 	@Autowired
-	protected AnyObjectIngredientListService	listService;
+	protected AnyKitchenwareIngredientListService	listService;
 
 	@Autowired
-	protected AnyObjectIngredientShowService			showService;
+	protected AnyKitchenwareIngredientShowService			showService;
 
 
 	@PostConstruct

@@ -1,25 +1,25 @@
-package acme.features.any.object.ingredient;
+package acme.features.any.kitchenware.ingredient;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.Object;
+import acme.entities.recipes.Kitchenware;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.roles.Any;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AnyObjectIngredientShowService implements AbstractShowService<Any, Object>{
+public class AnyKitchenwareIngredientShowService implements AbstractShowService<Any, Kitchenware>{
 
 	@Autowired
-	protected AnyObjectIngredientRepository repo;
+	protected AnyKitchenwareIngredientRepository repo;
 	
 	@Override
-	public boolean authorise(final Request<Object> request) {
+	public boolean authorise(final Request<Kitchenware> request) {
 		assert request != null;
 		int ingredientId;
-		Object ingredient;
+		Kitchenware ingredient;
 		boolean res;
 		
 		ingredientId = request.getModel().getInteger("id");
@@ -29,10 +29,10 @@ public class AnyObjectIngredientShowService implements AbstractShowService<Any, 
 	}
 
 	@Override
-	public Object findOne(final Request<Object> request) {
+	public Kitchenware findOne(final Request<Kitchenware> request) {
 		assert request != null;
 		int ingredientId;
-		Object ingredient;
+		Kitchenware ingredient;
 		
 		ingredientId = request.getModel().getInteger("id");
 		ingredient = this.repo.findOneIngredientById(ingredientId);
@@ -41,12 +41,12 @@ public class AnyObjectIngredientShowService implements AbstractShowService<Any, 
 	}
 
 	@Override
-	public void unbind(final Request<Object> request, final Object entity, final Model model) {
+	public void unbind(final Request<Kitchenware> request, final Kitchenware entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "code", "name", "objectType", "description", "retailPrice", "info", "published");
+		request.unbind(entity, model, "code", "name", "wareType", "description", "retailPrice", "info", "published");
 		
 	}
 
