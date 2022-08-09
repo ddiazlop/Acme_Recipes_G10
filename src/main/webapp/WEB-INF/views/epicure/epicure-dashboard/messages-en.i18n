@@ -1,0 +1,25 @@
+# i18n-en.i18n
+#
+# Copyright (C) 2012-2022 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+epicure.dashboard.form.title.indicators = General indicators
+epicure.dashboard.form.title.dishes-type = Find Dishes Type
+epicure.dashboard.form.title.accepted-dishes = Accepted
+epicure.dashboard.form.title.denied-dishes = Denied
+epicure.dashboard.form.title.pending-dishes = Pending
+
+epicure.dashboard.form.label.num = Number 
+epicure.dashboard.form.label.avg = Average
+epicure.dashboard.form.label.desv = Desviation
+epicure.dashboard.form.label.min = Minimum
+epicure.dashboard.form.label.max = Maximum
+
+
+epicure.dashboard.form.no-data = No data
+
