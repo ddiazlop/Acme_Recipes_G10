@@ -80,7 +80,7 @@ master.menu.chef = Chef
 # master.menu.epicure #########################################################
 
 master.menu.epicure = Epicure
-
+master.menu.epicure.dashboard = Dashboard
 
 # master.menu.user-account ####################################################
 

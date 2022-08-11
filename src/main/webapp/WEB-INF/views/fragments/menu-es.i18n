@@ -80,7 +80,7 @@ master.menu.chef = Chef
 # master.menu.epicure #########################################################
 
 master.menu.epicure = Epicúreo
-
+master.menu.epicure.dashboard = Panel de indicadores
 
 # master.menu.user-account ####################################################
 
