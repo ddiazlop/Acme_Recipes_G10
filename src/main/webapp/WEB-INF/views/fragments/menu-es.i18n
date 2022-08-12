@@ -48,6 +48,7 @@ master.menu.authenticated.system-configuration.show = Información sobre monedas
 master.menu.administrator = Administrador
 
 master.menu.administrator.system-configuration = Editar detalles del sistema
+master.menu.administrator.system-configuration-sep = Editar detalles del sistema Sep
 master.menu.administrator.dashboard = Panel de indicadores
 master.menu.administrator.announcement.create = Crear Anuncios
 master.menu.administrator.user-accounts = Todas las cuentas de usuario

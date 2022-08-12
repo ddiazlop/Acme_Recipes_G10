@@ -49,6 +49,7 @@ master.menu.authenticated.system-configuration.show = Currencies information
 master.menu.administrator = Administrator
 
 master.menu.administrator.system-configuration = Update System Details
+master.menu.administrator.system-configuration-sep = Update System Details Sep
 master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.announcement.create = Create Announcements
 master.menu.administrator.user-accounts = All User accounts

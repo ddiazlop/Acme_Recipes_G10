@@ -40,6 +40,7 @@
 
 			<acme:menu-suboption code="master.menu.administrator.user-accounts"	action="/administrator/user-account/list" />
 			<acme:menu-suboption code="master.menu.administrator.system-configuration" action="/administrator/system-configuration/show"/>
+			<acme:menu-suboption code="master.menu.administrator.system-configuration-sep" action="/administrator/system-configuration-sep/show"/>
 			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/admin-dashboard/show"/>
 			<acme:menu-suboption code="master.menu.administrator.announcement.create" action="/administrator/announcement/create"/>
 			<acme:menu-separator />
