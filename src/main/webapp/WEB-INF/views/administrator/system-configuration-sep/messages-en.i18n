@@ -1,15 +1,17 @@
 # i18n-en.i18n
 
-administrator.system-configuration.form.label.systemCurrency =  System currency
-administrator.system-configuration.form.label.acceptedCurrencies = Accepted currencies
+administrator.system-configuration-sep.button.title.system-currency =  System currency
+administrator.system-configuration-sep.button.title.accepted-currencies = Accepted currencies
+administrator.system-configuration-sep.button.title.spam = Spam Words
+
+
+administrator.system-configuration-sep.form.label.acceptedCurrencies = Accepted Currencies
+administrator.system-configuration-sep.form.label.systemCurrency = System Currency
+administrator.system-configuration-sep.form.label.spamTuple = Spam Tuples
+administrator.system-configuration-sep.form.label.spamThreshold = Spam Threshold
 
 administrator.system-configuration.form.title.spam = Spam Words
-administrator.system-configuration.form.label.strongSpamTerms = Strong Spam Words
-administrator.system-configuration.form.label.strongSpamThreshold = Strong Spam Threshold
-administrator.system-configuration.form.label.weakSpamTerms = Weak Spam Words
-administrator.system-configuration.form.label.weakSpamThreshold = Weak Spam Threshold
+administrator.system-configuration.form.title.systemCurrency = System Currency
+administrator.system-configuration.form.title.acceptedCurrencies = Accepted Currencies
 
-administrator.system-configuration.button.title.accepted-currencies = Edit Accepted Currencies
-administrator.system-configuration.button.title.system-currency = Edit Current System Currency
-administrator.system-configuration.button.title.spam = Edit Spam Words
 administrator.system-configuration.form.button.update = Update
