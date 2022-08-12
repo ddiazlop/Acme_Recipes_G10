@@ -14,20 +14,32 @@
 	
 		<jstl:when test="${command == 'accepted-currencies' }">
 			<acme:input-textbox code="administrator.system-configuration.form.label.acceptedCurrencies" path="acceptedCurrencies"/>
+			<acme:input-textbox code="administrator.system-configuration.form.label.systemCurrency" path="systemCurrency" readonly="true"/>
+			<acme:input-textbox code="administrator.system-configuration.form.label.strongSpamTerms" path="strongSpamTerms" readonly="true"/>
+			<acme:input-double code="administrator.system-configuration.form.label.strongSpamThreshold" path="strongSpamThreshold" readonly="true"/>
+			<acme:input-textbox code="administrator.system-configuration.form.label.weakSpamTerms" path="weakSpamTerms" readonly="true"/>
+			<acme:input-double code="administrator.system-configuration.form.label.weakSpamThreshold" path="weakSpamThreshold" readonly="true"/>
 		</jstl:when>
 		
 		<jstl:when test="${command == 'system-currency' }">
+			<acme:input-textbox code="administrator.system-configuration.form.label.acceptedCurrencies" path="acceptedCurrencies" readonly="true"/>
 			<acme:input-select code="administrator.system-configuration.form.label.systemCurrency" path="systemCurrency">
                 <jstl:forEach items="${accepted}" var="acceptedCurr">
                     <acme:input-option code="${acceptedCurr}" value="${acceptedCurr}"/>
                 </jstl:forEach>
 			</acme:input-select>
+			<acme:input-textbox code="administrator.system-configuration.form.label.strongSpamTerms" path="strongSpamTerms" readonly="true"/>
+			<acme:input-double code="administrator.system-configuration.form.label.strongSpamThreshold" path="strongSpamThreshold" readonly="true"/>
+			<acme:input-textbox code="administrator.system-configuration.form.label.weakSpamTerms" path="weakSpamTerms" readonly="true"/>
+			<acme:input-double code="administrator.system-configuration.form.label.weakSpamThreshold" path="weakSpamThreshold" readonly="true"/>
 		</jstl:when>
 		
 		<jstl:when test="${command == 'spam' }">
 			<h2>
 				<acme:message code="administrator.system-configuration.form.title.spam"/>
 			</h2>
+			<acme:input-textbox code="administrator.system-configuration.form.label.acceptedCurrencies" path="acceptedCurrencies" readonly="true"/>
+			<acme:input-textbox code="administrator.system-configuration.form.label.systemCurrency" path="systemCurrency" readonly="true"/>
 			<acme:input-textbox code="administrator.system-configuration.form.label.strongSpamTerms" path="strongSpamTerms"/>
 			<acme:input-double code="administrator.system-configuration.form.label.strongSpamThreshold" path="strongSpamThreshold"/>
 			<acme:input-textbox code="administrator.system-configuration.form.label.weakSpamTerms" path="weakSpamTerms"/>
