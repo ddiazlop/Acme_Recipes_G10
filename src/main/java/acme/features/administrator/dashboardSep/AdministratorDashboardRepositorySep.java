@@ -8,7 +8,7 @@ import javax.persistence.Tuple;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import acme.components.configuration.SystemConfiguration;
+import acme.components.configuration.SystemConfigurationSep;
 import acme.entities.fineDish.DishStatus;
 import acme.entities.recipes.WareType;
 import acme.framework.datatypes.Money;
@@ -27,7 +27,7 @@ public interface AdministratorDashboardRepositorySep extends AbstractRepository 
 	Integer getNumDishes(DishStatus status);
 
 	@Query("select sc from SystemConfigurationSep sc")
-	SystemConfiguration findSystemConfigurationSep();
+	SystemConfigurationSep findSystemConfigurationSep();
 
 	//Para ingredientes como para Utensilios de cocina
 	@Query("select k.retailPrice from Kitchenware k where k.wareType=:type")

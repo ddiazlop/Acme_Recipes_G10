@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.util.Pair;
 import org.springframework.stereotype.Service;
 
-import acme.components.configuration.SystemConfiguration;
+import acme.components.configuration.SystemConfigurationSep;
 import acme.datatypes.StatData;
 import acme.entities.fineDish.DishStatus;
 import acme.entities.recipes.WareType;
@@ -55,7 +55,7 @@ public class AdministratorDashboardShowServiceSep implements AbstractShowService
 		final Map<String, StatData> kitchenUtensilsDataByCurrency = new HashMap<>();
 		final Map<Pair<DishStatus, String>, StatData> fDishesBudgetData = new HashMap<>();
 
-		final SystemConfiguration sc = this.repository.findSystemConfigurationSep();
+		final SystemConfigurationSep sc = this.repository.findSystemConfigurationSep();
 		final List<String> acceptedCurrencies = Arrays.asList(sc.getAcceptedCurrencies().trim().split(","));
 
 		//---------INGREDIENT and KITCHEN_UTENSIL Data By Currency--------------

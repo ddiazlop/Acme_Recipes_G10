@@ -17,18 +17,13 @@ administrator.dashboard.form.title.denied-dishes = Denied
 administrator.dashboard.form.title.pending-dishes = Pending
 
 administrator.dashboard.form.title.ingredients-kitchenUtensils-data = Ingredients and Kitchen Utensils Data  
-administrator.dashboard.form.title.avg-data = Component and Tool Averages
-administrator.dashboard.form.title.min-max-dataComp = Components Maxs and Mins
-administrator.dashboard.form.title.min-max-dataTool = Tools Maxs and Mins
-administrator.dashboard.form.label.desviationComp = Component Desviation
-administrator.dashboard.form.label.desviationTool = Tool Desviation
-administrator.dashboard.form.label.numComponents =  Number of Components
-administrator.dashboard.form.label.numTools =  Number of Tools
-
-administrator.dashboard.form.title.comps-data-tech = Component Data By Tech
-administrator.dashboard.form.title.tools-data-tech = Tool Data By Tech
-
-administrator.dashboard.form.title.tech = Technology
+administrator.dashboard.form.title.avg-data = Ingredient and Kitchen Utensil Averages
+administrator.dashboard.form.title.min-max-dataKitchen = Kitchen Utensils Maxs and Mins
+administrator.dashboard.form.title.min-max-dataIngredient = Ingredients Maxs and Mins
+administrator.dashboard.form.label.desviationIngredients = Ingredient Desviation
+administrator.dashboard.form.label.desviationKitchenUtensils = Kitchen Utensil Desviation
+administrator.dashboard.form.label.numOfIngredients = Number of Ingredients
+administrator.dashboard.form.label.numOfKitchenUtensils = Number of Kitchen Utensils
 
 administrator.dashboard.form.label.num = Number 
 administrator.dashboard.form.label.avg = Average
