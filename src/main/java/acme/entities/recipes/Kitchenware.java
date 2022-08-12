@@ -53,7 +53,7 @@ public class Kitchenware extends AbstractEntity{
 		@Enumerated(EnumType.STRING)
 		protected WareType			wareType;
 
-		protected boolean			published;
+		protected boolean			published=false;
 
 		// Derived attributes -----------------------------------------------------
 		
