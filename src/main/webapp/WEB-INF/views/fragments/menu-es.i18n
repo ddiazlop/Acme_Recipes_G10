@@ -18,13 +18,17 @@ master.menu.sign-out = Salir
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous =                                 Anónimo
+
 master.menu.anonymous.toolkit.list =                    Kits de herramientas
-master.menu.anonymous.user-account.list =               Cuentas de usuarios
-master.menu.anonymous.chirp.list =                      Mensajes informales
-master.menu.anonymous.ingredient.list = 				Ingredientes
-master.menu.anonymous.peep.list = 						Mensajes informales
 master.menu.anonymous.component.list =                  Componentes
 master.menu.anonymous.tool.list =                       Herramientas
+master.menu.anonymous.chirp.list =                      Mensajes informales
+
+master.menu.anonymous.user-account.list =               Cuentas de usuarios
+master.menu.anonymous.ingredient.list = 				Ingredientes
+master.menu.anonymous.kitchen-utensils.list = 			Utensilios de cocina
+master.menu.anonymous.peep.list = 						Mensajes informales
+
 
 master.menu.anonymous.diedialop-favourite-link =  20060486R: Díaz López, Diego Jesús
 master.menu.anonymous.salparram-favourite-link = 29552748W: Parejo Ramos, Salvador

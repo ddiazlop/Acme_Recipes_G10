@@ -19,6 +19,4 @@
 		width="20%" />
 	<acme:list-column code="any.kitchenware.list.label.name" path="name"
 		width="20%" />
-	<acme:list-column code="any.kitchenware.list.label.published" path="published"
-		width="20%" />
 </acme:list>

@@ -1,4 +1,4 @@
-package acme.features.any.kitchenware.ingredient;
+package acme.features.any.kitchenware;
 
 import java.util.Collection;
 
@@ -12,10 +12,10 @@ import acme.framework.roles.Any;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AnyKitchenwareIngredientListService implements AbstractListService<Any, Kitchenware>{
+public class AnyKitchenwareListService implements AbstractListService<Any, Kitchenware>{
 	
 	@Autowired
-	protected AnyKitchenwareIngredientRepository repo;
+	protected AnyKitchenwareRepository repo;
 
 	@Override
 	public boolean authorise(final Request<Kitchenware> request) {
@@ -27,7 +27,12 @@ public class AnyKitchenwareIngredientListService implements AbstractListService<
 	public Collection<Kitchenware> findMany(final Request<Kitchenware> request) {
 		assert request != null;
 		Collection<Kitchenware> res;
-		res = this.repo.findPublishedIngredients();
+		if (request.isCommand("list-ingredient")) {
+			res = this.repo.findPublishedIngredients();
+		}else {
+			res = this.repo.findAllPublishedUtensils();
+		}
+		
 		return res;
 	}
 

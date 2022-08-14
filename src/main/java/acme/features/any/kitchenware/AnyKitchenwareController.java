@@ -1,4 +1,4 @@
-package acme.features.any.kitchenware.ingredient;
+package acme.features.any.kitchenware;
 
 import javax.annotation.PostConstruct;
 
@@ -10,18 +10,19 @@ import acme.framework.controllers.AbstractController;
 import acme.framework.roles.Any;
 
 @Controller
-public class AnyKitchenwareIngredientController extends AbstractController<Any, Kitchenware>{
+public class AnyKitchenwareController extends AbstractController<Any, Kitchenware>{
 	
 	@Autowired
-	protected AnyKitchenwareIngredientListService	listService;
+	protected AnyKitchenwareListService	listService;
 
 	@Autowired
-	protected AnyKitchenwareIngredientShowService			showService;
+	protected AnyKitchenwareShowService			showService;
 
 
 	@PostConstruct
 	protected void initialize() {
 		super.addCommand("list-ingredient", "list", this.listService);
+		super.addCommand("list-utensils", "list", this.listService);
 		super.addCommand("show", this.showService);
 	}
 

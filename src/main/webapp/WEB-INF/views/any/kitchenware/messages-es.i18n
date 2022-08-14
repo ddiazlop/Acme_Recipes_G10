@@ -18,5 +18,10 @@ any.kitchenware.form.label.name = Nombre
 any.kitchenware.form.label.description = Descripción
 any.kitchenware.form.label.retail-price = Precio
 any.kitchenware.form.label.info = Información
-any.kitchenware.form.label.ware-type = Tipo
-any.kitchenware.form.label.published = Publicado
+any.kitchenware.form.label.kitchenware-type = Tipo
+any.kitchenware.form.label.published = Estado
+
+any.kitchenware.placeholder.published = Publicado
+any.kitchenware.placeholder.notpublished = No publicado
+any.kitchenware.placeholder.type.ingredient = Ingrediente
+any.kitchenware.placeholder.type.kitchen-utensil = Utensilio de cocina

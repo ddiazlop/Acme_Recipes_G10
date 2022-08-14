@@ -1,4 +1,4 @@
-package acme.features.any.kitchenware.ingredient;
+package acme.features.any.kitchenware;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,10 +10,10 @@ import acme.framework.roles.Any;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AnyKitchenwareIngredientShowService implements AbstractShowService<Any, Kitchenware>{
+public class AnyKitchenwareShowService implements AbstractShowService<Any, Kitchenware>{
 
 	@Autowired
-	protected AnyKitchenwareIngredientRepository repo;
+	protected AnyKitchenwareRepository repo;
 	
 	@Override
 	public boolean authorise(final Request<Kitchenware> request) {
@@ -23,7 +23,7 @@ public class AnyKitchenwareIngredientShowService implements AbstractShowService<
 		boolean res;
 		
 		ingredientId = request.getModel().getInteger("id");
-		ingredient = this.repo.findOneIngredientById(ingredientId);
+		ingredient = this.repo.findOneKitchenwareById(ingredientId);
 		res = ingredient.isPublished();
 		return res;
 	}
@@ -35,7 +35,7 @@ public class AnyKitchenwareIngredientShowService implements AbstractShowService<
 		Kitchenware ingredient;
 		
 		ingredientId = request.getModel().getInteger("id");
-		ingredient = this.repo.findOneIngredientById(ingredientId);
+		ingredient = this.repo.findOneKitchenwareById(ingredientId);
 		
 		return ingredient;
 	}
@@ -47,6 +47,7 @@ public class AnyKitchenwareIngredientShowService implements AbstractShowService<
 		assert model != null;
 		
 		request.unbind(entity, model, "code", "name", "wareType", "description", "retailPrice", "info", "published");
+		
 		
 	}
 
