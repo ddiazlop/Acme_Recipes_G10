@@ -55,46 +55,6 @@ public class AdministratorSystemConfigurationSepUpdateTest extends TestHarness{
 		super.signOut();
 	}
 	
-	@ParameterizedTest
-	@CsvFileSource(resources = "/administrator/systemConfigurationSep/update-system-configuration-sep-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(10)
-	public void negativeTest(final int recordIndex, final String systemCurrency, final String acceptedCurrencies, final String spamTuple, final String spamThreshold) {
-		super.signIn("administrator", "administrator");
-
-		super.clickOnMenu("Administrator", "Update System Details Sep");
-		super.checkFormExists();
-		
-		super.clickOnButton("Accepted currencies");
-		super.checkFormExists();
-		super.fillInputBoxIn("acceptedCurrencies", acceptedCurrencies);
-		super.clickOnSubmit("Update");
-		super.checkNotErrorsExist();
-		
-		super.clickOnButton("System currency");
-		final BrowserDriver driver = super.getDriver();
-		driver.locateOne(By.xpath("//*[@name=\"systemCurrency_proxy\"]/option[\""+ systemCurrency +"\"]")).click();
-		super.clickOnSubmit("Update");
-		super.checkNotErrorsExist();
-		
-		super.clickOnButton("Spam Words");
-		super.fillInputBoxIn("spamTuple", spamTuple);
-		super.fillInputBoxIn("spamThreshold", spamThreshold);
-		super.clickOnSubmit("Update");
-		super.checkNotErrorsExist();
-
-		super.clickOnMenu("Administrator", "Update System Details Sep");
-		super.checkFormExists();
-		
-		super.clickOnButton("Accepted currencies");
-		super.checkInputBoxHasValue("acceptedCurrencies", acceptedCurrencies);
-		
-		super.clickOnButton("Spam Words");
-		super.checkInputBoxHasValue("spamTuple", spamTuple);
-		super.checkInputBoxHasValue("spamThreshold", spamThreshold);
-		super.checkErrorsExist();
-		
-		super.signOut();
-	}
 	
 	@Test
 	@Order(30)
