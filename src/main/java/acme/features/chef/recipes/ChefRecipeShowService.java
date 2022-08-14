@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.components.configuration.SystemConfiguration;
+import acme.entities.recipes.Kitchenware;
 import acme.entities.recipes.Recipe;
 import acme.features.authenticated.moneyExchange.AuthenticatedMoneyExchangePerformService;
 import acme.framework.components.models.Model;
@@ -53,27 +54,37 @@ public class ChefRecipeShowService implements AbstractShowService<Chef, Recipe>{
 		assert entity != null;
 		assert model != null;
 		
-		final List<Money> prices = new ArrayList<>();
+		final Integer recipeId = request.getModel().getInteger("id");
 		final SystemConfiguration sc = this.repository.findSystemConfiguration();
 		
-		for (final String curr : sc.getAcceptedCurrencies().trim().split(",")) {
-			final Money price = new Money();
-			price.setCurrency(curr);
-			price.setAmount(this.repository.getRecipePricesByIdAndCurrency(entity.getId(), curr));
-			prices.add(price);
+		final List<Kitchenware> kitchenwares = (List<Kitchenware>) this.repository.getKitchenwaresOfARecipe(recipeId);
+		final List<Money> convertedPrices = new ArrayList<>();
+		
+		for(final Kitchenware k : kitchenwares) {
+			convertedPrices.add(k.getRetailPrice());
 		}
 		
-		request.unbind(entity, model, "code", "heading", "description", "preparationNotes", "wareType", "published");
 		
-		final List<Money> convertedPrices;
-		convertedPrices = this.moneyExchange.convertMoney(prices, sc.getSystemCurrency());
+		this.moneyExchange.convertMoney(convertedPrices, sc.getSystemCurrency());
+		Double totalAmount = 0.0;
+		for(int i = 0; i < convertedPrices.size(); i++) {
+			final Kitchenware kitchenware = kitchenwares.get(i);
+			final Double quantity = this.repository.getKitchenwareQuantityFromARecipe(recipeId, kitchenware.getId());
+			totalAmount = totalAmount + quantity*convertedPrices.get(i).getAmount();
+		}
 		
-		final Money money = new Money();
-		final Double amount = convertedPrices.stream().mapToDouble(Money::getAmount).sum();
-		money.setAmount(amount);
-		money.setCurrency(sc.getSystemCurrency());
-
+		final Money totalPrice = new Money();
+		totalPrice.setAmount(totalAmount);
+		totalPrice.setCurrency(sc.getSystemCurrency());
 		
+		model.setAttribute("totalPrice", totalPrice);
+		request.unbind(entity, model, "code", "heading", "description", "preparationNotes", "published");
+	
+		if (entity.isPublished()) {
+			model.setAttribute("state", "PUBLISHED");
+		} else {
+			model.setAttribute("state", "NOT PUBLISHED");
+		}
 	}
 
 }

@@ -1,0 +1,15 @@
+chef.recipes.form.label.code = Code
+chef.recipes.form.label.heading = Heading
+chef.recipes.form.label.description = Description
+chef.recipes.form.label.preparationNotes = Preparation Notes
+chef.recipes.form.label.info = Info
+chef.recipes.form.label.totalPrice = Total Price
+chef.recipes.form.label.state = State
+
+chef.recipes.list.label.code = Code
+chef.recipes.list.label.heading = Heading
+chef.recipes.list.label.description = Description
+chef.recipes.list.label.preparationNotes = Preparation Notes
+chef.recipes.list.label.info = Info
+chef.recipes.list.label.totalPrice = Total Price
+chef.recipes.list.label.state = State
