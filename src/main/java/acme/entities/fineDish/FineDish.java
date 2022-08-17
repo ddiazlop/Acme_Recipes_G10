@@ -67,7 +67,7 @@ public class FineDish extends AbstractEntity {
 	
 	@URL
 	protected String			info;
-				
+	
 					
 	// Derived attributes -----------------------------------------------------
 
