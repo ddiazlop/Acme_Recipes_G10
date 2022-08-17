@@ -8,14 +8,27 @@ import acme.testing.TestHarness;
 
 public class AnyKitchenwareListAllnShowTest extends TestHarness{
 
-//	@ParameterizedTest
-//	@CsvFileSource(resources = "/any/item/list-all-components.csv", encoding = "utf-8", numLinesToSkip = 1)
-//	@Order(10)
-//	public void positiveComponentTest(final int recordIndex, final String itemType, final String name, final String code, final String technology, final String description, final String retailPrice, final String inventor, final String info) {
-//		super.navigateHome();
-//		super.clickOnMenu("Anonymous", "Components");
-//		this.checkListAllItemsNShow(recordIndex, code, name, technology, retailPrice, description, info);
-//	}
+	@ParameterizedTest
+	@CsvFileSource(resources = "/any/object/ingredient/list.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Order(10)
+	public void positiveIngredientTest(final int recordIndex, final String name, final String code, final String description, final String retailPrice, final String info) {
+		
+		super.clickOnMenu("Anonymous", "Ingredients");
+		
+		super.checkListingExists();
+		super.sortListing(0, "desc");
+
+		super.checkColumnHasValue(recordIndex, 0, code);
+		super.checkColumnHasValue(recordIndex, 1, name);
+
+		super.clickOnListingRecord(recordIndex);
+		super.checkFormExists();
+		super.checkInputBoxHasValue("code", code);
+		super.checkInputBoxHasValue("name", name);
+		super.checkInputBoxHasValue("description", description);
+		super.checkInputBoxHasValue("retailPrice", retailPrice);
+		super.checkInputBoxHasValue("info", info);
+	}
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/any/kitchenware/list-all-kitchen-utensils.csv", encoding = "utf-8", numLinesToSkip = 1)

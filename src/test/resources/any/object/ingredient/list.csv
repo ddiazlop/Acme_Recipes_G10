@@ -1,3 +1,3 @@
-recordIndex,name,code,objectType,description,retailPrice,info,published
-0,Pimienta,INP-001,INGREDIENT,Demasiado bueno,USD 5.35,"",true
-1,Ajo,INA-002,INGREDIENT,Extremadamente bueno,EUR 8.45,https://ev.us.es/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_29_1,true
+recordIndex,name,code,description,retailPrice,info,published
+1,Azucar,AA:DDD-000,Para endulzar la vida,EUR 0.50,
+0,Aceite de oliva virgen extra,BB:DDD-000,Bien rico,GBP 0.25,
