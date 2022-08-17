@@ -1,4 +1,4 @@
-# i18n-es.i18n
+# i18n-en.i18n
 #
 # Copyright (C) 2012-2022 Rafael Corchuelo.
 #
@@ -9,14 +9,8 @@
 # they accept any liabilities with respect to them.
 
 
-any.object.list.label.code = Código
-any.object.list.label.name = Nombre
-any.object.list.label.published = Publicado
-
-any.object.form.label.code = Código
-any.object.form.label.name = Nombre
-any.object.form.label.description = Descripción
-any.object.form.label.retail-price = Precio
-any.object.form.label.info = Información
-any.object.form.label.object-type = Tipo
-any.object.form.label.published = Publicado
+any.peep.list.label.moment = Moment
+any.peep.list.label.heading = Heading
+any.peep.list.label.writer = Writer
+any.peep.list.label.text = Text
+any.peep.list.label.email = Email

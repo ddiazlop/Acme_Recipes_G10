@@ -1,9 +1,10 @@
-package acme.entities;
+package acme.entities.recipes;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.ManyToOne;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -14,14 +15,13 @@ import org.hibernate.validator.constraints.URL;
 
 import acme.framework.datatypes.Money;
 import acme.framework.entities.AbstractEntity;
+import acme.roles.Chef;
 import lombok.Getter;
 import lombok.Setter;
-
 @Entity
 @Getter
 @Setter
-public class Object extends AbstractEntity{
-
+public class Kitchenware extends AbstractEntity{
 	// Serialisation identifier -----------------------------------------------
 
 		protected static final long	serialVersionUID	= 1L;
@@ -36,10 +36,6 @@ public class Object extends AbstractEntity{
 		@NotNull
 		@Column(unique = true)
 		protected String			code;
-		
-		@NotNull
-		@Enumerated(EnumType.STRING)
-		protected ObjectType			objectType;
 
 		@NotBlank
 		@Length(min = 1, max = 255)
@@ -54,10 +50,17 @@ public class Object extends AbstractEntity{
 		protected String			info;
 		
 		@NotNull
+		@Enumerated(EnumType.STRING)
+		protected WareType			wareType;
+
 		protected boolean			published;
 
 		// Derived attributes -----------------------------------------------------
 		
 		// Relationships ----------------------------------------------------------
-
+		
+		@ManyToOne(optional = false)
+		@NotNull
+		protected Chef			chef;
+		
 }
