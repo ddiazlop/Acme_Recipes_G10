@@ -31,8 +31,7 @@ public class SystemConfigurationSep extends AbstractEntity{
 		@NotBlank
 		protected String	spamTuple;
 
-		//Supuestamente el rango es de 0.00 a 1.00, por comodidad de 0 a 100
-		@Range(max = 100, min = 0)
+		@Range(max = 1, min = 0)
 		@NotNull
 		protected Double			spamThreshold;
 

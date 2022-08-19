@@ -53,7 +53,7 @@
 	
 	
 	<jstl:choose>
-		<jstl:when test="${acme:anyOf(command, 'accepted-currencies, system-currency, spam, update, delete')}">
+		<jstl:when test="${acme:anyOf(command, 'accepted-currencies, system-currency, spam, delete')}">
 			<acme:submit code="administrator.system-configuration.form.button.update" action="/administrator/system-configuration-sep/update"/>
 		</jstl:when>
 	</jstl:choose>	
