@@ -1,4 +1,4 @@
-package acme.features.chef.fineDishes;
+package acme.features.chef.fineDish;
 
 import java.util.Collection;
 

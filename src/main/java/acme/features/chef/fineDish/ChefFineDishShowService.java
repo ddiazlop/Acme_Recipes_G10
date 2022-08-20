@@ -1,4 +1,4 @@
-package acme.features.chef.fineDishes;
+package acme.features.chef.fineDish;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

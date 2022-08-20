@@ -69,6 +69,7 @@
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.chef" access="hasRole('Chef')">
+			<acme:menu-suboption code="master.menu.chef.fineDish.list" action="/chef/fineDish/list"/>
 		
 		</acme:menu-option>
 		

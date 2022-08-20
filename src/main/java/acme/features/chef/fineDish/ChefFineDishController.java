@@ -1,4 +1,4 @@
-package acme.features.chef.fineDishes;
+package acme.features.chef.fineDish;
 
 import javax.annotation.PostConstruct;
 
@@ -19,7 +19,6 @@ public class ChefFineDishController extends AbstractController<Chef, FineDish>{
 	
 	@PostConstruct
 	protected void initialse() {
-		//super.addCommand("change-status","update", this.inventorPatronageAcceptService);
 		super.addCommand("list", this.listService);
 		super.addCommand("show", this.showService);
 	}
