@@ -69,6 +69,7 @@
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.chef" access="hasRole('Chef')">
+			<acme:menu-suboption code="master.menu.chef.memoranda.list" action="/chef/memoranda/list"/>
 		
 		</acme:menu-option>
 		
