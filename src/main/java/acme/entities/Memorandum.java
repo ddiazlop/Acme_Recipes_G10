@@ -16,6 +16,7 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.entities.fineDish.FineDish;
 import acme.framework.entities.AbstractEntity;
 import acme.roles.Chef;
 import acme.roles.Epicure;
@@ -66,7 +67,12 @@ public class Memorandum extends AbstractEntity{
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	protected Chef			chef;
+	protected Chef				chef;
+	
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	protected FineDish 			fineDish;
 }
 
 
