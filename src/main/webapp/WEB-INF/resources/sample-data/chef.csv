@@ -1,0 +1,6 @@
+key,key:user-account,organisation,assertion,link
+chef-01,user-account-chef-01,"chef01-organisation","chef01-assertion", "http://www.chef01.com"
+chef-02,user-account-chef-02,"chef02-organisation","chef02-assertion", "http://www.chef02.com"
+chef-03,user-account-chef-03,"chef03-organisation","chef03-assertion", "http://www.chef03.com"
+chef-04,user-account-chef-04,"chef04-organisation","chef04-assertion", "http://www.chef04.com"
+chef-05,user-account-chef-05,"chef05-organisation","chef05-assertion", "http://www.chef05.com"
