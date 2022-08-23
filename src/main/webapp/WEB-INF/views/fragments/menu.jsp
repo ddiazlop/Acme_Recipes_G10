@@ -39,6 +39,8 @@
       		<acme:menu-suboption code="master.menu.authenticated.component.list" action="/any/item/list-component"/>
 			<acme:menu-suboption code="master.menu.authenticated.tool.list" action="/any/item/list-tool"/>
 			<acme:menu-suboption code="master.menu.authenticated.system-configuration.show" action="/authenticated/system-configuration/show"/>	
+			<acme:menu-suboption code="master.menu.authenticated.system-configuration.show" action="/authenticated/system-configuration-sep/show"/>	
+		
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
