@@ -15,7 +15,7 @@ public class AuthenticatedSystemConfigurationListAndShowTest extends TestHarness
 	@Order(10)
 	public void positiveSystemConfigurationTest(final int recordIndex, final String systemCurrency, final String acceptedCurrencies) {
 
-		super.signIn("patron1", "patron1");
+		super.signIn("epicure1", "epicure1");
 
 		super.navigateHome();
 		super.clickOnMenu("Authenticated", "Currencies information sep");
@@ -31,7 +31,7 @@ public class AuthenticatedSystemConfigurationListAndShowTest extends TestHarness
 	@Order(30)
 	public void hackingTest() {
 		
-		super.navigate("/authenticated/system-configuration/show");
+		super.navigate("/authenticated/system-configuration-sep/show");
 		super.checkPanicExists();
 	}
 	

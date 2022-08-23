@@ -4,7 +4,6 @@ package acme.features.authenticated.systemConfigurationSep;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.components.configuration.SystemConfiguration;
 import acme.components.configuration.SystemConfigurationSep;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
