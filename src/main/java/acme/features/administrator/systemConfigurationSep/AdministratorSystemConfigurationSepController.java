@@ -19,14 +19,7 @@ public class AdministratorSystemConfigurationSepController extends AbstractContr
 	@Autowired
 	protected AdministratorSystemConfigurationSepUpdateService	updateService;
 	
-	@Autowired
-	protected AdministratorSystemConfigurationSepAcceptedCurrenciesService	acceptedCurrenciesService;
 	
-	@Autowired
-	protected AdministratorSystemConfigurationSepSystemCurrencyService	systemCurrencyService;
-	
-	@Autowired
-	protected AdministratorSystemConfigurationSepSpamService	spamService;
 
 	// Constructors -----------------------------------------------------------
 
@@ -34,9 +27,6 @@ public class AdministratorSystemConfigurationSepController extends AbstractContr
 	@PostConstruct
 	protected void initialise() {
 		super.addCommand("show", this.showService);
-		super.addCommand("accepted-currencies", "update", this.acceptedCurrenciesService);
-		super.addCommand("system-currency", "update", this.systemCurrencyService);
-		super.addCommand("spam", "update", this.spamService);
 		super.addCommand("update", this.updateService);
 	}
 

@@ -1,6 +1,10 @@
 recordIndex,system_currency,accepted_currencies, spamTuple,spamThreshold
-0,EUR,"EUR,USD,GBP","",0.20
+0,EUR,"EUR,USD,GBP","",0.99
 0,EUR,"EUR,USD,GBP","sex:0.10,sexo:0.10,hard core:0.10,viagra:0.30,cialis:0.10,sexy:0.05,nigeria:0.05,you’ve won:0.05,has ganado:0.05,Francisco Franco:0.20",
-0,EUR,"EUR,USD,GBP","sexylady:10000000.0,sex:0.10,sexo:0.10,hard core:0.10,viagra:0.30,cialis:0.10,sexy:0.05,nigeria:0.05,you’ve won:0.05,has ganado:0.05,Francisco Franco:0.20",0.20
+0,EUR,"EUR,USD,GBP","sexylady:10000000.0,sex:0.10,sexo:0.10,hard core:0.10,viagra:0.30,cialis:0.10,sexy:0.05,nigeria:0.05,you’ve won:0.05,has ganado:0.05,Francisco Franco:0.20",1.00
 0,EUR,"EUR,USD,GBP","sexylady-0.10,sex:0.10,sexo:0.10,hard core:0.10,viagra:0.30,cialis:0.10,sexy:0.05,nigeria:0.05,you’ve won:0.05,has ganado:0.05,Francisco Franco:0.20",0.20
 0,EUR,"EUR,USD,GBP","sex:0.10,sexo:0.10,hard core:0.10,viagra:0.30,cialis:0.10,sexy:0.05,nigeria:0.05,you’ve won:0.05,has ganado:0.05,Francisco Franco:0.20",-0.20
+0,EUR,"","sex:0.10,"sex:0.1,sexo:0.1,hard core:0.1,viagra:0.1,cialis:0.1,sexy:0.05,nigeria:0.05,you’ve won:0.05,has ganado:0.05",0.1
+0,EUR,"EUR,USD,GBP,POLLOSHERMANOS","sex:0.1,sexo:0.1,hard core:0.1,viagra:0.1,cialis:0.1,sexy:0.05,nigeria:0.05,you’ve won:0.05,has ganado:0.05",0.1
+0,,"EUR,USD,GBP","sex:0.10,sexo:0.10,hard core:0.10,viagra:0.30,cialis:0.10,sexy:0.05,nigeria:0.05,you’ve won:0.05,has ganado:0.05,Francisco Franco:0.20",0.20
+0,INVENTAZO,"EUR,USD,GBP","sex:0.10,sexo:0.10,hard core:0.10,viagra:0.30,cialis:0.10,sexy:0.05,nigeria:0.05,you’ve won:0.05,has ganado:0.05,Francisco Franco:0.20",0.20

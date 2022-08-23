@@ -1,17 +1,11 @@
 # i18n-en.i18n
 
-administrator.system-configuration-sep.button.title.system-currency =  System currency
-administrator.system-configuration-sep.button.title.accepted-currencies = Accepted currencies
-administrator.system-configuration-sep.button.title.spam = Spam Words
+administrator.systemConfigurationSep.form.label.systemCurrency = System Currency
+administrator.systemConfigurationSep.form.label.acceptedCurrencies = Accepted Currencies
+administrator.systemConfigurationSep.form.label.spamTuple = Spam Tuple 
+administrator.systemConfigurationSep.form.label.spamThreshold = Spam Threshold
+
+administrator.system-configuration-sep.form.button.update = Update
 
 
-administrator.system-configuration-sep.form.label.acceptedCurrencies = Accepted Currencies
-administrator.system-configuration-sep.form.label.systemCurrency = System Currency
-administrator.system-configuration-sep.form.label.spamTuple = Spam Tuples
-administrator.system-configuration-sep.form.label.spamThreshold = Spam Threshold
-
-administrator.system-configuration.form.title.spam = Spam Words
-administrator.system-configuration.form.title.systemCurrency = System Currency
-administrator.system-configuration.form.title.acceptedCurrencies = Accepted Currencies
-
-administrator.system-configuration.form.button.update = Update
+administrator.system-configuration-sep.form.error.sysCurrencyNoAvaliable = Currency not available for the system

@@ -1,6 +1,7 @@
 package acme.features.administrator.systemConfigurationSep;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -68,15 +69,36 @@ public class AdministratorSystemConfigurationSepUpdateService implements Abstrac
 		assert entity != null;
 		assert errors != null;
 		
+		if(!errors.hasErrors("systemCurrency")) {
+			final boolean availableCurrency = entity.getAcceptedCurrencies().contains(entity.getSystemCurrency());
+			errors.state(request, availableCurrency, "systemCurrency", "administrator.system-configuration-sep.form.error.sysCurrencyNoAvaliable");
+		}
+		
+		
+		//if(!errors.hasErrors("systemCurrency")) {
+		//	final boolean availableCurrency = this.validateAvailableCurrency(entity.getSystemCurrency());
+		//	errors.state(request, availableCurrency, "systemCurrency", "administrator.system-configuration-sep.form.error.sysCurrencyNoAvaliable");
+		//}
+			
 	}
 
 	@Override
 	public void update(final Request<SystemConfigurationSep> request, final SystemConfigurationSep entity) {
 		assert request != null;
 		assert entity != null;
+		
 
 		this.repository.save(entity);
 		
+	}
+	
+	//otros metodos
+	public boolean validateAvailableCurrency(final String currency) {
+
+		final String currencies = this.repository.findAcceptedCurrncies();
+		final List<Object> listOfAvailableCurrencies = Arrays.asList((Object[]) currencies.split(","));
+
+		return listOfAvailableCurrencies.contains(currency);
 	}
 
 }

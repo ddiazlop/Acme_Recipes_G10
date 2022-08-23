@@ -29,6 +29,7 @@ public class SystemConfigurationSep extends AbstractEntity{
 		protected String			acceptedCurrencies;
 
 		@NotBlank
+		@Pattern(regexp = "(([a-zA-Z0-9 ’]+:[0].[0-9]+)|[a-zA-Z0-9 ’]+:1.0|,?)+\\b")
 		protected String	spamTuple;
 
 		@Range(max = 1, min = 0)
