@@ -7,7 +7,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.components.configuration.SystemConfiguration;
+import acme.components.configuration.SystemConfigurationSep;
 import acme.entities.recipes.Recipe;
 import acme.features.authenticated.moneyExchange.AuthenticatedMoneyExchangePerformService;
 import acme.framework.components.models.Model;
@@ -51,10 +51,10 @@ public class AnyRecipeShowService implements AbstractShowService<Any, Recipe> {
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model,"code", "title", "description", "assemblyNotes");
+		request.unbind(entity, model,"code", "heading", "description", "preparationNotes");
 
 		final List<Money> prices = new ArrayList<>();
-		final SystemConfiguration sc = this.repository.findSystemConfiguration();
+		final SystemConfigurationSep sc = this.repository.findSystemConfiguration();
 		for (final String curr : sc.getAcceptedCurrencies().trim().split(",")) {
 			final Money price = new Money();
 			price.setCurrency(curr);
@@ -70,7 +70,7 @@ public class AnyRecipeShowService implements AbstractShowService<Any, Recipe> {
 		money.setCurrency(sc.getSystemCurrency());
 
 		model.setAttribute("price", money);
-		model.setAttribute("inventor", entity.getChef().getIdentity().getFullName());
+		model.setAttribute("chef", entity.getChef().getIdentity().getFullName());
 
 	}
 

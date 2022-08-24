@@ -8,7 +8,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.components.configuration.SystemConfiguration;
+import acme.components.configuration.SystemConfigurationSep;
+import acme.entities.recipes.Kitchenware;
 import acme.entities.recipes.Recipe;
 import acme.features.authenticated.moneyExchange.AuthenticatedMoneyExchangePerformService;
 import acme.framework.components.models.Model;
@@ -51,7 +52,7 @@ public class AnyRecipeListService implements AbstractListService<Any, Recipe> {
 		assert entity != null;
 		assert model != null;
 		final List<Money> prices = new ArrayList<>();
-		final SystemConfiguration sc = this.repository.findSystemConfiguration();
+		final SystemConfigurationSep sc = this.repository.findSystemConfiguration();
 		for (final String curr : sc.getAcceptedCurrencies().trim().split(",")) {
 			final Money price = new Money();
 			price.setCurrency(curr);
@@ -69,6 +70,12 @@ public class AnyRecipeListService implements AbstractListService<Any, Recipe> {
 		money.setCurrency(sc.getSystemCurrency());
 
 		model.setAttribute("price", money);
+		
+		final StringBuilder warePayload = new StringBuilder();
+		for (final Kitchenware kitchenware : this.repository.getKitchenwaresFromRecipe(entity.getId())) {
+			warePayload.append(kitchenware.getName() + kitchenware.getCode() + " ");
+		}
+		model.setAttribute("kitchenwares", warePayload.toString());
 	}
 
 }
