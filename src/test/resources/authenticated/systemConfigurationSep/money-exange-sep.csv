@@ -1,4 +1,0 @@
-recordIndex,system_currency,accepted_currencies,source_money,target_currency
-0,EUR,"EUR,USD,GBP",EUR 300.00,"GBP"
-0,EUR,"EUR,USD,GBP",EUR 10.00,"USD"
-0,EUR,"EUR,USD,GBP",GBP 69.50,"EUR"
