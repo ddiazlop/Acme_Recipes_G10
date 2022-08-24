@@ -19,21 +19,12 @@ master.menu.sign-out = Sign out
 
 master.menu.anonymous =                                 Anonymous
 master.menu.anonymous.toolkit.list =                    Toolkits
+master.menu.anonymous.user-account.list =               User Accounts
 master.menu.anonymous.chirp.list =                      Chirps
 master.menu.anonymous.component.list =                  Components
 master.menu.anonymous.tool.list =                       Tools
 
-master.menu.anonymous.user-account.list =               User Accounts
-master.menu.anonymous.ingredient.list = 				Ingredients
-master.menu.anonymous.kitchen-utensils.list = 			Kitchen Utensils
-master.menu.anonymous.peep.list = 						Peeps
-
-
-master.menu.anonymous.diedialop-favourite-link =  20060486R: Díaz López, Diego Jesús
-master.menu.anonymous.salparram-favourite-link = 29552748W: Parejo Ramos, Salvador
-master.menu.anonymous.carcardia-favourite-link = 53738719R: Carrasco Díaz, Carolina
-master.menu.anonymous.marpedrod3-favourite-link = 53772352P: Pedraz Rodríguez, María Isabel
-master.menu.anonymous.alvsevcab-favourite-link =  45339624T: Sevilla Cabrera, Álvaro
+master.menu.anonymous.salparram-favourite-link =  29552748W: Parejo Ramos, Salvador
 
 # master.menu.authenticated ###################################################
 master.menu.authenticated = Authenticated
@@ -41,8 +32,6 @@ master.menu.authenticated = Authenticated
 master.menu.authenticated.toolkit.list = Toolkits
 master.menu.authenticated.user-account.list = User Accounts
 master.menu.authenticated.chirp.list = Chirps
-master.menu.authenticated.ingredient.list = Ingredients
-master.menu.authenticated.peep.list = Peeps
 master.menu.authenticated.announcement.list = Announcements
 master.menu.authenticated.component.list = Components
 master.menu.authenticated.tool.list = Tools
@@ -77,16 +66,6 @@ master.menu.inventor.patronage.list = My Patronages
 master.menu.inventor.component.list = My Components
 master.menu.inventor.tool.list = My Tools
 
-# master.menu.chef #########################################################
-
-master.menu.chef = Chef
-master.menu.chef.kitchenware.list = My Kitchenwares
-
-
-# master.menu.epicure #########################################################
-
-master.menu.epicure = Epicure
-master.menu.epicure.dashboard = Dashboard
 
 # master.menu.user-account ####################################################
 
