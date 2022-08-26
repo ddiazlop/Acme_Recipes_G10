@@ -55,9 +55,9 @@
 
 		</acme:menu-option>
 
-		<acme:menu-option code="master.menu.patron" access="hasRole('Patron')">
-			<acme:menu-suboption code="master.menu.patron.patronage.list" action="/patron/patronage/list"/>
-			<acme:menu-suboption code="master.menu.patron.dashboard" action="/patron/patron-dashboard/show"/>
+		<acme:menu-option code="master.menu.epicure" access="hasRole('Epicure')">
+			<acme:menu-suboption code="master.menu.epicure.finedishish.list" action="/epicure/FineDish/list"/>
+			<acme:menu-suboption code="master.menu.epicure.dashboard" action="/epicure/epicure-dashboard/show"/>
 		</acme:menu-option>
 
 
@@ -84,8 +84,8 @@
      	
      	<acme:menu-option code="master.menu.user-account" access="isAuthenticated()">
 		<acme:menu-suboption code="master.menu.user-account.general-data" action="/authenticated/user-account/update"/>
-		<acme:menu-suboption code="master.menu.user-account.become-patron" action="/authenticated/patron/create" access="!hasRole('Patron')"/>
-		<acme:menu-suboption code="master.menu.user-account.patron" action="/authenticated/patron/update" access="hasRole('Patron')"/>
+		<acme:menu-suboption code="master.menu.user-account.become-epicure" action="/authenticated/epicure/create" access="!hasRole('Epicure')"/>
+		<acme:menu-suboption code="master.menu.user-account.epicure" action="/authenticated/epicure/update" access="hasRole('Epicure')"/>
 		<acme:menu-suboption code="master.menu.user-account.become-inventor" action="/authenticated/inventor/create" access="!hasRole('Inventor')"/> 
 		<acme:menu-suboption code="master.menu.user-account.inventor" action="/authenticated/inventor/update" access="hasRole('Inventor')"/>
 		</acme:menu-option>
