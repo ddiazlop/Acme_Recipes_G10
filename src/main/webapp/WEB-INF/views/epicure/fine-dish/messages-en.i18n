@@ -1,0 +1,37 @@
+# i18n-en.i18n
+#
+# Copyright (C) 2012-2022 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+epicure.fine-dish.form.label.fineDishId = Id FineDish:
+epicure.fine-dish.form.label.status = Status:
+epicure.fine-dish.form.label.code = Code:
+epicure.fine-dish.form.label.request = Request:
+epicure.fine-dish.form.label.budget = Budget :
+epicure.fine-dish.form.label.creationDate = CreationDate :
+epicure.fine-dish.form.label.startDate = StartDate :
+epicure.fine-dish.form.label.endDate = EndDate :
+epicure.fine-dish.form.label.info = Info :
+
+
+epicure.fine-dish.button.create = Apply
+epicure.fine-dish.list.title = My Fine Dish
+
+epicure.fine-dish.list.label.status = Status:
+epicure.fine-dish.list.label.code = Code:
+epicure.fine-dish.list.label.request = Request:
+epicure.fine-dish.list.label.budget = Budget :
+epicure.fine-dish.list.label.creationDate = CreationDate :
+epicure.fine-dish.list.label.startDate = StartDate :
+epicure.fine-dish.list.label.endDate = EndDate :
+epicure.fine-dish.list.label.info = Info :
+
+
+
+
+
