@@ -33,7 +33,7 @@ public class EpicureFineDishListService implements AbstractListService<Epicure,F
 		int fineDishId;
 
 		fineDishId = request.getModel().getInteger("fineDishId");
-		result = this.repository.findFineDishByFineDish(fineDishId);
+		result = this.repository.findFineDishByEpicure(fineDishId);
 
 		return result;
 

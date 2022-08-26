@@ -1,16 +1,17 @@
 
 package acme.features.epicure.fineDish;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.fineDish.FineDish;
+import acme.framework.components.models.Model;
+import acme.framework.controllers.Request;
+import acme.framework.services.AbstractShowService;
 import acme.roles.Epicure;
 
 @Service
 public class EpicureFineDishServiceShow implements AbstractShowService<Epicure, FineDish> {
 
-	@Autowired
 	protected EpicureFineDishRepository repository;
 
 
@@ -24,7 +25,7 @@ public class EpicureFineDishServiceShow implements AbstractShowService<Epicure, 
 
 		FineDishId = request.getModel().getInteger("id");
 		fd = this.repository.findOneFineDishById(FineDishId);
-		result = fd.getFineDish().getEpicure().getId() == request.getfdincipal().getActiveRoleId();
+		result = fd.getEpicure().getId() == request.getPrincipal().getActiveRoleId();
 
 		return result;
 	}
@@ -50,7 +51,7 @@ public class EpicureFineDishServiceShow implements AbstractShowService<Epicure, 
 
 		request.unbind(entity, model,"status", "code","request","budget","creationDate","startDate", 
 				 "endDate","info");
-		model.setAttribute("fineDishId", entity.getFineDish().getId());
+		model.setAttribute("fineDishId", entity.getId());
 
 	}
 
