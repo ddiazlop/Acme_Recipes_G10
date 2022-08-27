@@ -1,3 +1,4 @@
+
 package acme.entities.recipes;
 
 import javax.persistence.Column;
@@ -53,7 +54,7 @@ public class Kitchenware extends AbstractEntity{
 		@Enumerated(EnumType.STRING)
 		protected WareType			wareType;
 
-		protected boolean			published=false;
+		protected boolean			published;
 
 		// Derived attributes -----------------------------------------------------
 		
@@ -64,3 +65,4 @@ public class Kitchenware extends AbstractEntity{
 		protected Chef			chef;
 		
 }
+
