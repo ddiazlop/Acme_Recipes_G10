@@ -14,5 +14,5 @@
 	
 </acme:form>
 
-<acme:button code="chef.recipes.form.button.kitchenwareRecipe" action="/chef/kitchenwareRecipe/list?recipeId=${id}"/>
+<acme:button code="chef.recipes.form.button.kitchenwareRecipe" action="/chef/kitchenware-recipe/list?recipeId=${id}"/>
 

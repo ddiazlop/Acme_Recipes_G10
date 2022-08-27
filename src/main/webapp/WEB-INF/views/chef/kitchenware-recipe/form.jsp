@@ -14,5 +14,4 @@
 	
 </acme:form>
 
-<acme:button code="chef.recipes.form.button.kitchenwareRecipe" action="/chef/kitchenwareRecipe/list?recipeId=${id}"/>
 

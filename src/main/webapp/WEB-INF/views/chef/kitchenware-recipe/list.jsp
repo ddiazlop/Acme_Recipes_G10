@@ -9,5 +9,4 @@
 	<acme:list-column code="chef.kitchenwareRecipe.list.label.wareType" path="kitchenware.wareType"/>
 	<acme:list-column code="chef.kitchenwareRecipe.list.label.quantity" path="quantity"/>
 	<acme:list-column code="chef.kitchenwareRecipe.list.label.unitType" path="unitType"/>
-	<acme:list-column code="chef.kitchenwareRecipe.list.label.published" path="kitchenware.published"/>
 </acme:list>
