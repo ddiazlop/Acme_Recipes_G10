@@ -1,3 +1,4 @@
+
 package acme.entities.fineDish;
 
 import java.util.Date;
@@ -67,7 +68,7 @@ public class FineDish extends AbstractEntity {
 	
 	@URL
 	protected String			info;
-	
+				
 					
 	// Derived attributes -----------------------------------------------------
 
@@ -85,3 +86,4 @@ public class FineDish extends AbstractEntity {
 	@ManyToOne(optional = false)
 	protected Chef			chef;
 }
+
