@@ -54,12 +54,12 @@ master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shut-down = Shut down
 
-# master.menu.patron ########################################################
+# master.menu.epicure ########################################################
 
-master.menu.patron = Patron
+master.menu.epicure = Epicure
 
-master.menu.patron.patronage.list = My Patronages
-master.menu.patron.dashboard = Dashboard
+master.menu.epicure.memorandum.list = My Memorandum
+master.menu.epicure.dashboard = Dashboard
 
 # master.menu.inventor #########################################################
 
@@ -85,7 +85,7 @@ master.menu.epicure = Epicure
 master.menu.user-account = Account
 
 master.menu.user-account.general-data = General data
-master.menu.user-account.patron = Patron data
-master.menu.user-account.become-patron = Become a patron
+master.menu.user-account.epicure = Epicure data
+master.menu.user-account.become-epicure = Become a epicure
 master.menu.user-account.inventor = Inventor data
 master.menu.user-account.become-inventor = Become an inventor

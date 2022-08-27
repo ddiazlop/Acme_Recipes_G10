@@ -55,9 +55,9 @@ master.menu.administrator.shut-down = Detener el sistema
 
 # master.menu.patron ########################################################
 
-master.menu.patron = Patrocinador
+master.menu.epicure = Epicúreo
 
-master.menu.patron.patronage.list = Mis patrocinios
+master.menu.patron.memorandum.list = Mis recordatorios
 master.menu.patron.dashboard = Panel de indicadores
 
 # master.menu.inventor #########################################################
@@ -85,7 +85,7 @@ master.menu.epicure = Epicúreo
 master.menu.user-account = Cuenta
 
 master.menu.user-account.general-data = Datos generales
-master.menu.user-account.patron = Datos de patrocinador
-master.menu.user-account.become-patron = Hazte patrocinador
+master.menu.user-account.epicure = Datos de epicúreo
+master.menu.user-account.become-epicure = Hazte Epicúreo
 master.menu.user-account.inventor = Datos de inventor
 master.menu.user-account.become-inventor = Hazte inventor

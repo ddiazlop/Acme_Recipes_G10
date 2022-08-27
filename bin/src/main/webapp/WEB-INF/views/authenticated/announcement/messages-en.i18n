@@ -1,0 +1,22 @@
+# i18n-en.i18n
+
+
+authenticated.announcement.list.label.title = Title
+authenticated.announcement.list.label.moment = Moment
+authenticated.announcement.list.label.body = Body
+
+authenticated.announcement.list.button.create = Create announcement
+
+authenticated.announcement.form.label.title = Title:
+authenticated.announcement.form.label.moment = Moment:
+authenticated.announcement.form.label.body = Body:
+authenticated.announcement.form.label.critical = Critical:
+authenticated.announcement.form.label.link = Link:
+
+authenticated.announcement.form.label.TRUE = Critical
+authenticated.announcement.form.label.FALSE = Not critical
+authenticated.announcement.form.label.confirmation = Confirm that the announcement is correct
+	
+authenticated.announcement.form.button.create = Create	
+
+

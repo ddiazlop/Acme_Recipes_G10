@@ -47,9 +47,9 @@
 
 		</acme:menu-option>
 
-		<acme:menu-option code="master.menu.patron" access="hasRole('Patron')">
-			<acme:menu-suboption code="master.menu.patron.patronage.list" action="/patron/patronage/list"/>
-			<acme:menu-suboption code="master.menu.patron.dashboard" action="/patron/patron-dashboard/show"/>
+		<acme:menu-option code="master.menu.epicure" access="hasRole('Epicure')">
+			<acme:menu-suboption code="master.menu.epicure.memorandum.list" action="/epicure/memorandum/list"/>
+			<acme:menu-suboption code="master.menu.epicure.dashboard" action="/epicure/epicure-dashboard/show"/>
 		</acme:menu-option>
 
 
@@ -64,10 +64,9 @@
 		
 		</acme:menu-option>
 		
-		<acme:menu-option code="master.menu.epicure" access="hasRole('Epicure')">
 		
-		</acme:menu-option>
 		
+	
 	</acme:menu-left>
 
 	<acme:menu-right>
