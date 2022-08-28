@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>10</zoom_level>
+  <zoom_level>4</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1100</x>
-      <y>650</y>
-      <w>320</w>
-      <h>100</h>
+      <x>440</x>
+      <y>300</y>
+      <w>128</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>&lt;&lt;UserRole&gt;&gt;
 Epicure
@@ -21,10 +21,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>490</x>
-      <y>1010</y>
-      <w>430</w>
-      <h>140</h>
+      <x>196</x>
+      <y>444</y>
+      <w>172</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Recipe
@@ -41,10 +41,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>590</x>
-      <y>730</y>
-      <w>320</w>
-      <h>100</h>
+      <x>236</x>
+      <y>332</y>
+      <w>128</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>&lt;&lt;UserRole&gt;&gt;
 Chef
@@ -58,10 +58,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>70</x>
-      <y>1040</y>
-      <w>260</w>
-      <h>80</h>
+      <x>28</x>
+      <y>456</y>
+      <w>104</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 KitchenwareRecipe
@@ -74,10 +74,10 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>320</x>
-      <y>1060</y>
-      <w>190</w>
-      <h>50</h>
+      <x>128</x>
+      <y>464</y>
+      <w>76</w>
+      <h>20</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
@@ -88,10 +88,10 @@ compone &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>140</x>
-      <y>900</y>
-      <w>100</w>
-      <h>160</h>
+      <x>56</x>
+      <y>400</y>
+      <w>40</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
@@ -102,10 +102,10 @@ cuantifica ^</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1100</x>
-      <y>500</y>
-      <w>180</w>
-      <h>170</h>
+      <x>440</x>
+      <y>240</y>
+      <w>72</w>
+      <h>68</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
@@ -116,10 +116,10 @@ m2=*
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>660</x>
-      <y>500</y>
-      <w>80</w>
-      <h>250</h>
+      <x>264</x>
+      <y>240</y>
+      <w>32</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
@@ -130,10 +130,10 @@ recibe &gt;</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>290</x>
-      <y>20</y>
-      <w>160</w>
-      <h>110</h>
+      <x>116</x>
+      <y>48</y>
+      <w>64</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Enum&gt;&gt;
 WareType
@@ -146,10 +146,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>710</x>
-      <y>110</y>
-      <w>590</w>
-      <h>130</h>
+      <x>284</x>
+      <y>84</y>
+      <w>236</w>
+      <h>52</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Memorandum
@@ -166,10 +166,10 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>890</x>
-      <y>230</y>
-      <w>100</w>
-      <h>150</h>
+      <x>356</x>
+      <y>132</y>
+      <w>40</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
@@ -182,10 +182,10 @@ describe ^
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1520</x>
-      <y>170</y>
-      <w>420</w>
-      <h>140</h>
+      <x>608</x>
+      <y>108</y>
+      <w>168</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Peep
@@ -202,9 +202,9 @@ bg=green</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>740</y>
-      <w>430</w>
-      <h>170</h>
+      <y>336</y>
+      <w>172</w>
+      <h>68</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Kitchenware
@@ -222,10 +222,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>260</x>
-      <y>950</y>
-      <w>200</w>
-      <h>70</h>
+      <x>104</x>
+      <y>420</y>
+      <w>80</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>Si el Item es de tipo KitchenUtensil, 
 el atributo quantity de 
@@ -236,10 +236,10 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>220</x>
-      <y>1010</y>
-      <w>60</w>
-      <h>50</h>
+      <x>88</x>
+      <y>444</y>
+      <w>24</w>
+      <h>20</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes>10.0;30.0;40.0;10.0</additional_attributes>
@@ -247,10 +247,10 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>90</x>
-      <y>20</y>
-      <w>180</w>
-      <h>110</h>
+      <x>36</x>
+      <y>48</y>
+      <w>72</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Enum&gt;&gt;
 Status
@@ -264,10 +264,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1520</x>
-      <y>350</y>
-      <w>430</w>
-      <h>130</h>
+      <x>608</x>
+      <y>180</y>
+      <w>172</w>
+      <h>52</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Bulletin
@@ -283,10 +283,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>690</x>
-      <y>360</y>
-      <w>420</w>
-      <h>200</h>
+      <x>276</x>
+      <y>184</y>
+      <w>168</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 FineDish
@@ -305,10 +305,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1220</x>
-      <y>840</y>
-      <w>580</w>
-      <h>150</h>
+      <x>488</x>
+      <y>376</y>
+      <w>232</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 SystemConfigurationSep
@@ -323,10 +323,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1600</x>
-      <y>740</y>
-      <w>220</w>
-      <h>80</h>
+      <x>640</x>
+      <y>336</y>
+      <w>88</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>systemCurrency debe ser 
 una de las currencies
@@ -338,10 +338,10 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1520</x>
-      <y>770</y>
-      <w>100</w>
-      <h>90</h>
+      <x>608</x>
+      <y>348</y>
+      <w>40</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes>10.0;70.0;80.0;10.0</additional_attributes>
@@ -349,10 +349,10 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1050</x>
-      <y>1030</y>
-      <w>770</w>
-      <h>120</h>
+      <x>428</x>
+      <y>452</y>
+      <w>308</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>DefaultValues..
 systemCurrency="EUR"
@@ -368,21 +368,21 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1460</x>
-      <y>980</y>
-      <w>50</w>
-      <h>70</h>
+      <x>592</x>
+      <y>420</y>
+      <w>12</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>30.0;10.0;10.0;50.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>90</x>
-      <y>550</y>
-      <w>490</w>
-      <h>160</h>
+      <x>36</x>
+      <y>260</y>
+      <w>196</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Form&gt;&gt;
 EpicureDashboard
@@ -398,10 +398,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>90</x>
-      <y>150</y>
-      <w>470</w>
-      <h>120</h>
+      <x>36</x>
+      <y>100</y>
+      <w>188</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 MoneyExchange
@@ -417,10 +417,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1240</x>
-      <y>360</y>
-      <w>210</w>
-      <h>120</h>
+      <x>496</x>
+      <y>184</y>
+      <w>84</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>Desde el creationDate al
 startDate debe haber mínimo
@@ -434,10 +434,10 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1100</x>
-      <y>390</y>
-      <w>160</w>
-      <h>40</h>
+      <x>440</x>
+      <y>196</y>
+      <w>64</w>
+      <h>16</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
@@ -445,10 +445,10 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1400</x>
-      <y>70</y>
-      <w>280</w>
-      <h>90</h>
+      <x>560</x>
+      <y>68</y>
+      <w>112</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>El secuence number toma el 
 fine dish-code y el serial-number 
@@ -460,10 +460,10 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1290</x>
-      <y>100</y>
-      <w>130</w>
-      <h>60</h>
+      <x>516</x>
+      <y>80</y>
+      <w>52</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes>10.0;40.0;110.0;10.0</additional_attributes>
@@ -471,10 +471,10 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>730</x>
-      <y>820</y>
-      <w>120</w>
-      <h>210</h>
+      <x>292</x>
+      <y>368</y>
+      <w>48</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
@@ -485,10 +485,10 @@ pertenece a ^</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>420</x>
-      <y>780</y>
-      <w>190</w>
-      <h>50</h>
+      <x>168</x>
+      <y>352</y>
+      <w>76</w>
+      <h>20</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
@@ -499,10 +499,10 @@ está creado por &gt;</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>90</x>
-      <y>290</y>
-      <w>470</w>
-      <h>240</h>
+      <x>36</x>
+      <y>156</y>
+      <w>188</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Form&gt;&gt;
 AdminDashboard
@@ -522,10 +522,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>480</x>
-      <y>0</y>
-      <w>160</w>
-      <h>130</h>
+      <x>192</x>
+      <y>40</y>
+      <w>64</w>
+      <h>52</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Enum&gt;&gt;
 UnitType
