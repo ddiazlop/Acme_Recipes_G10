@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.components.configuration.SystemConfigurationSep;
-import acme.entities.recipes.Kitchenware;
 import acme.entities.recipes.KitchenwareRecipe;
 import acme.features.any.recipes.AnyRecipeRepository;
 import acme.features.authenticated.moneyExchange.AuthenticatedMoneyExchangePerformService;
@@ -31,7 +30,7 @@ public class AnyKitchenwareRecipeShowService implements AbstractShowService<Any,
 		
 		final int id = request.getModel().getInteger("id");
 		final KitchenwareRecipe it=this.repository.findKitchenwareRecipeById(id);
-		return it.getRecipe().getChef().getId()==request.getPrincipal().getActiveRoleId();
+		return it.getRecipe().isPublished();
 
 	}
 
@@ -51,14 +50,15 @@ public class AnyKitchenwareRecipeShowService implements AbstractShowService<Any,
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "quantity", "unitType","kitchenware.code", "kitchenware.name", "kitchenware.wareType", "kitchenware.description", "kitchenware.retailPrice", "kitchenware.info", "kitchenware.published" );
+		request.unbind(entity, model, "quantity", "unitType","kitchenware.code", "kitchenware.name", "kitchenware.wareType", "kitchenware.description", "kitchenware.info", "kitchenware.published" );
 		model.setAttribute("published", entity.getKitchenware().isPublished());
-		this.unbindConvertedMoney(entity.getKitchenware(), model);
+		this.unbindConvertedMoney(entity, model);
 	}
 	
-	private void unbindConvertedMoney(final Kitchenware entity, final Model model) {
+	private void unbindConvertedMoney(final KitchenwareRecipe entity, final Model model) {
 		final SystemConfigurationSep sc = this.repository.findSystemConfiguration();
-		final Money money = this.moneyExchange.computeMoneyExchange(entity.getRetailPrice(), sc.getSystemCurrency()).getChange();
+		final Money money = this.moneyExchange.computeMoneyExchange(entity.getKitchenware().getRetailPrice(), sc.getSystemCurrency()).getChange();
+		money.setAmount(money.getAmount()*entity.getQuantity());
 		model.setAttribute("price", money);
 	}
 	

@@ -21,7 +21,6 @@ public class KitchenwareRecipe extends AbstractEntity {
 	@Positive
 	protected Double			quantity;
 	
-	@NotNull
 	protected UnitType          unitType;
 
 	// Relationships ----------------------------------------------------------
