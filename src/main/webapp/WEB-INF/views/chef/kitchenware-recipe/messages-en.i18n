@@ -1,0 +1,15 @@
+chef.kitchenwareRecipe.form.label.kitchenware.name = Name
+chef.kitchenwareRecipe.form.label.kitchenware.code = Code
+chef.kitchenwareRecipe.form.label.kitchenware.description = Description
+chef.kitchenwareRecipe.form.label.kitchenware.wareType = Ware Type
+chef.kitchenwareRecipe.form.label.kitchenware.retailPrice = Retail Price
+chef.kitchenwareRecipe.form.label.kitchenware.info = More Info
+chef.kitchenwareRecipe.form.label.kitchenware.published = Is Published
+chef.kitchenwareRecipe.form.label.quantity = Quantity 
+chef.kitchenwareRecipe.form.label.unitType = Unit Type
+
+chef.kitchenwareRecipe.list.label.name = Name
+chef.kitchenwareRecipe.list.label.code = Code
+chef.kitchenwareRecipe.list.label.wareType = Ware Type
+chef.kitchenwareRecipe.list.label.quantity = Quantity 
+chef.kitchenwareRecipe.list.label.unitType = Unit Type

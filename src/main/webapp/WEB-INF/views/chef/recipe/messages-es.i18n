@@ -13,3 +13,5 @@ chef.recipes.list.label.preparationNotes = Notas de Preparación
 chef.recipes.list.label.info = Información
 chef.recipes.list.label.totalPrice = Precio Total
 chef.recipes.list.label.state = Estado de Publicación
+
+chef.recipes.form.button.kitchenwareRecipe = Ver Artículos de Cocina Asociados
