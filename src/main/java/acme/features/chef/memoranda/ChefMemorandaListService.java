@@ -5,39 +5,39 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.Memorandum;
+import acme.entities.Memoranda;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractListService;
 import acme.roles.Chef;
 
 @Service
-public class ChefMemorandaListService implements AbstractListService<Chef, Memorandum>{
+public class ChefMemorandaListService implements AbstractListService<Chef, Memoranda>{
 
 	@Autowired
 	protected ChefMemorandaRepository repository;
 	
 	
 	@Override
-	public boolean authorise(final Request<Memorandum> request) {
+	public boolean authorise(final Request<Memoranda> request) {
 		
 		assert request != null;
 		return true;
 	}
 
 	@Override
-	public Collection<Memorandum> findMany(final Request<Memorandum> request) {
+	public Collection<Memoranda> findMany(final Request<Memoranda> request) {
 		
 		assert request != null;
 		final int chefId = request.getPrincipal().getActiveRoleId();
-		final Collection<Memorandum> memorandum;
-		memorandum = this.repository.findMemorandaByChefId(chefId);
+		final Collection<Memoranda> memoranda;
+		memoranda = this.repository.findMemorandaByChefId(chefId);
 		
-		return memorandum;
+		return memoranda;
 	}
 
 	@Override
-	public void unbind(final Request<Memorandum> request, final Memorandum entity, final Model model) {
+	public void unbind(final Request<Memoranda> request, final Memoranda entity, final Model model) {
 		assert entity != null;
 		assert request != null;
 		assert model != null;

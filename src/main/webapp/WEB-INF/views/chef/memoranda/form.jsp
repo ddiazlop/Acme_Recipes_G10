@@ -1,12 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
+<%@page language="java"%>
 
-</body>
-</html>
+<%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
+
+<acme:form>
+	<acme:input-textbox code="chef.memoranda.form.label.sequenceNumber" path="sequenceNumber"/>
+	<acme:input-textbox code="chef.memoranda.form.label.fineDishCode" path="fineDishCode"/>
+	<acme:input-textarea code="chef.memoranda.form.label.report" path="report"/>
+	<acme:input-textbox code="chef.memoranda.form.label.moment" path="moment"/>
+	<acme:input-textbox code="chef.memoranda.form.label.info" path="info"/>
+	<acme:input-textbox code="chef.memoranda.form.label.epicureUsername" path="epicureUsername"/>
+</acme:form>

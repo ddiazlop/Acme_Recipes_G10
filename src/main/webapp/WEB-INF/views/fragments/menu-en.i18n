@@ -80,7 +80,7 @@ master.menu.inventor.tool.list = My Tools
 # master.menu.chef #########################################################
 
 master.menu.chef = Chef
-
+master.menu.chef.memoranda.list = My Memoranda
 
 # master.menu.epicure #########################################################
 

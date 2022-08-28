@@ -26,7 +26,7 @@ import lombok.Setter;
 @Getter
 @Setter
 
-public class Memorandum extends AbstractEntity{
+public class Memoranda extends AbstractEntity{
 
 
 	// Serialisation identifier 

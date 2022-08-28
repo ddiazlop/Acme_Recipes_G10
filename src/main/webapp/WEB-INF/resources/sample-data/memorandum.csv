@@ -1,6 +1,0 @@
-key,moment,sequence_number,report,info,key:epicure,key:chef,key:fine-dish
-memorandum-01,2022/05/08 10:00,AA:AAA-000:0000,"comenzando la fiesta","http://www.memorandum.com",epicure-01,chef-01,fine-dish-01
-memorandum-02,2022/05/08 10:00,AA:AAA-001:0001,"comenzando la fiesta","http://www.ONGgenerica.com",epicure-02,chef-01,fine-dish-02
-memorandum-03,2022/05/08 10:00,AA:AAA-002:0002,"comenzando la fiesta..........",,epicure-02,chef-02,fine-dish-03
-memorandum-04,2022/05/08 10:00,BB:ZZZ-333:0003,"Imposible hacer esta wea loko",,epicure-01,chef-02,fine-dish-04
-memorandum-05,2022/05/08 10:00,AA:ZZZ-666:0004,"comenzando la fiesta sin intencion de terminar","http://www.ev.us.es.com",epicure-01,chef-02,fine-dish-05

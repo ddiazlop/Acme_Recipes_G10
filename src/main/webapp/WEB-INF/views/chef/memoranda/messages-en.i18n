@@ -1,0 +1,12 @@
+chef.memoranda.form.label.sequenceNumber = Sequence Number
+chef.memoranda.form.label.fineDishCode = Fine Dish Code
+chef.memoranda.form.label.report = Report
+chef.memoranda.form.label.moment = Moment
+chef.memoranda.form.label.info = Info
+chef.memoranda.form.label.epicureUsername = Epicure Username
+
+
+chef.memoranda.list.label.sequenceNumber = Sequence Number
+chef.memoranda.list.label.fineDishCode = Fine Dish Code
+chef.memoranda.list.label.moment = Moment
+chef.memoranda.list.label.epicureUsername = Epicure Username
