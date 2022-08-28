@@ -27,6 +27,7 @@ master.menu.anonymous.user-account.list =               User Accounts
 master.menu.anonymous.ingredient.list = 				Ingredients
 master.menu.anonymous.kitchen-utensils.list = 			Kitchen Utensils
 master.menu.anonymous.peep.list = 						Peeps
+master.menu.anonymous.recipe.list = 					Recipes
 
 
 master.menu.anonymous.diedialop-favourite-link =  20060486R: Díaz López, Diego Jesús
