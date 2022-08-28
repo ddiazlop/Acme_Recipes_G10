@@ -23,9 +23,9 @@
 			<jstl:when test="${unitType == 'LITER'}">
 				<acme:input-textbox code="any.kitchenware.list.label.unitType" path="" placeholder="any.kitchenware_recipe.placeholder.type.liter" readonly="true"/>
 			</jstl:when>
-			<jstl:otherwise>
+			<jstl:when test="${unitType == 'SPOON'}">
 				<acme:input-textbox code="any.kitchenware.list.label.unitType" path="" placeholder="any.kitchenware_recipe.placeholder.type.spoon" readonly="true"/>
-			</jstl:otherwise>
+			</jstl:when>
 		</jstl:choose>
 	</jstl:if>
 	
@@ -35,7 +35,7 @@
 	
 	
 	<jstl:choose>
-		<jstl:when test="${kitchenware.wareType == 'INGREDIENT'}">
+		<jstl:when test="${kitchenware.wareType == INGREDIENT}">
 			<acme:input-textbox code="any.kitchenware.form.label.kitchenware-type" path="" placeholder="any.kitchenware.placeholder.type.ingredient" readonly="true"/>
 		</jstl:when>
 		<jstl:otherwise>

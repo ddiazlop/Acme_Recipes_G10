@@ -7,6 +7,7 @@ chef.recipe.form.label.preparationNotes = Preparation Notes
 chef.recipe.form.label.price = Price
 chef.recipe.form.label.components = Ingredients
 chef.recipe.form.label.chef = Chef
+chef.recipe.form.label.info = Further Information
 chef.recipe.form.label.content.ingredients = List of ingredients
 chef.recipe.form.label.content.utensils = List of kitchen utensils
 chef.recipe.list.label.search.code = Find recipes including a specific kitchenware

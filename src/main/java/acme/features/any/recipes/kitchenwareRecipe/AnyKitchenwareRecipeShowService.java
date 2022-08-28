@@ -50,8 +50,13 @@ public class AnyKitchenwareRecipeShowService implements AbstractShowService<Any,
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "quantity", "unitType","kitchenware.code", "kitchenware.name", "kitchenware.wareType", "kitchenware.description", "kitchenware.info", "kitchenware.published" );
+		request.unbind(entity, model, "quantity","kitchenware.code", "kitchenware.name", "kitchenware.description", "kitchenware.info", "kitchenware.published" );
 		model.setAttribute("published", entity.getKitchenware().isPublished());
+		model.setAttribute("wareType", entity.getKitchenware().getWareType().name());
+		
+		if (entity.getUnitType() != null) {
+			model.setAttribute("unitType", entity.getUnitType().name());
+		}
 		this.unbindConvertedMoney(entity, model);
 	}
 	

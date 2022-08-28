@@ -4,6 +4,7 @@ chef.recipe.form.label.code = Código
 chef.recipe.form.label.heading = Cabecera
 chef.recipe.form.label.description = Descripción
 chef.recipe.form.label.preparationNotes = Notas de preparación
+chef.recipe.form.label.info = Further Information
 chef.recipe.form.label.price = Precio
 chef.recipe.form.label.info = Info
 chef.recipe.form.label.chef = Chef (Cocinero/a)
