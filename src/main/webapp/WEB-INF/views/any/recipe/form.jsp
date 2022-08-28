@@ -13,5 +13,6 @@
 	<acme:input-url code="chef.recipe.form.label.info" path="info"/>
 </acme:form>
 
-<acme:button code="chef.recipe.form.label.content" action="/any/kitchenware-recipe/list?recipeId=${id}"/>
+<acme:button code="chef.recipe.form.label.content.ingredients" action="/any/kitchenware-recipe/list-ingredients?recipeId=${id}"/>
+<acme:button code="chef.recipe.form.label.content.utensils" action="/any/kitchenware-recipe/list-utensils?recipeId=${id}"/>
 

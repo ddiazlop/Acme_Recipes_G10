@@ -53,6 +53,12 @@ public class AnyRecipeShowService implements AbstractShowService<Any, Recipe> {
 
 		request.unbind(entity, model,"code", "heading", "description", "preparationNotes");
 
+		this.unbindConvertedMoney(entity, model);
+		model.setAttribute("chef", entity.getChef().getIdentity().getFullName());
+
+	}
+
+	private void unbindConvertedMoney(final Recipe entity, final Model model) {
 		final List<Money> prices = new ArrayList<>();
 		final SystemConfigurationSep sc = this.repository.findSystemConfiguration();
 		for (final String curr : sc.getAcceptedCurrencies().trim().split(",")) {
@@ -70,8 +76,6 @@ public class AnyRecipeShowService implements AbstractShowService<Any, Recipe> {
 		money.setCurrency(sc.getSystemCurrency());
 
 		model.setAttribute("price", money);
-		model.setAttribute("chef", entity.getChef().getIdentity().getFullName());
-
 	}
 
 }
