@@ -9,7 +9,7 @@ import acme.testing.TestHarness;
 public class AnyKitchenwareListAllnShowTest extends TestHarness{
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "/any/object/ingredient/list.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/any/kitchenware/list-all-ingredients.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void positiveIngredientTest(final int recordIndex, final String name, final String code, final String description, final String retailPrice, final String info) {
 		
