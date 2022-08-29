@@ -13,9 +13,9 @@ public interface AdministratorSystemConfigurationRepository extends AbstractRepo
 	@Query("select sc from SystemConfiguration sc")
 	SystemConfiguration findSystemConfiguration();
 
-	@Query("select sc.acceptedCurrencies from SystemConfiguration sc")
+	@Query("select sc.acceptedCurrencies from SystemConfigurationSep sc")
 	String findAcceptedCurrncies();
 	
-	@Query("select sc.acceptedCurrencies from SystemConfiguration sc where sc.acceptedCurrencies=:currency")
+	@Query("select sc.acceptedCurrencies from SystemConfigurationSep sc where sc.acceptedCurrencies=:currency")
 	String findAcceptedCurrnciesByName(String currency);
 }

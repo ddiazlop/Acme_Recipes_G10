@@ -46,8 +46,8 @@ public class AnyKitchenwareShowService implements AbstractShowService<Any, Kitch
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "code", "name", "wareType", "description", "retailPrice", "info", "published");
-		
+		request.unbind(entity, model, "code", "name", "description", "retailPrice", "info", "published");
+		model.setAttribute("wareType", entity.getWareType().name());
 		
 	}
 

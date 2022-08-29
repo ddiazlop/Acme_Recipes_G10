@@ -1,0 +1,20 @@
+any.kitchenware.list.label.code = Code
+any.kitchenware.list.label.name = Name
+any.kitchenware.list.label.quantity = Quantity
+any.kitchenware.list.label.unitType = Unit
+any.kitchenware.list.label.price = Price
+
+any.kitchenware_recipe.placeholder.type.gram = Grams
+any.kitchenware_recipe.placeholder.type.kilo = Kilos
+any.kitchenware_recipe.placeholder.type.cm3 = cm3
+any.kitchenware_recipe.placeholder.type.liter = Liters
+any.kitchenware_recipe.placeholder.type.spoon = Spoons
+any.kitchenware.form.label.description = Description
+any.kitchenware.form.label.total-price =Total Price
+any.kitchenware.form.label.info = Further information
+any.kitchenware.form.label.kitchenware-type = Type
+any.kitchenware.placeholder.type.ingredient = Ingredient
+any.kitchenware.placeholder.type.kitchen-utensil = Kitchen utensil
+any.kitchenware.list.label.published = Status
+any.kitchenware.placeholder.published = Published
+any.kitchenware.placeholder.notpublished = Not Published

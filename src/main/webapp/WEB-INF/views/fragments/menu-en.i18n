@@ -27,6 +27,7 @@ master.menu.anonymous.user-account.list =               User Accounts
 master.menu.anonymous.ingredient.list = 				Ingredients
 master.menu.anonymous.kitchen-utensils.list = 			Kitchen Utensils
 master.menu.anonymous.peep.list = 						Peeps
+master.menu.anonymous.recipe.list = 					Recipes
 
 
 master.menu.anonymous.diedialop-favourite-link =  20060486R: Díaz López, Diego Jesús
@@ -47,6 +48,7 @@ master.menu.authenticated.announcement.list = Announcements
 master.menu.authenticated.component.list = Components
 master.menu.authenticated.tool.list = Tools
 master.menu.authenticated.system-configuration.show = Currencies information
+master.menu.authenticated.system-configuration-sep.show = Currencies information Sep
 
 
 # master.menu.administrator ###################################################
