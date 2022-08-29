@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import acme.components.configuration.SystemConfigurationSep;
 import acme.entities.recipes.Kitchenware;
 import acme.entities.recipes.Recipe;
-import acme.features.authenticated.moneyExchange.AuthenticatedMoneyExchangePerformService;
+import acme.features.authenticated.moneyExchangeSep.AuthenticatedMoneyExchangeSepPerformService;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.datatypes.Money;
@@ -27,7 +27,7 @@ public class AnyRecipeListService implements AbstractListService<Any, Recipe> {
 	protected AnyRecipeRepository repository;
 
 	@Autowired
-	protected AuthenticatedMoneyExchangePerformService moneyExchange;
+	protected AuthenticatedMoneyExchangeSepPerformService moneyExchange;
 
 	@Override
 	public boolean authorise(final Request<Recipe> request) {

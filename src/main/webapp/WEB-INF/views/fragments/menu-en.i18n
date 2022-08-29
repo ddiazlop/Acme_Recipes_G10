@@ -48,6 +48,7 @@ master.menu.authenticated.announcement.list = Announcements
 master.menu.authenticated.component.list = Components
 master.menu.authenticated.tool.list = Tools
 master.menu.authenticated.system-configuration.show = Currencies information
+master.menu.authenticated.system-configuration-sep.show = Currencies information Sep
 
 
 # master.menu.administrator ###################################################

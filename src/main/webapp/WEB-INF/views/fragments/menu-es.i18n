@@ -49,6 +49,7 @@ master.menu.authenticated.announcement.list = Anuncios
 master.menu.authenticated.component.list = Componentes
 master.menu.authenticated.tool.list = Herramientas
 master.menu.authenticated.system-configuration.show = Información sobre monedas
+master.menu.authenticated.system-configuration-sep.show = Información sobre monedas sep
 
 # master.menu.administrator ###################################################
 
