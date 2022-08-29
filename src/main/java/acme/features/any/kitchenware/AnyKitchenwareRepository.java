@@ -19,5 +19,8 @@ public interface AnyKitchenwareRepository  extends AbstractRepository{
 
 	@Query("select c from Kitchenware c where c.wareType = 'KITCHEN_UTENSIL' and c.published = TRUE")
 	Collection<Kitchenware> findAllPublishedUtensils();
+	
+	@Query("select c from Kitchenware c where c.published = TRUE")
+	Collection<Kitchenware> findAllPublishedKitchenwares();
 
 }

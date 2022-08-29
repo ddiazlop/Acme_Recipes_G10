@@ -18,7 +18,6 @@ public class AnyKitchenwareController extends AbstractController<Any, Kitchenwar
 	@Autowired
 	protected AnyKitchenwareShowService			showService;
 
-
 	@PostConstruct
 	protected void initialize() {
 		super.addCommand("list-ingredient", "list", this.listService);

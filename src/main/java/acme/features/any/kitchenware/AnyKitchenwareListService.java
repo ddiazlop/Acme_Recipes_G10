@@ -16,6 +16,8 @@ public class AnyKitchenwareListService implements AbstractListService<Any, Kitch
 
 	@Autowired
 	protected AnyKitchenwareRepository repo;
+	
+	
 
 	@Override
 	public boolean authorise(final Request<Kitchenware> request) {

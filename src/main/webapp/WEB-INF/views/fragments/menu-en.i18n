@@ -25,6 +25,13 @@ master.menu.anonymous.peep.list = 						Peeps
 master.menu.anonymous.component.list =                  Components
 master.menu.anonymous.tool.list =                       Tools
 
+master.menu.anonymous.user-account.list =               User Accounts
+master.menu.anonymous.ingredient.list = 				Ingredients
+master.menu.anonymous.kitchen-utensils.list = 			Kitchen Utensils
+master.menu.anonymous.peep.list = 						Peeps
+master.menu.anonymous.recipe.list = 					Recipes
+
+
 master.menu.anonymous.diedialop-favourite-link =  20060486R: Díaz López, Diego Jesús
 master.menu.anonymous.salparram-favourite-link = 29552748W: Parejo Ramos, Salvador
 master.menu.anonymous.carcardia-favourite-link = 53738719R: Carrasco Díaz, Carolina
@@ -42,6 +49,7 @@ master.menu.authenticated.announcement.list = Announcements
 master.menu.authenticated.component.list = Components
 master.menu.authenticated.tool.list = Tools
 master.menu.authenticated.system-configuration.show = Currencies information
+master.menu.authenticated.system-configuration-sep.show = Currencies information Sep
 
 
 # master.menu.administrator ###################################################
@@ -81,7 +89,7 @@ master.menu.chef = Chef
 # master.menu.epicure #########################################################
 
 master.menu.epicure = Epicure
-
+master.menu.epicure.dashboard = Dashboard
 
 # master.menu.user-account ####################################################
 
