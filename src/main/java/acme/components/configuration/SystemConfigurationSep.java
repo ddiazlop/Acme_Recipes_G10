@@ -1,7 +1,5 @@
 package acme.components.configuration;
 
-
-
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -31,10 +29,10 @@ public class SystemConfigurationSep extends AbstractEntity{
 		protected String			acceptedCurrencies;
 
 		@NotBlank
+		@Pattern(regexp = "(([a-zA-Z0-9 ’]+:[0].[0-9]+)|[a-zA-Z0-9 ’]+:1.0|,?)+\\b")
 		protected String	spamTuple;
 
-		//Supuestamente el rango es de 0.00 a 1.00, por comodidad de 0 a 100
-		@Range(max = 100, min = 0)
+		@Range(max = 1, min = 0)
 		@NotNull
 		protected Double			spamThreshold;
 

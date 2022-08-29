@@ -1,0 +1,15 @@
+# i18n-en.i18n
+
+chef.recipe.form.label.code = Code
+chef.recipe.form.label.heading = Heading
+chef.recipe.form.label.description = Description
+chef.recipe.form.label.preparationNotes = Preparation Notes
+chef.recipe.form.label.price = Price
+chef.recipe.form.label.components = Ingredients
+chef.recipe.form.label.chef = Chef
+chef.recipe.form.label.info = Further Information
+chef.recipe.form.label.content.ingredients = List of ingredients
+chef.recipe.form.label.content.utensils = List of kitchen utensils
+chef.recipe.list.label.search.code = Find recipes including a specific kitchenware
+chef.recipe.list.button.search = Search
+chef.recipe.list.text.search-for-kitchenware =TIP: You can also search for ingredients or kitchen utensils inside a recipe by typing its name or code in the search bar
