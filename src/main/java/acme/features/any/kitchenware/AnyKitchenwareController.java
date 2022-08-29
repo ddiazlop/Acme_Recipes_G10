@@ -11,7 +11,7 @@ import acme.framework.roles.Any;
 
 @Controller
 public class AnyKitchenwareController extends AbstractController<Any, Kitchenware>{
-	
+
 	@Autowired
 	protected AnyKitchenwareListService	listService;
 
@@ -25,6 +25,6 @@ public class AnyKitchenwareController extends AbstractController<Any, Kitchenwar
 		super.addCommand("show", this.showService);
 	}
 
-	
+
 
 }

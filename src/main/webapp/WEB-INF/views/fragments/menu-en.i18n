@@ -19,7 +19,9 @@ master.menu.sign-out = Sign out
 
 master.menu.anonymous =                                 Anonymous
 master.menu.anonymous.toolkit.list =                    Toolkits
+master.menu.anonymous.user-account.list =               User Accounts
 master.menu.anonymous.chirp.list =                      Chirps
+master.menu.anonymous.peep.list = 						Peeps
 master.menu.anonymous.component.list =                  Components
 master.menu.anonymous.tool.list =                       Tools
 
@@ -42,7 +44,6 @@ master.menu.authenticated = Authenticated
 master.menu.authenticated.toolkit.list = Toolkits
 master.menu.authenticated.user-account.list = User Accounts
 master.menu.authenticated.chirp.list = Chirps
-master.menu.authenticated.ingredient.list = Ingredients
 master.menu.authenticated.peep.list = Peeps
 master.menu.authenticated.announcement.list = Announcements
 master.menu.authenticated.component.list = Components
@@ -56,6 +57,7 @@ master.menu.authenticated.system-configuration-sep.show = Currencies information
 master.menu.administrator = Administrator
 
 master.menu.administrator.system-configuration = Update System Details
+master.menu.administrator.system-configuration-sep = Update System Details Sep
 master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.announcement.create = Create Announcements
 master.menu.administrator.user-accounts = All User accounts

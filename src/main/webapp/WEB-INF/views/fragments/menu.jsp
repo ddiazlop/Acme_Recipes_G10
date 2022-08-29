@@ -10,7 +10,9 @@
 	
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
       		<acme:menu-suboption code="master.menu.anonymous.toolkit.list" action="/any/toolkit/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.user-account.list" action="/any/user-account/list" />
 			<acme:menu-suboption code="master.menu.anonymous.chirp.list" action="/any/chirp/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.peep.list" action="/any/peep/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.component.list" action="/any/item/list-component"/>
 			<acme:menu-suboption code="master.menu.anonymous.tool.list" action="/any/item/list-tool"/>
 			<acme:menu-separator/>
@@ -51,6 +53,7 @@
 
 			<acme:menu-suboption code="master.menu.administrator.user-accounts"	action="/administrator/user-account/list" />
 			<acme:menu-suboption code="master.menu.administrator.system-configuration" action="/administrator/system-configuration/show"/>
+			<acme:menu-suboption code="master.menu.administrator.system-configuration-sep" action="/administrator/system-configuration-sep/show"/>
 			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/admin-dashboard/show"/>
 			<acme:menu-suboption code="master.menu.administrator.announcement.create" action="/administrator/announcement/create"/>
 			<acme:menu-separator />

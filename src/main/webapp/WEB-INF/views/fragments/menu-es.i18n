@@ -18,11 +18,12 @@ master.menu.sign-out = Salir
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous =                                 Anónimo
-
 master.menu.anonymous.toolkit.list =                    Kits de herramientas
+master.menu.anonymous.user-account.list =               Cuentas de usuarios
+master.menu.anonymous.chirp.list =                      Mensajes informales
+master.menu.anonymous.peep.list = 						Mensajes informales
 master.menu.anonymous.component.list =                  Componentes
 master.menu.anonymous.tool.list =                       Herramientas
-master.menu.anonymous.chirp.list =                      Mensajes informales
 
 master.menu.anonymous.user-account.list =               Cuentas de usuarios
 master.menu.anonymous.ingredient.list = 				Ingredientes
@@ -43,7 +44,6 @@ master.menu.authenticated = Autenticado
 master.menu.authenticated.toolkit.list = Kit de herramientas
 master.menu.authenticated.user-account.list = Cuentas de usuarios
 master.menu.authenticated.chirp.list = Mensajes informales
-master.menu.authenticated.ingredient.list = Ingredientes
 master.menu.authenticated.peep.list = Mensajes informales
 master.menu.authenticated.announcement.list = Anuncios
 master.menu.authenticated.component.list = Componentes
@@ -56,6 +56,7 @@ master.menu.authenticated.system-configuration-sep.show = Información sobre mon
 master.menu.administrator = Administrador
 
 master.menu.administrator.system-configuration = Editar detalles del sistema
+master.menu.administrator.system-configuration-sep = Editar detalles del sistema Sep
 master.menu.administrator.dashboard = Panel de indicadores
 master.menu.administrator.announcement.create = Crear Anuncios
 master.menu.administrator.user-accounts = Todas las cuentas de usuario
