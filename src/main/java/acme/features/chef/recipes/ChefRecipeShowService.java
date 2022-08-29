@@ -78,7 +78,7 @@ public class ChefRecipeShowService implements AbstractShowService<Chef, Recipe>{
 		totalPrice.setCurrency(sc.getSystemCurrency());
 		
 		model.setAttribute("totalPrice", totalPrice);
-		request.unbind(entity, model, "code", "heading", "description", "preparationNotes", "published");
+		request.unbind(entity, model, "code", "heading", "description", "info", "preparationNotes", "published");
 	
 		if (entity.isPublished()) {
 			model.setAttribute("state", "PUBLISHED");
