@@ -55,6 +55,7 @@
 			<acme:menu-suboption code="master.menu.administrator.system-configuration" action="/administrator/system-configuration/show"/>
 			<acme:menu-suboption code="master.menu.administrator.system-configuration-sep" action="/administrator/system-configuration-sep/show"/>
 			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/admin-dashboard/show"/>
+			<acme:menu-suboption code="master.menu.administrator.dashboard.sep" action="/administrator/administrator-dashboard/show"/>
 			<acme:menu-suboption code="master.menu.administrator.announcement.create" action="/administrator/announcement/create"/>
 			<acme:menu-separator />
 			<acme:menu-suboption code="master.menu.administrator.populate-initial" action="/administrator/populate-initial" />
