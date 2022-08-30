@@ -1,0 +1,4 @@
+recordIndex,heading,moment,text,critical,link
+0,titulo1,2022/08/29 10:00,texto1,true,https://www.youtube.com
+1,titulo2,2022/08/28 10:30,texto2,false,""
+2,titulo3,2022/08/28 09:45,texto3,true,""
