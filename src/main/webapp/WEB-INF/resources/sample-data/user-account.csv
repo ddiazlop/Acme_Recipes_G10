@@ -9,3 +9,10 @@ user-account-inventor-02,true,"UserIdentity{name: 'Inventor2Name', surname: 'Inv
 user-account-inventor-03,true,"UserIdentity{name: 'Inventor3Name', surname: 'Inventor3Surname', email: 'inventor3email@acme.com'}",inventor3,inventor3
 user-account-inventor-04,true,"UserIdentity{name: 'Inventor4Name', surname: 'Inventor4Surname', email: 'inventor4email@acme.com'}",inventor4,inventor4
 user-account-inventor-05,true,"UserIdentity{name: 'Inventor5Name', surname: 'Inventor5Surname', email: 'inventor5email@acme.com'}",inventor5,inventor5
+user-account-chef-01,true,"UserIdentity{name: 'Chef1Name', surname: 'Chef1Surname', email: 'chef1@acme.com'}",chef1,chef1
+user-account-chef-02,true,"UserIdentity{name: 'Chef2Name', surname: 'Chef2Surname', email: 'chef2@acme.com'}",chef2,chef2
+user-account-chef-03,true,"UserIdentity{name: 'Chef3Name', surname: 'Chef3Surname', email: 'chef3@acme.com'}",chef3,chef3
+user-account-chef-04,true,"UserIdentity{name: 'Chef4Name', surname: 'Chef4Surname', email: 'chef4@acme.com'}",chef4,chef4
+user-account-chef-05,true,"UserIdentity{name: 'Chef5Name', surname: 'Chef5Surname', email: 'chef5@acme.com'}",chef5,chef5
+user-account-epicure-01,true,"UserIdentity{name: 'Epicure1Name', surname: 'Epicure1Surname', email: 'epicure1@acme.com'}",epicure1,epicure1
+user-account-epicure-02,true,"UserIdentity{name: 'Epicure2Name', surname: 'Epicure2Surname', email: 'epicure2@acme.com'}",epicure2,epicure2

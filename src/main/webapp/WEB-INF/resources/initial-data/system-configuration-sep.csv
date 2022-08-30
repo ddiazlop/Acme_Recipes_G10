@@ -1,0 +1,2 @@
+key,system_currency,accepted_currencies,spam_tuple,spam_threshold
+system-configuration-sep-01,EUR,"EUR,USD,GBP","sex:0.1,sexo:0.1,hard core:0.1,viagra:0.1,cialis:0.1,sexy:0.05,nigeria:0.05,you’ve won:0.05,has ganado:0.05",0.1

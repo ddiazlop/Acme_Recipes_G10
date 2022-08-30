@@ -1,0 +1,34 @@
+# i18n-es.i18n
+#
+# Copyright (C) 2012-2022 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.dashboard.form.title.general-indicators = Indicadores Generales
+
+administrator.dashboard.form.title.FineDish-statuses = Estado de los Platos
+administrator.dashboard.form.title.dishes-type = Tipo de Platos
+administrator.dashboard.form.title.accepted-dishes = Aceptados
+administrator.dashboard.form.title.denied-dishes = Denegados
+administrator.dashboard.form.title.pending-dishes = Pendientes
+
+administrator.dashboard.form.title.ingredients-kitchenUtensils-data = Datos de Ingredientes y Utensilios de cocina
+administrator.dashboard.form.title.avg-data = Media de Precio de Ingredientes y Utensilios de cocina
+administrator.dashboard.form.title.min-max-dataKitchen = Minimos y Máximo de Precios de Utensilios de cocina
+administrator.dashboard.form.title.min-max-dataIngredient =  Minimos y Máximo de Precios de Ingredientes
+administrator.dashboard.form.label.desviationIngredients = Desviaciones de Precio en Ingredientes
+administrator.dashboard.form.label.desviationKitchenUtensils = Desviaciones de Precio en Utensilios de cocina
+administrator.dashboard.form.label.numOfIngredients = Número de Ingredientes
+administrator.dashboard.form.label.numOfKitchenUtensils = Número de Utensilios de cocina 
+
+administrator.dashboard.form.label.num = Cantidad 
+administrator.dashboard.form.label.avg = Media
+administrator.dashboard.form.label.desv = Desviación
+administrator.dashboard.form.label.min = Mínimo
+administrator.dashboard.form.label.max = Máximo
+
+administrator.dashboard.form.no-data = Sin datos

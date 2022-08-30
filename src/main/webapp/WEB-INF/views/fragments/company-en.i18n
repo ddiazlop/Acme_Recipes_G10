@@ -10,10 +10,10 @@
 
 master.company.title = The company
 master.company.text = \
-	Acme Toolkits, Inc. is a fictitious company that specialises \
-	in helping inventors and patrons. On the one hand, inventors \
-	can advertise their components, tools, and toolkits; on the other \
-	hand patrons can offer patronages to them. \
+	Acme Recipes, Inc. is a fictitious organisation that specialises \ 
+	in helping chefs and epicures. On the one hand, chefs can \
+	advertise their ingredients, kitchen utensils, and recipes; \ 
+	on the other hand, epicures can request fine dishes from them 
 master.company.name = Acme, Inc.
 master.company.address = 01 Acme Drive, Wondercity, Wonderland
 master.company.phone = +1 000 111 222
