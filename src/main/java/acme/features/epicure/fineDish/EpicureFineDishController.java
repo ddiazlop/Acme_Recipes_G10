@@ -1,23 +1,23 @@
 
-package acme.features.patron.patronageReport;
+package acme.features.epicure.fineDish;
 
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import acme.entities.patronages.PatronageReport;
+import acme.entities.fineDish.FineDish;
 import acme.framework.controllers.AbstractController;
-import acme.roles.Patron;
+import acme.roles.Epicure;
 
 @Controller
-public class PatronPatronageReportController extends AbstractController<Patron, PatronageReport> {
+public class EpicureFineDishController extends AbstractController<Epicure, FineDish> {
 
 	@Autowired
-	protected PatronPatronageReportListService	listService;
+	protected EpicureFineDishListService	listService;
 
 	@Autowired
-	protected PatronPatronageReportServiceShow	showService;
+	protected EpicureFineDishShowService	showService;
 
 
 	@PostConstruct

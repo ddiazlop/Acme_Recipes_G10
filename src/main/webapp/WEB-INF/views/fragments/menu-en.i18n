@@ -90,6 +90,7 @@ master.menu.chef = Chef
 # master.menu.epicure #########################################################
 
 master.menu.epicure = Epicure
+master.menu.epicure.fine-dish.list = My Fine Dishes
 master.menu.epicure.dashboard = Dashboard
 
 # master.menu.user-account ####################################################
@@ -101,3 +102,5 @@ master.menu.user-account.patron = Patron data
 master.menu.user-account.become-patron = Become a patron
 master.menu.user-account.inventor = Inventor data
 master.menu.user-account.become-inventor = Become an inventor
+master.menu.user-account.epicure = Epicure data
+master.menu.user-account.become-epicure = Become an epicure

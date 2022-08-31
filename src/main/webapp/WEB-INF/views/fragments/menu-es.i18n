@@ -90,6 +90,7 @@ master.menu.chef = Chef
 # master.menu.epicure #########################################################
 
 master.menu.epicure = Epicúreo
+master.menu.epicure.fine-dish.list = Mis platos
 master.menu.epicure.dashboard = Panel de indicadores
 
 # master.menu.user-account ####################################################
@@ -101,3 +102,5 @@ master.menu.user-account.patron = Datos de patrocinador
 master.menu.user-account.become-patron = Hazte patrocinador
 master.menu.user-account.inventor = Datos de inventor
 master.menu.user-account.become-inventor = Hazte inventor
+master.menu.user-account.epicure = Datos de epicúreo
+master.menu.user-account.become-epicure = Hazte epicúreo
