@@ -17,7 +17,7 @@ public class EpicureFineDishController extends AbstractController<Epicure, FineD
 	protected EpicureFineDishListService	listService;
 
 	@Autowired
-	protected EpicureFineDishServiceShow	showService;
+	protected EpicureFineDishShowService	showService;
 
 
 	@PostConstruct

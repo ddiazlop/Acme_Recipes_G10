@@ -1,33 +1,38 @@
 
 package acme.features.epicure.fineDish;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.fineDish.FineDish;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractShowService;
+import acme.roles.Chef;
 import acme.roles.Epicure;
 
 @Service
-public class EpicureFineDishServiceShow implements AbstractShowService<Epicure, FineDish> {
+public class EpicureFineDishShowService implements AbstractShowService<Epicure, FineDish> {
 
+	@Autowired
 	protected EpicureFineDishRepository repository;
 
 
 	@Override
 	public boolean authorise(final Request<FineDish> request) {
 		assert request != null;
+		
+		int epicureId;
+		int fineDishId;
+		Epicure epicure;
+		FineDish fineDish;
+		
+		fineDishId = request.getModel().getInteger("id");
+		fineDish = this.repository.findOneFineDishById(fineDishId);
+		epicureId = request.getPrincipal().getActiveRoleId();
+		epicure = this.repository.findOneEpicureById(epicureId);
 
-		boolean result;
-		int FineDishId;
-		FineDish fd;
-
-		FineDishId = request.getModel().getInteger("id");
-		fd = this.repository.findOneFineDishById(FineDishId);
-		result = fd.getEpicure().getId() == request.getPrincipal().getActiveRoleId();
-
-		return result;
+		return fineDish.getEpicure().equals(epicure);
 	}
 
 	@Override
@@ -51,7 +56,12 @@ public class EpicureFineDishServiceShow implements AbstractShowService<Epicure, 
 
 		request.unbind(entity, model,"status", "code","request","budget","creationDate","startDate", 
 				 "endDate","info");
-		model.setAttribute("fineDishId", entity.getId());
+		
+		final Chef chef = entity.getChef();
+		model.setAttribute("chef.username", chef.getUserAccount().getUsername());
+		model.setAttribute("chef.organisation", chef.getOrganisation());
+		model.setAttribute("chef.assertion", chef.getAssertion());
+		model.setAttribute("chef.link", chef.getLink());
 
 	}
 

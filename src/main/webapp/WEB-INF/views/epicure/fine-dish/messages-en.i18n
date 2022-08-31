@@ -8,28 +8,26 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-epicure.fine-dish.form.label.fineDishId = Id FineDish:
-epicure.fine-dish.form.label.status = Status:
-epicure.fine-dish.form.label.code = Code:
-epicure.fine-dish.form.label.request = Request:
-epicure.fine-dish.form.label.budget = Budget :
-epicure.fine-dish.form.label.creationDate = CreationDate :
-epicure.fine-dish.form.label.startDate = StartDate :
-epicure.fine-dish.form.label.endDate = EndDate :
-epicure.fine-dish.form.label.info = Info :
+epicure.fine-dish.form.label.status = Status
+epicure.fine-dish.form.label.code = Code
+epicure.fine-dish.form.label.request = Request
+epicure.fine-dish.form.label.budget = Budget 
+epicure.fine-dish.form.label.creationDate = CreationDate 
+epicure.fine-dish.form.label.startDate = StartDate 
+epicure.fine-dish.form.label.endDate = EndDate 
+epicure.fine-dish.form.label.info = Info 
+epicure.fine-dish.form.label.chef.username = Chef
+epicure.fine-dish.form.label.chef.organisation = Chef's organisation
+epicure.fine-dish.form.label.chef.assertion = Chef's assertion
+epicure.fine-dish.form.label.chef.link = Chef's link
 
 
 epicure.fine-dish.button.create = Apply
 epicure.fine-dish.list.title = My Fine Dish
 
-epicure.fine-dish.list.label.status = Status:
-epicure.fine-dish.list.label.code = Code:
-epicure.fine-dish.list.label.request = Request:
-epicure.fine-dish.list.label.budget = Budget :
-epicure.fine-dish.list.label.creationDate = CreationDate :
-epicure.fine-dish.list.label.startDate = StartDate :
-epicure.fine-dish.list.label.endDate = EndDate :
-epicure.fine-dish.list.label.info = Info :
+epicure.fine-dish.list.label.status = Status
+epicure.fine-dish.list.label.code = Code
+epicure.fine-dish.list.label.request = Request
 
 
 
