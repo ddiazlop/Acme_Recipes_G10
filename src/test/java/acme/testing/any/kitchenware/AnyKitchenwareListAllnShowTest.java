@@ -40,7 +40,7 @@ public class AnyKitchenwareListAllnShowTest extends TestHarness{
 
 		this.checkListAllKitchenwaresNShow(recordIndex, code, name, retailPrice, description, info);
 	}
-	
+
 	protected void checkListAllKitchenwaresNShow(final int recordIndex, final String code, final String name, final String retailPrice, final String description, final String info) {
 		super.checkListingExists();
 		super.sortListing(0, "asc");
@@ -55,7 +55,7 @@ public class AnyKitchenwareListAllnShowTest extends TestHarness{
 		super.checkInputBoxHasValue("description", description);
 		super.checkInputBoxHasValue("retailPrice", retailPrice);
 		super.checkInputBoxHasValue("info", info);
-		
+
 	}
-	
+
 }
