@@ -23,7 +23,7 @@ public class AdministratorSystemConfigurationSepShowService implements AbstractS
 	@Override
 	public boolean authorise(final Request<SystemConfigurationSep> request) {
 		assert request != null;
-		return true;
+		return request.getPrincipal().hasRole(Administrator.class);
 	}
 
 	@Override
