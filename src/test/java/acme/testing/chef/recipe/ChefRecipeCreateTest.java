@@ -42,11 +42,6 @@ public class ChefRecipeCreateTest extends TestHarness {
 		super.checkInputBoxHasValue("endDate", endDate);
 		super.checkInputBoxHasValue("budget", budget);
 		super.checkInputBoxHasValue("info", info);
-		super.checkInputBoxHasValue("inventorFullName", inventorFullName);
-		super.checkInputBoxHasValue("inventorEmail", inventorEmail);
-		super.checkInputBoxHasValue("inventorCompany", inventorCompany);
-		super.checkInputBoxHasValue("inventorStatement", inventorStatement);
-		super.checkInputBoxHasValue("inventorInfo", inventorInfo);
 
 		super.signOut();
 
@@ -55,8 +50,8 @@ public class ChefRecipeCreateTest extends TestHarness {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/chef/recipe/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void negativeTest(final int recordIndex, final String code, final String heading, final String description, final String preparationNotes, 
-			final Boolean published, final String info) {
+	public void negativeTest(final int recordIndex, final String code, final String heading, final String description, 
+			final String preparationNotes, final Boolean published, final String info) {
 
 		super.signIn("chef3", "chef3");
 
