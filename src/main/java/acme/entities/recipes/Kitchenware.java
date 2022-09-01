@@ -1,4 +1,3 @@
-
 package acme.entities.recipes;
 
 import javax.persistence.Column;
@@ -65,4 +64,3 @@ public class Kitchenware extends AbstractEntity{
 		protected Chef			chef;
 		
 }
-

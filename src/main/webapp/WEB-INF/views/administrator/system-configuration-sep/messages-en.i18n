@@ -1,0 +1,11 @@
+# i18n-en.i18n
+
+administrator.systemConfigurationSep.form.label.systemCurrency = System Currency
+administrator.systemConfigurationSep.form.label.acceptedCurrencies = Accepted Currencies
+administrator.systemConfigurationSep.form.label.spamTuple = Spam Tuple 
+administrator.systemConfigurationSep.form.label.spamThreshold = Spam Threshold
+
+administrator.system-configuration-sep.form.button.update = Update
+
+
+administrator.system-configuration-sep.form.error.sysCurrencyNoAvaliable = Currency not available for the system

@@ -14,14 +14,14 @@ public class AnyKitchenwareShowService implements AbstractShowService<Any, Kitch
 
 	@Autowired
 	protected AnyKitchenwareRepository repo;
-	
+
 	@Override
 	public boolean authorise(final Request<Kitchenware> request) {
 		assert request != null;
 		int ingredientId;
 		Kitchenware ingredient;
 		boolean res;
-		
+
 		ingredientId = request.getModel().getInteger("id");
 		ingredient = this.repo.findOneKitchenwareById(ingredientId);
 		res = ingredient.isPublished();
@@ -33,10 +33,10 @@ public class AnyKitchenwareShowService implements AbstractShowService<Any, Kitch
 		assert request != null;
 		int ingredientId;
 		Kitchenware ingredient;
-		
+
 		ingredientId = request.getModel().getInteger("id");
 		ingredient = this.repo.findOneKitchenwareById(ingredientId);
-		
+
 		return ingredient;
 	}
 
@@ -51,6 +51,6 @@ public class AnyKitchenwareShowService implements AbstractShowService<Any, Kitch
 		
 	}
 
-	
+
 
 }
