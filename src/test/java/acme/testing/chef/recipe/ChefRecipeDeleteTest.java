@@ -1,5 +1,5 @@
 
-package acme.testing.patron.patronage;
+package acme.testing.chef.recipe;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
@@ -7,17 +7,17 @@ import org.springframework.core.annotation.Order;
 
 import acme.testing.TestHarness;
 
-public class PatronPatronageDeleteTest extends TestHarness {
+public class ChefRecipeDeleteTest extends TestHarness {
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "/patron/patronage/delete-patronage-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/chef/recipe/delete-recipe-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void positivePatronageTest(final int recordIndex) {
+	public void positiveRecipeTest(final int recordIndex) {
 
-		super.signIn("patron4", "patron4");
+		super.signIn("chef4", "chef4");
 		super.navigateHome();
 
-		super.clickOnMenu("Patron", "My Patronages");
+		super.clickOnMenu("Chef", "My Recipes");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 		super.checkNotListingEmpty();

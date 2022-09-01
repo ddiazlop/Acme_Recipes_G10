@@ -1,5 +1,5 @@
 
-package acme.testing.patron.patronage;
+package acme.testing.chef.recipe;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
@@ -7,17 +7,17 @@ import org.springframework.core.annotation.Order;
 
 import acme.testing.TestHarness;
 
-public class PatronPatronagePublishTest extends TestHarness {
+public class ChefRecipePublishTest extends TestHarness {
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "/patron/patronage/publish-patronage-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/chef/recipe/publish-recipe-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void positivePatronageTest(final int recordIndex) {
+	public void positiveRecipeTest(final int recordIndex) {
 
 		super.navigateHome();
 
-        super.signIn("patron4", "patron4");
-        super.clickOnMenu("Patron", "My Patronages");
+        super.signIn("chef4", "chef4");
+        super.clickOnMenu("Chef", "My Recipes");
 
         super.checkListingExists();
         super.sortListing(0, "asc");
