@@ -1,0 +1,9 @@
+recordIndex,request,code,budget,creationDate,startDate,endDate,info
+0,Solomillo,AA:CCC-000,"10,00",2022/05/20,2022/06/22,2022/07/21,Solomillo al whisky
+1,Queso,BB:AAA-000,"5,00",2022/04/20,2022/06/2022,2022/07/23,Queso payoyo
+2,Parrillada,BB:ABB-000,"8,00",2022/06/20,2022/07/24,2022/08/25,Parrillada de verdidas
+3,Lubina,CC:CCC-000,"9,00",2022/05/23,2022/08/26,2022/09/29,Lubina al horno
+4,Salmon,AA:CCC-001,"8,50",2022/05/28,2022/06/29,2022/07/30,Salmón ahumado
+5,Sopa,BB:ABC-000,"9,50",2022/05/12,2022/06/13,2022/06/14,Sopa de picadillo
+6,Tarta,BB:ACB-000,"15,6",2022/06/12,2022/07/13,2022/07/15,Tarta de queso
+7,Helado,BB:BBB-000,"2,00",2022/07/12,2022/08/12,2022/08/18,Helado de fresa
