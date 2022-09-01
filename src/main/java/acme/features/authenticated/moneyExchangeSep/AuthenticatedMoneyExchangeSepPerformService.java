@@ -42,7 +42,7 @@ public class AuthenticatedMoneyExchangeSepPerformService implements AbstractPerf
 	public boolean authorise(final Request<MoneyExchangeSep> request) {
 		assert request != null;
 
-		return true;
+		return request.getPrincipal().isAuthenticated();
 	}
 
 	@Override
