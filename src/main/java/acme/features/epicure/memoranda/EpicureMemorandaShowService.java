@@ -1,10 +1,10 @@
 
-package acme.features.epicure.memorandum;
+package acme.features.epicure.memoranda;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.Memorandum;
+import acme.entities.Memoranda;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractShowService;
@@ -12,19 +12,19 @@ import acme.roles.Epicure;
 
 
 @Service
-public class EpicureMemorandumShowService implements AbstractShowService<Epicure, Memorandum> {
+public class EpicureMemorandaShowService implements AbstractShowService<Epicure, Memoranda> {
 
 	@Autowired
-	protected EpicureMemorandumRepository repository;
+	protected EpicureMemorandaRepository repository;
 
 
 	@Override
-	public boolean authorise(final Request<Memorandum> request) {
+	public boolean authorise(final Request<Memoranda> request) {
 		assert request != null;
 
 		boolean result;
 		int MemorandumId;
-		Memorandum m;
+		Memoranda m;
 
 		MemorandumId = request.getModel().getInteger("id");
 		m = this.repository.findOneMemorandumById(MemorandumId);
@@ -34,10 +34,10 @@ public class EpicureMemorandumShowService implements AbstractShowService<Epicure
 	}
 
 	@Override
-	public Memorandum findOne(final Request<Memorandum> request) {
+	public Memoranda findOne(final Request<Memoranda> request) {
 		assert request != null;
 
-		Memorandum result;
+		Memoranda result;
 		int id;
 
 		id = request.getModel().getInteger("id");
@@ -46,7 +46,7 @@ public class EpicureMemorandumShowService implements AbstractShowService<Epicure
 	}
 
 	@Override
-	public void unbind(final Request<Memorandum> request, final Memorandum entity, final Model model) {
+	public void unbind(final Request<Memoranda> request, final Memoranda entity, final Model model) {
 
 		assert request != null;
 		assert entity != null;

@@ -1,24 +1,24 @@
 
-package acme.features.epicure.memorandum;
+package acme.features.epicure.memoranda;
 
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import acme.entities.Memorandum;
+import acme.entities.Memoranda;
 import acme.framework.controllers.AbstractController;
 import acme.roles.Epicure;
 
 
 @Controller
-public class EpicureMemorandumController extends AbstractController<Epicure, Memorandum> {
+public class EpicureMemorandaController extends AbstractController<Epicure, Memoranda> {
 
 	@Autowired
-	protected EpicureMemorandumListService	listService;
+	protected EpicureMemorandaListService	listService;
 
 	@Autowired
-	protected EpicureMemorandumShowService	showService;
+	protected EpicureMemorandaShowService	showService;
 
 
 	@PostConstruct

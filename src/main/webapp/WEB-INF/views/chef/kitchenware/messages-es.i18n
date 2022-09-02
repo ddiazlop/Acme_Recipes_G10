@@ -11,12 +11,14 @@
 
 chef.kitchenware.list.label.code = Código
 chef.kitchenware.list.label.name = Nombre
+chef.kitchenware.list.label.wareType = Tipo
 chef.kitchenware.list.label.status = Estado
 
 chef.kitchenware.form.label.code = Código
 chef.kitchenware.form.label.name = Nombre
 chef.kitchenware.form.label.description = Descripción
-chef.kitchenware.form.label.retailPrice = Precio
+chef.kitchenware.form.label.retailPrice = Precio original
+chef.kitchenware.form.label.retailPriceConverted = Precio
 chef.kitchenware.form.label.info = Información
 chef.kitchenware.form.label.wareType = Tipo
 chef.kitchenware.form.label.ingredient = Ingrediente

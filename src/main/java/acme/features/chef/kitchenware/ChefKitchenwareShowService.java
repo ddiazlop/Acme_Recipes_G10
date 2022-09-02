@@ -3,9 +3,13 @@ package acme.features.chef.kitchenware;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.configuration.SystemConfigurationSep;
 import acme.entities.recipes.Kitchenware;
+import acme.features.authenticated.moneyExchangeSep.AuthenticatedMoneyExchangeSepPerformService;
+import acme.features.authenticated.systemConfigurationSep.AuthenticatedSystemConfigurationSepRepository;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
+import acme.framework.datatypes.Money;
 import acme.framework.services.AbstractShowService;
 import acme.roles.Chef;
 
@@ -14,6 +18,12 @@ public class ChefKitchenwareShowService implements AbstractShowService<Chef, Kit
 
 	@Autowired
 	protected ChefKitchenwareRepository repo;
+	
+	@Autowired
+	protected AuthenticatedMoneyExchangeSepPerformService moneyExchange;
+	
+	@Autowired
+	protected AuthenticatedSystemConfigurationSepRepository config;
 	
 	@Override
 	public boolean authorise(final Request<Kitchenware> request) {
@@ -47,9 +57,12 @@ public class ChefKitchenwareShowService implements AbstractShowService<Chef, Kit
 		assert model != null;
 		
 		request.unbind(entity, model, "code", "name", "wareType", "description", "retailPrice", "info", "published");
-		
+		this.unbindConvertedMoney(entity, model);
 	}
 
-	
-
+	private void unbindConvertedMoney(final Kitchenware entity, final Model model) {
+		final SystemConfigurationSep sc = this.config.findSystemConfiguration();
+		final Money money = this.moneyExchange.computeMoneyExchange(entity.getRetailPrice(), sc.getSystemCurrency()).getChange();
+		model.setAttribute("retailPriceConverted", money);
+	}
 }

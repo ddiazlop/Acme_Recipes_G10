@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import acme.components.configuration.SystemConfigurationSep;
 import acme.entities.recipes.Recipe;
 import acme.features.authenticated.moneyExchangeSep.AuthenticatedMoneyExchangeSepPerformService;
+import acme.features.authenticated.systemConfigurationSep.AuthenticatedSystemConfigurationSepRepository;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.datatypes.Money;
@@ -26,6 +27,9 @@ public class AnyRecipeShowService implements AbstractShowService<Any, Recipe> {
 	
 	@Autowired
 	protected AuthenticatedMoneyExchangeSepPerformService moneyExchange;
+	
+	@Autowired
+	protected AuthenticatedSystemConfigurationSepRepository config;
 
 
 	@Override
