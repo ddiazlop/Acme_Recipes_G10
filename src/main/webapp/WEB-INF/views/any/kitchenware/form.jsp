@@ -9,6 +9,7 @@
 	<acme:input-textbox code="any.kitchenware.form.label.name" path="name" />
 	<acme:input-textarea code="any.kitchenware.form.label.description" path="description" />
 	<acme:input-money code="any.kitchenware.form.label.retail-price" path="retailPrice" />
+	<acme:input-money code="any.kitchenware.form.label.retail-price" path="retailPriceConverted" />
 	<acme:input-url code="any.kitchenware.form.label.info" path="info"/>
 	<acme:input-select code="chef.kitchenware.form.label.wareType" path="wareType">
 		<jstl:if test="${wareType == 'INGREDIENT'}">

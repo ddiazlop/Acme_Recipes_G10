@@ -86,6 +86,7 @@ master.menu.inventor.tool.list = Mis herramientas
 
 master.menu.chef = Chef
 master.menu.chef.kitchenware.list = Mis Artículos
+master.menu.chef.recipe.list = Mis Recetas
 
 
 # master.menu.epicure #########################################################

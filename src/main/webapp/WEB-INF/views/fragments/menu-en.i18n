@@ -85,7 +85,10 @@ master.menu.inventor.tool.list = My Tools
 # master.menu.chef #########################################################
 
 master.menu.chef = Chef
+
 master.menu.chef.kitchenware.list = My Kitchenwares
+master.menu.chef.recipe.list = My Recipes
+
 
 
 # master.menu.epicure #########################################################

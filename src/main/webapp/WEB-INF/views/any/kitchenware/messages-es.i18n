@@ -9,6 +9,7 @@
 # they accept any liabilities with respect to them.
 
 
+
 any.kitchenware.list.label.code = Código
 any.kitchenware.list.label.name = Nombre
 any.kitchenware.list.label.status = Estado
@@ -25,7 +26,7 @@ any.kitchenware.form.label.status = Estado
 any.kitchenware.form.label.published = Publicado
 any.kitchenware.form.label.not-published = No publicado
 
-any.kitchenware.placeholder.published = Publicado
-any.kitchenware.placeholder.notpublished = No publicado
-any.kitchenware.placeholder.type.ingredient = Ingrediente
-any.kitchenware.placeholder.type.kitchen-utensil = Utensilio de cocina 
+any.kitchenware.placeholder.published = 				Publicado
+any.kitchenware.placeholder.notpublished = 				No publicado
+any.kitchenware.placeholder.type.ingredient = 			Ingrediente
+any.kitchenware.placeholder.type.kitchen-utensil = 		Utensilio de cocina 
