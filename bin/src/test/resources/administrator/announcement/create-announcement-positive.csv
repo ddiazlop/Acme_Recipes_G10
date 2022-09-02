@@ -1,0 +1,3 @@
+recordIndex,title,body,critical,link,confirmation
+2,titulo3,cuerpo3,true,https://www.google.com,true
+3,titulo4,cuerpo4,true,https://www.google.com,false

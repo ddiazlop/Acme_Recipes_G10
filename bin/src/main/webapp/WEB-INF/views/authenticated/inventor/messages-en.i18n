@@ -1,0 +1,8 @@
+
+authenticated.inventor.form.label.company = Company
+authenticated.inventor.form.label.statement = Statement
+authenticated.inventor.form.label.info = Info
+
+authenticated.inventor.form.button.create = Register
+authenticated.inventor.form.button.update = Update
+spam.detector.error.message = Spam Detected
