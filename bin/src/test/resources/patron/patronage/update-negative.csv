@@ -1,0 +1,8 @@
+patronageIndex,code,startDate,endDate,legalStuff,budget,info,inventorFullName,inventorEmail,inventorCompany,inventorStatement,inventorinfo
+0,AAA-132,2023/08/02 12:00,2027/05/02 12:00,"",EUR 134.40,http://patronage4info.com,"Inventor4Surname, Inventor4Name",inventor4email@acme.com,inventor04-company,inventor04-statement,http://www.inventor04info.com
+0,AAA-045,2023/08/02 12:00,2027/05/02 12:00,"LegalStuffAAA",EUR -134.40,http://patronage4info.com,"Inventor4Surname, Inventor4Name",inventor4email@acme.com,inventor04-company,inventor04-statement,http://www.inventor04info.com
+0,AAA-047,2023/08/02 12:00,2027/05/02 12:00,"LegalStuffAAA",UER 240,http://patronage4info.com,"Inventor4Surname, Inventor4Name",inventor4email@acme.com,inventor04-company,inventor04-statement,http://www.inventor04info.com
+0,AAA-012,2020/08/02 12:00,2027/05/02 12:00,LegalStuffAAA-043,EUR 134.40,http://patronage4info.com,"Inventor4Surname, Inventor4Name",inventor4email@acme.com,inventor04-company,inventor04-statement,http://www.inventor04info.com
+0,AAA-777,2023/08/02 12:00,2023/08/19 12:00,LegalStuffAAA-043,EUR 134.40,http://patronage4info.com,"Inventor4Surname, Inventor4Name",inventor4email@acme.com,inventor04-company,inventor04-statement,http://www.inventor04info.com
+0,AAA-555,2023/08/02 12:00,null,LegalStuffAAA-043,EUR 134.40,http://patronage4info.com,"Inventor4Surname, Inventor4Name",inventor4email@acme.com,inventor04-company,inventor04-statement,http://www.inventor04info.com
+0,AAA-342,2023/08/02 12:00,2027/05/02 12:00,LegalStuffAAA-043,EUR 134.40,patronage4info.com,"Inventor4Surname, Inventor4Name",inventor4email@acme.com,inventor04-company,inventor04-statement,http://www.inventor04info.com

@@ -1,0 +1,12 @@
+chef.memoranda.form.label.sequenceNumber = Número de Secuencia
+chef.memoranda.form.label.fineDishCode = Código del Plato
+chef.memoranda.form.label.report = Reporte
+chef.memoranda.form.label.moment = Momento
+chef.memoranda.form.label.info = Más Información
+chef.memoranda.form.label.epicureUsername = Nombre de Usuario del Epicúreo
+
+
+chef.memoranda.list.label.sequenceNumber = Número de Secuencia
+chef.memoranda.list.label.fineDishCode = Código del Plato
+chef.memoranda.list.label.moment = Momento
+chef.memoranda.list.label.epicureUsername = Nombre de Usuario del Epicúreo

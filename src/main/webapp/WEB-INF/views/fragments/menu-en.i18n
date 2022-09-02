@@ -21,14 +21,22 @@ master.menu.anonymous =                                 Anonymous
 master.menu.anonymous.toolkit.list =                    Toolkits
 master.menu.anonymous.user-account.list =               User Accounts
 master.menu.anonymous.chirp.list =                      Chirps
+master.menu.anonymous.peep.list = 						Peeps
 master.menu.anonymous.component.list =                  Components
 master.menu.anonymous.tool.list =                       Tools
 
+master.menu.anonymous.user-account.list =               User Accounts
+master.menu.anonymous.ingredient.list = 				Ingredients
+master.menu.anonymous.kitchen-utensils.list = 			Kitchen Utensils
+master.menu.anonymous.peep.list = 						Peeps
+master.menu.anonymous.recipe.list = 					Recipes
+
+
 master.menu.anonymous.diedialop-favourite-link =  20060486R: Díaz López, Diego Jesús
-master.menu.anonymous.manferrod6-favourite-link= 77866123Z: Fernández Rodríguez, Manuel
-master.menu.anonymous.mansanrod4-favourite-link =  49236025V: Sánchez Rodríguez, Manuel
-master.menu.anonymous.aisqazcev-favourite-link =  77976716T: Qazza Cevallos, Aisha Doris
-master.menu.anonymous.olisanrod-favourite-link =  47538886W: Sánchez Rodríguez, Oliva
+master.menu.anonymous.salparram-favourite-link = 29552748W: Parejo Ramos, Salvador
+master.menu.anonymous.carcardia-favourite-link = 53738719R: Carrasco Díaz, Carolina
+master.menu.anonymous.marpedrod3-favourite-link = 53772352P: Pedraz Rodríguez, María Isabel
+master.menu.anonymous.alvsevcab-favourite-link =  45339624T: Sevilla Cabrera, Álvaro
 
 # master.menu.authenticated ###################################################
 master.menu.authenticated = Authenticated
@@ -36,10 +44,13 @@ master.menu.authenticated = Authenticated
 master.menu.authenticated.toolkit.list = Toolkits
 master.menu.authenticated.user-account.list = User Accounts
 master.menu.authenticated.chirp.list = Chirps
+master.menu.authenticated.bulletin.list = Bulletins
+master.menu.authenticated.peep.list = Peeps
 master.menu.authenticated.announcement.list = Announcements
 master.menu.authenticated.component.list = Components
 master.menu.authenticated.tool.list = Tools
 master.menu.authenticated.system-configuration.show = Currencies information
+master.menu.authenticated.system-configuration-sep.show = Currencies information Sep
 
 
 # master.menu.administrator ###################################################
@@ -47,19 +58,21 @@ master.menu.authenticated.system-configuration.show = Currencies information
 master.menu.administrator = Administrator
 
 master.menu.administrator.system-configuration = Update System Details
+master.menu.administrator.system-configuration-sep = Update System Details Sep
 master.menu.administrator.dashboard = Dashboard
+master.menu.administrator.dashboard.sep = September Dashboard
 master.menu.administrator.announcement.create = Create Announcements
 master.menu.administrator.user-accounts = All User accounts
 master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shut-down = Shut down
 
-# master.menu.patron ########################################################
+# master.menu.epicure ########################################################
 
-master.menu.patron = Patron
+master.menu.epicure = Epicure
 
-master.menu.patron.patronage.list = My Patronages
-master.menu.patron.dashboard = Dashboard
+master.menu.epicure.memorandum.list = My Memoranda
+master.menu.epicure.dashboard = Dashboard
 
 # master.menu.inventor #########################################################
 
@@ -73,12 +86,17 @@ master.menu.inventor.tool.list = My Tools
 # master.menu.chef #########################################################
 
 master.menu.chef = Chef
+master.menu.chef.memoranda.list = My Memoranda
+master.menu.chef.fineDish.list = My Dishes
+master.menu.chef.kitchenware.list = My Kitchenwares
+master.menu.chef.recipe.list = My Recipes
 
 
 # master.menu.epicure #########################################################
 
 master.menu.epicure = Epicure
-
+master.menu.epicure.fine-dish.list = My Fine Dishes
+master.menu.epicure.dashboard = Dashboard
 
 # master.menu.user-account ####################################################
 
@@ -91,3 +109,4 @@ master.menu.user-account.become-epicure = Become an epicure
 master.menu.user-account.become-patron = Become a patron
 master.menu.user-account.inventor = Inventor data
 master.menu.user-account.become-inventor = Become an inventor
+master.menu.user-account.epicure = Epicure data

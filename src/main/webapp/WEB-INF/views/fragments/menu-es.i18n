@@ -21,14 +21,22 @@ master.menu.anonymous =                                 Anónimo
 master.menu.anonymous.toolkit.list =                    Kits de herramientas
 master.menu.anonymous.user-account.list =               Cuentas de usuarios
 master.menu.anonymous.chirp.list =                      Mensajes informales
+master.menu.anonymous.peep.list = 						Mensajes informales
 master.menu.anonymous.component.list =                  Componentes
 master.menu.anonymous.tool.list =                       Herramientas
 
+master.menu.anonymous.user-account.list =               Cuentas de usuarios
+master.menu.anonymous.ingredient.list = 				Ingredientes
+master.menu.anonymous.kitchen-utensils.list = 			Utensilios de cocina
+master.menu.anonymous.peep.list = 						Mensajes informales
+master.menu.anonymous.recipe.list = 					Recetas
+
+
 master.menu.anonymous.diedialop-favourite-link =  20060486R: Díaz López, Diego Jesús
-master.menu.anonymous.manferrod6-favourite-link= 77866123Z: Fernández Rodríguez, Manuel
-master.menu.anonymous.mansanrod4-favourite-link =  49236025V: Sánchez Rodríguez, Manuel
-master.menu.anonymous.aisqazcev-favourite-link =  77976716T: Qazza Cevallos, Aisha Doris
-master.menu.anonymous.olisanrod-favourite-link =  47538886W: Sánchez Rodríguez, Oliva
+master.menu.anonymous.salparram-favourite-link = 29552748W: Parejo Ramos, Salvador
+master.menu.anonymous.carcardia-favourite-link = 53738719R: Carrasco Díaz, Carolina
+master.menu.anonymous.marpedrod3-favourite-link = 53772352P: Pedraz Rodriguez, Maria Isabel
+master.menu.anonymous.alvsevcab-favourite-link =  45339624T: Sevilla Cabrera, Álvaro
 
 # master.menu.authenticated ###################################################
 master.menu.authenticated = Autenticado
@@ -36,17 +44,22 @@ master.menu.authenticated = Autenticado
 master.menu.authenticated.toolkit.list = Kit de herramientas
 master.menu.authenticated.user-account.list = Cuentas de usuarios
 master.menu.authenticated.chirp.list = Mensajes informales
+master.menu.authenticated.bulletin.list = Boletines
+master.menu.authenticated.peep.list = Mensajes informales
 master.menu.authenticated.announcement.list = Anuncios
 master.menu.authenticated.component.list = Componentes
 master.menu.authenticated.tool.list = Herramientas
 master.menu.authenticated.system-configuration.show = Información sobre monedas
+master.menu.authenticated.system-configuration-sep.show = Información sobre monedas sep
 
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
 
 master.menu.administrator.system-configuration = Editar detalles del sistema
+master.menu.administrator.system-configuration-sep = Editar detalles del sistema Sep
 master.menu.administrator.dashboard = Panel de indicadores
+master.menu.administrator.dashboard.sep = Panel de indicadores de Septiembre
 master.menu.administrator.announcement.create = Crear Anuncios
 master.menu.administrator.user-accounts = Todas las cuentas de usuario
 master.menu.administrator.populate-initial = Poblar DB (inicial)
@@ -55,9 +68,9 @@ master.menu.administrator.shut-down = Detener el sistema
 
 # master.menu.patron ########################################################
 
-master.menu.patron = Patrocinador
+master.menu.epicure = Epicúreo
 
-master.menu.patron.patronage.list = Mis patrocinios
+master.menu.patron.memorandum.list = Mis memorandos
 master.menu.patron.dashboard = Panel de indicadores
 
 # master.menu.inventor #########################################################
@@ -73,12 +86,17 @@ master.menu.inventor.tool.list = Mis herramientas
 # master.menu.chef #########################################################
 
 master.menu.chef = Chef
-
+master.menu.chef.memoranda.list = Mis Memorandos
+master.menu.chef.fineDish.list = Mis Platos
+master.menu.chef.kitchenware.list = Mis Artículos
+master.menu.chef.recipe.list = Mis Recetas
 
 # master.menu.epicure #########################################################
 
 master.menu.epicure = Epicúreo
-
+master.menu.epicure.fine-dish.list = Mis platos
+master.menu.epicure.memorandum.list = Mis memorandos
+master.menu.epicure.dashboard = Panel de indicadores
 
 # master.menu.user-account ####################################################
 
@@ -91,3 +109,5 @@ master.menu.user-account.become-epicure = Hazte epicúreo
 master.menu.user-account.become-patron = Hazte patrocinador
 master.menu.user-account.inventor = Datos de inventor
 master.menu.user-account.become-inventor = Hazte inventor
+master.menu.user-account.epicure = Datos de epicúreo
+master.menu.user-account.become-epicure = Hazte epicúreo

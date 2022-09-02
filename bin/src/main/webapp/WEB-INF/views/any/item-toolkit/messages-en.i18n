@@ -1,0 +1,8 @@
+any.component.list.label.quantity = Quantity
+any.component.list.label.code = Component code
+any.component.list.label.name = Name
+any.component.list.label.tech = Technology 
+any.component.list.label.description = Description
+any.component.list.label.price = Price
+any.component.list.label.info = Further Information
+any.component.list.label.itemType = Type
