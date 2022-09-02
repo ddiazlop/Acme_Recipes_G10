@@ -44,7 +44,7 @@ public class AnyKitchenwareListService implements AbstractListService<Any, Kitch
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "code", "name", "published");
+		request.unbind(entity, model, "code", "name");
 
 	}
 

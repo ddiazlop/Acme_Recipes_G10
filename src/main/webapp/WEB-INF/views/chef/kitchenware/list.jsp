@@ -16,11 +16,8 @@
 
 <acme:list>
 	<acme:list-column code="chef.kitchenware.list.label.code" path="code"
-		 />
+		width="20%" />
 	<acme:list-column code="chef.kitchenware.list.label.name" path="name"
-	 	 />
-	<acme:list-column code="chef.kitchenware.list.label.wareType" path="wareType"
-		 />
-	<acme:list-column code="chef.kitchenware.list.label.published" path="published"
-		 />
+	 	width="20%" />
+		 
 </acme:list>
