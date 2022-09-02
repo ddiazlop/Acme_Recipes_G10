@@ -32,7 +32,7 @@ public class ChefFineDishListService implements AbstractListService<Chef, FineDi
 	public boolean authorise(final Request<FineDish> request) {
 		
 		assert request !=null;
-		return true;
+		return request.getPrincipal().hasRole(Chef.class);
 	}
 
 	@Override
