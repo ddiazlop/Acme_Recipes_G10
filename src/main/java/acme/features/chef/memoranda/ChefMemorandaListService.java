@@ -22,7 +22,7 @@ public class ChefMemorandaListService implements AbstractListService<Chef, Memor
 	public boolean authorise(final Request<Memoranda> request) {
 		
 		assert request != null;
-		return true;
+		return request.getPrincipal().hasRole(Chef.class);
 	}
 
 	@Override
