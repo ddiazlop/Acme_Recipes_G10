@@ -9,19 +9,25 @@
 # they accept any liabilities with respect to them.
 
 
-any.kitchenware.list.label.code = Código
-any.kitchenware.list.label.name = Nombre
-any.kitchenware.list.label.published = Publicado
+any.kitchenware.list.label.code = 						Código
+any.kitchenware.list.label.name = 						Nombre
+any.kitchenware.list.label.published = 					Publicado
 
-any.kitchenware.form.label.code = Código
-any.kitchenware.form.label.name = Nombre
-any.kitchenware.form.label.description = Descripción
-any.kitchenware.form.label.retail-price = Precio
-any.kitchenware.form.label.info = Información
-any.kitchenware.form.label.kitchenware-type = Tipo
-any.kitchenware.form.label.published = Estado
+any.kitchenware.form.label.code = 						Código
+any.kitchenware.form.label.name = 						Nombre
+any.kitchenware.form.label.description = 				Descripción
+any.kitchenware.form.label.retail-price = 				Precio
+chef.kitchenwareRecipe.form.label.kitchenware.retailPrice-original = Original price
+chef.kitchenwareRecipe.form.label.kitchenware.retailPrice-total = Total price
+any.kitchenware.form.label.info = 						Información
+any.kitchenware.form.label.kitchenware-type = 			Tipo
+any.kitchenware.form.label.published = 					Estado
+TRUE = 													Publicado
+FALSE = 												No publicado
+INGREDIENT = 											Ingrediente
+KITCHEN_UTENSIL = 										Utensilio de cocina
 
-any.kitchenware.placeholder.published = Publicado
-any.kitchenware.placeholder.notpublished = No publicado
-any.kitchenware.placeholder.type.ingredient = Ingrediente
-any.kitchenware.placeholder.type.kitchen-utensil = Utensilio de cocina 
+any.kitchenware.placeholder.published = 				Publicado
+any.kitchenware.placeholder.notpublished = 				No publicado
+any.kitchenware.placeholder.type.ingredient = 			Ingrediente
+any.kitchenware.placeholder.type.kitchen-utensil = 		Utensilio de cocina 

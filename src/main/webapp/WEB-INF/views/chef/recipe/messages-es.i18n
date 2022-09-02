@@ -14,4 +14,7 @@ chef.recipes.list.label.info = Información
 chef.recipes.list.label.totalPrice = Precio Total
 chef.recipes.list.label.state = Estado de Publicación
 
+TRUE = PUBLICADO
+FALSE = NO PUBLICADO
+
 chef.recipes.form.button.kitchenwareRecipe = Ver Artículos de Cocina Asociados

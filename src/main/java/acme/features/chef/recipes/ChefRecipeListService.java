@@ -39,9 +39,7 @@ public class ChefRecipeListService implements AbstractListService<Chef, Recipe>{
 		assert request != null;
 		
 		final int chefId = request.getPrincipal().getActiveRoleId();
-		final Collection<Recipe> recipes = this.repository.findRecipesByChefId(chefId);
-		
-		return recipes;
+		return this.repository.findRecipesByChefId(chefId);
 	}
 
 	@Override

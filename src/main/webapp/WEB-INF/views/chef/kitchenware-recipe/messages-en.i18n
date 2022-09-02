@@ -3,10 +3,22 @@ chef.kitchenwareRecipe.form.label.kitchenware.code = Code
 chef.kitchenwareRecipe.form.label.kitchenware.description = Description
 chef.kitchenwareRecipe.form.label.kitchenware.wareType = Ware Type
 chef.kitchenwareRecipe.form.label.kitchenware.retailPrice = Retail Price
+chef.kitchenwareRecipe.form.label.kitchenware.retailPrice-original = Original price
+chef.kitchenwareRecipe.form.label.kitchenware.retailPrice-total = Total price
 chef.kitchenwareRecipe.form.label.kitchenware.info = More Info
 chef.kitchenwareRecipe.form.label.kitchenware.published = Is Published
 chef.kitchenwareRecipe.form.label.quantity = Quantity 
 chef.kitchenwareRecipe.form.label.unitType = Unit Type
+
+GRAM = Grams
+KILO = Kilos
+CM3 = cm3
+LITER = Liters
+SPOON = Spoons
+INGREDIENT = Ingredient
+KITCHEN_UTENSIL = Kitchen Utensil
+TRUE = Published
+FALSE = Not Published
 
 chef.kitchenwareRecipe.list.label.name = Name
 chef.kitchenwareRecipe.list.label.code = Code

@@ -10,7 +10,11 @@
 	<acme:input-textarea code="chef.recipes.form.label.preparationNotes" path="preparationNotes"/>
 	<acme:input-textbox code="chef.recipes.form.label.info" path="info"/>
 	<acme:input-textbox code="chef.recipes.form.label.totalPrice" path="totalPrice"/>
-	<acme:input-textbox code="chef.recipes.form.label.state" path="state" readonly='true'/>
+	
+	<acme:input-select code="chef.recipes.form.label.state" path="state">
+		<acme:input-option code="TRUE" value="TRUE" selected="${state == 'PUBLISHED'}"/>
+		<acme:input-option code="FALSE" value="FALSE" selected="${state == 'NOT PUBLISHED'}"/>
+	</acme:input-select>
 	
 </acme:form>
 
