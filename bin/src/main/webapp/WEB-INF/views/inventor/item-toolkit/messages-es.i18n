@@ -1,0 +1,21 @@
+
+
+inventor.item-toolkit.form.label.quantity = Cantidad
+any.component.list.label.code = Código del Elemento
+any.component.list.label.name = Nombre
+any.component.list.label.tech = Tecnología 
+any.component.list.label.description = Descripción
+any.component.list.label.price = Precio
+any.component.list.label.info = Información Adicional
+any.component.list.label.itemType = Tipo
+
+inventor.item-toolkit.form.label.item = Elemento
+
+inventor.item-toolkit.form.button.add-item = Añadir a Kit de Herramientas 
+inventor.item-toolkit.form.button.delete-item = Eliminar Elemento
+inventor.item-toolkit.form.button.update-item = Editar Cantidad
+
+inventor.item-toolkit.form.error.item-already-added = Este elemento ya está en tu Kit
+inventor.item-toolkit.form.error.toolkit-already-has-a-tool = Este Kit de Herramientas ya tiene una herramienta
+inventor.toolkit.form.error.wrong-tool-quantity = Solo puedes tener una unidad de herramienta en tu Kit de Herramientas
+spam.detector.error.message = Spam Detectado

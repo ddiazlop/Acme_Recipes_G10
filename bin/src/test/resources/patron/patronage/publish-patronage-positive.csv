@@ -1,0 +1,2 @@
+recordIndex,status,code,legal_stuff,budget,creation_date,start_date,end_date,info,key:patron,key:inventor,published
+0,PROPOSED,ADF-200-A,legalStuff2,"EUR 56.3",2021/03/8 10:00,2021/05/08 10:00,2022/11/08 10:00,https://ev.us.es/,false,patron-04,inventor-04,false

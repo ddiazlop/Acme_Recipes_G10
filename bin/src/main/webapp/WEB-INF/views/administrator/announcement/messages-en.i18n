@@ -1,0 +1,22 @@
+# i18n-en.i18n
+
+
+administrator.announcement.list.label.title = Title
+administrator.announcement.list.label.moment = Moment
+administrator.announcement.list.label.body = Body
+
+administrator.announcement.list.button.create = Create announcement
+administrator.announcement.form.label.title = Title:
+administrator.announcement.form.label.moment = Moment:
+administrator.announcement.form.label.body = Body:
+administrator.announcement.form.label.critical = Critical:
+administrator.announcement.form.label.link = Link:
+
+administrator.announcement.form.label.TRUE = Critical
+administrator.announcement.form.label.FALSE = Not critical
+administrator.announcement.form.label.confirmation = Confirm that the announcement is correct
+	
+administrator.announcement.form.button.create = Create	
+spam.detector.error.message = Spam Detected
+
+
