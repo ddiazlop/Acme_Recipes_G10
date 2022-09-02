@@ -22,7 +22,7 @@ public class EpicureMemorandumListService implements AbstractListService<Epicure
 	@Override
 	public boolean authorise(final Request<Memorandum> request) {
 		assert request != null;
-		return true;
+		return request.getPrincipal().hasRole(Epicure.class);
 	}
 
 	@Override
@@ -30,10 +30,10 @@ public class EpicureMemorandumListService implements AbstractListService<Epicure
 		assert request != null;
 
 		Collection<Memorandum> result;
-		int MemorandumId;
+		int epicureId;
 
-		MemorandumId = request.getModel().getInteger("MemorandumId");
-		result = this.repository.findMemorandumByEpicure(MemorandumId);
+		epicureId = request.getPrincipal().getActiveRoleId();
+		result = this.repository.findMemoranduaByEpicure(epicureId);
 
 		return result;
 
@@ -45,7 +45,7 @@ public class EpicureMemorandumListService implements AbstractListService<Epicure
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model,"moment","sequenceNumber","report","info");
+		request.unbind(entity, model,"moment","sequenceNumber");
 
 	}
 

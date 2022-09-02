@@ -14,7 +14,7 @@ import acme.framework.repositories.AbstractRepository;
 public interface EpicureMemorandumRepository extends AbstractRepository {
 
 	@Query("select m from Memorandum m where m.epicure.id = :id")
-	Collection<Memorandum> findMemorandumByEpicure(int id);
+	Collection<Memorandum> findMemoranduaByEpicure(int id);
 
 	@Query("select m from Memorandum m where m.id = :id")
 	Memorandum findOneMemorandumById(int id);

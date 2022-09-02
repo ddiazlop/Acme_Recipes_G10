@@ -48,5 +48,8 @@ public class Peep extends AbstractEntity {
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
+	
+	// Notes ------------------------------------------------------------------
+	// The writer does not have to be the name of the principal
 
 }

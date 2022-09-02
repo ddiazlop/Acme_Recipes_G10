@@ -7,8 +7,5 @@
 		width="20%" />
 	<acme:list-column code="epicure.memorandum.list.label.sequenceNumber" path="sequenceNumber"
 		width="20%" />
-	<acme:list-column code="epicure.memorandum.list.label.report" path="report"
-		width="20%" />
-	<acme:list-column code="epicure.memorandum.list.label.info" path="info"
-		width="20%" />
+		
 </acme:list>

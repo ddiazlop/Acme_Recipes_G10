@@ -9,10 +9,10 @@
 # they accept any liabilities with respect to them.
 
 epicure.dashboard.form.title.indicators = General indicators
-epicure.dashboard.form.title.memorandum-type = memorandum Type
-epicure.dashboard.form.title.accepted-memorandum = Accepted
-epicure.dashboard.form.title.denied-memorandum = Denied
-epicure.dashboard.form.title.pending-memorandum = Pending
+epicure.dashboard.form.title.dishes-type = Find Dishes Type
+epicure.dashboard.form.title.accepted-dishes = Accepted
+epicure.dashboard.form.title.denied-dishes = Denied
+epicure.dashboard.form.title.pending-dishes = Pending
 
 epicure.dashboard.form.label.num = Number 
 epicure.dashboard.form.label.avg = Average
@@ -22,4 +22,5 @@ epicure.dashboard.form.label.max = Maximum
 
 
 epicure.dashboard.form.no-data = No data
+
 

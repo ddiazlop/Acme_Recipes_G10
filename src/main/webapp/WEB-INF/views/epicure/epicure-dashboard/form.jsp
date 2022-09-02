@@ -10,7 +10,7 @@
 <table class="table table-sm">
 	<caption> </caption>
 	<tr>
-		<th id="memorandums"><acme:message code="epicure.dashboard.form.title.memorandums-type"/></th>
+		<th id="dishes"><acme:message code="epicure.dashboard.form.title.dishes-type"/></th>
 		<th id = "quantity"><acme:message code="epicure.dashboard.form.label.num"/></th>
 		<th id ="average"><acme:message code="epicure.dashboard.form.label.avg"/></th>
 		<th id = "desviation"><acme:message code="epicure.dashboard.form.label.desv"/></th>
@@ -18,8 +18,8 @@
 		<th id = "maximum"><acme:message code="epicure.dashboard.form.label.max"/></th>
 	</tr>
 	<tr>
-		<td style="color:#58D68D"><strong><acme:message code="epicure.dashboard.form.title.accepted-memorandums"/></strong></td>
-		<td><acme:print value="${numMemorandumAccepted}"/></td>
+		<td style="color:#58D68D"><strong><acme:message code="epicure.dashboard.form.title.accepted-dishes"/></strong></td>
+		<td><acme:print value="${numDishesAccepted}"/></td>
 		
 		<td>
 		
@@ -80,8 +80,8 @@
 	</tr>
 	
 		<tr>
-		<td style="color:#C0392B"><strong><acme:message code="epicure.dashboard.form.title.denied-memorandums"/></strong></td>
-		<td><acme:print value="${numMemorandumDenied}"/></td>
+		<td style="color:#C0392B"><strong><acme:message code="epicure.dashboard.form.title.denied-dishes"/></strong></td>
+		<td><acme:print value="${numDishesDenied}"/></td>
 		
 		<td>
 		<jstl:forEach items="${denieds}" var="denied">
@@ -137,8 +137,8 @@
 	</tr>
 	
 		<tr>
-		<td style="color:#616A6B"><strong><acme:message code="epicure.dashboard.form.title.pending-memorandums"/></strong></td>
-		<td><acme:print value="${numMemorandumProposed}"/></td>
+		<td style="color:#616A6B"><strong><acme:message code="epicure.dashboard.form.title.pending-dishes"/></strong></td>
+		<td><acme:print value="${numDishesProposed}"/></td>
 		
 		<td>
 			<jstl:forEach items="${proposeds}" var="proposed">

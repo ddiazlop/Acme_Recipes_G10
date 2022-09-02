@@ -9,10 +9,10 @@
 # they accept any liabilities with respect to them.
 
 epicure.dashboard.form.title.indicators = Panel de indicadores
-epicure.dashboard.form.title.memorandum-type = Tipos de patrocinios
-epicure.dashboard.form.title.accepted-memorandum = Aceptados
-epicure.dashboard.form.title.denied-memorandum = Denegados
-epicure.dashboard.form.title.pending-memorandum = Propuestos
+epicure.dashboard.form.title.dishes-type = Tipos de Plato
+epicure.dashboard.form.title.accepted-dishes = Aceptados
+epicure.dashboard.form.title.denied-dishes = Denegados
+epicure.dashboard.form.title.pending-dishes = Propuestos
 
 epicure.dashboard.form.label.num = Número 
 epicure.dashboard.form.label.avg = Media
@@ -20,3 +20,5 @@ epicure.dashboard.form.label.desv = Desviación
 epicure.dashboard.form.label.min = Mínimo
 epicure.dashboard.form.label.max = Máximo
 
+
+epicure.dashboard.form.no-data = Sin datos

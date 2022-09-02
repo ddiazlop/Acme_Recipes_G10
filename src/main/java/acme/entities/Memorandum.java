@@ -50,8 +50,6 @@ public class Memorandum extends AbstractEntity{
 	
 	@URL
 	protected String			info;
-	
-
 				
 					
 	// Derived attributes -----------------------------------------------------
@@ -70,3 +68,5 @@ public class Memorandum extends AbstractEntity{
 	@ManyToOne(optional = false)
 	protected Chef			chef;
 }
+
+

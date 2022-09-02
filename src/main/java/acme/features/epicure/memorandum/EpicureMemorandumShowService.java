@@ -1,12 +1,12 @@
 
 package acme.features.epicure.memorandum;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.Memorandum;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
-
 import acme.framework.services.AbstractShowService;
 import acme.roles.Epicure;
 
@@ -14,6 +14,7 @@ import acme.roles.Epicure;
 @Service
 public class EpicureMemorandumShowService implements AbstractShowService<Epicure, Memorandum> {
 
+	@Autowired
 	protected EpicureMemorandumRepository repository;
 
 
@@ -52,7 +53,6 @@ public class EpicureMemorandumShowService implements AbstractShowService<Epicure
 		assert model != null;
 
 		request.unbind(entity, model,"moment","sequenceNumber","report","info");
-		model.setAttribute("MemorandumId", entity.getId());
 
 	}
 
