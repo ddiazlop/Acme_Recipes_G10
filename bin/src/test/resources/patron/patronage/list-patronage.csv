@@ -1,0 +1,2 @@
+recordIndex,status,code,legal_stuff,budget,creation_date,start_date,end_date,info,key:patron,key:inventor,inventor_name,inventor_surname,inventor_email,inventor_company,inventor_statement,inventor_info
+0,ACCEPTED,AAA-000,legalStuff1,"EUR 36.30",2022/03/08 10:00,2022/05/08 10:00,2022/10/08 10:00,https://ev.us.es/,patron-01,inventor1,Inventor1Name,Inventor1Surname,inventor1email@acme.com,inventor01-company,inventor01-statement,http://www.inventor01info.com

@@ -1,0 +1,42 @@
+# i18n-es.i18n
+#
+# Copyright (C) 2012-2022 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+epicure.fine-dish.form.label.status = Estado
+epicure.fine-dish.form.label.code = Código
+epicure.fine-dish.form.label.request = Petición
+epicure.fine-dish.form.label.budget = Presupuesto
+epicure.fine-dish.form.label.creationDate = Fecha creación
+epicure.fine-dish.form.label.startDate = Fecha comienzo
+epicure.fine-dish.form.label.endDate = Fecha fin
+epicure.fine-dish.form.label.info = Info
+epicure.fine-dish.form.label.chef.username = Chef
+epicure.fine-dish.form.label.chef.organisation = Organización del chef
+epicure.fine-dish.form.label.chef.assertion = Afirmación del chef
+epicure.fine-dish.form.label.chef.link = Link del chef
+
+
+epicure.fine-dish.button.create = Solicitar
+epicure.fine-dish.list.title = Mi plato
+
+epicure.fine-dish.list.label.status = Estado
+epicure.fine-dish.list.label.code = Código
+epicure.fine-dish.list.label.request = Petición
+epicure.fine-dish.list.label.budget = Presupuesto
+epicure.fine-dish.list.label.creationDate = Fecha creación
+epicure.fine-dish.list.label.startDate = Fecha comienzo
+epicure.fine-dish.list.label.endDate = Fecha fin
+epicure.fine-dish.list.label.info = Info
+
+
+
+
+
+
+

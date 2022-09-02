@@ -1,0 +1,4 @@
+recordIndex, username, password,name,code,technology,description,retail-price,info
+0,inventor1,inventor1,Martillo,AAA-000,Clasica,Muy confiable,EUR 22.30,https://ev.us.es/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_29_1
+0,inventor2,inventor2,Martillo E.,AAA-000-A,Electico,Demasiado confiable,USD 50.30,
+0,inventor3,inventor3,Martillo de Agua,AAB-000-B,Presion,Extremadamente confiable,EUR 80.30,https://ev.us.es/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_29_1

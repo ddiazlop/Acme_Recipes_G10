@@ -50,7 +50,7 @@ public class AnyKitchenwareRecipeShowService implements AbstractShowService<Any,
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "quantity","kitchenware.code", "kitchenware.name", "kitchenware.description", "kitchenware.info", "kitchenware.published" );
+		request.unbind(entity, model, "quantity","kitchenware.code", "kitchenware.name", "kitchenware.description", "kitchenware.info", "kitchenware.published", "kitchenware.retailPrice");
 		model.setAttribute("published", entity.getKitchenware().isPublished());
 		model.setAttribute("wareType", entity.getKitchenware().getWareType().name());
 		
@@ -63,8 +63,12 @@ public class AnyKitchenwareRecipeShowService implements AbstractShowService<Any,
 	private void unbindConvertedMoney(final KitchenwareRecipe entity, final Model model) {
 		final SystemConfigurationSep sc = this.repository.findSystemConfiguration();
 		final Money money = this.moneyExchange.computeMoneyExchange(entity.getKitchenware().getRetailPrice(), sc.getSystemCurrency()).getChange();
+		final Money moneyPerUnit = new Money();
+		moneyPerUnit.setAmount(money.getAmount());
+		moneyPerUnit.setCurrency(money.getCurrency());
+		model.setAttribute("retailPrice", moneyPerUnit);
 		money.setAmount(money.getAmount()*entity.getQuantity());
-		model.setAttribute("price", money);
+		model.setAttribute("totalPrice", money);
 	}
 	
 

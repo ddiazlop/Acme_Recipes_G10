@@ -1,0 +1,22 @@
+# i18n-es.i18n
+
+administrator.announcement.list.label.title = Título
+administrator.announcement.list.label.moment = Fecha de creacion
+administrator.announcement.list.label.body = Descripcion
+
+administrator.announcement.list.button.create = Crear anuncio	
+
+
+administrator.announcement.form.label.title = Título:
+administrator.announcement.form.label.moment = Fecha de creacion:
+administrator.announcement.form.label.body = Descripción:
+administrator.announcement.form.label.critical = Es crítico:
+administrator.announcement.form.label.link = Informacion adicional:
+
+administrator.announcement.form.label.TRUE = Es crítico
+administrator.announcement.form.label.FALSE = No es crítico
+administrator.announcement.form.label.confirmation = Confirme que el anuncio es correcto
+
+administrator.announcement.form.button.create = Crear
+spam.detector.error.message = Spam Detectado
+

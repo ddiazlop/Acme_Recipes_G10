@@ -1,0 +1,8 @@
+
+authenticated.patron.form.label.company = Company
+authenticated.patron.form.label.statement = Statement
+authenticated.patron.form.label.info = Info
+
+authenticated.patron.form.button.create = Register
+authenticated.patron.form.button.update = Update
+spam.detector.error.message = Spam Detected
