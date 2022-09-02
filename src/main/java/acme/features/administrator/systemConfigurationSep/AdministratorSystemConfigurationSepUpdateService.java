@@ -23,7 +23,7 @@ public class AdministratorSystemConfigurationSepUpdateService implements Abstrac
 	@Override
 	public boolean authorise(final Request<SystemConfigurationSep> request) {
 		assert request != null;
-		return true;
+		return request.getPrincipal().hasRole(Administrator.class);
 	}
 
 	@Override
@@ -69,16 +69,17 @@ public class AdministratorSystemConfigurationSepUpdateService implements Abstrac
 		assert entity != null;
 		assert errors != null;
 		
+		final List<String> currencies= new ArrayList<String>();
+		final String[] acceptedCurrencies= entity.getAcceptedCurrencies().split(",");
+		for (final String currency : acceptedCurrencies){
+		    currencies.add(currency.trim());
+		    }
+		
 		if(!errors.hasErrors("systemCurrency")) {
-			final boolean availableCurrency = entity.getAcceptedCurrencies().contains(entity.getSystemCurrency());
+			final boolean availableCurrency = currencies.contains(entity.getSystemCurrency());
 			errors.state(request, availableCurrency, "systemCurrency", "administrator.system-configuration-sep.form.error.sysCurrencyNoAvaliable");
 		}
 		
-		
-		//if(!errors.hasErrors("systemCurrency")) {
-		//	final boolean availableCurrency = this.validateAvailableCurrency(entity.getSystemCurrency());
-		//	errors.state(request, availableCurrency, "systemCurrency", "administrator.system-configuration-sep.form.error.sysCurrencyNoAvaliable");
-		//}
 			
 	}
 
