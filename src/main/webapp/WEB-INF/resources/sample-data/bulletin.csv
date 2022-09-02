@@ -1,4 +1,5 @@
 key,heading,moment,text,critical,link
-bulletin-01,titulo1,2022/07/15 10:00,texto1,TRUE,https://www.youtube.com
-bulletin-02,titulo2,2022/07/17 10:30,texto2,FALSE,""
-bulletin-03,titulo3,2022/05/20 10:30,texto3,FALSE,""
+bulletin-01,titulo1,2022/08/29 10:00,texto1,TRUE,https://www.youtube.com
+bulletin-02,titulo2,2022/08/28 10:30,texto2,FALSE,""
+bulletin-03,titulo3,2022/08/28 09:45,texto3,TRUE,""
+bulletin-04,titulo4,2022/05/20 10:30,texto4,FALSE,""
