@@ -1,0 +1,4 @@
+username, password, organisation, assertion, info
+chef1, chef1, "Cocineros SA", "Cocineros SL", 
+chef2, chef2, "Cocineros Alternos SA", "Cocineros Alternos SL", 
+administrator, administrator, "Cocineros SA", "Cocineros SL", 
