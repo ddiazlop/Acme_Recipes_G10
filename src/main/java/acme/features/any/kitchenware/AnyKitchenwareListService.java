@@ -13,9 +13,11 @@ import acme.framework.services.AbstractListService;
 
 @Service
 public class AnyKitchenwareListService implements AbstractListService<Any, Kitchenware>{
-	
+
 	@Autowired
 	protected AnyKitchenwareRepository repo;
+	
+	
 
 	@Override
 	public boolean authorise(final Request<Kitchenware> request) {
@@ -32,7 +34,7 @@ public class AnyKitchenwareListService implements AbstractListService<Any, Kitch
 		}else {
 			res = this.repo.findAllPublishedUtensils();
 		}
-		
+
 		return res;
 	}
 
@@ -41,11 +43,17 @@ public class AnyKitchenwareListService implements AbstractListService<Any, Kitch
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		
-		request.unbind(entity, model, "code", "name", "published");
-		
+
+		request.unbind(entity, model, "code", "name");
+		if(entity.isPublished()) {
+			model.setAttribute("published", "PUBLISHED");
+		}
+		else {
+			model.setAttribute("published", "NOT PUBLISHED");
+		}
+
 	}
 
-	
+
 
 }

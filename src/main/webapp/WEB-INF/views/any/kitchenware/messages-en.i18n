@@ -11,15 +11,21 @@
 
 any.kitchenware.list.label.code = Code
 any.kitchenware.list.label.name = Name
-any.kitchenware.list.label.published = Published
+any.kitchenware.list.label.status = Status
 
 any.kitchenware.form.label.code = Code
 any.kitchenware.form.label.name = Name
 any.kitchenware.form.label.description = Description
 any.kitchenware.form.label.retail-price = Retail Price
+chef.kitchenwareRecipe.form.label.kitchenware.retailPrice-original = Original price
+chef.kitchenwareRecipe.form.label.kitchenware.retailPrice-total = Total price
 any.kitchenware.form.label.info = Info
 any.kitchenware.form.label.kitchenware-type = Type
-any.kitchenware.form.label.published = State
+any.kitchenware.form.label.ingredient = Ingredient
+any.kitchenware.form.label.kitchen-utensil = Kitchen Utensil
+any.kitchenware.form.label.status = Status
+any.kitchenware.form.label.published = Published
+any.kitchenware.form.label.not-published = Not published
 
 any.kitchenware.placeholder.published = Published
 any.kitchenware.placeholder.notpublished = Not published

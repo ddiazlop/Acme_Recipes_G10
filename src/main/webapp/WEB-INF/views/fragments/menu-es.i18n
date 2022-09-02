@@ -18,16 +18,18 @@ master.menu.sign-out = Salir
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous =                                 Anónimo
-
 master.menu.anonymous.toolkit.list =                    Kits de herramientas
+master.menu.anonymous.user-account.list =               Cuentas de usuarios
+master.menu.anonymous.chirp.list =                      Mensajes informales
+master.menu.anonymous.peep.list = 						Mensajes informales
 master.menu.anonymous.component.list =                  Componentes
 master.menu.anonymous.tool.list =                       Herramientas
-master.menu.anonymous.chirp.list =                      Mensajes informales
 
 master.menu.anonymous.user-account.list =               Cuentas de usuarios
 master.menu.anonymous.ingredient.list = 				Ingredientes
 master.menu.anonymous.kitchen-utensils.list = 			Utensilios de cocina
 master.menu.anonymous.peep.list = 						Mensajes informales
+master.menu.anonymous.recipe.list = 					Recetas
 
 
 master.menu.anonymous.diedialop-favourite-link =  20060486R: Díaz López, Diego Jesús
@@ -42,19 +44,21 @@ master.menu.authenticated = Autenticado
 master.menu.authenticated.toolkit.list = Kit de herramientas
 master.menu.authenticated.user-account.list = Cuentas de usuarios
 master.menu.authenticated.chirp.list = Mensajes informales
-master.menu.authenticated.ingredient.list = Ingredientes
 master.menu.authenticated.peep.list = Mensajes informales
 master.menu.authenticated.announcement.list = Anuncios
 master.menu.authenticated.component.list = Componentes
 master.menu.authenticated.tool.list = Herramientas
 master.menu.authenticated.system-configuration.show = Información sobre monedas
+master.menu.authenticated.system-configuration-sep.show = Información sobre monedas sep
 
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
 
 master.menu.administrator.system-configuration = Editar detalles del sistema
+master.menu.administrator.system-configuration-sep = Editar detalles del sistema Sep
 master.menu.administrator.dashboard = Panel de indicadores
+master.menu.administrator.dashboard.sep = Panel de indicadores de Septiembre
 master.menu.administrator.announcement.create = Crear Anuncios
 master.menu.administrator.user-accounts = Todas las cuentas de usuario
 master.menu.administrator.populate-initial = Poblar DB (inicial)
@@ -82,10 +86,14 @@ master.menu.inventor.tool.list = Mis herramientas
 
 master.menu.chef = Chef
 master.menu.chef.fineDish.list = Mis Platos
+master.menu.chef.kitchenware.list = Mis Artículos
+master.menu.chef.recipe.list = Mis Recetas
+
 
 # master.menu.epicure #########################################################
 
 master.menu.epicure = Epicúreo
+master.menu.epicure.fine-dish.list = Mis platos
 master.menu.epicure.dashboard = Panel de indicadores
 
 # master.menu.user-account ####################################################
@@ -97,3 +105,5 @@ master.menu.user-account.patron = Datos de patrocinador
 master.menu.user-account.become-patron = Hazte patrocinador
 master.menu.user-account.inventor = Datos de inventor
 master.menu.user-account.become-inventor = Hazte inventor
+master.menu.user-account.epicure = Datos de epicúreo
+master.menu.user-account.become-epicure = Hazte epicúreo
