@@ -20,6 +20,10 @@
 	<acme:list-column code="chef.kitchenware.list.label.name" path="name"
 	 	width="20%" />
 	 	
+	 		
+	<acme:list-column code="chef.kitchenware.list.label.wareType" path="wareType"
+		width="20%" />	
+	 	
  	<acme:list-column code="chef.kitchenware.list.label.status" path="published"
  	width="20%" />
 		 
