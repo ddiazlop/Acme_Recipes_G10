@@ -15,8 +15,12 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 <acme:list>
-	<acme:list-column code="any.kitchenware.list.label.code" path="code"
+	<acme:list-column code="chef.kitchenware.list.label.code" path="code"
 		width="20%" />
-	<acme:list-column code="any.kitchenware.list.label.name" path="name"
-		width="20%" />		
+	<acme:list-column code="chef.kitchenware.list.label.name" path="name"
+	 	width="20%" />
+	 	
+ 	<acme:list-column code="chef.kitchenware.list.label.status" path="published"
+ 	width="20%" />
+		 
 </acme:list>
