@@ -44,6 +44,7 @@ master.menu.authenticated = Authenticated
 master.menu.authenticated.toolkit.list = Toolkits
 master.menu.authenticated.user-account.list = User Accounts
 master.menu.authenticated.chirp.list = Chirps
+master.menu.authenticated.bulletin.list = Bulletins
 master.menu.authenticated.peep.list = Peeps
 master.menu.authenticated.announcement.list = Announcements
 master.menu.authenticated.component.list = Components

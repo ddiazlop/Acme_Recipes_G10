@@ -1,0 +1,13 @@
+# i18n-en.i18n
+
+
+authenticated.bulletin.list.label.moment = Moment
+authenticated.bulletin.list.label.heading = Heading
+
+authenticated.bulletin.form.label.heading = Heading
+authenticated.bulletin.form.label.moment = Moment
+authenticated.bulletin.form.label.text = Text
+authenticated.bulletin.form.label.critical = Critical
+authenticated.bulletin.form.label.link = Link
+
+
