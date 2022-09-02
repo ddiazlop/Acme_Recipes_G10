@@ -10,24 +10,22 @@
 	<acme:input-textarea code="any.kitchenware.form.label.description" path="description" />
 	<acme:input-money code="any.kitchenware.form.label.retail-price" path="retailPrice" />
 	<acme:input-url code="any.kitchenware.form.label.info" path="info"/>
-
-
-	<jstl:choose>
-		<jstl:when test="${wareType == 'INGREDIENT'}">
-			<acme:input-textbox code="any.kitchenware.form.label.kitchenware-type" path="" placeholder="any.kitchenware.placeholder.type.ingredient" readonly="true"/>
-		</jstl:when>
-		<jstl:otherwise>
-			<acme:input-textbox code="any.kitchenware.form.label.kitchenware-type" path="" placeholder="any.kitchenware.placeholder.type.kitchen-utensil" readonly="true"/>
-		</jstl:otherwise>
-	</jstl:choose>
-	<jstl:choose>
-		<jstl:when test="${published}">
-			<acme:input-textbox code="any.kitchenware.list.label.published" path="" placeholder="any.kitchenware.placeholder.published" readonly="true"/>
-		</jstl:when>
-		<jstl:otherwise>
-			<acme:input-textbox code="any.kitchenware.list.label.published" path="" placeholder="any.kitchenware.placeholder.notpublished" readonly="true"/>
-		</jstl:otherwise>
-	</jstl:choose>
+	<acme:input-select code="chef.kitchenware.form.label.wareType" path="wareType">
+		<jstl:if test="${wareType == 'INGREDIENT'}">
+			<acme:input-option code="any.kitchenware.form.label.ingredient" value="${wareType}"/>
+		</jstl:if>
+		<jstl:if test="${wareType == 'KITCHEN_UTENSIL'}">
+			<acme:input-option code="any.kitchenware.form.label.kitchen-utensil" value="${wareType}"/>
+		</jstl:if>
+	</acme:input-select>
+	<acme:input-select code="any.kitchenware.form.label.status" path="published">
+		<jstl:if test="${published}">
+			<acme:input-option code="any.kitchenware.form.label.published" value="TRUE"/>
+		</jstl:if>
+		<jstl:if test="${!published}">
+			<acme:input-option code="any.kitchenware.form.label.not-published" value="FALSE"/>
+		</jstl:if>
+	</acme:input-select>
 
 
 </acme:form> 

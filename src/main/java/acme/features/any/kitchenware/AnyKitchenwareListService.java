@@ -45,6 +45,12 @@ public class AnyKitchenwareListService implements AbstractListService<Any, Kitch
 		assert model != null;
 
 		request.unbind(entity, model, "code", "name");
+		if(entity.isPublished()) {
+			model.setAttribute("published", "PUBLISHED");
+		}
+		else {
+			model.setAttribute("published", "NOT PUBLISHED");
+		}
 
 	}
 

@@ -43,7 +43,13 @@ public class ChefKitchenwareListService implements AbstractListService<Chef, Kit
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "code", "name", "wareType", "published");
+		request.unbind(entity, model, "code", "name");
+		if(entity.isPublished()) {
+			model.setAttribute("published", "PUBLISHED");
+		}
+		else {
+			model.setAttribute("published", "NOT PUBLISHED");
+		}
 		
 	}
 
