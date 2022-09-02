@@ -16,6 +16,9 @@ public class AuthenticatedChefController extends AbstractController<Authenticate
 
 	@Autowired
 	protected AuthenticatedChefCreateService	createService;
+	
+	@Autowired
+	protected AuthenticatedChefUpdateService	updateService;
 
 
 	// Constructors -----------------------------------------------------------
@@ -24,6 +27,7 @@ public class AuthenticatedChefController extends AbstractController<Authenticate
 	@PostConstruct
 	protected void initialise() {
 		super.addCommand("create", this.createService);
+		super.addCommand("update", this.updateService);
 	}
 
 }
