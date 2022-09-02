@@ -28,13 +28,13 @@
 	<acme:input-url code="any.kitchenware.form.label.info" path="kitchenware.info"/>
 	
 	<acme:input-select code="any.kitchenware.form.label.kitchenware-type" path="wareType">
-		<acme:input-option code="INGREDIENT" value="INGREDIENT" selected="${wareType == 'INGREDIENT'}"/>
-		<acme:input-option code="KITCHEN_UTENSIL" value="KITCHEN_UTENSIL" selected="${wareType == 'KITCHEN_UTENSIL'}" />
+		<acme:input-option code="any.kitchenware.form.label.ingredient" value="INGREDIENT" selected="${wareType == 'INGREDIENT'}"/>
+		<acme:input-option code="any.kitchenware.form.label.kitchen-utensil" value="KITCHEN_UTENSIL" selected="${wareType == 'KITCHEN_UTENSIL'}" />
 	</acme:input-select>
 	
 	<acme:input-select code="any.kitchenware.list.label.published" path="published">
-		<acme:input-option code="TRUE" value="TRUE" selected="${published}"/>
-		<acme:input-option code="FALSE" value="FALSE" selected="${!published}"/>
+		<acme:input-option code="any.kitchenware.form.label.published" value="TRUE" selected="${published}"/>
+		<acme:input-option code="any.kitchenware.form.label.not-published" value="FALSE" selected="${!published}"/>
 	</acme:input-select>
 	
 
