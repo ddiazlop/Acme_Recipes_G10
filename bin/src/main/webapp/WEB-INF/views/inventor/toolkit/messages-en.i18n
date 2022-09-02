@@ -1,0 +1,21 @@
+# i18n-en.i18n
+
+inventor.toolkit.form.label.title = Title
+inventor.toolkit.form.label.code = Code
+inventor.toolkit.form.label.description = Description
+inventor.toolkit.form.label.assemblyNotes = Assembly Notes
+inventor.toolkit.form.label.price = Price
+inventor.toolkit.form.label.components = Components
+inventor.toolkit.form.label.inventor = Inventor
+inventor.toolkit.form.label.info = Info
+inventor.toolkit.form.label.published = State
+
+inventor.toolkit.form.button.create = Create Toolkit
+inventor.toolkit.form.button.update = Update Toolkit
+inventor.toolkit.form.button.add-content = Add Items
+inventor.toolkit.form.button.delete = Delete Toolkit
+inventor.toolkit.form.button.publish = Publish Toolkit
+
+inventor.toolkit.no-tool-in-toolkit = Your toolkit do not have any tool. You must add a tool before you publish it
+inventor.toolkit.form.error.duplicated-code = This code belongs to another artifact. Your Toolkit code has to be unique
+spam.detector.error.message = Spam Detected

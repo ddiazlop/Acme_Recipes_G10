@@ -65,7 +65,6 @@
 
 		</acme:menu-option>
 
-
 		<acme:menu-option code="master.menu.inventor" access="hasRole('Inventor')">
 			<acme:menu-suboption code="master.menu.inventor.toolkit.list" action="/inventor/toolkit/list"/>
 			<acme:menu-suboption code="master.menu.inventor.component.list" action="/inventor/item/list-component"/>
@@ -74,14 +73,19 @@
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.chef" access="hasRole('Chef')">
-		
+			<acme:menu-suboption code="master.menu.chef.memoranda.list" action="/chef/memoranda/list"/>
+			<acme:menu-suboption code="master.menu.chef.fineDish.list" action="/chef/fine-dish/list"/>
+			<acme:menu-suboption code="master.menu.chef.kitchenware.list" action="/chef/kitchenware/list"/>
+			<acme:menu-suboption code="master.menu.chef.recipe.list" action="/chef/recipe/list"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.epicure" access="hasRole('Epicure')">
 			<acme:menu-suboption code="master.menu.epicure.fine-dish.list" action="/epicure/fine-dish/list"/>
+			<acme:menu-suboption code="master.menu.epicure.memorandum.list" action="/epicure/memorandum/list"/>
 			<acme:menu-suboption code="master.menu.epicure.dashboard" action="/epicure/epicure-dashboard/show"/>
 		</acme:menu-option>
 		
+	
 	</acme:menu-left>
 
 	<acme:menu-right>
