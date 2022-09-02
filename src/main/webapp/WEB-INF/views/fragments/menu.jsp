@@ -74,6 +74,7 @@
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.chef" access="hasRole('Chef')">
+			<acme:menu-suboption code="master.menu.chef.memoranda.list" action="/chef/memoranda/list"/>
 			<acme:menu-suboption code="master.menu.chef.fineDish.list" action="/chef/fine-dish/list"/>
 			<acme:menu-suboption code="master.menu.chef.kitchenware.list" action="/chef/kitchenware/list"/>
 			<acme:menu-suboption code="master.menu.chef.recipe.list" action="/chef/recipe/list"/>
