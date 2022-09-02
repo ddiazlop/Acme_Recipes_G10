@@ -1,4 +1,4 @@
-package acme.features.any.kitchenware;
+package acme.features.chef.kitchenware;
 
 import java.util.Collection;
 
@@ -8,34 +8,33 @@ import org.springframework.stereotype.Service;
 import acme.entities.recipes.Kitchenware;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
-import acme.framework.roles.Any;
 import acme.framework.services.AbstractListService;
+import acme.roles.Chef;
 
 @Service
-public class AnyKitchenwareListService implements AbstractListService<Any, Kitchenware>{
+public class ChefKitchenwareListService implements AbstractListService<Chef, Kitchenware>{
 
 	@Autowired
-	protected AnyKitchenwareRepository repo;
+	protected ChefKitchenwareRepository repo;
 	
-	
-
 	@Override
 	public boolean authorise(final Request<Kitchenware> request) {
 		assert request != null;
-		return true;
+		
+		return request.getPrincipal().hasRole(Chef.class);
 	}
 
 	@Override
 	public Collection<Kitchenware> findMany(final Request<Kitchenware> request) {
 		assert request != null;
-		Collection<Kitchenware> res;
-		if (request.isCommand("list-ingredient")) {
-			res = this.repo.findPublishedIngredients();
-		}else {
-			res = this.repo.findAllPublishedUtensils();
-		}
-
-		return res;
+		int chefId;
+		final Collection<Kitchenware> kitchenwares;
+		
+		chefId = request.getPrincipal().getActiveRoleId();
+		kitchenwares = this.repo.findManyChefKitchenwares(chefId);
+		
+		return kitchenwares;
+		
 	}
 
 	@Override
@@ -43,7 +42,7 @@ public class AnyKitchenwareListService implements AbstractListService<Any, Kitch
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-
+		
 		request.unbind(entity, model, "code", "name");
 		if(entity.isPublished()) {
 			model.setAttribute("published", "PUBLISHED");
@@ -51,9 +50,9 @@ public class AnyKitchenwareListService implements AbstractListService<Any, Kitch
 		else {
 			model.setAttribute("published", "NOT PUBLISHED");
 		}
-
+		
 	}
 
-
+	
 
 }
