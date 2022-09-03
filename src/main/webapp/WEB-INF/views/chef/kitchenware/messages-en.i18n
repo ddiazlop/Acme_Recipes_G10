@@ -1,0 +1,45 @@
+# i18n-en.i18n
+#
+# Copyright (C) 2012-2022 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+
+chef.kitchenware.list.button.create = Create
+chef.kitchenware.form.submit.create = Create
+chef.kitchenware.form.submit.update = Update
+chef.kitchenware.form.submit.publish = Publish
+chef.kitchenware.form.submit.delete = Delete
+
+
+chef.kitchenware.list.label.code = Code
+chef.kitchenware.list.label.name = Name
+chef.kitchenware.list.label.wareType = Type
+chef.kitchenware.list.label.status = Status
+
+chef.kitchenware.form.label.code = Code
+chef.kitchenware.form.label.name = Name
+chef.kitchenware.form.label.description = Description
+chef.kitchenware.form.label.retailPrice = Original Price
+chef.kitchenware.form.label.retailPriceConverted = Retail Price
+chef.kitchenware.form.label.info = Info
+chef.kitchenware.form.label.wareType = Type
+chef.kitchenware.form.label.ingredient = Ingredient
+chef.kitchenware.form.label.kitchen-utensil = Kitchen Utensil
+chef.kitchenware.form.label.status = Status
+chef.kitchenware.form.label.published = Published
+chef.kitchenware.form.label.not-published = Not published
+
+chef.kitchenware.form.message.with-recipe-associated = NOTE: Remember that if a kitchenware with recipes associated is deleted, its associations will be deleted too
+
+chef.kitchenware.form.error.update.published-kitchenware = You can't update a published kitchenware
+chef.kitchenware.form.error.delete.published-kitchenware = You can't delete a published kitchenware
+chef.kitchenware.form.error.with-recipe-associated = Please delete it(s) associated recipe(s) before
+chef.kitchenware.error.duplicated = Duplicated code
+chef.kitchenware.form.error.retailPrice.currency-not-supported = Not supported currency
+chef.kitchenware.form.error.retailPrice.negativeOrZero = It can't be negative or zero
+
