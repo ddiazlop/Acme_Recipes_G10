@@ -72,8 +72,8 @@ public class AdministratorBulletinCreateService implements AbstractCreateService
 		boolean confirmation;
 
 		confirmation = request.getModel().getBoolean("confirmation");
-		errors.state(request, confirmation, "c"
-			+ "onfirmation", "javax.validation.constraints.AssertTrue.message");
+		errors.state(request, confirmation, "confirmation", 
+			"javax.validation.constraints.AssertTrue.message");
 		
 	}
 
