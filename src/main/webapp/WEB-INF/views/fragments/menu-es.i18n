@@ -61,6 +61,7 @@ master.menu.administrator.system-configuration-sep = Editar detalles del sistema
 master.menu.administrator.dashboard = Panel de indicadores
 master.menu.administrator.dashboard.sep = Panel de indicadores de Septiembre
 master.menu.administrator.announcement.create = Crear Anuncios
+master.menu.administrator.bulletin.create = Crear Boletín
 master.menu.administrator.user-accounts = Todas las cuentas de usuario
 master.menu.administrator.populate-initial = Poblar DB (inicial)
 master.menu.administrator.populate-sample = Poblar DB (ejemplos)

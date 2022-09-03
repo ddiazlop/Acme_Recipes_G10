@@ -62,6 +62,7 @@ master.menu.administrator.system-configuration-sep = Update System Details Sep
 master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.dashboard.sep = September Dashboard
 master.menu.administrator.announcement.create = Create Announcements
+master.menu.administrator.bulletin.create = Create Bulletin
 master.menu.administrator.user-accounts = All User accounts
 master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
