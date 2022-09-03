@@ -1,0 +1,19 @@
+chef.fineDish.label.form.code = Code
+chef.fineDish.label.form.request = Request
+chef.fineDish.label.form.budget = Budget
+chef.fineDish.label.form.creationDate = Creation Date
+chef.fineDish.label.form.startDate = Start Date
+chef.fineDish.label.form.endDate = End Date
+chef.fineDish.label.form.info = More Info
+chef.fineDish.label.form.epicureName = Epicure Name
+chef.fineDish.label.form.epicureUserName = Epicure Username
+chef.fineDish.label.form.epicureOrganisation = Epicure Organisation
+chef.fineDish.label.form.epicureAssertion = Epicure Assertion
+chef.fineDish.label.form.epicureLink = Epicure Link
+
+chef.fineDish.list.label.code = Code
+chef.fineDish.list.label.budget = Budget
+chef.fineDish.list.label.startDate = Start Date
+chef.fineDish.list.label.endDate = End Date
+chef.fineDish.list.label.status = Status
+chef.fineDish.list.label.epicureUserName = Epicure Username

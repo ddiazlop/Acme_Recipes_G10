@@ -1,0 +1,19 @@
+chef.fineDish.label.form.code = Código
+chef.fineDish.label.form.request = Propuesta
+chef.fineDish.label.form.budget = Presupuesto
+chef.fineDish.label.form.creationDate = Fecha de Creación
+chef.fineDish.label.form.startDate = Fecha de Inicio
+chef.fineDish.label.form.endDate = Fecha de Finalización
+chef.fineDish.label.form.info = Más Información
+chef.fineDish.label.form.epicureName = Nombre del Epicúreo
+chef.fineDish.label.form.epicureUserName = Nombre de Usuario del Epicúreo
+chef.fineDish.label.form.epicureOrganisation = Organización del Epicúreo
+chef.fineDish.label.form.epicureAssertion = Aserción del Epicúreo
+chef.fineDish.label.form.epicureLink = Enlace del Epicúreo
+
+chef.fineDish.list.label.code = Código
+chef.fineDish.list.label.budget = Presupuesto
+chef.fineDish.list.label.startDate = Fecha de Inicio
+chef.fineDish.list.label.endDate = Fecha de Finalización
+chef.fineDish.list.label.status = Estado
+chef.fineDish.list.label.epicureUserName = Nombre de Usuario del Epicúreo

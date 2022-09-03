@@ -1,0 +1,7 @@
+
+authenticated.epicure.form.label.organisation = Organisation
+authenticated.epicure.form.label.assertion = Assertion
+authenticated.epicure.form.label.link = Link
+
+authenticated.epicure.form.button.create = Register
+authenticated.epicure.form.button.update = Update

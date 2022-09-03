@@ -8,4 +8,5 @@ authenticated.bulletin.form.label.moment = Momento
 authenticated.bulletin.form.label.text = Texto
 authenticated.bulletin.form.label.critical = Crítico
 authenticated.bulletin.form.label.link = Link
-
+authenticated.bulletin.form.label.is-critical = Verdadero
+authenticated.bulletin.form.label.not-critical = Falso
