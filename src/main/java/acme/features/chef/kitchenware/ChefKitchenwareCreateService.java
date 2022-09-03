@@ -6,9 +6,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamDetector2;
 import acme.entities.recipes.Kitchenware;
 import acme.entities.recipes.WareType;
-import acme.features.administrator.systemConfiguration.AdministratorSystemConfigurationRepository;
+import acme.features.administrator.systemConfigurationSep.AdministratorSystemConfigurationSepRepository;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
@@ -22,7 +23,7 @@ public class ChefKitchenwareCreateService implements AbstractCreateService<Chef,
 	protected ChefKitchenwareRepository repository;
 	
 	@Autowired
-	protected AdministratorSystemConfigurationRepository systemConfigRepository;
+	protected AdministratorSystemConfigurationSepRepository systemConfigRepository;
 
 	@Override
 	public boolean authorise(final Request<Kitchenware> request) {
@@ -83,6 +84,7 @@ public class ChefKitchenwareCreateService implements AbstractCreateService<Chef,
 		assert errors != null;
 		
 		
+		
 		if(!errors.hasErrors("code")) {
 			Kitchenware existing;
 			String code;
@@ -99,6 +101,17 @@ public class ChefKitchenwareCreateService implements AbstractCreateService<Chef,
 				"retailPrice", "chef.kitchenware.form.error.retailPrice.currency-not-supported");
 			errors.state(request, entity.getRetailPrice().getAmount()>0., "retailPrice", "chef.kitchenware.form.error.retailPrice.negativeOrZero");
 		}
+		
+		final SpamDetector2 spamDetector = new SpamDetector2(this.systemConfigRepository.findSpamTuple(), this.systemConfigRepository.findSpamThreshold());
+		
+		if (!errors.hasErrors("name")) {
+			errors.state(request, !spamDetector.stringHasManySpam(entity.getName()), "name", "spamDetector.spamDetected");
+		}
+		
+		if (!errors.hasErrors("description")) {
+			
+		}
+		
 	}
 
 	@Override

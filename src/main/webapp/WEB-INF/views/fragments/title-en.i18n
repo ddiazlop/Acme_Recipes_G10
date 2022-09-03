@@ -9,3 +9,4 @@
 # they accept any liabilities with respect to them.
 
 master.title.company = Acme Recipes, Inc.
+spamDetector.spamDetected = Spam detected
