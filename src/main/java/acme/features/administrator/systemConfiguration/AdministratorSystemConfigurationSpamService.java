@@ -40,7 +40,7 @@ public class AdministratorSystemConfigurationSpamService implements AbstractUpda
 		assert entity != null;
 		assert model != null;
 
-		final String[] acepCurrencies = this.repository.findAcceptedCurrncies().split(",");
+		final String[] acepCurrencies = this.repository.findAcceptedCurrencies().split(",");
 		final List<String> accepted = new ArrayList<String>();
 		
 		for(int i = 0; i<acepCurrencies.length; i++) {

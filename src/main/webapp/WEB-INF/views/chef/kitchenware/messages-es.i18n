@@ -9,6 +9,12 @@
 # they accept any liabilities with respect to them.
 
 
+chef.kitchenware.list.button.create = Crear
+chef.kitchenware.form.submit.create = Crear
+chef.kitchenware.form.submit.update = Actualizar
+chef.kitchenware.form.submit.publish = Publicar
+chef.kitchenware.form.submit.delete = Borrar
+
 chef.kitchenware.list.label.code = Código
 chef.kitchenware.list.label.name = Nombre
 chef.kitchenware.list.label.wareType = Tipo
@@ -26,3 +32,14 @@ chef.kitchenware.form.label.kitchen-utensil = Utensilio de cocina
 chef.kitchenware.form.label.status = Estado
 chef.kitchenware.form.label.published = Publicado
 chef.kitchenware.form.label.not-published = No publicado
+
+chef.kitchenware.form.message.with-recipe-associated = NOTA: Recuerde que si borra un artículo con alguna receta asociada, su asociación también se borrará
+
+chef.kitchenware.form.error.update.published-kitchenware = No puedes modificar un artículo publicado
+chef.kitchenware.form.error.delete.published-kitchenware = No puedes borrar un artículo publicado
+chef.kitchenware.form.error.with-recipe-associated = Por favor borre la(s) receta(s) asociada(s) antes
+chef.kitchenware.error.duplicated = Código duplicado
+chef.kitchenware.form.error.retailPrice.currency-not-supported = Moneda no soportada
+chef.kitchenware.form.error.retailPrice.negativeOrZero = No puede ser ni negativo ni cero
+
+
