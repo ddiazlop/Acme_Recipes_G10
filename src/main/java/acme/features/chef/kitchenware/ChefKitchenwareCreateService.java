@@ -6,7 +6,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.components.SpamDetector2;
 import acme.entities.recipes.Kitchenware;
 import acme.entities.recipes.WareType;
 import acme.features.administrator.systemConfigurationSep.AdministratorSystemConfigurationSepRepository;
@@ -15,6 +14,7 @@ import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractCreateService;
 import acme.roles.Chef;
+import justenoughspam.detector.SpamDetector2;
 
 @Service
 public class ChefKitchenwareCreateService implements AbstractCreateService<Chef, Kitchenware>{
@@ -109,7 +109,7 @@ public class ChefKitchenwareCreateService implements AbstractCreateService<Chef,
 		}
 		
 		if (!errors.hasErrors("description")) {
-			
+			errors.state(request, !spamDetector.stringHasManySpam(entity.getDescription()), "description", "spamDetector.spamDetected");
 		}
 		
 	}

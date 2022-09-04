@@ -27,7 +27,7 @@ public class SpamDetector2 {
 			final Double val = entry.getValue();
 			if (stringToTest.contains(key)) {
 				Integer ocurrences = (numberOWords==1)?1:this.countSubstring2(stringToTest, key);
-				if (stringToTest.split(" ").length>=ocurrences) {
+				if (key.split(" ").length>=1) {
 					ocurrences = ocurrences*2;
 					numberOWords -=1;
 				}
