@@ -7,5 +7,9 @@ epicure.memorandum.list.label.moment = Moment
 epicure.memorandum.list.label.sequenceNumber  = Sequence Number
 epicure.memorandum.list.label.report = Report
 epicure.memorandum.list.label.info = Further Information
+epicure.memorandum.form.label.confirmation = Confirm that the memoranda is correct
 
 spam.detector.error.message = Spam Detected
+
+epicure.memorandum.list.button.create = Create
+epicure.memorandum.form.button.create = Create

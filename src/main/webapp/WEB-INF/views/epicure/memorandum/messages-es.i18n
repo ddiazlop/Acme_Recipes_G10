@@ -1,7 +1,11 @@
+epicure.memorandum.list.button.create = Crear
+epicure.memorandum.form.button.create = Crear
+
 epicure.memorandum.form.label.moment = Momento
 epicure.memorandum.form.label.sequenceNumber = Número de secuencia
 epicure.memorandum.form.label.report = Reporte
 epicure.memorandum.form.label.info = Información Adicional
+any.peep.form.label.confirmation = Confirme que el mensaje es correcto
 
 epicure.memorandum.list.label.moment = Momento
 epicure.memorandum.list.label.sequenceNumber = Número de secuencia
