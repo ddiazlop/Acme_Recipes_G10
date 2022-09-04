@@ -11,3 +11,7 @@ kitchenware-09,INGREDIENT,Azucar,AA:DDD-000,Para endulzar la vida,EUR 0.5,chef-0
 kitchenware-10,INGREDIENT,Aceite de oliva virgen extra,BB:DDD-000,Bien rico,GBP 0.25,chef-02,null,true
 kitchenware-11,INGREDIENT,Lechuga,CC:ZZZ-000,Lechuguita rica,EUR 4.5,chef-03,null,FALSE
 kitchenware-12,KITCHEN_UTENSIL,Tijeras de cocina,CC:ZZZ-001,Increiblemente confiable,EUR 44.5,chef-03,null,FALSE
+kitchenware-13,KITCHEN_UTENSIL,Tijeras de Podar,CC:ZZZ-666,Increiblemente confiable podando el jardin,EUR 65.99,chef-02,null,true
+kitchenware-14,KITCHEN_UTENSIL,Taladro para trinchar,CC:ZZZ-661,Dudosa fiabilidad,EUR 99.99,chef-02,null,true
+kitchenware-15,INGREDIENT,Pichon,CC:ZZZ-662,Mejor muerto,EUR 3.99,chef-02,null,true
+kitchenware-16,INGREDIENT,Limones,CC:ZZZ-664,Dudosa fiabilidad,EUR 2.00,chef-02,null,true

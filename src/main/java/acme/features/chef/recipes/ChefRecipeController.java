@@ -17,16 +17,23 @@ public class ChefRecipeController extends AbstractController<Chef, Recipe>{
 	
 	@Autowired
 	private ChefRecipeListService listService;
+	@Autowired
+	private ChefRecipeDeleteService deleteService;
+	@Autowired
+	private ChefRecipeCreateService createService;
+	@Autowired
+	private ChefRecipeUpdateService updateService;
+	@Autowired
+	private ChefRecipePublishService publishService;
 	
 	@PostConstruct
 	protected void initialise() {
 		super.addCommand("show", this.showService);
 		super.addCommand("list", this.listService);
-		/*super.addCommand("delete", this.deleteService);
+		super.addCommand("delete", this.deleteService);
 		super.addCommand("create", this.createService);
 		super.addCommand("update", this.updateService);
-		
-		super.addCommand("publish", "update", this.publishService);*/
+		super.addCommand("publish", "update", this.publishService);
 	}
 
 }

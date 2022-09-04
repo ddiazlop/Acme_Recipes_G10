@@ -3,18 +3,28 @@ chef.recipes.form.label.heading = Encabezado
 chef.recipes.form.label.description = Descripción
 chef.recipes.form.label.preparationNotes = Notas de Preparación
 chef.recipes.form.label.info = Información
-chef.recipes.form.label.totalPrice = Precio Total
+chef.recipes.form.label.price = Precio Total
 chef.recipes.form.label.state = Estado de Publicación
+chef.recipes.form.label.chef = Chef
 
 chef.recipes.list.label.code = Código
 chef.recipes.list.label.heading = Encabezado
 chef.recipes.list.label.description = Descripción
 chef.recipes.list.label.preparationNotes = Notas de Preparación
 chef.recipes.list.label.info = Información
-chef.recipes.list.label.totalPrice = Precio Total
+chef.recipes.list.label.price = Precio Total
 chef.recipes.list.label.state = Estado de Publicación
 
 TRUE = PUBLICADO
 FALSE = NO PUBLICADO
 
 chef.recipes.form.button.kitchenwareRecipe = Ver Artículos de Cocina Asociados
+chef.recipes.form.button.publish = Publicar receta
+chef.recipes.form.button.update = Actualizar
+chef.recipes.form.button.add-content = Añadir contenido
+chef.recipes.form.button.delete = Borrar receta
+chef.recipes.form.button.create = Crear receta
+
+chef.recipe.no-ingredient-in-recipe = No existen ingredientes en esta receta
+chef.recipe.no-kitchenUtensils-in-recipe = No existen utensilios de cocina en esta receta
+chef.recipe.form.error.duplicated-code = El codigo de la receta no es unico
