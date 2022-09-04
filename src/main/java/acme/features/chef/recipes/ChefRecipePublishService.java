@@ -82,7 +82,7 @@ public class ChefRecipePublishService implements AbstractUpdateService<Chef, Rec
 
 		model.setAttribute("price", money);
 		model.setAttribute("chef", entity.getChef().getIdentity().getFullName());
-		
+		model.setAttribute("readOnly", true);
 		model.setAttribute("ableToPublish", 
 			this.repository.getIngredientsFromRecipe(entity.getId()).stream().anyMatch(e->e.getWareType().equals(WareType.INGREDIENT))
 			&& this.repository.getUtensilsFromRecipe(entity.getId()).stream().anyMatch(e->e.getWareType().equals(WareType.KITCHEN_UTENSIL)));

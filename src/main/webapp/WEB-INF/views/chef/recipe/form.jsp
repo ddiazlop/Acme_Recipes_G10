@@ -4,7 +4,7 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 <acme:form>
-	<acme:input-textbox code="chef.recipes.form.label.code" path="code"/>
+	<acme:input-textbox  readonly="${readOnly}" placeholder= "Code structure like AA:ABC-123 or AAA-111" code="chef.recipes.form.label.code" path="code"/>
 	<acme:input-textbox code="chef.recipes.form.label.heading" path="heading"/>
 	<acme:input-textarea code="chef.recipes.form.label.description" path="description"/>
 	<acme:input-textarea code="chef.recipes.form.label.preparationNotes" path="preparationNotes"/>

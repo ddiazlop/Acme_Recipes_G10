@@ -93,7 +93,7 @@ public class ChefRecipeCreateService implements AbstractCreateService<Chef, Reci
 		final Double amount = pricesFix.stream().mapToDouble(Money::getAmount).sum();
 		money.setAmount(amount);
 		money.setCurrency(sc.getSystemCurrency());
-
+		model.setAttribute("readOnly", false);
 		model.setAttribute("price", money);
 		model.setAttribute("chef", entity.getChef().getIdentity().getFullName());
 	}

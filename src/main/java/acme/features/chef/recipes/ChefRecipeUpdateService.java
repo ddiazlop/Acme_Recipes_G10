@@ -81,15 +81,16 @@ public class ChefRecipeUpdateService implements AbstractUpdateService<Chef, Reci
 
 		model.setAttribute("price", money);
 		model.setAttribute("chef", entity.getChef().getIdentity().getFullName());
+		model.setAttribute("readOnly", true);
 ///////////////////////////////////////////////////////////MODIFICAR////////////////////////////////////////////////////////////////////////////////////////////////////	
 		// AÑADIR METODO QUE COMPRUEBE QUE CON LA SIGUIENTE LISTA :
 		//Coger los ingredientes y comprobar si:
-			// hay solo 1 Ingrediente y este esta Publicado
-			// hay 1 o varios utensilios y estos estan Publicados
+			// hay solo 1 Ingrediente de cada tipo, pero puede haber varios diferentes en la receta y este esta Publicado
+			// hay solo 1 utensilio de cada tipo, pero puede haber varios diferentes en la receta y estos estan Publicados
 		
 		model.setAttribute("ableToPublish", 
-			this.repository.getIngredientsFromRecipe(entity.getId()).stream().anyMatch(e->e.getWareType().equals(WareType.INGREDIENT) && e.isPublished())
-			&& this.repository.getUtensilsFromRecipe(entity.getId()).stream().anyMatch(e->e.getWareType().equals(WareType.KITCHEN_UTENSIL) && e.isPublished()));
+			this.repository.getIngredientsFromRecipe(entity.getId()).stream().allMatch(e->e.getWareType().equals(WareType.INGREDIENT) && e.isPublished())
+			&& this.repository.getUtensilsFromRecipe(entity.getId()).stream().allMatch(e->e.getWareType().equals(WareType.KITCHEN_UTENSIL) && e.isPublished()));
 	}
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	@Override
