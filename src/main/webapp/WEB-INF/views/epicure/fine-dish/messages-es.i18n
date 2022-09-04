@@ -35,7 +35,14 @@ epicure.fine-dish.list.label.endDate = Fecha fin
 epicure.fine-dish.list.label.info = Info
 
 
-
+TRUE = PUBLICADO
+FALSE = NO PUBLICADO
+epicure.fine-dish.button.kitchenwareRecipe = Ver Artículos de Cocina Asociados
+epicure.fine-dish.button.publish = Publicar plato
+epicure.fine-dish.button.update = Actualizar
+epicure.fine-dish.button.add-content = Añadir contenido
+epicure.fine-dish.button.delete = Borrar plato
+epicure.fine-dish.button.create = Crear plato
 
 
 

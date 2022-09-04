@@ -29,7 +29,14 @@ epicure.fine-dish.list.label.status = Status
 epicure.fine-dish.list.label.code = Code
 epicure.fine-dish.list.label.request = Request
 
+TRUE = PUBLISHED
+FALSE = NOT PUBLISHED
 
 
-
+epicure.fine-dish.form.button.kitchenwareRecipe = View Associated Kitchenwares
+epicure.fine-dish.button.publish = Publish fine dish
+epicure.fine-dish.button.update = Update
+epicure.fine-dish.button.add-content = Add content
+epicure.fine-dish.button.delete = Delete fine dish
+epicure.fine-dish.button.create = New fine dish
 
