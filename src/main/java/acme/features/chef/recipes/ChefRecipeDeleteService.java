@@ -83,8 +83,8 @@ public class ChefRecipeDeleteService implements AbstractDeleteService<Chef, Reci
 		model.setAttribute("chef", entity.getChef().getIdentity().getFullName());
 
 		model.setAttribute("ableToPublish", 
-			this.repository.getIngredientsFromRecipe(entity.getId()).stream().anyMatch(e->e.getWareType().equals(WareType.INGREDIENT))
-			&& this.repository.getUtensilsFromRecipe(entity.getId()).stream().anyMatch(e->e.getWareType().equals(WareType.KITCHEN_UTENSIL)));
+			this.repository.getIngredientsFromRecipe(entity.getId()).stream().allMatch(e->e.getWareType().equals(WareType.INGREDIENT) && e.isPublished() )
+			&& this.repository.getUtensilsFromRecipe(entity.getId()).stream().allMatch(e->e.getWareType().equals(WareType.KITCHEN_UTENSIL) && e.isPublished()));
 	}
 
 	@Override

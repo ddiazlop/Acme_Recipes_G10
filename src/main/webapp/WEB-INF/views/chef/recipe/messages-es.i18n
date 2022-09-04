@@ -27,4 +27,8 @@ chef.recipes.form.button.create = Crear receta
 
 chef.recipe.no-ingredient-in-recipe = No existen ingredientes en esta receta
 chef.recipe.no-kitchenUtensils-in-recipe = No existen utensilios de cocina en esta receta
+chef.recipe.kitchenUtensils-duplicated-in-recipe= Existen utensilios de cocina duplicados en esta receta
+chef.recipe.ingredient-duplicated-in-recipe= Existen ingredientes duplicados en esta receta
+chef.recipe.no-kitchenUtensils-published-in-recipe= Existen utensilios de cocina no publicados en esta receta
+chef.recipe.no-ingredient-published-in-recipe= Existen ingredientes no publicados en esta receta
 chef.recipe.form.error.duplicated-code = El codigo de la receta no es unico

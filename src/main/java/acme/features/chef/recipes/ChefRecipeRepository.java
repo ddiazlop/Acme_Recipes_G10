@@ -17,16 +17,6 @@ import acme.roles.Chef;
 @Repository
 public interface ChefRecipeRepository extends AbstractRepository{
 	
-	
-	/*
-	 *  Item --> Kitchenware
-	 *  Toolkit ---> Recipe
-	 *  ItemToolkit --->KitchenwareRecipe
-	 *  Inventor ----> chef
-	 *  
-	 */
-	
-	
 	@Query("Select r From Recipe r")
 	Collection<Recipe> findAllRecipes();
 	
@@ -49,13 +39,13 @@ public interface ChefRecipeRepository extends AbstractRepository{
 	@Query("select sum(kitchenR.quantity * k.retailPrice.amount) from Kitchenware k left join KitchenwareRecipe kitchenR"
 		+ " on k.id=kitchenR.kitchenware.id where kitchenR.recipe.id = :id and k.retailPrice.currency=:currency")
 	Double getRecipePricesByIdAndCurrency(int id, String currency);
-	///////////////////////////////////////////////////////////MODIFICAR////////////////////////////////////////////////////////////////////////////////////////////////////
-	@Query("select kwR.kitchenware from KitchenwareRecipe kwR where kwR.kitchenware.id=:id and kwR.kitchenware.wareType='INGREDIENT' and kwR.kitchenware.published ='true'")
+	
+	@Query("select kwR.kitchenware from KitchenwareRecipe kwR where kwR.kitchenware.id=:id and kwR.kitchenware.wareType='INGREDIENT' ")
 	Collection<Kitchenware> getIngredientsFromRecipe(int id);
 
-	@Query("select kwR.kitchenware from KitchenwareRecipe kwR where kwR.kitchenware.id=:id and kwR.kitchenware.wareType='KITCHEN_UTENSIL' and kwR.kitchenware.published ='true'")
+	@Query("select kwR.kitchenware from KitchenwareRecipe kwR where kwR.kitchenware.id=:id and kwR.kitchenware.wareType='KITCHEN_UTENSIL'")
 	Collection<Kitchenware> getUtensilsFromRecipe(int id);
-	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 	@Query("select kwr.kitchenware from KitchenwareRecipe kwr where kwr.kitchenware.wareType=:type and kwr.recipe.id=:id")
 	Collection<Kitchenware> findKitchenwareByTypeFromRecipe(int id, WareType type);
 	

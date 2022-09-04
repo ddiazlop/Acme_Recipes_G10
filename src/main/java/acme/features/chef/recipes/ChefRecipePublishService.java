@@ -84,8 +84,8 @@ public class ChefRecipePublishService implements AbstractUpdateService<Chef, Rec
 		model.setAttribute("chef", entity.getChef().getIdentity().getFullName());
 		model.setAttribute("readOnly", true);
 		model.setAttribute("ableToPublish", 
-			this.repository.getIngredientsFromRecipe(entity.getId()).stream().anyMatch(e->e.getWareType().equals(WareType.INGREDIENT))
-			&& this.repository.getUtensilsFromRecipe(entity.getId()).stream().anyMatch(e->e.getWareType().equals(WareType.KITCHEN_UTENSIL)));
+			this.repository.getIngredientsFromRecipe(entity.getId()).stream().allMatch(e->e.getWareType().equals(WareType.INGREDIENT) && e.isPublished() )
+			&& this.repository.getUtensilsFromRecipe(entity.getId()).stream().allMatch(e->e.getWareType().equals(WareType.KITCHEN_UTENSIL) && e.isPublished()));
 		}
 
 	@Override
@@ -104,7 +104,7 @@ public class ChefRecipePublishService implements AbstractUpdateService<Chef, Rec
 		assert errors != null;
 		
 		if (!errors.hasErrors("*")) {
-			
+
 			final Collection<Kitchenware> ingredients=this.repository.findKitchenwareByTypeFromRecipe(entity.getId(), WareType.INGREDIENT);
 			errors.state(request, !ingredients.isEmpty(),"*", "chef.recipe.no-ingredient-in-recipe");
 		}
@@ -112,8 +112,38 @@ public class ChefRecipePublishService implements AbstractUpdateService<Chef, Rec
 			
 			final Collection<Kitchenware> utensils=this.repository.findKitchenwareByTypeFromRecipe(entity.getId(), WareType.KITCHEN_UTENSIL);
 			errors.state(request, !utensils.isEmpty(),"*", "chef.recipe.no-kitchenUtensils-in-recipe");
+			
+		}
+		if (!errors.hasErrors("*")) {
+			
+			final Collection<Kitchenware> ingredients=this.repository.findKitchenwareByTypeFromRecipe(entity.getId(), WareType.INGREDIENT);
+			final Boolean validados = ingredients.stream().allMatch(Kitchenware::isPublished);
+			errors.state(request, validados,"*", "chef.recipe.no-ingredient-published-in-recipe");
 		}
 		
+		if (!errors.hasErrors("*")) {
+		
+			final Collection<Kitchenware> ingredients=this.repository.findKitchenwareByTypeFromRecipe(entity.getId(), WareType.KITCHEN_UTENSIL);
+			final Boolean validados = ingredients.stream().allMatch(Kitchenware::isPublished);
+			errors.state(request, validados,"*", "chef.recipe.no-kitchenUtensils-published-in-recipe");
+		}
+			
+	
+ 		if (!errors.hasErrors("*")) {
+			
+			final Collection<Kitchenware> utensils=this.repository.findKitchenwareByTypeFromRecipe(entity.getId(), WareType.INGREDIENT);
+			final Long diferentes = utensils.stream().mapToInt(Kitchenware::getId).distinct().count();
+			errors.state(request, utensils.size()== diferentes.intValue(),"*", "chef.recipe.ingredient-duplicated-in-recipe");
+		}
+
+ 		if (!errors.hasErrors("*")) {
+			
+			final Collection<Kitchenware> utensils=this.repository.findKitchenwareByTypeFromRecipe(entity.getId(), WareType.KITCHEN_UTENSIL);
+			final Long diferentesU = utensils.stream().mapToInt(Kitchenware::getId).distinct().count();
+			errors.state(request, utensils.size()== diferentesU.intValue(),"*", "chef.recipe.kitchenUtensils-duplicated-in-recipe");			
+		}
+ 				
+ 			
 		if(!errors.hasErrors("code")) {
 			final Recipe existing=this.repository.findOneRecipeByCode(entity.getCode());
 			
