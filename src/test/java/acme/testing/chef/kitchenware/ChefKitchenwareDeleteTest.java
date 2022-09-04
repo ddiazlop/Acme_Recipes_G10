@@ -1,4 +1,4 @@
-package acme.testing.chef.object.ingredient;
+package acme.testing.chef.kitchenware;
 
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -6,18 +6,17 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.TestHarness;
 
-public class ChefObjectIngredientDeleteTest extends TestHarness{
+public class ChefKitchenwareDeleteTest extends TestHarness{
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "/inventor/item/delete-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(10)
-	public void positiveObjectIngredientDeleteTest(final int recordIndex) {
+	@CsvFileSource(resources = "/chef/kitchenware/delete-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Order(30)
+	public void positiveKitchenwareDeleteTest(final int recordIndex) {
 
 		super.signIn("chef1", "chef1");
-		super.clickOnMenu("Chef", "My Ingredients");
+		super.clickOnMenu("Chef", "My Kitchenwares");
 
 		super.checkListingExists();
-		super.sortListing(0, "desc");
 
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();

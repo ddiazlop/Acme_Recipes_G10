@@ -1,4 +1,4 @@
-package acme.testing.chef.object.ingredient;
+package acme.testing.chef.kitchenware;
 
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -7,25 +7,25 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.TestHarness;
 
-public class ChefObjectIngredientListTest extends TestHarness{
+public class ChefKitchenwareListAndShowTest extends TestHarness{
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "/chef/object/list-ingredient.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/chef/kitchenware/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void positiveChefIngredientsTest(final int recordIndex, final String name, final String code, final String objectType, final String description, final String retailPrice, final String info,
-		final String published) {
+	public void positiveChefKitchenwaresTest(final int recordIndex, final String wareType, 
+		final String name, final String code, final String description, 
+		final String retailPrice, final String info, final String published) {
 		
-		super.signIn("chef1", "chef1");
+		super.signIn("chef3", "chef3");
 		
-		super.clickOnMenu("Chef", "My Ingredients");	
+		super.clickOnMenu("Chef", "My Kitchenwares");	
 		super.checkListingExists();
-		
-		super.checkListingExists();
-		super.sortListing(0, "desc");
+		super.sortListing(0, "asc");
 
 		super.checkColumnHasValue(recordIndex, 0, code);
 		super.checkColumnHasValue(recordIndex, 1, name);
-		super.checkColumnHasValue(recordIndex, 2, published);
+		super.checkColumnHasValue(recordIndex, 2, wareType);
+		super.checkColumnHasValue(recordIndex, 3, published);
 
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
@@ -34,8 +34,7 @@ public class ChefObjectIngredientListTest extends TestHarness{
 		super.checkInputBoxHasValue("description", description);
 		super.checkInputBoxHasValue("retailPrice", retailPrice);
 		super.checkInputBoxHasValue("info", info);
-		super.checkInputBoxHasValue("objectType", objectType);
-		super.checkInputBoxHasValue("published", published);
+		super.checkInputBoxHasValue("wareType", wareType);
 		
 		super.signOut();
 		
@@ -45,22 +44,22 @@ public class ChefObjectIngredientListTest extends TestHarness{
 	@Test
 	@Order(20)
 	public void hackingTest() {
-		final String pathShowObject= "/chef/object/show";
+		final String pathShowKitchenware= "/chef/kitchenware/show";
 		
 		
 		super.checkNotLinkExists("Chef");
-		super.navigate(pathShowObject);
+		super.navigate(pathShowKitchenware);
 		super.checkPanicExists();
 		
 		super.signIn("administrator", "administrator");
 		super.checkNotLinkExists("Chef");
-		super.navigate(pathShowObject);
+		super.navigate(pathShowKitchenware);
 		super.checkPanicExists();
 		super.signOut();
 		
 		super.signIn("epicure1", "epicure1");
 		super.checkNotLinkExists("Chef");
-		super.navigate(pathShowObject);
+		super.navigate(pathShowKitchenware);
 		super.checkPanicExists();
 		
 		super.signOut();
