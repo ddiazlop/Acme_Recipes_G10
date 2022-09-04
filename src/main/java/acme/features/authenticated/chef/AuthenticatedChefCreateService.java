@@ -3,6 +3,7 @@ package acme.features.authenticated.chef;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.features.administrator.systemConfigurationSep.AdministratorSystemConfigurationSepRepository;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.HttpMethod;
@@ -14,12 +15,16 @@ import acme.framework.helpers.PrincipalHelper;
 import acme.framework.roles.Authenticated;
 import acme.framework.services.AbstractCreateService;
 import acme.roles.Chef;
+import justenoughspam.detector.SpamDetector2;
 
 @Service
 public class AuthenticatedChefCreateService implements AbstractCreateService<Authenticated, Chef>{
 	
 	@Autowired
 	protected AuthenticatedChefRepository repo;
+	
+	@Autowired
+	protected AdministratorSystemConfigurationSepRepository systemConfigRepository;
 
 	@Override
 	public boolean authorise(final Request<Chef> request) {
@@ -77,6 +82,19 @@ public class AuthenticatedChefCreateService implements AbstractCreateService<Aut
 		assert entity != null;
 		assert errors != null;
 		
+		final SpamDetector2 spamDetector = new SpamDetector2(this.systemConfigRepository.findSpamTuple(), this.systemConfigRepository.findSpamThreshold());
+		
+		if (!errors.hasErrors("organisation")) {
+			errors.state(request, !spamDetector.stringHasManySpam(entity.getOrganisation()), "organisation", "spamDetector.spamDetected");
+		}
+		
+		if (!errors.hasErrors("assertion")) {
+			errors.state(request, !spamDetector.stringHasManySpam(entity.getAssertion()), "assertion", "spamDetector.spamDetected");
+		}
+		
+		if (!errors.hasErrors("link")) {
+			errors.state(request, !spamDetector.stringHasManySpam(entity.getLink()), "link", "spamDetector.spamDetected");
+		}
 	}
 
 	@Override

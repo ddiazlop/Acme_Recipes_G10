@@ -42,7 +42,7 @@ public class AdministratorSystemConfigurationSepUpdateService implements Abstrac
 		assert entity != null;
 		assert model != null;
 
-		final String[] acepCurrencies = this.repository.findAcceptedCurrncies().split(",");
+		final String[] acepCurrencies = this.repository.findAcceptedCurrencies().split(",");
 		final List<String> accepted = new ArrayList<String>();
 		
 		for(int i = 0; i<acepCurrencies.length; i++) {
@@ -96,7 +96,7 @@ public class AdministratorSystemConfigurationSepUpdateService implements Abstrac
 	//otros metodos
 	public boolean validateAvailableCurrency(final String currency) {
 
-		final String currencies = this.repository.findAcceptedCurrncies();
+		final String currencies = this.repository.findAcceptedCurrencies();
 		final List<Object> listOfAvailableCurrencies = Arrays.asList((Object[]) currencies.split(","));
 
 		return listOfAvailableCurrencies.contains(currency);

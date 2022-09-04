@@ -6,7 +6,7 @@
 <acme:message code="chef.kitchenware.form.message.with-recipe-associated"/>
 <acme:form>
 
-	<acme:input-textbox code="chef.kitchenware.form.label.code" path="code" readonly="${readOnly}" />	
+	<acme:input-textbox code="chef.kitchenware.form.label.code" path="code" readonly="${readOnly}"  placeholder="AB:CDE-123, ABC-123..."/>	
 	<acme:input-textbox code="chef.kitchenware.form.label.name" path="name" />
 	<acme:input-textarea code="chef.kitchenware.form.label.description" path="description" />
 	<acme:input-select code="chef.kitchenware.form.label.wareType" path="wareType" readonly="${readOnly}" >

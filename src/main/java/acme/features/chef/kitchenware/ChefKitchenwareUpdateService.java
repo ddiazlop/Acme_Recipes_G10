@@ -8,12 +8,13 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.recipes.Kitchenware;
 import acme.entities.recipes.WareType;
-import acme.features.administrator.systemConfiguration.AdministratorSystemConfigurationRepository;
+import acme.features.administrator.systemConfigurationSep.AdministratorSystemConfigurationSepRepository;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractUpdateService;
 import acme.roles.Chef;
+import justenoughspam.detector.SpamDetector2;
 
 @Service
 public class ChefKitchenwareUpdateService implements AbstractUpdateService<Chef, Kitchenware>{
@@ -22,7 +23,7 @@ public class ChefKitchenwareUpdateService implements AbstractUpdateService<Chef,
 	protected ChefKitchenwareRepository repository;
 	
 	@Autowired
-	protected AdministratorSystemConfigurationRepository systemConfigRepository;
+	protected AdministratorSystemConfigurationSepRepository systemConfigRepository;
 	
 	@Override
 	public boolean authorise(final Request<Kitchenware> request) {
@@ -91,6 +92,16 @@ public class ChefKitchenwareUpdateService implements AbstractUpdateService<Chef,
 			errors.state(request, currencies.contains(entity.getRetailPrice().getCurrency()), 
 				"retailPrice", "chef.kitchenware.form.error.retailPrice.currency-not-supported");
 			errors.state(request, entity.getRetailPrice().getAmount()>0., "retailPrice", "chef.kitchenware.form.error.retailPrice.negativeOrZero");
+		}
+		
+		final SpamDetector2 spamDetector = new SpamDetector2(this.systemConfigRepository.findSpamTuple(), this.systemConfigRepository.findSpamThreshold());
+		
+		if (!errors.hasErrors("name")) {
+			errors.state(request, !spamDetector.stringHasManySpam(entity.getName()), "name", "spamDetector.spamDetected");
+		}
+		
+		if (!errors.hasErrors("description")) {
+			errors.state(request, !spamDetector.stringHasManySpam(entity.getDescription()), "description", "spamDetector.spamDetected");
 		}
 		
 	}
