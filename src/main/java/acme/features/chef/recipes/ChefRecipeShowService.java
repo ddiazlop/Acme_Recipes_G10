@@ -44,8 +44,7 @@ public class ChefRecipeShowService implements AbstractShowService<Chef, Recipe>{
 		assert request != null;
 		
 		final int id = request.getModel().getInteger("id");
-		final Recipe recipe = this.repository.findOneRecipeById(id);
-		return recipe;
+		return this.repository.findOneRecipeById(id);
 	}
 
 	@Override

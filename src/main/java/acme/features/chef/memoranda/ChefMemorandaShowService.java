@@ -36,9 +36,7 @@ public class ChefMemorandaShowService implements AbstractShowService<Chef, Memor
 		
 		final int memorandumId = request.getModel().getInteger("id");
 		
-		final Memoranda memoranda = this.repository.findOneById(memorandumId);
-		
-		return memoranda;
+		return this.repository.findOneById(memorandumId);
 	}
 
 	@Override

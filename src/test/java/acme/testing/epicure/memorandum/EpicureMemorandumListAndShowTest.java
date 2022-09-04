@@ -8,7 +8,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.TestHarness;
 
-public class EpicureMemorandumListAndShow extends TestHarness {
+public class EpicureMemorandumListAndShowTest extends TestHarness {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/epicure/memodandum/list-and-show-test.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)

@@ -23,11 +23,11 @@ public class EpicureMemorandaShowService implements AbstractShowService<Epicure,
 		assert request != null;
 
 		boolean result;
-		int MemorandumId;
+		int memorandumId;
 		Memoranda m;
 
-		MemorandumId = request.getModel().getInteger("id");
-		m = this.repository.findOneMemorandumById(MemorandumId);
+		memorandumId = request.getModel().getInteger("id");
+		m = this.repository.findOneMemorandumById(memorandumId);
 		result = m.getEpicure().getId() == request.getPrincipal().getActiveRoleId();
 
 		return result;

@@ -1,17 +1,13 @@
 
 package acme.testing.epicure.fineDish;
 
-import java.util.Date;
-
 import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import acme.framework.datatypes.Money;
 import acme.testing.TestHarness;
 
-public class EpicureFineDishListAndShow extends TestHarness {
+public class EpicureFineDishListAndShowTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/epicure/fineDish/list-and-show-test.csv", encoding = "utf-8", numLinesToSkip = 1)

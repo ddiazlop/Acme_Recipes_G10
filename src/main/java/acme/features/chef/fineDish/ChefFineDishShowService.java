@@ -46,9 +46,7 @@ public class ChefFineDishShowService implements AbstractShowService<Chef, FineDi
 		assert request != null;
 	
 		final int fineDishId  = request.getModel().getInteger("id");
-		final FineDish fineDish = this.repository.findFineDishById(fineDishId);
-		
-		return fineDish;
+		return this.repository.findFineDishById(fineDishId);
 	}
 
 	@Override

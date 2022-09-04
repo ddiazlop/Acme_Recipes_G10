@@ -41,9 +41,7 @@ public class ChefFineDishListService implements AbstractListService<Chef, FineDi
 		assert request != null;
 		
 		final int chefId = request.getPrincipal().getActiveRoleId();
-		final Collection<FineDish> fineDishes = this.repository.findFineDishesByChefId(chefId);
-		
-		return fineDishes;
+		return this.repository.findFineDishesByChefId(chefId);
 	}
 
 	@Override
