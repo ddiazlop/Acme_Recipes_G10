@@ -8,6 +8,10 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
+epicure.fine-dish.form.message.with-memoranda-associated = NOTE: Remember that if a fine dish with memoranda associated is deleted, they will be deleted too
+
+
+
 epicure.fine-dish.form.label.status = Status
 epicure.fine-dish.form.label.code = Code
 epicure.fine-dish.form.label.request = Request
@@ -16,10 +20,17 @@ epicure.fine-dish.form.label.creationDate = CreationDate
 epicure.fine-dish.form.label.startDate = StartDate 
 epicure.fine-dish.form.label.endDate = EndDate 
 epicure.fine-dish.form.label.info = Info 
-epicure.fine-dish.form.label.chef.username = Chef
+epicure.fine-dish.form.label.chefUsername = Chef's username
 epicure.fine-dish.form.label.chef.organisation = Chef's organisation
 epicure.fine-dish.form.label.chef.assertion = Chef's assertion
 epicure.fine-dish.form.label.chef.link = Chef's link
+epicure.fineDish.form.label.status = Status
+epicure.fineDish.form.label.status.PROPOSED = Proposed
+epicure.fineDish.form.label.status.ACCEPTED = Accepted
+epicure.fineDish.form.label.status.DENIED = Denied
+epicure.fineDish.form.label.is-published = Publication's status
+epicure.fineDish.form.label.published = Published
+epicure.fineDish.form.label.not-published = Not published
 
 epicure.fine-dish.form.error.invalidChef = Invalid or null chef
 epicure.fine-dish.form.error.duplicated-code = Existing code
@@ -31,11 +42,15 @@ epicure.fine-dish.form.error.too-short-periodOfTime = The period of time between
 
 epicure.fine-dish.list.button.create = Create
 epicure.fine-dish.form.submit.create = Create
+epicure.fine-dish.form.submit.update = Update
+epicure.fine-dish.form.submit.publish = Publish
+epicure.fine-dish.form.submit.delete = Delete
 epicure.fine-dish.list.title = My Fine Dish
 
 epicure.fine-dish.list.label.status = Status
 epicure.fine-dish.list.label.code = Code
 epicure.fine-dish.list.label.request = Request
+epicure.fine-dish.list.label.published = Publication's status
 
 TRUE = PUBLISHED
 FALSE = NOT PUBLISHED

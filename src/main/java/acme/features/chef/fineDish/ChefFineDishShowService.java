@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.components.configuration.SystemConfiguration;
+import acme.entities.fineDish.DishStatus;
 import acme.entities.fineDish.FineDish;
 import acme.features.authenticated.moneyExchange.AuthenticatedMoneyExchangePerformService;
 import acme.features.authenticated.systemConfiguration.AuthenticatedSystemConfigurationRepository;
@@ -36,7 +37,7 @@ public class ChefFineDishShowService implements AbstractShowService<Chef, FineDi
 
 		final int chefId = request.getPrincipal().getActiveRoleId();
 		
-		result = fineDish.getChef().getId() == chefId;
+		result = fineDish.getChef().getId() == chefId && fineDish.isPublished();
 		
 		return result;
 	}
@@ -70,7 +71,9 @@ public class ChefFineDishShowService implements AbstractShowService<Chef, FineDi
 		}
 		
 		request.unbind(entity, model, "code", "request", "budget", "creationDate", "startDate", "endDate", "info");
-		
+		model.setAttribute("PROPOSED", DishStatus.PROPOSED);
+		model.setAttribute("ACCEPTED", DishStatus.ACCEPTED);
+		model.setAttribute("DENIED", DishStatus.DENIED);
 		model.setAttribute("epicureName", entity.getEpicure().getUserAccount().getIdentity().getFullName());
 		model.setAttribute("epicureUserName", entity.getEpicure().getUserAccount().getUsername());
 		model.setAttribute("epicureOrganisation", entity.getEpicure().getOrganisation());

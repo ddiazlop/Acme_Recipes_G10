@@ -1,11 +1,18 @@
 
 package acme.features.epicure.fineDish;
 
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.fineDish.DishStatus;
 import acme.entities.fineDish.FineDish;
-import acme.entities.recipes.Kitchenware;
+import acme.features.administrator.systemConfiguration.AdministratorSystemConfigurationRepository;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
@@ -19,6 +26,8 @@ public class EpicureFineDishUpdateService implements AbstractUpdateService<Epicu
 	@Autowired
 	protected EpicureFineDishRepository repository;
 
+	@Autowired
+	protected AdministratorSystemConfigurationRepository administratorSystemConfigurationRepository;
 
 	@Override
 	public boolean authorise(final Request<FineDish> request) {
@@ -34,7 +43,7 @@ public class EpicureFineDishUpdateService implements AbstractUpdateService<Epicu
 		epicureId = request.getPrincipal().getActiveRoleId();
 		epicure = this.repository.findOneEpicureById(epicureId);
 
-		return fineDish.getEpicure().equals(epicure);
+		return fineDish.getEpicure().equals(epicure) && !fineDish.isPublished();
 	}
 
 	@Override
@@ -57,13 +66,26 @@ public class EpicureFineDishUpdateService implements AbstractUpdateService<Epicu
 		assert model != null;
 
 		request.unbind(entity, model,"status", "code","request","budget","creationDate","startDate", 
-				 "endDate","info");
+				 "endDate","info", "published");
 		
-		final Chef chef = entity.getChef();
-		model.setAttribute("chef.username", chef.getUserAccount().getUsername());
-		model.setAttribute("chef.organisation", chef.getOrganisation());
-		model.setAttribute("chef.assertion", chef.getAssertion());
-		model.setAttribute("chef.link", chef.getLink());
+		if(entity.getChef() == null) {
+			model.setAttribute("chef.username", "");
+			model.setAttribute("chef.organisation", "");
+			model.setAttribute("chef.assertion", "");
+			model.setAttribute("chef.link", "");
+		}
+		else {
+			final Chef chef = entity.getChef();
+			model.setAttribute("chef.organisation", chef.getOrganisation());
+			model.setAttribute("chef.assertion", chef.getAssertion());
+			model.setAttribute("chef.link", chef.getLink());
+			model.setAttribute("chef.username", entity.getChef().getUserAccount().getUsername());
+		}
+		
+		
+		model.setAttribute("PROPOSED", DishStatus.PROPOSED);
+		model.setAttribute("ACCEPTED", DishStatus.ACCEPTED);
+		model.setAttribute("DENIED", DishStatus.DENIED);
 		model.setAttribute("readOnly", true);
 
 	}
@@ -74,22 +96,53 @@ public class EpicureFineDishUpdateService implements AbstractUpdateService<Epicu
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors,"status", "code","request","budget","creationDate","startDate", 
+		request.bind(entity, errors, "code","request","budget","startDate", 
 				 "endDate","info");
 		
+		final String chefUsername = String.valueOf(request.getModel().getAttribute("chef.username"));
+		final Chef chef = this.repository.findOneChefByUsername(chefUsername);
+		if(!errors.hasErrors("chef")) {
+			errors.state(request, chef!=null, "*", "epicure.fine-dish.form.error.invalidChef");
+		}
+		entity.setChef(chef);
 	}
 
 	@Override
 	public void validate(final Request<FineDish> request, final FineDish entity, final Errors errors) {
-
-		if (!errors.hasErrors("code")) {
-			final FineDish existing = this.repository.findOneFineDishByCode(entity.getCode());
-			errors.state(request, existing == null, "code", "chef.recipe.form.error.duplicated-code");
+		assert request != null;
+		assert entity != null;
+		assert errors != null;
+		
+		if(!errors.hasErrors("budget")) {
+			errors.state(request, entity.getBudget().getAmount() > 0, "budget", "epicure.fine-dish.form.error.negative");
+			
+			final String entityCurrency = entity.getBudget().getCurrency();			
+			final String[] acceptedCurrencies=this.administratorSystemConfigurationRepository.findAcceptedCurrencies().split(",");
+			final List<String> currencies= Arrays.asList(acceptedCurrencies);			
+			errors.state(request, currencies.contains(entityCurrency) , "budget", "epicure.fine-dish.form.error.noAcceptedCurrency");
 		}
-
-		if (!errors.hasErrors("code")) {
-			final Kitchenware existing = this.repository.findOneKitchenwareByCode(entity.getCode());
-			errors.state(request, existing == null, "code", "chef.recipe.form.error.duplicated-code");
+		
+		if(!errors.hasErrors("startDate")) {
+			Calendar calendar;
+			final Date minimunDate;
+			
+			calendar = new GregorianCalendar();
+			calendar.add(Calendar.MONTH, 1);
+			minimunDate = calendar.getTime();
+			errors.state(request, entity.getStartDate().after(minimunDate), "startDate", "epicure.fine-dish.form.error.too-close-start");
+		}
+		
+		if(!errors.hasErrors("endDate")) {
+			Calendar calendar;
+			Date minimunDate;
+			
+			calendar = new GregorianCalendar();
+			calendar.setTime(entity.getStartDate());
+			
+			calendar.add(Calendar.MONTH, 1);
+			minimunDate = calendar.getTime();
+			
+			errors.state(request, entity.getEndDate().after(minimunDate), "endDate", "epicure.fine-dish.form.error.too-short-periodOfTime");
 		}
 		
 	}

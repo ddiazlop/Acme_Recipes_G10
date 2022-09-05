@@ -47,9 +47,11 @@ public class EpicureFineDishCreateService implements AbstractCreateService<Epicu
 
 		request.bind(entity, errors, "status", "code","request","budget","creationDate",
 			"startDate", "endDate","info");
-		final String epicureUsername = String.valueOf(request.getModel().getAttribute("chefUsername"));
-		final Chef chef = this.repository.findOneChefByUsername(epicureUsername);
-		errors.state(request, chef!=null, "*", "epicure.fine-dish.form.error.invalidChef");
+		final String chefUsername = String.valueOf(request.getModel().getAttribute("chefUsername"));
+		final Chef chef = this.repository.findOneChefByUsername(chefUsername);
+		if(!errors.hasErrors("chef")) {
+			errors.state(request, chef!=null, "*", "epicure.fine-dish.form.error.invalidChef");
+		}
 		entity.setChef(chef);
 
 	}
@@ -62,10 +64,20 @@ public class EpicureFineDishCreateService implements AbstractCreateService<Epicu
 		assert model != null;
 
 		request.unbind(entity, model,"status", "code","request","budget","creationDate","startDate", 
-				 "endDate","info");
+				 "endDate","info", "published");
+		
+		if(entity.getChef() == null) {
+			model.setAttribute("chefUsername", "");
+		}
+		else {
+			model.setAttribute("chefUsername", entity.getChef().getUserAccount().getUsername());
+		}
 		
 		final Collection<Chef> chefs = this.repository.findAllChefs();
 		model.setAttribute("chefs", chefs);
+		model.setAttribute("PROPOSED", DishStatus.PROPOSED);
+		model.setAttribute("ACCEPTED", DishStatus.ACCEPTED);
+		model.setAttribute("DENIED", DishStatus.DENIED);
 		model.setAttribute("readOnly", false);
 
 	}
@@ -103,6 +115,7 @@ public class EpicureFineDishCreateService implements AbstractCreateService<Epicu
 		fineDish.setCreationDate(creationDate);
 		fineDish.setStartDate(startDate);
 		fineDish.setEndDate(endDate);
+		fineDish.setPublished(false);
 				
 		return fineDish;
 	}
@@ -137,7 +150,7 @@ public class EpicureFineDishCreateService implements AbstractCreateService<Epicu
 			errors.state(request, entity.getStartDate().after(minimunDate), "startDate", "epicure.fine-dish.form.error.too-close-start");
 		}
 		
-		if(!errors.hasErrors("finishDate")) {
+		if(!errors.hasErrors("endDate")) {
 			Calendar calendar;
 			Date minimunDate;
 			

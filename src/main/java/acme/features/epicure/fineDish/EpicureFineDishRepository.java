@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import acme.entities.Memoranda;
 import acme.entities.fineDish.FineDish;
 import acme.entities.recipes.Kitchenware;
 import acme.framework.repositories.AbstractRepository;
@@ -33,6 +34,15 @@ public interface EpicureFineDishRepository extends AbstractRepository {
 	@Query("select chef from Chef chef")
 	Collection<Chef> findAllChefs();
 	
+	@Query("select c.userAccount.username from Chef c ")
+	Collection<String> findAllChefUsernames();
+	
+	@Query("select c from Chef c where c.id = :id")
+	Chef findOneChefById(int id);
+	
 	@Query("select c from Chef c where c.userAccount.username = :username")
 	Chef findOneChefByUsername(String username);
+	
+	@Query("select m from Memoranda m where m.fineDish.id = :id")
+	Collection<Memoranda> findManyMemorandaByFineDishId(int id);
 }

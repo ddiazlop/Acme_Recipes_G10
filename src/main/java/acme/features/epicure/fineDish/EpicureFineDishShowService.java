@@ -4,6 +4,7 @@ package acme.features.epicure.fineDish;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.fineDish.DishStatus;
 import acme.entities.fineDish.FineDish;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
@@ -55,9 +56,12 @@ public class EpicureFineDishShowService implements AbstractShowService<Epicure, 
 		assert model != null;
 
 		request.unbind(entity, model,"status", "code","request","budget","creationDate","startDate", 
-				 "endDate","info");
+				 "endDate","info", "published");
 		
 		final Chef chef = entity.getChef();
+		model.setAttribute("PROPOSED", DishStatus.PROPOSED);
+		model.setAttribute("ACCEPTED", DishStatus.ACCEPTED);
+		model.setAttribute("DENIED", DishStatus.DENIED);
 		model.setAttribute("chef.username", chef.getUserAccount().getUsername());
 		model.setAttribute("chef.organisation", chef.getOrganisation());
 		model.setAttribute("chef.assertion", chef.getAssertion());

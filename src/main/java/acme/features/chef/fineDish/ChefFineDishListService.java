@@ -67,6 +67,12 @@ public class ChefFineDishListService implements AbstractListService<Chef, FineDi
 		
 		request.unbind(entity, model, "code", "budget", "startDate", "endDate", "status");
 		model.setAttribute("epicureUserName", entity.getEpicure().getUserAccount().getUsername());
+		if(entity.isPublished()) {
+			model.setAttribute("published", "Published");
+		}
+		else {
+			model.setAttribute("published", "Not published");
+		}
 	}
 
 }
