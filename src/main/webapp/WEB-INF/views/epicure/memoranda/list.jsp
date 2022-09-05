@@ -7,6 +7,6 @@
 		width="20%" />
 	<acme:list-column code="epicure.memorandum.list.label.sequenceNumber" path="sequenceNumber"
 		width="20%" />
-		
-		<acme:button code="epicure.memorandum.list.button.create" action="/epicure/memorandum/create"/>
 </acme:list>
+
+	<acme:button code="epicure.memorandum.list.button.create" action="/epicure/memoranda/create"/>

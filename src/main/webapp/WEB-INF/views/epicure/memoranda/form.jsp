@@ -9,5 +9,7 @@
 		<acme:input-textarea code="epicure.memorandum.form.label.report" path="report" readonly = "true"/>
 		<acme:input-textbox code="epicure.memorandum.form.label.info" path="info" readonly = "true"/>
 		
-		<acme:submit code="epicure.memorandum.form.button.create"	action="/epicure/memorandum/create" />
+		
+		
+		<acme:submit code="epicure.memorandum.form.button.create" action="/epicure/memoranda/create" />
 </acme:form>
