@@ -32,7 +32,7 @@ public class ChefKitchenwareRecipeShowService implements AbstractShowService<Che
 		assert request != null;
 		final int kitchenwareRecipeId = request.getModel().getInteger("id");
 		
-		final KitchenwareRecipe kitchenware = this.repository.findOneById(kitchenwareRecipeId);
+		final KitchenwareRecipe kitchenware = this.repository.findKitchenwareRecipeById(kitchenwareRecipeId);
 		
 		return kitchenware.getRecipe().getChef().getId() == request.getPrincipal().getActiveRoleId();
 		
@@ -45,7 +45,7 @@ public class ChefKitchenwareRecipeShowService implements AbstractShowService<Che
 		KitchenwareRecipe result;
 		
 		final int kitchenwareRecipeId = request.getModel().getInteger("id");
-		result = this.repository.findOneById(kitchenwareRecipeId);
+		result = this.repository.findKitchenwareRecipeById(kitchenwareRecipeId);
 		
 		return result;
 		

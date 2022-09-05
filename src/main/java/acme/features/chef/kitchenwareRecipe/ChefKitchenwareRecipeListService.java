@@ -36,7 +36,7 @@ public class ChefKitchenwareRecipeListService implements AbstractListService<Che
 		Collection<KitchenwareRecipe> result;
 		final int recipeId = request.getModel().getInteger("recipeId");
 		
-		result = this.repository.findKitchenwareRecipesByRecipeId(recipeId);
+		result = this.repository.findAllKitchenwareRecipesByRecipeId(recipeId);
 		return result;
 		
 	}
