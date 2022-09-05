@@ -33,7 +33,7 @@ public class EpicureMemorandaCreateService implements AbstractCreateService<Epic
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model,"moment","sequenceNumber","report","info");
+		request.unbind(entity, model,"moment","sequenceNumber","report","info", "chef", "fineDish" );
 
 	}
 
@@ -43,7 +43,7 @@ public class EpicureMemorandaCreateService implements AbstractCreateService<Epic
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors,"moment","sequenceNumber","report","info");
+		request.bind(entity, errors,"moment","sequenceNumber","report","info",  "chef", "fineDish" );
 
 		
 	}

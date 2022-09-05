@@ -50,8 +50,9 @@ public class EpicureMemorandaShowService implements AbstractShowService<Epicure,
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-
-		request.unbind(entity, model,"moment","sequenceNumber","report","info");
+		
+		
+		request.unbind(entity, model,"moment","sequenceNumber","report","info", "chef", "fineDish" );
 
 	}
 
