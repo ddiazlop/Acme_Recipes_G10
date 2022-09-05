@@ -5,6 +5,7 @@ chef.fineDish.label.form.creationDate = Creation Date
 chef.fineDish.label.form.startDate = Start Date
 chef.fineDish.label.form.endDate = End Date
 chef.fineDish.label.form.info = More Info
+chef.fineDish.label.form.status = Status
 chef.fineDish.label.form.epicureName = Epicure Name
 chef.fineDish.label.form.epicureUserName = Epicure Username
 chef.fineDish.label.form.epicureOrganisation = Epicure Organisation
@@ -17,3 +18,6 @@ chef.fineDish.list.label.startDate = Start Date
 chef.fineDish.list.label.endDate = End Date
 chef.fineDish.list.label.status = Status
 chef.fineDish.list.label.epicureUserName = Epicure Username
+
+chef.fineDish.form.button.accept = Accept Dish
+chef.fineDish.form.button.deny = Deny Dish
