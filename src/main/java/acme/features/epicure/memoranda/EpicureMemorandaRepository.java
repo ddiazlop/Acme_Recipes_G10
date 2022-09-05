@@ -20,9 +20,9 @@ public interface EpicureMemorandaRepository extends AbstractRepository {
 	@Query("select m from Memoranda m where m.id = :id")
 	Memoranda findOneMemorandumById(int id);
 	
-	@Query("select c from Chef c where c.username = :name")
+	/*@Query("select c from Chef c where c.userAccount.name = :name")
 	Chef findChefByName(String name);
 	
 	@Query("select c from FineDish c where c.code = :code")
-	FineDish findFineDishByName(String code);
+	FineDish findFineDishByName(String code);*/
 }
