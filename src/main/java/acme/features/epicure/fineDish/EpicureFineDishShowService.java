@@ -62,6 +62,7 @@ public class EpicureFineDishShowService implements AbstractShowService<Epicure, 
 		model.setAttribute("chef.organisation", chef.getOrganisation());
 		model.setAttribute("chef.assertion", chef.getAssertion());
 		model.setAttribute("chef.link", chef.getLink());
+		model.setAttribute("readOnly", true);
 
 	}
 

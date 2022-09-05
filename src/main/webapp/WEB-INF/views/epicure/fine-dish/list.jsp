@@ -10,6 +10,6 @@
  	<acme:list-column code="epicure.fine-dish.list.label.request" path="request" width="20%"/>
  	<acme:list-column code="epicure.fine-dish.list.label.status" path="status" width="20%"/>
  
- 	
-	<acme:button code="epicure.fine-dish.form.button.create" action="/epicure/fine-dish/create"/>		
+		
 </acme:list>
+<acme:button code="epicure.fine-dish.list.button.create" action="/epicure/fine-dish/create"/>

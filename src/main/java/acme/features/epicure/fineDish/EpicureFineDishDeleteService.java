@@ -1,29 +1,19 @@
 
 package acme.features.epicure.fineDish;
 
-import java.text.DecimalFormat;
-import java.util.Calendar;
 import java.util.Collection;
-import java.util.Date;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.components.SpamDetector;
-import acme.components.configuration.SystemConfiguration;
 import acme.entities.fineDish.FineDish;
-import acme.entities.patronages.Patronage;
-import acme.entities.patronages.PatronageReport;
 import acme.features.administrator.systemConfiguration.AdministratorSystemConfigurationRepository;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
-import acme.framework.datatypes.Money;
 import acme.framework.services.AbstractDeleteService;
 import acme.roles.Chef;
 import acme.roles.Epicure;
-import acme.roles.Inventor;
 
 @Service
 public class EpicureFineDishDeleteService implements AbstractDeleteService<Epicure, FineDish> {
@@ -34,7 +24,7 @@ public class EpicureFineDishDeleteService implements AbstractDeleteService<Epicu
 	@Autowired
 	protected AdministratorSystemConfigurationRepository administratorSystemConfigurationRepository;
 
-	@Autowired
+	@Override
 	public boolean authorise(final Request<FineDish> request) {
 		assert request != null;
 		
@@ -79,7 +69,7 @@ public class EpicureFineDishDeleteService implements AbstractDeleteService<Epicu
 		model.setAttribute("chef.organisation", chef.getOrganisation());
 		model.setAttribute("chef.assertion", chef.getAssertion());
 		model.setAttribute("chef.link", chef.getLink());
-
+		model.setAttribute("readOnly", true);
 	}
 	
 	@Override
@@ -106,11 +96,11 @@ public class EpicureFineDishDeleteService implements AbstractDeleteService<Epicu
 
 	
 	@Override
-	public void delete(Request<FineDish> request, FineDish entity) {
+	public void delete(final Request<FineDish> request, final FineDish entity) {
 		assert request != null;
 		assert entity != null;
 		
-		Collection<FineDish> recipeContent;
+		final Collection<FineDish> recipeContent;
 
 		this.repository.delete(entity);
 

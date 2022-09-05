@@ -21,8 +21,16 @@ epicure.fine-dish.form.label.chef.organisation = Chef's organisation
 epicure.fine-dish.form.label.chef.assertion = Chef's assertion
 epicure.fine-dish.form.label.chef.link = Chef's link
 
+epicure.fine-dish.form.error.invalidChef = Invalid or null chef
+epicure.fine-dish.form.error.duplicated-code = Existing code
+epicure.fine-dish.form.error.negative = Budget can't be negative
+epicure.fine-dish.form.error.noAcceptedCurrency = Invalid currency
+epicure.fine-dish.form.error.too-close-start = Start date must be one month later than fine dish's creation 
+epicure.fine-dish.form.error.too-short-periodOfTime = The period of time between start date and the end date must be at least one month long
 
-epicure.fine-dish.button.create = Apply
+
+epicure.fine-dish.list.button.create = Create
+epicure.fine-dish.form.submit.create = Create
 epicure.fine-dish.list.title = My Fine Dish
 
 epicure.fine-dish.list.label.status = Status

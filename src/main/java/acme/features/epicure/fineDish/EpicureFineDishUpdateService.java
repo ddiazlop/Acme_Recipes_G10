@@ -1,8 +1,6 @@
 
 package acme.features.epicure.fineDish;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +9,6 @@ import acme.entities.recipes.Kitchenware;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
-import acme.framework.services.AbstractShowService;
 import acme.framework.services.AbstractUpdateService;
 import acme.roles.Chef;
 import acme.roles.Epicure;
@@ -67,11 +64,12 @@ public class EpicureFineDishUpdateService implements AbstractUpdateService<Epicu
 		model.setAttribute("chef.organisation", chef.getOrganisation());
 		model.setAttribute("chef.assertion", chef.getAssertion());
 		model.setAttribute("chef.link", chef.getLink());
+		model.setAttribute("readOnly", true);
 
 	}
 
 	@Override
-	public void bind(Request<FineDish> request, FineDish entity, Errors errors) {
+	public void bind(final Request<FineDish> request, final FineDish entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -82,7 +80,7 @@ public class EpicureFineDishUpdateService implements AbstractUpdateService<Epicu
 	}
 
 	@Override
-	public void validate(Request<FineDish> request, FineDish entity, Errors errors) {
+	public void validate(final Request<FineDish> request, final FineDish entity, final Errors errors) {
 
 		if (!errors.hasErrors("code")) {
 			final FineDish existing = this.repository.findOneFineDishByCode(entity.getCode());
@@ -97,7 +95,7 @@ public class EpicureFineDishUpdateService implements AbstractUpdateService<Epicu
 	}
 
 	@Override
-	public void update(Request<FineDish> request, FineDish entity) {
+	public void update(final Request<FineDish> request, final FineDish entity) {
 		assert request != null;
 		assert entity != null;
 		

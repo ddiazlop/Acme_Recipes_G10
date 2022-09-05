@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 import acme.entities.fineDish.FineDish;
 import acme.entities.recipes.Kitchenware;
 import acme.framework.repositories.AbstractRepository;
+import acme.roles.Chef;
 import acme.roles.Epicure;
 
 @Repository
@@ -28,4 +29,10 @@ public interface EpicureFineDishRepository extends AbstractRepository {
 
 	@Query("select kwr from Kitchenware kwr where kwr.code = :code")
 	Kitchenware findOneKitchenwareByCode(String code);
+	
+	@Query("select chef from Chef chef")
+	Collection<Chef> findAllChefs();
+	
+	@Query("select c from Chef c where c.userAccount.username = :username")
+	Chef findOneChefByUsername(String username);
 }

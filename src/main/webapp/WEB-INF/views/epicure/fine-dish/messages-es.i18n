@@ -22,7 +22,16 @@ epicure.fine-dish.form.label.chef.assertion = Afirmación del chef
 epicure.fine-dish.form.label.chef.link = Link del chef
 
 
-epicure.fine-dish.button.create = Solicitar
+epicure.fine-dish.form.error.invalidChef = Chef inválido o nulo
+epicure.fine-dish.form.error.duplicated-code = Código existente
+epicure.fine-dish.form.error.negative = El presupuesto no puede ser negativo 
+epicure.fine-dish.form.error.noAcceptedCurrency = Moneda inválida
+epicure.fine-dish.form.error.too-close-start = La fecha de comienzo debe ser un mes más tarde de la creación del plato
+epicure.fine-dish.form.error.too-short-periodOfTime = El periodo de tiempo entre la fecha de comienzo y la fecha final debe ser de al menos un mes
+
+
+epicure.fine-dish.list.button.create = Crear
+epicure.fine-dish.form.submit.create = Crear
 epicure.fine-dish.list.title = Mi plato
 
 epicure.fine-dish.list.label.status = Estado

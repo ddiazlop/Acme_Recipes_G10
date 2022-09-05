@@ -1,29 +1,25 @@
 
 package acme.features.epicure.fineDish;
 
-import java.text.DecimalFormat;
+import java.util.Arrays;
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.components.SpamDetector;
-import acme.components.configuration.SystemConfiguration;
+import acme.entities.fineDish.DishStatus;
 import acme.entities.fineDish.FineDish;
-import acme.entities.patronages.Patronage;
-import acme.entities.patronages.PatronageReport;
-import acme.entities.recipes.Kitchenware;
 import acme.features.administrator.systemConfiguration.AdministratorSystemConfigurationRepository;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
-import acme.framework.datatypes.Money;
 import acme.framework.services.AbstractCreateService;
 import acme.roles.Chef;
 import acme.roles.Epicure;
-import acme.roles.Inventor;
 
 
 @Service
@@ -35,21 +31,11 @@ public class EpicureFineDishCreateService implements AbstractCreateService<Epicu
 	@Autowired
 	protected AdministratorSystemConfigurationRepository administratorSystemConfigurationRepository;
 
-	@Autowired
+	@Override
 	public boolean authorise(final Request<FineDish> request) {
 		assert request != null;
-		
-		int epicureId;
-		int fineDishId;
-		Epicure epicure;
-		FineDish fineDish;
-		
-		fineDishId = request.getModel().getInteger("id");
-		fineDish = this.repository.findOneFineDishById(fineDishId);
-		epicureId = request.getPrincipal().getActiveRoleId();
-		epicure = this.repository.findOneEpicureById(epicureId);
 
-		return fineDish.getEpicure().equals(epicure);
+		return request.getPrincipal().hasRole(Epicure.class);
 	}
 	
 	@Override
@@ -59,9 +45,12 @@ public class EpicureFineDishCreateService implements AbstractCreateService<Epicu
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors,"status", "code","request","budget","creationDate","startDate", 
-				 "endDate","info");
-		
+		request.bind(entity, errors, "status", "code","request","budget","creationDate",
+			"startDate", "endDate","info");
+		final String epicureUsername = String.valueOf(request.getModel().getAttribute("chefUsername"));
+		final Chef chef = this.repository.findOneChefByUsername(epicureUsername);
+		errors.state(request, chef!=null, "*", "epicure.fine-dish.form.error.invalidChef");
+		entity.setChef(chef);
 
 	}
 
@@ -75,11 +64,9 @@ public class EpicureFineDishCreateService implements AbstractCreateService<Epicu
 		request.unbind(entity, model,"status", "code","request","budget","creationDate","startDate", 
 				 "endDate","info");
 		
-		final Chef chef = entity.getChef();
-		model.setAttribute("chef.username", chef.getUserAccount().getUsername());
-		model.setAttribute("chef.organisation", chef.getOrganisation());
-		model.setAttribute("chef.assertion", chef.getAssertion());
-		model.setAttribute("chef.link", chef.getLink());
+		final Collection<Chef> chefs = this.repository.findAllChefs();
+		model.setAttribute("chefs", chefs);
+		model.setAttribute("readOnly", false);
 
 	}
 	
@@ -89,27 +76,32 @@ public class EpicureFineDishCreateService implements AbstractCreateService<Epicu
 	public FineDish instantiate(final Request<FineDish> request) {
 
 		assert request != null;
-				FineDish fineDish;
+		FineDish fineDish;
 		Epicure epicure;
-		Money budget;
 		Date creationDate;
+		final Calendar calendar;
+		Date startDate;
 		Date endDate;
 	
 		
 		int epicureId;
 		epicureId = request.getPrincipal().getActiveRoleId();
 		epicure = this.repository.findOneEpicureById(epicureId);
-		budget = new Money();
-		creationDate = new Date();
+		calendar = Calendar.getInstance();
+		creationDate = calendar.getTime();
+		calendar.setTime(creationDate);
+		calendar.add(Calendar.SECOND, -1);
+		startDate = new Date();
 		endDate = new Date();
 		
 		
 		fineDish = new FineDish();
 		fineDish.setCode("");
-		fineDish.setBudget(budget);
+		fineDish.setStatus(DishStatus.PROPOSED);
 		fineDish.setInfo("");
 		fineDish.setEpicure(epicure);
 		fineDish.setCreationDate(creationDate);
+		fineDish.setStartDate(startDate);
 		fineDish.setEndDate(endDate);
 				
 		return fineDish;
@@ -117,14 +109,45 @@ public class EpicureFineDishCreateService implements AbstractCreateService<Epicu
 
 	@Override
 	public void validate(final Request<FineDish> request, final FineDish entity, final Errors errors) {
+		assert request != null;
+		assert entity != null;
+		assert errors != null;
+		
 		if (!errors.hasErrors("code")) {
 			final FineDish existing = this.repository.findOneFineDishByCode(entity.getCode());
-			errors.state(request, existing == null, "code", "chef.recipe.form.error.duplicated-code");
+			errors.state(request, existing == null, "code", "epicure.fine-dish.form.error.duplicated-code");
 		}
-
-		if (!errors.hasErrors("code")) {
-			final Kitchenware existing = this.repository.findOneKitchenwareByCode(entity.getCode());
-			errors.state(request, existing == null, "code", "chef.recipe.form.error.duplicated-code");
+		
+		if(!errors.hasErrors("budget")) {
+			errors.state(request, entity.getBudget().getAmount() > 0, "budget", "epicure.fine-dish.form.error.negative");
+			
+			final String entityCurrency = entity.getBudget().getCurrency();			
+			final String[] acceptedCurrencies=this.administratorSystemConfigurationRepository.findAcceptedCurrencies().split(",");
+			final List<String> currencies= Arrays.asList(acceptedCurrencies);			
+			errors.state(request, currencies.contains(entityCurrency) , "budget", "epicure.fine-dish.form.error.noAcceptedCurrency");
+		}
+		
+		if(!errors.hasErrors("startDate")) {
+			Calendar calendar;
+			final Date minimunDate;
+			
+			calendar = new GregorianCalendar();
+			calendar.add(Calendar.MONTH, 1);
+			minimunDate = calendar.getTime();
+			errors.state(request, entity.getStartDate().after(minimunDate), "startDate", "epicure.fine-dish.form.error.too-close-start");
+		}
+		
+		if(!errors.hasErrors("finishDate")) {
+			Calendar calendar;
+			Date minimunDate;
+			
+			calendar = new GregorianCalendar();
+			calendar.setTime(entity.getStartDate());
+			
+			calendar.add(Calendar.MONTH, 1);
+			minimunDate = calendar.getTime();
+			
+			errors.state(request, entity.getEndDate().after(minimunDate), "endDate", "epicure.fine-dish.form.error.too-short-periodOfTime");
 		}
 	}
 
