@@ -8,7 +8,7 @@
 	<acme:input-textbox code="any.kitchenware.form.label.code" path="code" />
 	<acme:input-textbox code="any.kitchenware.form.label.name" path="name" />
 	<acme:input-textarea code="any.kitchenware.form.label.description" path="description" />
-	<acme:input-money code="any.kitchenware.form.label.retail-price" path="retailPrice" />
+	<acme:input-money code="any.kitchenwareRecipe.form.label.kitchenware.retailPrice-original" path="retailPrice" />
 	<acme:input-money code="any.kitchenware.form.label.retail-price" path="retailPriceConverted" />
 	
 	<acme:input-url code="any.kitchenware.form.label.info" path="info"/>

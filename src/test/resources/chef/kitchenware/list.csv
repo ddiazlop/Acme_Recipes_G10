@@ -1,0 +1,5 @@
+recordIndex,wareType,name,code,description,retail-price,info,published
+0,KITCHEN_UTENSIL,Cuchillo basico,BB:ABB-000,Extremadamente confiable,EUR 80.30,https://ev.us.es/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_29_1,PUBLISHED
+1,INGREDIENT,Pollo,CC:BBB-000,PolloPollo,EUR 4.50,,NOT PUBLISHED
+2,INGREDIENT,Lechuga,CC:ZZZ-000,Lechuguita rica,EUR 4.50,,NOT PUBLISHED
+3,KITCHEN_UTENSIL,Tijeras de cocina,CC:ZZZ-001,Increiblemente confiable,EUR 44.50,,NOT PUBLISHED

@@ -1,0 +1,7 @@
+
+authenticated.chef.form.label.organisation = Organisation
+authenticated.chef.form.label.assertion = Assertion
+authenticated.chef.form.label.link = Link
+
+authenticated.chef.form.button.create = Register
+authenticated.chef.form.button.update = Update

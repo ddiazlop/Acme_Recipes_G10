@@ -18,6 +18,7 @@ any.kitchenware.form.label.code = Código
 any.kitchenware.form.label.name = Nombre
 any.kitchenware.form.label.description = Descripción
 any.kitchenware.form.label.retail-price = Precio
+any.kitchenwareRecipe.form.label.kitchenware.retailPrice-original = Precio original
 any.kitchenware.form.label.info = Información
 any.kitchenware.form.label.kitchenware-type = Tipo
 any.kitchenware.form.label.ingredient = Ingrediente

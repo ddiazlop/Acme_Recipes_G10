@@ -1,0 +1,13 @@
+# i18n-en.i18n
+
+administrator.bulletin.form.button.create = Create
+administrator.bulletin.form.label.confirmation = Confirmation
+
+administrator.bulletin.form.label.heading = Heading
+administrator.bulletin.form.label.text = Text
+administrator.bulletin.form.label.critical = Critical
+administrator.bulletin.form.label.TRUE = True
+administrator.bulletin.form.label.FALSE = False
+administrator.bulletin.form.label.link = Link
+
+
