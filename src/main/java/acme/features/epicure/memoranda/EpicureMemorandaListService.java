@@ -44,7 +44,7 @@ public class EpicureMemorandaListService implements AbstractListService<Epicure,
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model,"moment","sequenceNumber");
+		request.unbind(entity, model,"moment","sequenceNumber", "chef.userAccount.username");
 
 	}
 

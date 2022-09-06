@@ -14,5 +14,10 @@ epicure.memorandum.list.label.sequenceNumber = Número de secuencia
 epicure.memorandum.list.label.report = Reporte
 epicure.memorandum.list.label.info = Información Adicional
 epicure.memorandum.list.label.chef = Chef
+epicure.memorandum.form.label.fineDish = Código del plato
 
+epicure.memorandum.button.submit = Crear
+epicure.memoranda.form.create.confirm = Recuerda que esta acción no es reversible ni puede ser editada, ¿estás seguro de que quieres crear un nuevo memorando?
+epicure.memoranda.form.create.confirm = Al seleccionar esta casilla reconoce que la creación de un memorando es una acción irreversible y que por lo tanto, no puede ser editada ni eliminada tras su creación
+epicure.memoranda.form.create.confirmed-warning = Es necesario confirmar la creación del memorando
 

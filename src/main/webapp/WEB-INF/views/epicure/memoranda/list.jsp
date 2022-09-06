@@ -7,7 +7,7 @@
 		width="20%" />
 	<acme:list-column code="epicure.memorandum.list.label.sequenceNumber" path="sequenceNumber"
 		width="20%" />
-		<acme:list-column code="epicure.memorandum.list.label.chef" path="chef"
+	<acme:list-column code="epicure.memorandum.list.label.chef" path="chef.userAccount.username"
 		width="20%" />
 		
 </acme:list>

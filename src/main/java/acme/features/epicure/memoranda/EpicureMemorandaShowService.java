@@ -22,11 +22,11 @@ public class EpicureMemorandaShowService implements AbstractShowService<Epicure,
 		assert request != null;
 
 		boolean result;
-		int MemorandumId;
+		int memorandumId;
 		Memoranda m;
 
-		MemorandumId = request.getModel().getInteger("id");
-		m = this.repository.findOneMemorandumById(MemorandumId);
+		memorandumId = request.getModel().getInteger("id");
+		m = this.repository.findOneMemorandumById(memorandumId);
 		result = m.getEpicure().getId() == request.getPrincipal().getActiveRoleId();
 
 		return result;
@@ -52,7 +52,8 @@ public class EpicureMemorandaShowService implements AbstractShowService<Epicure,
 		assert model != null;
 		
 		
-		request.unbind(entity, model,"moment","sequenceNumber","report","info", "chef", "fineDish" );
+		request.unbind(entity, model,"moment","sequenceNumber","report","info", "chef.userAccount.username", "fineDish.code");
+		model.setAttribute("readOnly", true);
 
 	}
 
