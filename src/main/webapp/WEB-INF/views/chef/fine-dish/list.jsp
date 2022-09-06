@@ -10,7 +10,6 @@
 	<acme:list-column code="chef.fineDish.list.label.startDate" path="startDate"/>
 	<acme:list-column code="chef.fineDish.list.label.endDate" path="endDate"/>
 	<acme:list-column code="chef.fineDish.list.label.status" path="status"/>
-	<acme:list-column code="chef.fineDish.list.label.published" path="published"/>
 	<acme:list-column code="chef.fineDish.list.label.epicureUserName" path="epicureUserName"/>
 
 			

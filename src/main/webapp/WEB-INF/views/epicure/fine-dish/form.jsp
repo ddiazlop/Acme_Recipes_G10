@@ -5,14 +5,14 @@
 
 <acme:message code="epicure.fine-dish.form.message.with-memoranda-associated"/>
 <acme:form>
-	<acme:input-textbox code="epicure.fine-dish.form.label.code" path="code" readonly="${readOnly}"/>
+	<acme:input-textbox code="epicure.fine-dish.form.label.code" path="code" readonly="${readOnly}" placeholder="AA:AAA-001, ABC-123..."/>
 	<acme:input-textbox code="epicure.fine-dish.form.label.request" path="request" />
 	<acme:input-select code="epicure.fineDish.form.label.status" path="status" readonly ="true" >
 		<acme:input-option code="epicure.fineDish.form.label.status.PROPOSED" value="${PROPOSED}" selected="${status == 'PROPOSED'}"/>
 		<acme:input-option code="epicure.fineDish.form.label.status.ACCEPTED" value="${ACCEPTED}" selected="${status == 'ACCEPTED'}"/>
 		<acme:input-option code="epicure.fineDish.form.label.status.DENIED" value="${DENIED}" selected="${status == 'DENIED'}"/>
 	</acme:input-select>
-	<acme:input-textbox code="epicure.fine-dish.form.label.budget" path="budget"/>
+	<acme:input-textbox code="epicure.fine-dish.form.label.budget" path="budget" placeholder="EUR 20, 1.2 GBP..."/>
 	<acme:input-textbox code="epicure.fine-dish.form.label.creationDate" path="creationDate" readonly="true" />	
 	<acme:input-textbox code="epicure.fine-dish.form.label.startDate" path="startDate"/>
 	<acme:input-textbox code="epicure.fine-dish.form.label.endDate" path="endDate"/>
