@@ -1,4 +1,3 @@
-
 package acme.features.epicure.memoranda;
 
 import javax.annotation.PostConstruct;
@@ -19,12 +18,16 @@ public class EpicureMemorandaController extends AbstractController<Epicure, Memo
 
 	@Autowired
 	protected EpicureMemorandaShowService	showService;
+	
+	@Autowired
+	protected EpicureMemorandaCreateService createService;
 
 
 	@PostConstruct
 	protected void initialse() {
 		super.addCommand("list", this.listService);
 		super.addCommand("show", this.showService);
+		super.addCommand("create", this.createService);
 
 	}
 }
