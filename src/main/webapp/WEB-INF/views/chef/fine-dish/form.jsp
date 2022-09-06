@@ -18,6 +18,8 @@
 		<acme:input-textbox code="chef.fineDish.label.form.epicureOrganisation" path="epicureOrganisation" readonly="true"/>
 		<acme:input-textbox code="chef.fineDish.label.form.epicureAssertion" path="epicureAssertion" readonly="true"/>
 		<acme:input-textbox code="chef.fineDish.label.form.epicureLink" path="epicureLink" readonly="true"/>
+		<acme:button code="chef.fineDish.form.button.memoranda.list" action="/chef/memoranda/list-from-fine-dish?fineDishId=${id}"/>
+		<acme:button code="chef.fineDish.form.button.memoranda.create" action="/chef/memoranda/create?fineDishId=${id}"/>
 	</jstl:if>
 	
 	<jstl:if test="${status.name() == 'PROPOSED'}">

@@ -5,7 +5,9 @@
 <acme:list>
 	
 	<acme:list-column code="chef.memoranda.list.label.sequenceNumber" path="sequenceNumber"/>
-	<acme:list-column code="chef.memoranda.list.label.fineDishCode" path="fineDishCode"/>
+	<jstl:if test="${command == 'list'}">
+		<acme:list-column code="chef.memoranda.list.label.fineDishCode" path="fineDishCode"/>
+	</jstl:if>
 	<acme:list-column code="chef.memoranda.list.label.moment" path="moment"/>
 	<acme:list-column code="chef.memoranda.list.label.epicureUsername" path="epicureUsername"/>
 	

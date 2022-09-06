@@ -10,3 +10,7 @@ chef.memoranda.list.label.sequenceNumber = Sequence Number
 chef.memoranda.list.label.fineDishCode = Fine Dish Code
 chef.memoranda.list.label.moment = Moment
 chef.memoranda.list.label.epicureUsername = Epicure Username
+
+
+chef.memoranda.form.label.button.create = Create Memoranda
+chef.memoranda.form.label.confirmation = Confirm

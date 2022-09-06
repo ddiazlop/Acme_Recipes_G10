@@ -10,3 +10,7 @@ chef.memoranda.list.label.sequenceNumber = Número de Secuencia
 chef.memoranda.list.label.fineDishCode = Código del Plato
 chef.memoranda.list.label.moment = Momento
 chef.memoranda.list.label.epicureUsername = Nombre de Usuario del Epicúreo
+
+
+chef.memoranda.form.label.button.create = Crear Memoranda
+chef.memoranda.form.label.confirmation = Confirmar
