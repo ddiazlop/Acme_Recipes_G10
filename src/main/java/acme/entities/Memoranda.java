@@ -40,7 +40,7 @@ public class Memoranda extends AbstractEntity{
 	protected Date				moment;
 	
 	@NotBlank
-	@Pattern(regexp = "^[A-Z]{2}:[A-Z]{3}-[0-9]{3}:[0-9]{4}$")
+	@Pattern(regexp = "^([A-Z]{2}:)?[A-Z]{3}-[0-9]{3}:[0-9]{4}$")
 	@Column(unique = true)
 	protected String			sequenceNumber;
 		
