@@ -5,6 +5,7 @@ import java.util.Collection;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import acme.components.configuration.SystemConfigurationSep;
 import acme.entities.Memoranda;
 import acme.entities.fineDish.FineDish;
 import acme.framework.repositories.AbstractRepository;
@@ -26,6 +27,9 @@ public interface ChefMemorandaRepository extends AbstractRepository{
 	
 	@Query("Select count(m) From Memoranda m")
 	Integer countMemoranda();
+	
+	@Query("Select sc From SystemConfigurationSep sc")
+	SystemConfigurationSep findSystemConfigurationSep();
 	
 
 }

@@ -9,17 +9,22 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.Memoranda;
 import acme.entities.fineDish.FineDish;
+import acme.features.administrator.systemConfigurationSep.AdministratorSystemConfigurationSepRepository;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractCreateService;
 import acme.roles.Chef;
+import justenoughspam.detector.SpamDetector2;
 
 @Service
 public class ChefMemorandaCreateService implements AbstractCreateService<Chef, Memoranda>{
 
 	@Autowired
 	protected ChefMemorandaRepository repository;
+	
+	@Autowired
+	protected AdministratorSystemConfigurationSepRepository systemConfigRepository;
 	
 	
 	@Override
@@ -108,16 +113,16 @@ public class ChefMemorandaCreateService implements AbstractCreateService<Chef, M
 		final boolean confirmation;
 		confirmation = request.getModel().getBoolean("confirmation");
 		errors.state(request, confirmation, "confirmation", "javax.validation.constraints.AssertTrue.message");
-		/*
-		final SystemConfiguration sc = this.administratorSystemConfigurationRepository.findSystemConfiguration();
-		final SpamDetector spamDetector = new SpamDetector(sc.getStrongSpamThreshold(), sc.getWeakSpamThreshold(), sc.getStrongSpamTerms().split(","), sc.getWeakSpamTerms().split(","));
-		if(!errors.hasErrors("memorandum")) {
-			errors.state(request, spamDetector.stringHasNoSpam(entity.getMemorandum()), "memorandum", "spam.detector.error.message");
+		
+		final SpamDetector2 spamDetector = new SpamDetector2(this.systemConfigRepository.findSpamTuple(), this.systemConfigRepository.findSpamThreshold());
+
+		if(!errors.hasErrors("report")) {
+			errors.state(request, !spamDetector.stringHasManySpam(entity.getReport()), "report", "spamDetector.spamDetected");
 		}
 		
 		if (!errors.hasErrors("info")) {
-			errors.state(request, spamDetector.stringHasNoSpam(entity.getInfo()), "info", "spam.detector.error.message");
-		}*/
+			errors.state(request, !spamDetector.stringHasManySpam(entity.getInfo()), "info", "spamDetector.spamDetected");
+		}
 		
 	}
 
