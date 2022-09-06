@@ -13,13 +13,14 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.fineDish.DishStatus;
 import acme.entities.fineDish.FineDish;
-import acme.features.administrator.systemConfiguration.AdministratorSystemConfigurationRepository;
+import acme.features.administrator.systemConfigurationSep.AdministratorSystemConfigurationSepRepository;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractCreateService;
 import acme.roles.Chef;
 import acme.roles.Epicure;
+import justenoughspam.detector.SpamDetector2;
 
 
 @Service
@@ -29,7 +30,7 @@ public class EpicureFineDishCreateService implements AbstractCreateService<Epicu
 	public EpicureFineDishRepository repository;
 	
 	@Autowired
-	protected AdministratorSystemConfigurationRepository administratorSystemConfigurationRepository;
+	protected AdministratorSystemConfigurationSepRepository administratorSystemConfigurationRepository;
 
 	@Override
 	public boolean authorise(final Request<FineDish> request) {
@@ -126,10 +127,12 @@ public class EpicureFineDishCreateService implements AbstractCreateService<Epicu
 		assert entity != null;
 		assert errors != null;
 		
+		
 		if (!errors.hasErrors("code")) {
 			final FineDish existing = this.repository.findOneFineDishByCode(entity.getCode());
 			errors.state(request, existing == null, "code", "epicure.fine-dish.form.error.duplicated-code");
 		}
+		
 		
 		if(!errors.hasErrors("budget")) {
 			errors.state(request, entity.getBudget().getAmount() > 0, "budget", "epicure.fine-dish.form.error.negative");
@@ -162,6 +165,19 @@ public class EpicureFineDishCreateService implements AbstractCreateService<Epicu
 			
 			errors.state(request, entity.getEndDate().after(minimunDate), "endDate", "epicure.fine-dish.form.error.too-short-periodOfTime");
 		}
+		
+		final SpamDetector2 spamDetector = new SpamDetector2(this.administratorSystemConfigurationRepository.findSpamTuple(), 
+			this.administratorSystemConfigurationRepository.findSpamThreshold());
+	
+		
+		if (!errors.hasErrors("request")) {
+			errors.state(request, !spamDetector.stringHasManySpam(entity.getRequest()), "request", "spamDetector.spamDetected");
+		}
+		
+		if (!errors.hasErrors("info")) {
+			errors.state(request, !spamDetector.stringHasManySpam(entity.getInfo()), "info", "spamDetector.spamDetected");
+		}
+		
 	}
 
 

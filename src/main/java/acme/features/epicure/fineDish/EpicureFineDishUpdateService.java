@@ -12,13 +12,14 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.fineDish.DishStatus;
 import acme.entities.fineDish.FineDish;
-import acme.features.administrator.systemConfiguration.AdministratorSystemConfigurationRepository;
+import acme.features.administrator.systemConfigurationSep.AdministratorSystemConfigurationSepRepository;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractUpdateService;
 import acme.roles.Chef;
 import acme.roles.Epicure;
+import justenoughspam.detector.SpamDetector2;
 
 @Service
 public class EpicureFineDishUpdateService implements AbstractUpdateService<Epicure, FineDish> {
@@ -27,7 +28,7 @@ public class EpicureFineDishUpdateService implements AbstractUpdateService<Epicu
 	protected EpicureFineDishRepository repository;
 
 	@Autowired
-	protected AdministratorSystemConfigurationRepository administratorSystemConfigurationRepository;
+	protected AdministratorSystemConfigurationSepRepository administratorSystemConfigurationRepository;
 
 	@Override
 	public boolean authorise(final Request<FineDish> request) {
@@ -143,6 +144,18 @@ public class EpicureFineDishUpdateService implements AbstractUpdateService<Epicu
 			minimunDate = calendar.getTime();
 			
 			errors.state(request, entity.getEndDate().after(minimunDate), "endDate", "epicure.fine-dish.form.error.too-short-periodOfTime");
+		}
+		
+		final SpamDetector2 spamDetector = new SpamDetector2(this.administratorSystemConfigurationRepository.findSpamTuple(), 
+			this.administratorSystemConfigurationRepository.findSpamThreshold());
+	
+		
+		if (!errors.hasErrors("request")) {
+			errors.state(request, !spamDetector.stringHasManySpam(entity.getRequest()), "request", "spamDetector.spamDetected");
+		}
+		
+		if (!errors.hasErrors("info")) {
+			errors.state(request, !spamDetector.stringHasManySpam(entity.getInfo()), "info", "spamDetector.spamDetected");
 		}
 		
 	}
