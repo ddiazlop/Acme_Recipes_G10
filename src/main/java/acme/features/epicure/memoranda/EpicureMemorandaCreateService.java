@@ -9,11 +9,13 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.Memoranda;
 import acme.entities.fineDish.FineDish;
+import acme.features.administrator.systemConfigurationSep.AdministratorSystemConfigurationSepRepository;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractCreateService;
 import acme.roles.Epicure;
+import justenoughspam.detector.SpamDetector2;
 
 
 @Service
@@ -21,6 +23,9 @@ public class EpicureMemorandaCreateService implements AbstractCreateService<Epic
 
 	@Autowired
 	protected EpicureMemorandaRepository repository;
+	
+	@Autowired
+	protected AdministratorSystemConfigurationSepRepository sysconfig;
 
 
 	@Override
@@ -110,6 +115,13 @@ public class EpicureMemorandaCreateService implements AbstractCreateService<Epic
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		
+		final SpamDetector2 spamDetector = new SpamDetector2(this.sysconfig.findSpamTuple(), this.sysconfig.findSpamThreshold());
+		
+		if (!errors.hasErrors("report")) {
+			errors.state(request, !spamDetector.stringHasManySpam(entity.getReport()), "report", "spamDetector.spamDetected");
+		}
+		
 		
 		if (!errors.hasErrors()) {
 			errors.state(request, request.getModel().getBoolean("confirmed"), "confirmed", "epicure.memoranda.form.create.confirmed-warning");
