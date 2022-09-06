@@ -87,7 +87,7 @@ public class ChefMemorandaCreateService implements AbstractCreateService<Chef, M
 		result.setReport("");
 		result.setFineDish(fineDish);
 		result.setEpicure(fineDish.getEpicure());
-		
+		result.setChef(fineDish.getChef());
 		
 		
 		final DecimalFormat decimalFormat = new DecimalFormat("0000");
