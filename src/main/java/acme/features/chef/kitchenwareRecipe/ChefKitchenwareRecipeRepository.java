@@ -24,10 +24,14 @@ public interface ChefKitchenwareRecipeRepository extends AbstractRepository{
 	
 	@Query ("Select kw From Kitchenware kw Where kw.id= :kitchenwareId")
 	Kitchenware findKitchenwareById(int kitchenwareId);
+	
 	@Query("Select kw From Kitchenware kw Where kw.published = 'true'")
 	Collection<Kitchenware> findAllPublishedKitchenwares();
+	
 	@Query("Select kwr.kitchenware From KitchenwareRecipe kwr Where kwr.kitchenware.id= :kitchenwareId and kwr.recipe.id = :recipeId")
 	Kitchenware findKitchenwareByIdInRecipe(int kitchenwareId, int recipeId);
+
+	
 	
 	
 	

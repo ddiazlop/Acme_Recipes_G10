@@ -59,8 +59,9 @@ public class ChefKitchenwareRecipeShowService implements AbstractShowService<Che
 		
 		request.unbind(entity, model, "quantity", "kitchenware.name", "kitchenware.code", "kitchenware.description", 
 			                          "kitchenware.retailPrice", "kitchenware.info");
-		model.setAttribute("published", entity.getKitchenware().isPublished());		
+		model.setAttribute("kitchenware.published", entity.getKitchenware().isPublished());			
 		model.setAttribute("wareType", entity.getKitchenware().getWareType().name());
+		model.setAttribute("readOnly", true);
 		if (entity.getUnitType() != null) {
 			model.setAttribute("unitType", entity.getUnitType().name());
 		}
@@ -76,6 +77,7 @@ public class ChefKitchenwareRecipeShowService implements AbstractShowService<Che
 		model.setAttribute("retailPrice", moneyPerUnit);
 		money.setAmount(money.getAmount()*entity.getQuantity());
 		model.setAttribute("totalPrice", money);
+		
 	}
 
 }

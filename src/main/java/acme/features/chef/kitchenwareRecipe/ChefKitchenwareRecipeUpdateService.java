@@ -48,6 +48,7 @@ public class ChefKitchenwareRecipeUpdateService implements AbstractUpdateService
 			assert model != null;
 			
 			request.unbind(entity, model, "quantity", "kitchenware.name");
+			model.setAttribute("readOnly", false);
 			model.setAttribute("published", entity.getRecipe().isPublished());
 			
 		}

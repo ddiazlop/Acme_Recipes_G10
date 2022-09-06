@@ -10,6 +10,11 @@ chef.kitchenwareRecipe.form.label.kitchenware.published = Is Published
 chef.kitchenwareRecipe.form.label.quantity = Quantity 
 chef.kitchenwareRecipe.form.label.unitType = Unit Type
 
+chef.kitchenwareRecipe.form.button.update-kitchenwareRecipe = Update Component
+chef.kitchenwareRecipe.form.button.delete-kitchenwareRecipe = Delete Component
+chef.kitchenware-recipe.form.button.add-kitchenware = Create Component
+
+
 GRAM = Grams
 KILO = Kilos
 CM3 = cm3

@@ -38,7 +38,8 @@ public class ChefKitchenwareRecipeCreateService implements AbstractCreateService
 		public KitchenwareRecipe instantiate(final Request<KitchenwareRecipe> request) {
 			final Recipe recipe=this.repository.findRecipeById(request.getModel().getInteger("recipeId"));
 			final KitchenwareRecipe it= new KitchenwareRecipe();
-			it.setRecipe(recipe);
+				it.setRecipe(recipe);
+		
 			return it;
 		}
 
@@ -49,7 +50,7 @@ public class ChefKitchenwareRecipeCreateService implements AbstractCreateService
 			assert errors != null;
 			request.bind(entity, errors, "quantity");
 			
-			final int kitchenwareId=request.getModel().getInteger("kitchenwareId");
+			final int kitchenwareId= request.getModel().getInteger("kitchenwareId");
 			entity.setKitchenware(this.repository.findKitchenwareById(kitchenwareId));
 			
 		}
@@ -62,13 +63,14 @@ public class ChefKitchenwareRecipeCreateService implements AbstractCreateService
 			request.unbind(entity, model, "quantity");
 			
 			final Integer recipeId = request.getModel().getInteger("recipeId");
-			final Collection<Kitchenware> publishedKitchenwares = this.repository.findAllPublishedKitchenwares();
-			final Collection<KitchenwareRecipe> kitchenwareRecipes = this.repository.findAllKitchenwareRecipesByRecipeId(recipeId);
+			final Collection<Kitchenware> publishedKitchenwares = this.repository.findAllPublishedKitchenwares();  
+			final Collection<KitchenwareRecipe> kitchenwareRecipes = this.repository.findAllKitchenwareRecipesByRecipeId(recipeId); 
 			final List<Kitchenware> addedKitchenwares = kitchenwareRecipes.stream().map(KitchenwareRecipe::getKitchenware).collect(Collectors.toList());
 			publishedKitchenwares.removeAll(addedKitchenwares);
 			
 			model.setAttribute("kitchenwares", publishedKitchenwares);
 			model.setAttribute("recipe", this.repository.findRecipeById(recipeId));
+			model.setAttribute("readOnly", false);
 			try {
 				final Integer kitchenwareId = entity.getKitchenware().getId();
 				model.setAttribute("previd", kitchenwareId);
@@ -81,16 +83,16 @@ public class ChefKitchenwareRecipeCreateService implements AbstractCreateService
 		@Override
 		public void validate(final Request<KitchenwareRecipe> request, final KitchenwareRecipe entity, final Errors errors) {
 			
-			//EL KITCHENWARE EN CUESTION TIENE QUE ESTAR PUBLICADO
 			
 			
-			//LA QUANTITY EN KITCHEN_UTENSILS SOLO PUEDE SER 1
+			
+			
 			if(!errors.hasErrors("quantity")) {
 				errors.state(request, entity.getKitchenware().getWareType()!=WareType.KITCHEN_UTENSIL||entity.getQuantity()==1
 					,"quantity", "chef.kitchenware-recipe.form.error.wrong-tool-quantity");
 			}
 			
-			// SI YA EXISTE ESE KITCHENWARE EN LA RECETA
+			
 			if(!errors.hasErrors("*")) {
 				final Kitchenware existing = this.repository.findKitchenwareByIdInRecipe(entity.getKitchenware().getId(), entity.getRecipe().getId());
 				errors.state(request, existing==null, "*", "chef.kitchenware-recipe.form.error.kitchenware-already-added");

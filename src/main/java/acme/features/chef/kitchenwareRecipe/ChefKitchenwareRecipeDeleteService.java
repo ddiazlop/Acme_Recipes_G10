@@ -32,6 +32,16 @@ public class ChefKitchenwareRecipeDeleteService implements AbstractDeleteService
 	}
 
 	@Override
+	public KitchenwareRecipe findOne(final Request<KitchenwareRecipe> request) {
+		assert request != null;
+		
+		final KitchenwareRecipe it;
+		final int id = request.getModel().getInteger("id");
+		it=this.repository.findKitchenwareRecipeById(id);
+		return it;
+	}
+	
+	@Override
 	public void bind(final Request<KitchenwareRecipe> request, final KitchenwareRecipe entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
@@ -49,16 +59,6 @@ public class ChefKitchenwareRecipeDeleteService implements AbstractDeleteService
 		request.unbind(entity, model, "quantity", "kitchenware.name");
 		model.setAttribute("published", entity.getRecipe().isPublished());
 		
-	}
-
-	@Override
-	public KitchenwareRecipe findOne(final Request<KitchenwareRecipe> request) {
-		assert request != null;
-		
-		final KitchenwareRecipe it;
-		final int id = request.getModel().getInteger("id");
-		it=this.repository.findKitchenwareRecipeById(id);
-		return it;
 	}
 
 	@Override
