@@ -15,3 +15,4 @@ chef.memoranda.list.label.epicureUsername = Epicure Username
 
 chef.memoranda.form.label.button.create = Create Memoranda
 chef.memoranda.form.label.confirmation = Confirm
+chef.memoranda.list.tip.creation = TIP: To create a new memoranda you must first navigate to the corresponding fine dish

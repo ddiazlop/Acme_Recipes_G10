@@ -15,3 +15,4 @@ chef.memoranda.list.label.epicureUsername = Nombre de Usuario del Epicúreo
 
 chef.memoranda.form.label.button.create = Crear Memoranda
 chef.memoranda.form.label.confirmation = Confirmar
+chef.memoranda.list.tip.creation = TIP: Para crear una nueva memoranda es necesario navegar hasta el plato sobre el que la quieras crear.
