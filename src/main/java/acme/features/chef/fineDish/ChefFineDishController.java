@@ -13,13 +13,16 @@ import acme.roles.Chef;
 public class ChefFineDishController extends AbstractController<Chef, FineDish>{
 
 	@Autowired
-	protected ChefFineDishListService	listService;
+	protected ChefFineDishListService			listService;
 	@Autowired
-	protected ChefFineDishShowService	showService;
+	protected ChefFineDishShowService			showService;
+	@Autowired
+	protected ChefFineDishChangeStatusService 	changeStatusService;
 	
 	@PostConstruct
 	protected void initialse() {
 		super.addCommand("list", this.listService);
 		super.addCommand("show", this.showService);
+		super.addCommand("change-status", "update", this.changeStatusService);
 	}
 }

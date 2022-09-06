@@ -1,23 +1,30 @@
 
 package acme.features.epicure.fineDish;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.Memoranda;
 import acme.entities.fineDish.DishStatus;
 import acme.entities.fineDish.FineDish;
+import acme.features.administrator.systemConfiguration.AdministratorSystemConfigurationRepository;
 import acme.framework.components.models.Model;
+import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
-import acme.framework.services.AbstractShowService;
+import acme.framework.services.AbstractDeleteService;
 import acme.roles.Chef;
 import acme.roles.Epicure;
 
 @Service
-public class EpicureFineDishShowService implements AbstractShowService<Epicure, FineDish> {
+public class EpicureFineDishDeleteService implements AbstractDeleteService<Epicure, FineDish> {
 
 	@Autowired
-	protected EpicureFineDishRepository repository;
-
+	public EpicureFineDishRepository repository;
+	
+	@Autowired
+	protected AdministratorSystemConfigurationRepository administratorSystemConfigurationRepository;
 
 	@Override
 	public boolean authorise(final Request<FineDish> request) {
@@ -33,19 +40,20 @@ public class EpicureFineDishShowService implements AbstractShowService<Epicure, 
 		epicureId = request.getPrincipal().getActiveRoleId();
 		epicure = this.repository.findOneEpicureById(epicureId);
 
-		return fineDish.getEpicure().equals(epicure);
+		return fineDish.getEpicure().equals(epicure) && !fineDish.isPublished();
 	}
-
+	
 	@Override
-	public FineDish findOne(final Request<FineDish> request) {
+	public void bind(final Request<FineDish> request, final FineDish entity, final Errors errors) {
+
 		assert request != null;
+		assert entity != null;
+		assert errors != null;
 
-		FineDish result;
-		int id;
+		request.bind(entity, errors,"status", "code","request","budget","creationDate","startDate", 
+				 "endDate","info", "published");
+		
 
-		id = request.getModel().getInteger("id");
-		result = this.repository.findOneFineDishById(id);
-		return result;
 	}
 
 	@Override
@@ -67,7 +75,43 @@ public class EpicureFineDishShowService implements AbstractShowService<Epicure, 
 		model.setAttribute("chef.assertion", chef.getAssertion());
 		model.setAttribute("chef.link", chef.getLink());
 		model.setAttribute("readOnly", true);
+	}
+	
+	@Override
+	public FineDish findOne(final Request<FineDish> request) {
+		assert request != null;
 
+		FineDish result;
+		int id;
+
+		id = request.getModel().getInteger("id");
+		result = this.repository.findOneFineDishById(id);
+		return result;
 	}
 
+	
+	@Override
+	public void validate(final Request<FineDish> request, final FineDish entity, final Errors errors) {
+		
+		assert request != null;
+		assert entity != null;
+		assert errors != null;
+	}
+
+
+	
+	@Override
+	public void delete(final Request<FineDish> request, final FineDish entity) {
+		assert request != null;
+		assert entity != null;
+		
+		final Collection<Memoranda> memoranda = this.repository.findManyMemorandaByFineDishId(entity.getId());
+		this.repository.deleteAll(memoranda);
+
+		this.repository.delete(entity);
+
+
+	}
+	
+	
 }
