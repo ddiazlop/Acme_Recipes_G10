@@ -1,6 +1,6 @@
-key,status,code,request,budget,creation-date,startDate,endDate,info,published,key:epicure,key:chef
-fine-dish-01,ACCEPTED,AA:AAA-000,Unos buenos espaguetis con tomatico,EUR 75.55,2022/03/08 10:00,2022/05/08 10:00,2022/10/08 10:00,https://ev.us.es/,TRUE,epicure-01,chef-01
-fine-dish-02,ACCEPTED,AA:AAA-001,Helado para perros con sabor a persona,EUR 106.35,2022/03/08 10:00,2022/05/08 10:00,2022/10/08 10:00,http://www.chef01.com,TRUE,epicure-02,chef-01
-fine-dish-03,ACCEPTED,AA:AAA-002,Un salmorejo de caballa,EUR 44.3,2022/03/08 10:00,2022/05/08 10:00,2022/10/08 10:00,http://www.chef02.com,false,epicure-02,chef-02
-fine-dish-04,DENIED,BB:ZZZ-333,Unos buenos espaguetis con zanahoria pa mi cuerpo serrano,EUR 66.3,2022/03/08 10:00,2022/05/08 10:00,2022/10/08 10:00,https://ev.us.es/,false,epicure-01,chef-02
-fine-dish-05,PROPOSED,AA:ZZZ-666,Unos buenos espaguetis con mayonesa,EUR 19.99,2022/03/08 10:00,2022/05/08 10:00,2022/10/08 10:00,http://www.chef02.com,TRUE,epicure-01,chef-02
+key,status,code,request,budget,creation-date,startDate,endDate,info,key:epicure,key:chef,published
+fine-dish-01,ACCEPTED,AA:AAA-000,Unos buenos espaguetis con tomatico,EUR 75.55,2022/03/08 10:00,2022/05/08 10:00,2022/10/08 10:00,https://ev.us.es/,epicure-01,chef-01,false
+fine-dish-02,ACCEPTED,AA:AAA-001,Helado para perros con sabor a persona,EUR 106.35,2022/03/08 10:00,2022/05/08 10:00,2022/10/08 10:00,http://www.chef01.com,epicure-02,chef-01,false
+fine-dish-03,ACCEPTED,AA:AAA-002,Un salmorejo de caballa,EUR 44.3,2022/03/08 10:00,2022/05/08 10:00,2022/10/08 10:00,http://www.chef02.com,epicure-02,chef-02,true
+fine-dish-04,DENIED,BB:ZZZ-333,Unos buenos espaguetis con zanahoria pa mi cuerpo serrano,EUR 66.3,2022/03/08 10:00,2022/05/08 10:00,2022/10/08 10:00,https://ev.us.es/,epicure-01,chef-02,true
+fine-dish-05,PROPOSED,AA:ZZZ-666,Unos buenos espaguetis con mayonesa,EUR 19.99,2022/03/08 10:00,2022/05/08 10:00,2022/10/08 10:00,http://www.chef02.com,epicure-01,chef-02,true

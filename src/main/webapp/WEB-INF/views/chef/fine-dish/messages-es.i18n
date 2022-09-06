@@ -5,6 +5,7 @@ chef.fineDish.label.form.creationDate = Fecha de Creación
 chef.fineDish.label.form.startDate = Fecha de Inicio
 chef.fineDish.label.form.endDate = Fecha de Finalización
 chef.fineDish.label.form.info = Más Información
+chef.fineDish.label.form.status = Estado
 chef.fineDish.label.form.epicureName = Nombre del Epicúreo
 chef.fineDish.label.form.epicureUserName = Nombre de Usuario del Epicúreo
 chef.fineDish.label.form.epicureOrganisation = Organización del Epicúreo
@@ -25,3 +26,6 @@ chef.fineDish.list.label.endDate = Fecha de Finalización
 chef.fineDish.list.label.status = Estado
 chef.fineDish.list.label.published = Estado de la publicación
 chef.fineDish.list.label.epicureUserName = Nombre de Usuario del Epicúreo
+
+chef.fineDish.form.button.accept = Aceptar Plato
+chef.fineDish.form.button.deny = Rechazar Plato
