@@ -29,3 +29,6 @@ chef.fineDish.list.label.epicureUserName = Epicure Username
 
 chef.fineDish.form.button.accept = Accept Dish
 chef.fineDish.form.button.deny = Deny Dish
+
+chef.fineDish.form.button.memoranda.list = View Related Memoranda
+chef.fineDish.form.button.memoranda.create = Create New Memoranda
