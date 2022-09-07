@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import acme.components.configuration.SystemConfigurationSep;
 import acme.entities.recipes.Kitchenware;
+import acme.entities.recipes.WareType;
 import acme.features.authenticated.moneyExchangeSep.AuthenticatedMoneyExchangeSepPerformService;
 import acme.features.authenticated.systemConfigurationSep.AuthenticatedSystemConfigurationSepRepository;
 import acme.framework.components.models.Model;
@@ -57,6 +58,9 @@ public class ChefKitchenwareShowService implements AbstractShowService<Chef, Kit
 		assert model != null;
 		
 		request.unbind(entity, model, "code", "name", "wareType", "description", "retailPrice", "info", "published");
+		model.setAttribute("IngredientType", WareType.INGREDIENT);
+		model.setAttribute("KitchenUtensilType", WareType.KITCHEN_UTENSIL);
+		model.setAttribute("readOnly", true);
 		this.unbindConvertedMoney(entity, model);
 	}
 

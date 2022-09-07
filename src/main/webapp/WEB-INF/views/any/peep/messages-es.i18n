@@ -8,9 +8,17 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
+any.peep.list.button.create = Crear
+any.peep.form.button.create = Crear
 
 any.peep.list.label.moment = Momento
 any.peep.list.label.heading = Título
 any.peep.list.label.writer = Escritor
 any.peep.list.label.text = Texto
 any.peep.list.label.email = Correo
+
+any.peep.form.label.heading = Título
+any.peep.form.label.writer = Escritor
+any.peep.form.label.text = Texto
+any.peep.form.label.email = Correo
+any.peep.form.label.confirmation = Confirme que el mensaje es correcto

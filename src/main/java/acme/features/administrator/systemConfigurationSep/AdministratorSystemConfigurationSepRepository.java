@@ -14,8 +14,14 @@ public interface AdministratorSystemConfigurationSepRepository extends AbstractR
 	SystemConfigurationSep findSystemConfiguration();
 
 	@Query("select sc.acceptedCurrencies from SystemConfigurationSep sc")
-	String findAcceptedCurrncies();
+	String findAcceptedCurrencies();
 	
 	@Query("select sc.acceptedCurrencies from SystemConfigurationSep sc where sc.acceptedCurrencies=:currency")
 	String findAcceptedCurrnciesByName(String currency);
+	
+	@Query("select sc.spamTuple from SystemConfigurationSep sc")
+	String findSpamTuple();
+	
+	@Query("select sc.spamThreshold from SystemConfigurationSep sc")
+	Double findSpamThreshold();
 }

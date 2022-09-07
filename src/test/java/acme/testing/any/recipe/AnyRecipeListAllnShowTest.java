@@ -59,7 +59,7 @@ public class AnyRecipeListAllnShowTest extends TestHarness {
 		super.checkInputBoxHasValue("kitchenware.name", name);
 		super.checkInputBoxHasValue("quantity", quantity);
 		super.checkInputBoxHasValue("kitchenware.description", description);
-		super.checkInputBoxHasValue("price", totalPrice);
+		super.checkInputBoxHasValue("totalPrice", totalPrice);
 		super.checkInputBoxHasValue("kitchenware.info", info);
 
 	}
@@ -87,7 +87,7 @@ public class AnyRecipeListAllnShowTest extends TestHarness {
 		super.checkInputBoxHasValue("kitchenware.name", name);
 		super.checkInputBoxHasValue("quantity", quantity);
 		super.checkInputBoxHasValue("kitchenware.description", description);
-		super.checkInputBoxHasValue("price", price);
+		super.checkInputBoxHasValue("retailPrice", price);
 		super.checkInputBoxHasValue("kitchenware.info", info);
 
 	}

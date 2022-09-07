@@ -8,6 +8,10 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
+
+epicure.fine-dish.form.message.with-memoranda-associated = NOTA: Recuerde que si borra un plato con algún memorando asociado, dicho memorando también se borrará
+
+
 epicure.fine-dish.form.label.status = Estado
 epicure.fine-dish.form.label.code = Código
 epicure.fine-dish.form.label.request = Petición
@@ -16,13 +20,32 @@ epicure.fine-dish.form.label.creationDate = Fecha creación
 epicure.fine-dish.form.label.startDate = Fecha comienzo
 epicure.fine-dish.form.label.endDate = Fecha fin
 epicure.fine-dish.form.label.info = Info
-epicure.fine-dish.form.label.chef.username = Chef
+epicure.fine-dish.form.label.chefUsername = Nombre de usuario del chef
 epicure.fine-dish.form.label.chef.organisation = Organización del chef
 epicure.fine-dish.form.label.chef.assertion = Afirmación del chef
 epicure.fine-dish.form.label.chef.link = Link del chef
+epicure.fineDish.form.label.status = Estado
+epicure.fineDish.form.label.status.PROPOSED = Propuesto
+epicure.fineDish.form.label.status.ACCEPTED = Aceptado
+epicure.fineDish.form.label.status.DENIED = Denegado
+epicure.fineDish.form.label.is-published = Estado de la publicación
+epicure.fineDish.form.label.published = Publicado
+epicure.fineDish.form.label.not-published = No publicado
 
 
-epicure.fine-dish.button.create = Solicitar
+epicure.fine-dish.form.error.invalidChef = Chef inválido o nulo
+epicure.fine-dish.form.error.duplicated-code = Código existente
+epicure.fine-dish.form.error.negative = El presupuesto no puede ser negativo 
+epicure.fine-dish.form.error.noAcceptedCurrency = Moneda inválida
+epicure.fine-dish.form.error.too-close-start = La fecha de comienzo debe ser un mes más tarde de la creación del plato
+epicure.fine-dish.form.error.too-short-periodOfTime = El periodo de tiempo entre la fecha de comienzo y la fecha final debe ser de al menos un mes
+
+
+epicure.fine-dish.list.button.create = Crear
+epicure.fine-dish.form.submit.create = Crear
+epicure.fine-dish.form.submit.update = Actualizar
+epicure.fine-dish.form.submit.publish = Publicar
+epicure.fine-dish.form.submit.delete = Borrar
 epicure.fine-dish.list.title = Mi plato
 
 epicure.fine-dish.list.label.status = Estado
@@ -33,9 +56,13 @@ epicure.fine-dish.list.label.creationDate = Fecha creación
 epicure.fine-dish.list.label.startDate = Fecha comienzo
 epicure.fine-dish.list.label.endDate = Fecha fin
 epicure.fine-dish.list.label.info = Info
-
-
-
+epicure.fine-dish.list.label.published = Estado de la publicación
+epicure.fine-dish.button.kitchenwareRecipe = Ver Artículos de Cocina Asociados
+epicure.fine-dish.button.publish = Publicar plato
+epicure.fine-dish.button.update = Actualizar
+epicure.fine-dish.button.add-content = Añadir contenido
+epicure.fine-dish.button.delete = Borrar plato
+epicure.fine-dish.button.create = Crear plato
 
 
 

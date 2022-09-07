@@ -28,3 +28,4 @@
  	width="20%" />
 		 
 </acme:list>
+<acme:button code="chef.kitchenware.list.button.create" action="/chef/kitchenware/create"/>
