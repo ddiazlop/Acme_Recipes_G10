@@ -1,0 +1,4 @@
+recordIndex,code,budget,request,status,info
+0,AA:AAA-002,EUR 44.30,Un salmorejo de caballa,ACCEPTED,http://www.chef02.com
+1,AA:ZZZ-666,EUR 19.99,Unos buenos espaguetis con mayonesa,PROPOSED,http://www.chef02.com
+2,BB:ZZZ-333,EUR 66.30,Unos buenos espaguetis con zanahoria pa mi cuerpo serrano,DENIED,https://ev.us.es/
