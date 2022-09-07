@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>440</x>
+      <x>444</x>
       <y>300</y>
       <w>128</w>
       <h>40</h>
@@ -14,7 +14,7 @@ Epicure
 --
 + organization: String {NotBlank,Lenght(1,100)}
 + assertion: String {NotBlank, Lenght(1,255)}
-+ info: String {URL}
++ link: String {URL}
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
@@ -51,7 +51,7 @@ Chef
 --
 + organization: String {NotBlank,Length(1,100)}
 + assertion: String {NotBlank, Lenght(1,255)}
-+ info: String {URL}
++ link: String {URL}
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
@@ -104,14 +104,14 @@ cuantifica ^</panel_attributes>
     <coordinates>
       <x>440</x>
       <y>240</y>
-      <w>72</w>
+      <w>76</w>
       <h>68</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
 m2=*
 &lt; Petición</panel_attributes>
-    <additional_attributes>100.0;150.0;100.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>110.0;150.0;100.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -286,7 +286,7 @@ bg=green</panel_attributes>
       <x>276</x>
       <y>184</y>
       <w>168</w>
-      <h>72</h>
+      <h>80</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 FineDish
@@ -299,6 +299,7 @@ FineDish
 + startDate: Date {NotNull, Temporal(TIMESTAMP)}
 + endDate: Date {NotNull, Temporal(TIMESTAMP)}
 + info: String {URL}
++ published: Boolean
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
@@ -387,11 +388,11 @@ bg=blue</panel_attributes>
     <panel_attributes>&lt;&lt;Form&gt;&gt;
 EpicureDashboard
 --
-+ numFineDishesByStatus: Map&lt;FineDishStatus, Integer&gt;
-+ averageBudgetsByStatus: Map&lt;Pair&lt;FineDishStatus,String&gt;,Double&gt;
-+ diviationBudgetsByStatus: Map&lt;Pair&lt;FineDishStatus, String&gt;,Double&gt;
-+ minBudgetByStatus: Map&lt;Pair&lt;FineDishStatus,String&gt;,Double&gt;
-+ maxBudgetByStatus: Map&lt;Pair&lt;FineDishStatus,String&gt;,Double&gt;
++ numDishesProposed: Integer
++ numDishesAccepted: Integer
++ numDishesDenied: Integer
++ dishedBudgetData: Map&lt;Pair&lt;DishStatus, String&gt;, StatData&gt;
+
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
@@ -401,15 +402,16 @@ bg=green</panel_attributes>
       <x>36</x>
       <y>100</y>
       <w>188</w>
-      <h>48</h>
+      <h>52</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 MoneyExchange
 --
 + source: Money {NotNull, Valid}
 + targetCurrency {NotBlank}
-+ target: Money {Valid}
++ change: Money
 + date: Date
++ rate: Double
 
 bg=green</panel_attributes>
     <additional_attributes/>
@@ -417,8 +419,8 @@ bg=green</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>496</x>
-      <y>184</y>
+      <x>460</x>
+      <y>180</y>
       <w>84</w>
       <h>48</h>
     </coordinates>
@@ -435,12 +437,12 @@ bg=blue</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>440</x>
-      <y>196</y>
-      <w>64</w>
-      <h>16</h>
+      <y>192</y>
+      <w>28</w>
+      <h>20</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
+    <additional_attributes>10.0;30.0;50.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
@@ -509,13 +511,13 @@ AdminDashboard
 --
 + numIngredients: Integer
 + numKitchenUtensil: Integer 
-+ numFineDishRequested: Integer 
-+ numFineDishAccepted: Integer 
-+ numFineDishDenied: Integer 
++ numDishRequested: Integer 
++ numDishAccepted: Integer 
++ numDishDenied: Integer 
 
 + ingredientsDataByCurrency: Map&lt;String, StatData&gt;
 + kitchenUtensilDataByCurrency: Map&lt;String, StatData&gt;
-+ fineDishBudgetData: Map&lt;Pair&lt;FineDishStatus,String&gt;, StatData&gt;
++ fineDishBudgetData: Map&lt;Pair&lt;DishStatus,String&gt;, StatData&gt;
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
@@ -537,5 +539,37 @@ UnitType
 + SPOON
 bg=green</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>100</y>
+      <w>48</w>
+      <h>236</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1
+m2=*
+crea ^
+
+</panel_attributes>
+    <additional_attributes>20.0;570.0;10.0;90.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>516</x>
+      <y>108</y>
+      <w>60</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1
+m2=*
+crea ^
+
+</panel_attributes>
+    <additional_attributes>90.0;480.0;90.0;110.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
