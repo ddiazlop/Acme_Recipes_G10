@@ -18,7 +18,7 @@ public class ChefRecipeListAndShowTest extends TestHarness{
 		super.signIn("chef1", "chef1");
 		super.navigateHome();
 		
-		super.clickOnMenu("Chef", "Recipes");
+		super.clickOnMenu("Chef", "My Recipes");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 		
