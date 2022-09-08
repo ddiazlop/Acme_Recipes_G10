@@ -30,5 +30,5 @@ chef.fineDish.list.label.epicureUserName = Nombre de Usuario del Epicúreo
 chef.fineDish.form.button.accept = Aceptar Plato
 chef.fineDish.form.button.deny = Rechazar Plato
 
-chef.fineDish.form.button.memoranda.list = Ver Memoranda Relacionada
-chef.fineDish.form.button.memoranda.create = Crear Nueva Memoranda
+chef.fineDish.form.button.memoranda.list = Ver Memorandos Relacionados
+chef.fineDish.form.button.memoranda.create = Crear Nuevo Memorando

@@ -75,7 +75,6 @@ public class ChefRecipeShowService implements AbstractShowService<Chef, Recipe>{
 		money.setAmount(amount);
 		money.setCurrency(sc.getSystemCurrency());
 		model.setAttribute("price", money);
-		model.setAttribute("chef", entity.getChef().getIdentity().getFullName());
 		model.setAttribute("readOnly", true);
 		
 		model.setAttribute("ableToPublish", 
