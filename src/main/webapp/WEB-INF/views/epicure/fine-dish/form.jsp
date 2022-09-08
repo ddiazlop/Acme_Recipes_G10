@@ -29,6 +29,8 @@
 		<acme:input-textbox code="epicure.fine-dish.form.label.chef.organisation" path="chef.organisation" readonly="true"/>
 		<acme:input-textbox code="epicure.fine-dish.form.label.chef.assertion" path="chef.assertion" readonly="true"/>
 		<acme:input-textbox code="epicure.fine-dish.form.label.chef.link" path="chef.link" readonly="true"/>
+		<acme:button code="epicure.fineDish.form.button.memoranda.list" action="/epicure/memoranda/list-from-fine-dish?fineDishId=${id}"/>
+		<acme:button code="epicure.fineDish.form.button.memoranda.create" action="/epicure/memoranda/create?fineDishId=${id}"/>
 		<jstl:if test="${!published}">
 			<acme:submit code="epicure.fine-dish.form.submit.update" action="/epicure/fine-dish/update"/>
 			<acme:submit code="epicure.fine-dish.form.submit.publish" action="/epicure/fine-dish/publish"/>

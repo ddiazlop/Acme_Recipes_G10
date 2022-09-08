@@ -12,7 +12,6 @@
 	
 	<jstl:choose>	 
 		<jstl:when test="${acme:anyOf(command, 'show, delete, update, publish')}">
-			<acme:input-textbox readonly="true" code="chef.recipes.form.label.chef" path="chef"/>
 			<acme:input-textbox readonly="true" code="chef.recipes.form.label.price" path="price"/>
 		</jstl:when> 
 	</jstl:choose>	
