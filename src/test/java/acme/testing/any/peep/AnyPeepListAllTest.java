@@ -21,10 +21,10 @@ public class AnyPeepListAllTest extends TestHarness{
 		super.sortListing(0, "asc");
 
 
-		super.checkColumnHasValue(recordIndex, 0, heading);
-		super.checkColumnHasValue(recordIndex, 1, writer);
-		super.checkColumnHasValue(recordIndex, 2, text);
-		super.checkColumnHasValue(recordIndex, 3, email);
+		super.checkColumnHasValue(recordIndex, 1, heading);
+		super.checkColumnHasValue(recordIndex, 2, writer);
+		super.checkColumnHasValue(recordIndex, 3, text);
+		super.checkColumnHasValue(recordIndex, 4, email);
 		
 		
 	}

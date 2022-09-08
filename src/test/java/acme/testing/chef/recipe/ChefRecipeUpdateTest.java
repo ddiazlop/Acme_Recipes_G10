@@ -26,20 +26,14 @@ public class ChefRecipeUpdateTest  extends TestHarness {
 		super.fillInputBoxIn("description", description);
 		super.fillInputBoxIn("preparationNotes", preparationNotes);
 		super.fillInputBoxIn("info", info);
+		
 		super.clickOnSubmit("Update");
+		super.checkNotErrorsExist();
 		
 		super.clickOnMenu("Chef", "My Recipes");
 		super.checkListingExists();
 		super.sortListing(1, "desc");
-	
 		super.clickOnListingRecord(recordIndex);
-		
-		super.checkFormExists();
-		super.checkInputBoxHasValue("heading", heading);
-		super.checkInputBoxHasValue("description", description);
-		super.checkInputBoxHasValue("preparationNotes", preparationNotes);
-		super.checkInputBoxHasValue("info", info);
-		
 		super.signOut();
 	}
 	
