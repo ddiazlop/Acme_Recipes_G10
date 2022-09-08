@@ -58,7 +58,7 @@ public class ChefRecipeCreateTest extends TestHarness{
 	@ParameterizedTest
 	@CsvFileSource(resources = "/chef/recipe/create-recipe-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)
-	public void negativeCreateToolkitTest(final int recordIndex, final String code, final String heading, final String description
+	public void negativeCreateRecipeTest(final int recordIndex, final String code, final String heading, final String description
 		, final String preparationNotes, final String info) {
 		super.signIn("chef2", "chef2");
 		super.navigateHome();
