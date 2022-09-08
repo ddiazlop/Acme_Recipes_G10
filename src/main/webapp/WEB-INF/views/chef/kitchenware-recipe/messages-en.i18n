@@ -12,7 +12,7 @@ chef.kitchenwareRecipe.form.label.unitType = Unit Type
 
 chef.kitchenwareRecipe.form.button.update-kitchenwareRecipe = Update Kitchenware
 chef.kitchenwareRecipe.form.button.delete-kitchenwareRecipe = Delete Kitchenware
-chef.kitchenware-recipe.form.button.add-kitchenware = Create Kitchenware
+chef.kitchenware-recipe.form.button.add-kitchenware = Add Kitchenware
 
 
 GRAM = Grams
@@ -40,4 +40,4 @@ chef.kitchenware-recipe.form.error.not-an-ingredient = That kitchenware is not a
 chef.kitchenware-recipe.form.error.not-an-utensil = That kitchenware is nat a kitchen utensil
 chef.kitchenware-recipe.form.error.unit-not-selected = You must provide a valid unit to add any amount of an ingredient
 chef.kitchenware-recipe.form.error.no-unit-for-utensils = You cannot add a unit type for a kitchen utensil
-
+chef.kitchenware-recipe.form.error.kitchenwareCode-repeated = Kitchenware already added. Please update that kitchenware if you want to change something like its quantity

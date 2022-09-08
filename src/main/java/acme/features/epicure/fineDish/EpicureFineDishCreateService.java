@@ -3,7 +3,6 @@ package acme.features.epicure.fineDish;
 
 import java.util.Arrays;
 import java.util.Calendar;
-import java.util.Collection;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
@@ -74,8 +73,6 @@ public class EpicureFineDishCreateService implements AbstractCreateService<Epicu
 			model.setAttribute("chefUsername", entity.getChef().getUserAccount().getUsername());
 		}
 		
-		final Collection<Chef> chefs = this.repository.findAllChefs();
-		model.setAttribute("chefs", chefs);
 		model.setAttribute("PROPOSED", DishStatus.PROPOSED);
 		model.setAttribute("ACCEPTED", DishStatus.ACCEPTED);
 		model.setAttribute("DENIED", DishStatus.DENIED);
@@ -153,7 +150,7 @@ public class EpicureFineDishCreateService implements AbstractCreateService<Epicu
 			errors.state(request, entity.getStartDate().after(minimunDate), "startDate", "epicure.fine-dish.form.error.too-close-start");
 		}
 		
-		if(!errors.hasErrors("endDate")) {
+		if(!errors.hasErrors("endDate") && entity.getStartDate() != null) {
 			Calendar calendar;
 			Date minimunDate;
 			
