@@ -21,3 +21,4 @@ epicure.memoranda.form.create.confirm = Recuerda que esta acción no es reversib
 epicure.memoranda.form.create.confirm = Al seleccionar esta casilla reconoce que la creación de un memorando es una acción irreversible y que por lo tanto, no puede ser editada ni eliminada tras su creación
 epicure.memoranda.form.create.confirmed-warning = Es necesario confirmar la creación del memorando
 
+epicure.memoranda.form.error.null-kitchenwareCode = Artículo inválido o nulo
