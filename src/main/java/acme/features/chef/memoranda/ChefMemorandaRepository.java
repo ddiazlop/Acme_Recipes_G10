@@ -25,8 +25,8 @@ public interface ChefMemorandaRepository extends AbstractRepository{
 	@Query("Select fd From FineDish fd Where fd.id = :id")
 	FineDish findFineDishById(int id);
 	
-	@Query("Select count(m) From Memoranda m")
-	Integer countMemoranda();
+	@Query("Select count(m) From Memoranda m Where m.fineDish.id = :id")
+	Integer countMemoranda(int id);
 	
 	@Query("Select sc From SystemConfigurationSep sc")
 	SystemConfigurationSep findSystemConfigurationSep();

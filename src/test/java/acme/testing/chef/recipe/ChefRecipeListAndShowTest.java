@@ -25,7 +25,7 @@ public class ChefRecipeListAndShowTest extends TestHarness{
 		super.checkColumnHasValue(recordIndex, 0, code);
 		super.checkColumnHasValue(recordIndex, 1, heading);
 		super.checkColumnHasValue(recordIndex, 2, description);
-		super.checkColumnHasValue(recordIndex, 3, state);
+		super.checkColumnHasValue(recordIndex, 4, state);
 		
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();

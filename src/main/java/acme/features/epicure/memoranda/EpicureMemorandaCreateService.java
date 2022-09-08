@@ -1,7 +1,6 @@
 package acme.features.epicure.memoranda;
 
 import java.util.Calendar;
-import java.util.Collection;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -69,8 +68,8 @@ public class EpicureMemorandaCreateService implements AbstractCreateService<Epic
 		
 		final String fineDishCode = request.getModel().getString("fineDish.code");
 		final FineDish finedish = this.repository.findFineDishByCode(fineDishCode);
-		final Collection<String> memorandaCodes = this.repository.findAllMemorandaCodesFromFineDishIdAndEpicureId(finedish.getId(), request.getPrincipal().getActiveRoleId());
-		Integer sequencePosition = memorandaCodes.stream().mapToInt(mc -> Integer.valueOf(mc.split(":")[2])).max().getAsInt();
+		Integer sequencePosition = this.repository.countMemoranda(finedish.getId());
+		
 		final StringBuilder secuenceNumberBuilder = new StringBuilder();
 		sequencePosition = sequencePosition +1;
 		

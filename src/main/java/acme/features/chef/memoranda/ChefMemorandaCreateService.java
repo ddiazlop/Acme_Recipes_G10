@@ -96,7 +96,7 @@ public class ChefMemorandaCreateService implements AbstractCreateService<Chef, M
 		
 		
 		final DecimalFormat decimalFormat = new DecimalFormat("0000");
-		final Integer serial = this.repository.countMemoranda()+1;
+		final Integer serial = this.repository.countMemoranda(fineDishId)+1;
 		final String serialString = decimalFormat.format(serial);
 		
 		result.setSequenceNumber(code+":"+serialString);

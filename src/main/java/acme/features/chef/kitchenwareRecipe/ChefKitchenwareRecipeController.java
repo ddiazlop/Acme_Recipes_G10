@@ -18,13 +18,23 @@ public class ChefKitchenwareRecipeController extends AbstractController<Chef, Ki
 	@Autowired
 	protected ChefKitchenwareRecipeListService listService;
 	
+	@Autowired
+	protected ChefKitchenwareRecipeCreateService createService;
+	
+	@Autowired
+	protected ChefKitchenwareRecipeUpdateService updateService;
+	
+	@Autowired
+	protected ChefKitchenwareRecipeDeleteService deleteService;
+	
+	
 	
 	@PostConstruct
 	protected void initialise() {
 		super.addCommand("show", this.showService);
 		super.addCommand("list", this.listService);
-		/*super.addCommand("create", this.createService);
+		super.addCommand("create", this.createService);
 		super.addCommand("delete", this.deleteService);
-		super.addCommand("update", this.updateService);*/
+		super.addCommand("update", this.updateService);
 	}
 }

@@ -30,6 +30,9 @@ public interface EpicureMemorandaRepository extends AbstractRepository {
 	@Query("select c from Chef c where c.userAccount.username = :name")
 	Chef findChefByUsername(String name);
 	
+	@Query("Select count(m) From Memoranda m Where m.fineDish.id = :id")
+	Integer countMemoranda(int id);
+	
 	@Query("select fd from FineDish fd where fd.code = :code")
 	FineDish findFineDishByCode(String code);
 }
