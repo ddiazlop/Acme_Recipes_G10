@@ -18,3 +18,5 @@ authenticated.money-exchange-sep.form.button.perform = Realizar cambio
 authenticated.money-exchange-sep.form.label.api-error = Lo sentimos, no se pudo hacer este cambio
 authenticated.money-exchange-sep.form.error.source.currency-not-supported = Moneda no registrada en el sistema. Por favor, revise la página anterior
 authenticated.money-exchange-sep.form.error.source.negative = No se aceptan cantidades negativas
+authenticated.money-exchange.form.error.target-currency.currency-not-supported = Moneda no registrada en el sistema. Por favor, revise la página anterior
+authenticated.money-exchange-sep.form.error.target-currency.negative = No se aceptan cantidades negativas

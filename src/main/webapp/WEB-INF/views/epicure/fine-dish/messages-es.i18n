@@ -63,7 +63,7 @@ epicure.fine-dish.button.update = Actualizar
 epicure.fine-dish.button.add-content = Añadir contenido
 epicure.fine-dish.button.delete = Borrar plato
 epicure.fine-dish.button.create = Crear plato
-
-
+epicure.fineDish.form.button.memoranda.list = Ver Memorandos Relacionados
+epicure.fineDish.form.button.memoranda.create = Crear Nuevo Memorando
 
 

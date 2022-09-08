@@ -62,4 +62,5 @@ epicure.fine-dish.button.update = Update
 epicure.fine-dish.button.add-content = Add content
 epicure.fine-dish.button.delete = Delete fine dish
 epicure.fine-dish.button.create = New fine dish
-
+epicure.fineDish.form.button.memoranda.list = View Related Memoranda
+epicure.fineDish.form.button.memoranda.create = Create New Memorandum

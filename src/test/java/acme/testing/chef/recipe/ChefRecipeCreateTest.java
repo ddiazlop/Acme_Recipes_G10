@@ -43,7 +43,6 @@ public class ChefRecipeCreateTest extends TestHarness{
 		super.checkInputBoxHasValue("heading", heading);
 		super.checkInputBoxHasValue("description", description);
 		super.checkInputBoxHasValue("preparationNotes", preparationNotes);
-		super.checkInputBoxHasValue("chef", "Chef7Surname, Chef7Name");
 		super.checkInputBoxHasValue("price", "EUR 0.00");
 		super.checkInputBoxHasValue("info", info);
 		
@@ -58,7 +57,7 @@ public class ChefRecipeCreateTest extends TestHarness{
 	@ParameterizedTest
 	@CsvFileSource(resources = "/chef/recipe/create-recipe-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)
-	public void negativeCreateToolkitTest(final int recordIndex, final String code, final String heading, final String description
+	public void negativeCreateRecipeTest(final int recordIndex, final String code, final String heading, final String description
 		, final String preparationNotes, final String info) {
 		super.signIn("chef2", "chef2");
 		super.navigateHome();
@@ -88,11 +87,11 @@ public class ChefRecipeCreateTest extends TestHarness{
 		super.checkPanicExists();
 
 		super.signIn("administrator", "administrator");
-		super.navigate("/inventor/toolkit/create");
+		super.navigate("/chef/recipe/create");
 		super.checkPanicExists();
 		super.signOut();
 
-		super.signIn("patron1", "patron1");
+		super.signIn("epicure1", "epicure1");
 		super.navigate("/chef/recipe/create");
 		super.checkPanicExists();
 		super.signOut();

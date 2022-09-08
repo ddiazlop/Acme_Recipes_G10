@@ -9,7 +9,7 @@ import acme.testing.TestHarness;
 public class AdministratorSystemConfigurationSepListAndShowTest extends TestHarness {
 
 	@Test
-	@Order(30)
+	@Order(100)
 	public void hackingTest() {
 
 		super.navigate("/administrator/systemConfigurationSep/show");

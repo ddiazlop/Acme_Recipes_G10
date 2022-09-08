@@ -11,11 +11,11 @@ public class ChefKitchenwarePublishTest extends TestHarness{
 	@Order(90)
 	public void positiveKitchenwarePublishTest() {
 
-		super.signIn("chef1", "chef1");
+		super.signIn("chef2", "chef2");
 		super.clickOnMenu("Chef", "My Kitchenwares");
 
 		super.checkListingExists();
-		super.clickOnListingRecord(0);
+		super.clickOnListingRecord(2);
 		super.checkFormExists();
 		super.checkSubmitExists("Publish");
 		super.clickOnSubmit("Publish");

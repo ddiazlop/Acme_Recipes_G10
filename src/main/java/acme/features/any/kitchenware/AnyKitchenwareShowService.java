@@ -29,26 +29,26 @@ public class AnyKitchenwareShowService implements AbstractShowService<Any, Kitch
 	@Override
 	public boolean authorise(final Request<Kitchenware> request) {
 		assert request != null;
-		int ingredientId;
-		Kitchenware ingredient;
+		int kitchenwareId;
+		Kitchenware kitchenware;
 		boolean res;
 
-		ingredientId = request.getModel().getInteger("id");
-		ingredient = this.repo.findOneKitchenwareById(ingredientId);
-		res = ingredient.isPublished();
+		kitchenwareId = request.getModel().getInteger("id");
+		kitchenware = this.repo.findOneKitchenwareById(kitchenwareId);
+		res = kitchenware.isPublished();
 		return res;
 	}
 
 	@Override
 	public Kitchenware findOne(final Request<Kitchenware> request) {
 		assert request != null;
-		int ingredientId;
-		Kitchenware ingredient;
+		int kitchenwareId;
+		Kitchenware kitchenware;
 
-		ingredientId = request.getModel().getInteger("id");
-		ingredient = this.repo.findOneKitchenwareById(ingredientId);
+		kitchenwareId = request.getModel().getInteger("id");
+		kitchenware = this.repo.findOneKitchenwareById(kitchenwareId);
 
-		return ingredient;
+		return kitchenware;
 	}
 
 	@Override

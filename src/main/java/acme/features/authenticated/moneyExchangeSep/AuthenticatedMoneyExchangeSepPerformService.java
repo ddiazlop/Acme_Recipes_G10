@@ -13,6 +13,7 @@
 package acme.features.authenticated.moneyExchangeSep;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -23,6 +24,7 @@ import org.springframework.web.client.RestTemplate;
 
 import acme.components.ExchangeRate;
 import acme.entities.MoneyExchangeSep;
+import acme.features.administrator.systemConfigurationSep.AdministratorSystemConfigurationSepRepository;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
@@ -36,6 +38,9 @@ public class AuthenticatedMoneyExchangeSepPerformService implements AbstractPerf
 
 	@Autowired
 	protected AuthenticatedMoneyExchangeSepRepository repository;
+	
+	@Autowired
+	protected AdministratorSystemConfigurationSepRepository systemConfigRepository;
 
 
 	@Override
@@ -77,8 +82,30 @@ public class AuthenticatedMoneyExchangeSepPerformService implements AbstractPerf
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-
-		request.unbind(entity, model, "source", "targetCurrency", "date", "change");
+		
+		if(entity.getSource() == null || entity.getTargetCurrency() == null) {
+			if(entity.getSource() == null ) {
+				model.setAttribute("source", "");
+				model.setAttribute("change", "");
+			}
+			else {
+				model.setAttribute("source", entity.getSource());
+				model.setAttribute("change", entity.getChange());
+			}
+			if(entity.getTargetCurrency() == null ) {
+				model.setAttribute("targetCurrency", "");
+				model.setAttribute("change", "");
+			}
+			else {
+				model.setAttribute("targetCurrency", entity.getTargetCurrency());
+				model.setAttribute("change", entity.getChange());
+			}
+			request.unbind(entity, model, "date");
+		}
+		
+		else {
+			request.unbind(entity, model, "source", "targetCurrency", "date", "change");
+		}
 
 	}
 
@@ -109,6 +136,24 @@ public class AuthenticatedMoneyExchangeSepPerformService implements AbstractPerf
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		
+		final String[] acceptedCurrencies=this.systemConfigRepository.findAcceptedCurrencies().split(",");
+		final List<String> currencies = Arrays.asList(acceptedCurrencies);
+		
+		if(!errors.hasErrors("source")) {
+	
+			errors.state(request, currencies.contains(entity.getSource().getCurrency()), 
+				"source", "authenticated.money-exchange-sep.form.error.source.currency-not-supported");
+			errors.state(request, entity.getSource().getAmount()>=0., 
+				"source", "authenticated.money-exchange-sep.form.error.source.negative");
+		}
+		if(!errors.hasErrors("targetCurrency")) {
+			
+			errors.state(request, currencies.contains(entity.getSource().getCurrency()), 
+				"targetCurrency", "authenticated.money-exchange.form.error.target-currency.currency-not-supported");
+			errors.state(request, entity.getSource().getAmount()>=0., 
+				"targetCurrency", "authenticated.money-exchange.form.error.target-currency.negative");
+		}
 
 	}
 
