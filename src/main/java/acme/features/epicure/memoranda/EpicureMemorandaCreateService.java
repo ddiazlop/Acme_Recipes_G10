@@ -68,20 +68,26 @@ public class EpicureMemorandaCreateService implements AbstractCreateService<Epic
 		
 		final String fineDishCode = request.getModel().getString("fineDish.code");
 		final FineDish finedish = this.repository.findFineDishByCode(fineDishCode);
-		Integer sequencePosition = this.repository.countMemoranda(finedish.getId());
-		
-		final StringBuilder secuenceNumberBuilder = new StringBuilder();
-		sequencePosition = sequencePosition +1;
-		
-		secuenceNumberBuilder.append(fineDishCode + ":");
-		for (int i = 0; sequencePosition.toString().length() + i < 4; i++) {
-			secuenceNumberBuilder.append(0);
+		Integer sequencePosition = 0;
+		if(finedish != null) {
+			sequencePosition = this.repository.countMemoranda(finedish.getId());
+			final StringBuilder secuenceNumberBuilder = new StringBuilder();
+			sequencePosition = sequencePosition +1;
+			
+			secuenceNumberBuilder.append(fineDishCode + ":");
+			for (int i = 0; sequencePosition.toString().length() + i < 4; i++) {
+				secuenceNumberBuilder.append(0);
+			}
+			secuenceNumberBuilder.append(sequencePosition);
+			
+			entity.setSequenceNumber(secuenceNumberBuilder.toString());
+			entity.setChef(finedish.getChef());
+			entity.setFineDish(finedish);
 		}
-		secuenceNumberBuilder.append(sequencePosition);
+		else {
+			errors.state(request, false, "fineDish.code", "epicure.memoranda.form.error.null-kitchenwareCode");
+		}
 		
-		entity.setSequenceNumber(secuenceNumberBuilder.toString());
-		entity.setChef(finedish.getChef());
-		entity.setFineDish(finedish);
 		
 		
 	}
