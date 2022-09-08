@@ -5,7 +5,8 @@ import org.springframework.stereotype.Service;
 
 import acme.components.configuration.SystemConfigurationSep;
 import acme.entities.recipes.KitchenwareRecipe;
-import acme.features.authenticated.moneyExchange.AuthenticatedMoneyExchangePerformService;
+import acme.entities.recipes.UnitType;
+import acme.features.authenticated.moneyExchangeSep.AuthenticatedMoneyExchangeSepPerformService;
 import acme.features.authenticated.systemConfigurationSep.AuthenticatedSystemConfigurationSepRepository;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
@@ -20,7 +21,7 @@ public class ChefKitchenwareRecipeShowService implements AbstractShowService<Che
 	protected ChefKitchenwareRecipeRepository  repository;
 	
 	@Autowired
-	protected AuthenticatedMoneyExchangePerformService moneyExchange;
+	protected AuthenticatedMoneyExchangeSepPerformService moneyExchange;
 	
 	@Autowired
 	protected AuthenticatedSystemConfigurationSepRepository config;
@@ -32,7 +33,7 @@ public class ChefKitchenwareRecipeShowService implements AbstractShowService<Che
 		assert request != null;
 		final int kitchenwareRecipeId = request.getModel().getInteger("id");
 		
-		final KitchenwareRecipe kitchenware = this.repository.findOneById(kitchenwareRecipeId);
+		final KitchenwareRecipe kitchenware = this.repository.findKitchenwareRecipeById(kitchenwareRecipeId);
 		
 		return kitchenware.getRecipe().getChef().getId() == request.getPrincipal().getActiveRoleId();
 		
@@ -45,7 +46,7 @@ public class ChefKitchenwareRecipeShowService implements AbstractShowService<Che
 		KitchenwareRecipe result;
 		
 		final int kitchenwareRecipeId = request.getModel().getInteger("id");
-		result = this.repository.findOneById(kitchenwareRecipeId);
+		result = this.repository.findKitchenwareRecipeById(kitchenwareRecipeId);
 		
 		return result;
 		
@@ -59,12 +60,17 @@ public class ChefKitchenwareRecipeShowService implements AbstractShowService<Che
 		
 		request.unbind(entity, model, "quantity", "kitchenware.name", "kitchenware.code", "kitchenware.description", 
 			                          "kitchenware.retailPrice", "kitchenware.info");
-		model.setAttribute("published", entity.getKitchenware().isPublished());		
 		model.setAttribute("wareType", entity.getKitchenware().getWareType().name());
+		model.setAttribute("readOnly", true);
 		if (entity.getUnitType() != null) {
-			model.setAttribute("unitType", entity.getUnitType().name());
+			model.setAttribute("unitType", entity.getUnitType());
 		}
 		this.unbindConvertedMoney(entity, model);
+		
+		for (int i = 0; i < UnitType.values().length; i++) {
+			final UnitType unitType = UnitType.values()[i];
+			model.setAttribute("enum" + unitType, unitType);
+		}
 	}
 	
 	private void unbindConvertedMoney(final KitchenwareRecipe entity, final Model model) {
@@ -76,6 +82,7 @@ public class ChefKitchenwareRecipeShowService implements AbstractShowService<Che
 		model.setAttribute("retailPrice", moneyPerUnit);
 		money.setAmount(money.getAmount()*entity.getQuantity());
 		model.setAttribute("totalPrice", money);
+		
 	}
 
 }

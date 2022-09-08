@@ -1,7 +1,0 @@
-key,code,heading,description,preparationNotes,key:chef,info,published
-recipe-01,ABC-123,recipe 1,The new recipe number 1,Do follow the recipe as it shows,chef-01,http://www.yourtoolkit1.com,false
-recipe-02,AA:ABC-123,recipe 2,The new recipe number 2,Do follow the recipe as it shows,chef-05,null,false
-recipe-03,ABC-111,recipe 3,The new recipe number 3,Do follow the recipe as it shows,chef-03,http://www.yourtoolkit3.com,false
-recipe-04,AA:ABC-111,recipe 4,The new recipe number 4,Do follow the recipe as it shows,chef-01,null,false
-recipe-05,BB:ABC-111,recipe 5,The new recipe number 5,Do follow the recipe as it shows,chef-02,null,true
-recipe-06,CC:ABC-111,recipe 6,The new recipe number 6,Do follow the recipe as it shows,chef-02,http://www.yourtoolkit6.com,false

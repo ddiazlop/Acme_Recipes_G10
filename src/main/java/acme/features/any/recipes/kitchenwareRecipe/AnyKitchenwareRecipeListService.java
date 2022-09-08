@@ -8,10 +8,10 @@ import org.springframework.stereotype.Service;
 import acme.components.configuration.SystemConfigurationSep;
 import acme.entities.recipes.Kitchenware;
 import acme.entities.recipes.KitchenwareRecipe;
-import acme.features.administrator.systemConfiguration.AdministratorSystemConfigurationRepositorySep;
+import acme.features.administrator.systemConfigurationSep.AdministratorSystemConfigurationSepRepository;
 import acme.features.any.kitchenware.AnyKitchenwareRepository;
 import acme.features.any.recipes.AnyRecipeRepository;
-import acme.features.authenticated.moneyExchange.AuthenticatedMoneyExchangePerformService;
+import acme.features.authenticated.moneyExchangeSep.AuthenticatedMoneyExchangeSepPerformService;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.datatypes.Money;
@@ -28,10 +28,10 @@ public class AnyKitchenwareRecipeListService implements AbstractListService<Any,
 	protected AnyKitchenwareRepository kitchenwareRepository;
 	
 	@Autowired
-	protected AuthenticatedMoneyExchangePerformService moneyExchange;
+	protected AuthenticatedMoneyExchangeSepPerformService moneyExchange;
 	
 	@Autowired
-	protected AdministratorSystemConfigurationRepositorySep sysconfig;
+	protected AdministratorSystemConfigurationSepRepository sysconfig;
 
 	@Override
 	public boolean authorise(final Request<KitchenwareRecipe> request) {

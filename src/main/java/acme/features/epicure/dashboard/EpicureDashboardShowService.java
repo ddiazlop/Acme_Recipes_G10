@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.util.Pair;
 import org.springframework.stereotype.Service;
 
-import acme.components.configuration.SystemConfiguration;
+import acme.components.configuration.SystemConfigurationSep;
 import acme.datatypes.StatData;
 import acme.entities.fineDish.DishStatus;
 import acme.forms.EpicureDashboard;
@@ -47,7 +47,7 @@ public class EpicureDashboardShowService implements AbstractShowService<Epicure,
 		numDishesAccepted = this.repository.numDishesByStatus(DishStatus.ACCEPTED, epicureId);
 		numDishesDenied = this.repository.numDishesByStatus(DishStatus.DENIED, epicureId);
 		
-		final SystemConfiguration sc = this.repository.findSystemConfiguration();
+		final SystemConfigurationSep sc = this.repository.findSystemConfiguration();
 		final List<String> acceptedCurrencies = Arrays.asList(sc.getAcceptedCurrencies().trim().split(","));
 		
 		for (final DishStatus fds : DishStatus.values()) {
