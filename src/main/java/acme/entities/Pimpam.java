@@ -70,10 +70,12 @@ public class Pimpam extends AbstractEntity{
 			
 			// Relationships ----------------------------------------------------------
 			
+			@Valid
 			@ManyToOne(optional = false)
 			@NotNull
 			protected Chef			chef;
 			
+			@Valid
 			@OneToOne(optional = false)
 			@NotNull
 			protected Kitchenware			kitchenware;
