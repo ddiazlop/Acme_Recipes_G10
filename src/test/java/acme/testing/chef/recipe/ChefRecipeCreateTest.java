@@ -92,7 +92,7 @@ public class ChefRecipeCreateTest extends TestHarness{
 		super.checkPanicExists();
 		super.signOut();
 
-		super.signIn("patron1", "patron1");
+		super.signIn("epicure1", "epicure1");
 		super.navigate("/chef/recipe/create");
 		super.checkPanicExists();
 		super.signOut();
