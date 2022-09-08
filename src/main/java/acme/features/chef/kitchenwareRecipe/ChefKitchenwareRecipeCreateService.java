@@ -107,6 +107,8 @@ public class ChefKitchenwareRecipeCreateService implements AbstractCreateService
 		public void validate(final Request<KitchenwareRecipe> request, final KitchenwareRecipe entity, final Errors errors) {
 			
 			if (!errors.hasErrors("kitchenwareCode")) {
+				final KitchenwareRecipe existing = this.repository.findKitchenwareRecipeByRecipeIdAndByKitchenwareCode(entity.getRecipe().getId(), entity.getKitchenware().getCode());
+				errors.state(request, existing == null, "kitchenwareCode", "chef.kitchenware-recipe.form.error.kitchenwareCode-repeated");
 				errors.state(request, entity.getKitchenware().isPublished(), "kitchenwareCode", "chef.kitchenware-recipe.form.error.kitchenware-not-published");
 				if (request.getModel().getAttribute("type").equals("INGREDIENT")) {
 					errors.state(request, entity.getKitchenware().getWareType().equals(WareType.INGREDIENT), "kitchenwareCode", "chef.kitchenware-recipe.form.error.not-an-ingredient");
@@ -123,14 +125,6 @@ public class ChefKitchenwareRecipeCreateService implements AbstractCreateService
 				}
 			}
 			
-			
-			
-			if(!errors.hasErrors("*")) {
-				final Kitchenware existing = this.repository.findKitchenwareByIdInRecipe(entity.getKitchenware().getId(), entity.getRecipe().getId());
-				errors.state(request, existing==null, "*", "chef.kitchenware-recipe.form.error.kitchenware-already-added");
-				
-				
-			}
 			
 		}
 

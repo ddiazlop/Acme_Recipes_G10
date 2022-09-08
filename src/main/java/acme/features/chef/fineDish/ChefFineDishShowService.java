@@ -68,6 +68,7 @@ public class ChefFineDishShowService implements AbstractShowService<Chef, FineDi
 		
 		request.unbind(entity, model, "code", "request", "budget", "creationDate", "startDate", "endDate", "info", "status");
 		
+		model.setAttribute("fineDishId", entity.getId());
 		model.setAttribute("epicureName", entity.getEpicure().getUserAccount().getIdentity().getFullName());
 		model.setAttribute("epicureUserName", entity.getEpicure().getUserAccount().getUsername());
 		model.setAttribute("epicureOrganisation", entity.getEpicure().getOrganisation());
