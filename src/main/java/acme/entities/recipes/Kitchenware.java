@@ -53,6 +53,7 @@ public class Kitchenware extends AbstractEntity{
 		@Enumerated(EnumType.STRING)
 		protected WareType			wareType;
 
+		@NotNull
 		protected boolean			published;
 
 		// Derived attributes -----------------------------------------------------
@@ -62,5 +63,5 @@ public class Kitchenware extends AbstractEntity{
 		@ManyToOne(optional = false)
 		@NotNull
 		protected Chef			chef;
-		
+
 }
