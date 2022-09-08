@@ -10,9 +10,9 @@ chef.kitchenwareRecipe.form.label.kitchenware.published = Publicado
 chef.kitchenwareRecipe.form.label.quantity = Cantidad 
 chef.kitchenwareRecipe.form.label.unitType = Tipo de Unidad
 
-chef.kitchenwareRecipe.form.button.update-kitchenwareRecipe = Actualizar componentes
-chef.kitchenwareRecipe.form.button.delete-kitchenwareRecipe = Borrar componentes
-chef.kitchenware-recipe.form.button.add-kitchenware = Añadir componentes
+chef.kitchenwareRecipe.form.button.update-kitchenwareRecipe = Actualizar material de cocina
+chef.kitchenwareRecipe.form.button.delete-kitchenwareRecipe = Borrar material de cocina
+chef.kitchenware-recipe.form.button.add-kitchenware = Añadir material de cocina
 
 
 
@@ -29,5 +29,16 @@ FALSE = No publicado
 chef.kitchenwareRecipe.list.label.name = Nombre
 chef.kitchenwareRecipe.list.label.code = Código
 chef.kitchenwareRecipe.list.label.wareType = Tipo de Artículo
-chef.kitchenwareRecipe.list.label.quantity = Cantidad 
+chef.kitchenware-recipe.form.label.quantity = Cantidad 
+chef.kitchenwareRecipe.list.label.quantity = Cantidad
 chef.kitchenwareRecipe.list.label.unitType = Tipo de Unidad
+chef.kitchenware-recipe.form.label.kitchenware = Código
+
+chef.kitchenware-recipe.create.errors.null-kitchenware = Ese material de cocina no existe
+chef.kitchenware-recipe.form.error.kitchenware-not-published = Ese material de cocina no está publicado
+chef.kitchenware-recipe.form.error.kitchenware-already-added = Esa kitchenware ya ha sido añadida a la receta
+chef.kitchenware-recipe.form.error.not-an-ingredient = Ese material de cocina no es un ingrediente
+chef.kitchenware-recipe.form.error.not-an-utensil = Ese material de cocina no es un utensilio
+chef.kitchenware-recipe.form.error.unit-not-selected = Es necesario proveer de un tipo de unidad para la cantidad del ingrediente
+chef.kitchenware-recipe.form.error.no-unit-for-utensils = No es posible añadir un tipo de unidad para un utensilio de cocina
+

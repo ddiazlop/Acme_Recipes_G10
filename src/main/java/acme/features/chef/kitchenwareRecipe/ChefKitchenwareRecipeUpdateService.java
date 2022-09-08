@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.recipes.KitchenwareRecipe;
+import acme.entities.recipes.UnitType;
 import acme.entities.recipes.WareType;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
@@ -37,7 +38,11 @@ public class ChefKitchenwareRecipeUpdateService implements AbstractUpdateService
 			assert entity != null;
 			assert errors != null;
 			
-			request.bind(entity, errors, "quantity");
+			if (entity.getKitchenware().getWareType().equals(WareType.INGREDIENT)) {
+				request.bind(entity, errors, "quantity", "unitType");
+			}else {
+				request.bind(entity, errors, "quantity");
+			}
 			
 		}
 
@@ -47,10 +52,15 @@ public class ChefKitchenwareRecipeUpdateService implements AbstractUpdateService
 			assert entity != null;
 			assert model != null;
 			
-			request.unbind(entity, model, "quantity", "kitchenware.name");
-			model.setAttribute("readOnly", false);
+			request.unbind(entity, model, "quantity","unitType", "kitchenware.name", "kitchenware.code", "kitchenware.description", 
+                "kitchenware.retailPrice", "kitchenware.info");
+			model.setAttribute("wareType", entity.getKitchenware().getWareType().name());
 			model.setAttribute("published", entity.getRecipe().isPublished());
 			
+			for (int i = 0; i < UnitType.values().length; i++) {
+				final UnitType unitType = UnitType.values()[i];
+				model.setAttribute("enum" + unitType, unitType);
+			}
 		}
 
 		@Override
@@ -69,9 +79,15 @@ public class ChefKitchenwareRecipeUpdateService implements AbstractUpdateService
 			assert entity != null;
 			assert errors != null;
 			
-			if(!errors.hasErrors("quantity")) {
-				errors.state(request, entity.getKitchenware().getWareType()!=WareType.KITCHEN_UTENSIL||entity.getQuantity()==1, "quantity", "chef.kitchenware-recipe.form.error.wrong-utensil-quantity");
+			
+			if (!errors.hasErrors("unitType")) {
+				if (entity.getKitchenware().getWareType().equals(WareType.INGREDIENT)) {
+					errors.state(request, entity.getUnitType() != null, "unitType", "chef.kitchenware-recipe.form.error.unit-not-selected");
+				}else {
+					errors.state(request, entity.getUnitType() == null, "*", "chef.kitchenware-recipe.form.error.no-unit-for-utensils");
+				}
 			}
+			
 		}
 
 		@Override

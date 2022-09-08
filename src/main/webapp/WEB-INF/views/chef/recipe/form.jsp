@@ -25,7 +25,8 @@
 			</jstl:if>
 			
 			<acme:submit code="chef.recipes.form.button.update" action="/chef/recipe/update"/>
-			<acme:button code="chef.recipes.form.button.add-content" action="/chef/kitchenware-recipe/create?recipeId=${id}"/>
+			<acme:button code="chef.recipes.form.button.add-content.ingredient" action="/chef/kitchenware-recipe/create?recipeId=${id}&type=INGREDIENT"/>
+			<acme:button code="chef.recipes.form.button.add-content.utensil" action="/chef/kitchenware-recipe/create?recipeId=${id}&type=KITCHEN_UTENSIL"/>
 		
 		</jstl:when>
 		<jstl:when test="${command=='create'}">

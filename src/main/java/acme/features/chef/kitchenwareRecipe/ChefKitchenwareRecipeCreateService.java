@@ -1,16 +1,13 @@
 package acme.features.chef.kitchenwareRecipe;
 
 
-import java.util.Collection;
-import java.util.List;
-import java.util.stream.Collectors;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.recipes.Kitchenware;
 import acme.entities.recipes.KitchenwareRecipe;
 import acme.entities.recipes.Recipe;
+import acme.entities.recipes.UnitType;
 import acme.entities.recipes.WareType;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
@@ -48,10 +45,20 @@ public class ChefKitchenwareRecipeCreateService implements AbstractCreateService
 			assert request != null;
 			assert entity != null;
 			assert errors != null;
-			request.bind(entity, errors, "quantity");
 			
-			final int kitchenwareId= request.getModel().getInteger("kitchenwareId");
-			entity.setKitchenware(this.repository.findKitchenwareById(kitchenwareId));
+			if (request.getModel().getString("type").equals("INGREDIENT")) {
+				request.bind(entity, errors, "quantity", "unitType");
+			}else {
+				request.bind(entity, errors, "quantity");
+			}
+			
+			final String kitchenwareCode= request.getModel().getString("kitchenwareCode");
+			final Kitchenware kitchenware = this.repository.findKitchenwareByCode(kitchenwareCode);
+			if (kitchenware == null) {
+				errors.state(request, false, "kitchenwareCode", "chef.kitchenware-recipe.create.errors.null-kitchenware");
+			}else {
+				entity.setKitchenware(kitchenware);
+			}
 			
 		}
 		
@@ -60,22 +67,38 @@ public class ChefKitchenwareRecipeCreateService implements AbstractCreateService
 			assert request != null;
 			assert entity != null;
 			assert model != null;
-			request.unbind(entity, model, "quantity");
+			
+			request.unbind(entity, model, "quantity", "unitType");
+			
 			
 			final Integer recipeId = request.getModel().getInteger("recipeId");
-			final Collection<Kitchenware> publishedKitchenwares = this.repository.findAllPublishedKitchenwares();  
-			final Collection<KitchenwareRecipe> kitchenwareRecipes = this.repository.findAllKitchenwareRecipesByRecipeId(recipeId); 
-			final List<Kitchenware> addedKitchenwares = kitchenwareRecipes.stream().map(KitchenwareRecipe::getKitchenware).collect(Collectors.toList());
-			publishedKitchenwares.removeAll(addedKitchenwares);
 			
-			model.setAttribute("kitchenwares", publishedKitchenwares);
+			
+			if (entity.getKitchenware() == null) {
+				model.setAttribute("kitchenwareCode", "");
+			}else {
+				model.setAttribute("kitchenwareCode", entity.getKitchenware().getCode());
+			}
+			
 			model.setAttribute("recipe", this.repository.findRecipeById(recipeId));
 			model.setAttribute("readOnly", false);
 			try {
 				final Integer kitchenwareId = entity.getKitchenware().getId();
 				model.setAttribute("previd", kitchenwareId);
+				model.setAttribute("prevType", entity.getKitchenware().getWareType().toString());
 			} catch (final NullPointerException e) {
 				model.setAttribute("previd", "");
+			}
+			
+			for (int i = 0; i < UnitType.values().length; i++) {
+				final UnitType unitType = UnitType.values()[i];
+				model.setAttribute("enum" + unitType, unitType);
+			}
+			
+			if (request.getModel().getString("type").equals("INGREDIENT")) {
+				model.setAttribute("type", "INGREDIENT");
+			}else {
+				model.setAttribute("type", "KITCHEN_UTENSIL");
 			}
 				
 		}
@@ -83,19 +106,30 @@ public class ChefKitchenwareRecipeCreateService implements AbstractCreateService
 		@Override
 		public void validate(final Request<KitchenwareRecipe> request, final KitchenwareRecipe entity, final Errors errors) {
 			
-			
-			
-			
-			
-			if(!errors.hasErrors("quantity")) {
-				errors.state(request, entity.getKitchenware().getWareType()!=WareType.KITCHEN_UTENSIL||entity.getQuantity()==1
-					,"quantity", "chef.kitchenware-recipe.form.error.wrong-tool-quantity");
+			if (!errors.hasErrors("kitchenwareCode")) {
+				errors.state(request, entity.getKitchenware().isPublished(), "kitchenwareCode", "chef.kitchenware-recipe.form.error.kitchenware-not-published");
+				if (request.getModel().getAttribute("type").equals("INGREDIENT")) {
+					errors.state(request, entity.getKitchenware().getWareType().equals(WareType.INGREDIENT), "kitchenwareCode", "chef.kitchenware-recipe.form.error.not-an-ingredient");
+				}else {
+					errors.state(request, entity.getKitchenware().getWareType().equals(WareType.KITCHEN_UTENSIL), "kitchenwareCode", "chef.kitchenware-recipe.form.error.not-an-utensil");
+				}
 			}
+			
+			if (!errors.hasErrors("unitType")) {
+				if (request.getModel().getAttribute("type").equals("INGREDIENT")) {
+					errors.state(request, entity.getUnitType() != null, "unitType", "chef.kitchenware-recipe.form.error.unit-not-selected");
+				}else {
+					errors.state(request, entity.getUnitType() == null, "*", "chef.kitchenware-recipe.form.error.no-unit-for-utensils");
+				}
+			}
+			
 			
 			
 			if(!errors.hasErrors("*")) {
 				final Kitchenware existing = this.repository.findKitchenwareByIdInRecipe(entity.getKitchenware().getId(), entity.getRecipe().getId());
 				errors.state(request, existing==null, "*", "chef.kitchenware-recipe.form.error.kitchenware-already-added");
+				
+				
 			}
 			
 		}

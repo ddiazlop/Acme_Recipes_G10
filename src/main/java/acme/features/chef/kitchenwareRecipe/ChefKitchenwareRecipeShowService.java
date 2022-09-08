@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import acme.components.configuration.SystemConfigurationSep;
 import acme.entities.recipes.KitchenwareRecipe;
+import acme.entities.recipes.UnitType;
 import acme.features.authenticated.moneyExchange.AuthenticatedMoneyExchangePerformService;
 import acme.features.authenticated.systemConfigurationSep.AuthenticatedSystemConfigurationSepRepository;
 import acme.framework.components.models.Model;
@@ -59,13 +60,17 @@ public class ChefKitchenwareRecipeShowService implements AbstractShowService<Che
 		
 		request.unbind(entity, model, "quantity", "kitchenware.name", "kitchenware.code", "kitchenware.description", 
 			                          "kitchenware.retailPrice", "kitchenware.info");
-		model.setAttribute("kitchenware.published", entity.getKitchenware().isPublished());			
 		model.setAttribute("wareType", entity.getKitchenware().getWareType().name());
 		model.setAttribute("readOnly", true);
 		if (entity.getUnitType() != null) {
-			model.setAttribute("unitType", entity.getUnitType().name());
+			model.setAttribute("unitType", entity.getUnitType());
 		}
 		this.unbindConvertedMoney(entity, model);
+		
+		for (int i = 0; i < UnitType.values().length; i++) {
+			final UnitType unitType = UnitType.values()[i];
+			model.setAttribute("enum" + unitType, unitType);
+		}
 	}
 	
 	private void unbindConvertedMoney(final KitchenwareRecipe entity, final Model model) {

@@ -5,17 +5,22 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.recipes.Kitchenware;
 import acme.entities.recipes.WareType;
+import acme.features.administrator.systemConfigurationSep.AdministratorSystemConfigurationSepRepository;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractUpdateService;
 import acme.roles.Chef;
+import justenoughspam.detector.SpamDetector2;
 
 @Service
 public class ChefKitchenwarePublishService implements AbstractUpdateService<Chef, Kitchenware>{
 	
 	@Autowired
 	protected ChefKitchenwareRepository repository;
+	
+	@Autowired
+	protected AdministratorSystemConfigurationSepRepository systemConfigRepository;
 
 	@Override
 	public boolean authorise(final Request<Kitchenware> request) {
@@ -71,6 +76,18 @@ public class ChefKitchenwarePublishService implements AbstractUpdateService<Chef
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		
+		
+		final SpamDetector2 spamDetector = new SpamDetector2(this.systemConfigRepository.findSpamTuple(), this.systemConfigRepository.findSpamThreshold());
+		
+		if (!errors.hasErrors("name")) {
+			errors.state(request, !spamDetector.stringHasManySpam(entity.getName()), "name", "spamDetector.spamDetected");
+		}
+		
+		if (!errors.hasErrors("description")) {
+			errors.state(request, !spamDetector.stringHasManySpam(entity.getDescription()), "description", "spamDetector.spamDetected");
+		}
+		
 		
 	}
 

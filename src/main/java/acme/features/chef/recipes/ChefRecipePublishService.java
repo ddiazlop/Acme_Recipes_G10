@@ -19,6 +19,7 @@ import acme.framework.controllers.Request;
 import acme.framework.datatypes.Money;
 import acme.framework.services.AbstractUpdateService;
 import acme.roles.Chef;
+import justenoughspam.detector.SpamDetector2;
 
 @Service
 public class ChefRecipePublishService implements AbstractUpdateService<Chef, Recipe>{
@@ -29,7 +30,7 @@ public class ChefRecipePublishService implements AbstractUpdateService<Chef, Rec
 	protected ChefRecipeRepository repository;
 	
 	@Autowired
-	protected AdministratorSystemConfigurationSepRepository administratorSystemConfigurationSepRepository;
+	protected AdministratorSystemConfigurationSepRepository systemConfigRepository;
 
 	@Autowired
 	protected AuthenticatedMoneyExchangeSepPerformService		moneyExchange;
@@ -156,20 +157,17 @@ public class ChefRecipePublishService implements AbstractUpdateService<Chef, Rec
 			errors.state(request, existing==null, "code", "chef.recipe.form.error.duplicated-code");
 		}
 		
-		final SystemConfigurationSep sc = this.administratorSystemConfigurationSepRepository.findSystemConfiguration();
-		/*
-		 * 
-		final SpamDetector spamDetector = new SpamDetector();
+		final SpamDetector2 spamDetector = new SpamDetector2(this.systemConfigRepository.findSpamTuple(), this.systemConfigRepository.findSpamThreshold());
+		
 		if (!errors.hasErrors("heading")) {
-			errors.state(request, spamDetector.stringHasNoSpam());
+			errors.state(request, !spamDetector.stringHasManySpam(entity.getHeading()), "heading", "spamDetector.spamDetected");
 		}
 		if (!errors.hasErrors("description")) {
-			errors.state(request, spamDetector.stringHasNoSpam());
+			errors.state(request, !spamDetector.stringHasManySpam(entity.getDescription()), "description", "spamDetector.spamDetected");
 		}
 		if (!errors.hasErrors("preparationNotes")) {
-			errors.state(request, spamDetector.stringHasNoSpam());
+			errors.state(request, !spamDetector.stringHasManySpam(entity.getPreparationNotes()), "preparationNotes", "spamDetector.spamDetected");
 		}
-		*/
 	}
 
 	@Override

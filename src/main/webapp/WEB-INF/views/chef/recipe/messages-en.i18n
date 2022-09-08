@@ -21,7 +21,8 @@ FALSE = NOT PUBLISHED
 chef.recipes.form.button.kitchenwareRecipe = View Associated Kitchenwares
 chef.recipes.form.button.publish = Publish recipe
 chef.recipes.form.button.update = Update
-chef.recipes.form.button.add-content = Add content
+chef.recipes.form.button.add-content.ingredient = Add ingredient
+chef.recipes.form.button.add-content.utensil = Add kitchen utensil
 chef.recipes.form.button.delete = Delete Recipe
 chef.recipes.form.button.create = New Recipe
 

@@ -21,7 +21,8 @@ FALSE = NO PUBLICADO
 chef.recipes.form.button.kitchenwareRecipe = Ver Artículos de Cocina Asociados
 chef.recipes.form.button.publish = Publicar receta
 chef.recipes.form.button.update = Actualizar
-chef.recipes.form.button.add-content = Añadir contenido
+chef.recipes.form.button.add-content.ingredient = Añadir ingrediente
+chef.recipes.form.button.add-content.utensil = Añadir utensilio de cocina
 chef.recipes.form.button.delete = Borrar receta
 chef.recipes.form.button.create = Crear receta
 
