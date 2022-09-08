@@ -6,10 +6,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.components.configuration.SystemConfiguration;
-import acme.entities.recipes.Kitchenware;
+import acme.components.configuration.SystemConfigurationSep;
 import acme.entities.recipes.Recipe;
-import acme.features.authenticated.moneyExchange.AuthenticatedMoneyExchangePerformService;
+import acme.entities.recipes.WareType;
+import acme.features.authenticated.moneyExchangeSep.AuthenticatedMoneyExchangeSepPerformService;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.datatypes.Money;
@@ -23,7 +23,7 @@ public class ChefRecipeShowService implements AbstractShowService<Chef, Recipe>{
 	private ChefRecipeRepository repository;
 	
 	@Autowired
-	protected AuthenticatedMoneyExchangePerformService	moneyExchange;
+	protected AuthenticatedMoneyExchangeSepPerformService	moneyExchange;
 	
 	@Override
 	public boolean authorise(final Request<Recipe> request) {
@@ -42,9 +42,12 @@ public class ChefRecipeShowService implements AbstractShowService<Chef, Recipe>{
 	@Override
 	public Recipe findOne(final Request<Recipe> request) {
 		assert request != null;
-		
-		final int id = request.getModel().getInteger("id");
-		return this.repository.findOneRecipeById(id);
+		int id;
+		Recipe recipe;
+		final int chefId = request.getPrincipal().getActiveRoleId();
+		id = request.getModel().getInteger("id");
+		recipe = this.repository.findOneRecipeByIdFromChef(id,chefId);
+		return recipe;
 	}
 
 	@Override
@@ -53,37 +56,32 @@ public class ChefRecipeShowService implements AbstractShowService<Chef, Recipe>{
 		assert entity != null;
 		assert model != null;
 		
-		final Integer recipeId = request.getModel().getInteger("id");
-		final SystemConfiguration sc = this.repository.findSystemConfiguration();
-		
-		final List<Kitchenware> kitchenwares = (List<Kitchenware>) this.repository.getKitchenwaresOfARecipe(recipeId);
-		final List<Money> convertedPrices = new ArrayList<>();
-		
-		for(final Kitchenware k : kitchenwares) {
-			convertedPrices.add(k.getRetailPrice());
+		final List<Money> prices = new ArrayList<>();
+		final SystemConfigurationSep sc = this.repository.findSystemConfigurationSep();
+		for (final String curr : sc.getAcceptedCurrencies().trim().split(",")) {
+			final Money price = new Money();
+			price.setCurrency(curr);
+			price.setAmount(this.repository.getRecipePricesByIdAndCurrency(entity.getId(), curr));
+			prices.add(price);
 		}
 		
-		
-		this.moneyExchange.convertMoney(convertedPrices, sc.getSystemCurrency());
-		Double totalAmount = 0.0;
-		for(int i = 0; i < convertedPrices.size(); i++) {
-			final Kitchenware kitchenware = kitchenwares.get(i);
-			final Double quantity = this.repository.getKitchenwareQuantityFromARecipe(recipeId, kitchenware.getId());
-			totalAmount = totalAmount + quantity*convertedPrices.get(i).getAmount();
-		}
-		
-		final Money totalPrice = new Money();
-		totalPrice.setAmount(totalAmount);
-		totalPrice.setCurrency(sc.getSystemCurrency());
-		
-		model.setAttribute("totalPrice", totalPrice);
 		request.unbind(entity, model, "code", "heading", "description", "info", "preparationNotes", "published");
 	
-		if (entity.isPublished()) {
-			model.setAttribute("state", "PUBLISHED");
-		} else {
-			model.setAttribute("state", "NOT PUBLISHED");
-		}
+
+		final List<Money> pricesFix = this.moneyExchange.convertMoney(prices, sc.getSystemCurrency());
+
+		final Money money = new Money();
+		final Double amount = pricesFix.stream().mapToDouble(Money::getAmount).sum();
+		money.setAmount(amount);
+		money.setCurrency(sc.getSystemCurrency());
+		model.setAttribute("price", money);
+		model.setAttribute("chef", entity.getChef().getIdentity().getFullName());
+		model.setAttribute("readOnly", true);
+		
+		model.setAttribute("ableToPublish", 
+			this.repository.getIngredientsFromRecipe(entity.getId()).stream().allMatch(e->e.getWareType().equals(WareType.INGREDIENT) && e.isPublished())
+			&& this.repository.getUtensilsFromRecipe(entity.getId()).stream().allMatch(e->e.getWareType().equals(WareType.KITCHEN_UTENSIL) && e.isPublished()));
+		
 	}
 
 }

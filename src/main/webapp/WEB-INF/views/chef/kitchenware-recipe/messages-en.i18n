@@ -10,6 +10,11 @@ chef.kitchenwareRecipe.form.label.kitchenware.published = Is Published
 chef.kitchenwareRecipe.form.label.quantity = Quantity 
 chef.kitchenwareRecipe.form.label.unitType = Unit Type
 
+chef.kitchenwareRecipe.form.button.update-kitchenwareRecipe = Update Kitchenware
+chef.kitchenwareRecipe.form.button.delete-kitchenwareRecipe = Delete Kitchenware
+chef.kitchenware-recipe.form.button.add-kitchenware = Create Kitchenware
+
+
 GRAM = Grams
 KILO = Kilos
 CM3 = cm3
@@ -23,5 +28,16 @@ FALSE = Not Published
 chef.kitchenwareRecipe.list.label.name = Name
 chef.kitchenwareRecipe.list.label.code = Code
 chef.kitchenwareRecipe.list.label.wareType = Ware Type
-chef.kitchenwareRecipe.list.label.quantity = Quantity 
+chef.kitchenware-recipe.form.label.quantity = Quantity 
+chef.kitchenwareRecipe.list.label.quantity = Quantity
 chef.kitchenwareRecipe.list.label.unitType = Unit Type
+chef.kitchenware-recipe.form.label.kitchenware = Code
+
+chef.kitchenware-recipe.create.errors.null-kitchenware = That kitchenware does not exist
+chef.kitchenware-recipe.form.error.kitchenware-not-published = That kitchenware is not published
+chef.kitchenware-recipe.form.error.kitchenware-already-added = That kitchenware has already been added to this recipe
+chef.kitchenware-recipe.form.error.not-an-ingredient = That kitchenware is not an ingredient
+chef.kitchenware-recipe.form.error.not-an-utensil = That kitchenware is nat a kitchen utensil
+chef.kitchenware-recipe.form.error.unit-not-selected = You must provide a valid unit to add any amount of an ingredient
+chef.kitchenware-recipe.form.error.no-unit-for-utensils = You cannot add a unit type for a kitchen utensil
+

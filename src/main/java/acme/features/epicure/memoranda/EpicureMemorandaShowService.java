@@ -1,4 +1,3 @@
-
 package acme.features.epicure.memoranda;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,8 +50,10 @@ public class EpicureMemorandaShowService implements AbstractShowService<Epicure,
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-
-		request.unbind(entity, model,"moment","sequenceNumber","report","info");
+		
+		
+		request.unbind(entity, model,"moment","sequenceNumber","report","info", "chef.userAccount.username", "fineDish.code");
+		model.setAttribute("readOnly", true);
 
 	}
 

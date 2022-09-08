@@ -16,12 +16,21 @@ public class ChefMemorandaController extends AbstractController<Chef, Memoranda>
 	protected ChefMemorandaListService listService;
 	
 	@Autowired
+	protected ChefMemorandaListFromFineDishService listFromFineDishService;
+	
+	@Autowired
 	protected ChefMemorandaShowService showService;
+	
+	@Autowired
+	protected ChefMemorandaCreateService createService;
+	
 	
 	@PostConstruct
 	protected void initialise() {
 		super.addCommand("list", this.listService);
+		super.addCommand("list-from-fine-dish", "list", this.listFromFineDishService);
 		super.addCommand("show", this.showService);
+		super.addCommand("create", this.createService);
 	}
 
 }

@@ -47,6 +47,7 @@ public class ChefMemorandaShowService implements AbstractShowService<Chef, Memor
 		assert entity != null;
 		
 		request.unbind(entity, model, "moment", "sequenceNumber", "report", "info");
+		model.setAttribute("fineDishId", entity.getFineDish().getId());
 		model.setAttribute("epicureUsername", entity.getEpicure().getUserAccount().getUsername());
 		model.setAttribute("fineDishCode", entity.getFineDish().getCode());
 		

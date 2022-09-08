@@ -8,4 +8,6 @@ kitchenwareRecipe-06,kitchenware-04,2,SPOON,recipe-02
 kitchenwareRecipe-07,kitchenware-05,4,SPOON,recipe-04
 kitchenwareRecipe-08,kitchenware-07,1,,recipe-05
 kitchenwareRecipe-09,kitchenware-09,2,CM3,recipe-05
-kitchenwareRecipe-10,kitchenware-10,6,LITER,recipe-06
+kitchenwareRecipe-10,kitchenware-15,8,KILO,recipe-06
+kitchenwareRecipe-11,kitchenware-14,1,,recipe-06
+kitchenwareRecipe-12,kitchenware-13,1,,recipe-06

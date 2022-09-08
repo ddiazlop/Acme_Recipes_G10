@@ -16,3 +16,4 @@ user-account-chef-04,true,"UserIdentity{name: 'Chef4Name', surname: 'Chef4Surnam
 user-account-chef-05,true,"UserIdentity{name: 'Chef5Name', surname: 'Chef5Surname', email: 'chef5@acme.com'}",chef5,chef5
 user-account-epicure-01,true,"UserIdentity{name: 'Epicure1Name', surname: 'Epicure1Surname', email: 'epicure1@acme.com'}",epicure1,epicure1
 user-account-epicure-02,true,"UserIdentity{name: 'Epicure2Name', surname: 'Epicure2Surname', email: 'epicure2@acme.com'}",epicure2,epicure2
+user-account-chef-07,true,"UserIdentity{name: 'Chef7Name', surname: 'Chef7Surname', email: 'chef7@acme.com'}",chef7,chef7

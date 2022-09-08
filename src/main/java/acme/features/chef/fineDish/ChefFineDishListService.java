@@ -5,10 +5,10 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.components.configuration.SystemConfiguration;
+import acme.components.configuration.SystemConfigurationSep;
 import acme.entities.fineDish.FineDish;
 import acme.features.authenticated.moneyExchange.AuthenticatedMoneyExchangePerformService;
-import acme.features.authenticated.systemConfiguration.AuthenticatedSystemConfigurationRepository;
+import acme.features.authenticated.systemConfigurationSep.AuthenticatedSystemConfigurationSepRepository;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.datatypes.Money;
@@ -22,7 +22,7 @@ public class ChefFineDishListService implements AbstractListService<Chef, FineDi
 	protected ChefFineDishRepository						repository;
 
 	@Autowired
-	protected AuthenticatedSystemConfigurationRepository	systemConfigurationRepository;
+	protected AuthenticatedSystemConfigurationSepRepository	systemConfigurationRepository;
 	
 	@Autowired
 	protected AuthenticatedMoneyExchangePerformService		moneyExchangeService;
@@ -37,11 +37,9 @@ public class ChefFineDishListService implements AbstractListService<Chef, FineDi
 
 	@Override
 	public Collection<FineDish> findMany(final Request<FineDish> request) {
-		
 		assert request != null;
-		
 		final int chefId = request.getPrincipal().getActiveRoleId();
-		return this.repository.findFineDishesByChefId(chefId);
+		return this.repository.findFinePublishedDishesByChefId(chefId);
 	}
 
 	@Override
@@ -51,7 +49,7 @@ public class ChefFineDishListService implements AbstractListService<Chef, FineDi
 		assert entity != null;
 		assert model != null;
 		
-		final SystemConfiguration sc = this.systemConfigurationRepository.findSystemConfiguration();
+		final SystemConfigurationSep sc = this.systemConfigurationRepository.findSystemConfiguration();
 		final Money budget = entity.getBudget();
 		final String systemCurrency = sc.getSystemCurrency();
 		
@@ -65,6 +63,12 @@ public class ChefFineDishListService implements AbstractListService<Chef, FineDi
 		
 		request.unbind(entity, model, "code", "budget", "startDate", "endDate", "status");
 		model.setAttribute("epicureUserName", entity.getEpicure().getUserAccount().getUsername());
+		if(entity.isPublished()) {
+			model.setAttribute("published", "Published");
+		}
+		else {
+			model.setAttribute("published", "Not published");
+		}
 	}
 
 }

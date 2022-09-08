@@ -2,10 +2,20 @@ epicure.memorandum.form.label.moment = Moment
 epicure.memorandum.form.label.sequenceNumber  = Sequence Number
 epicure.memorandum.form.label.report = Report
 epicure.memorandum.form.label.info = Further Information
+epicure.memorandum.form.label.chef = Chef
+
 
 epicure.memorandum.list.label.moment = Moment
 epicure.memorandum.list.label.sequenceNumber  = Sequence Number
 epicure.memorandum.list.label.report = Report
 epicure.memorandum.list.label.info = Further Information
+epicure.memorandum.list.label.confirmation = Confirm that the memoranda is correct
+epicure.memorandum.list.label.chef = Chef
+epicure.memorandum.form.label.fineDish = Fine dish code
 
-spam.detector.error.message = Spam Detected
+epicure.memorandum.button.submit = Create
+
+epicure.memorandum.list.button.create = Create
+epicure.memorandum.form.button.create = Create
+epicure.memoranda.form.create.confirm = By selecting this checkbox you acknowledge that creating a memoranda is an irreversible action and thus, cannot be further edited nor deleted after its creation
+epicure.memoranda.form.create.confirmed-warning = You must confirm that you want to create the memoranda
