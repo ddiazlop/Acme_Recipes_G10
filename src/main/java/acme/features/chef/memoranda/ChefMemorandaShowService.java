@@ -3,7 +3,7 @@ package acme.features.chef.memoranda;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.Memoranda;
+import acme.entities.fineDish.Memoranda;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractShowService;
@@ -36,9 +36,7 @@ public class ChefMemorandaShowService implements AbstractShowService<Chef, Memor
 		
 		final int memorandumId = request.getModel().getInteger("id");
 		
-		final Memoranda memoranda = this.repository.findOneById(memorandumId);
-		
-		return memoranda;
+		return this.repository.findOneById(memorandumId);
 	}
 
 	@Override

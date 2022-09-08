@@ -6,8 +6,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.components.configuration.SystemConfigurationSep;
-import acme.entities.Memoranda;
 import acme.entities.fineDish.FineDish;
+import acme.entities.fineDish.Memoranda;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository

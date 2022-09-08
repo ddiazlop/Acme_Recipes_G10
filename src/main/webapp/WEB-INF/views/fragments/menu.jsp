@@ -1,5 +1,5 @@
 <%@page language="java"
-	import="acme.framework.helpers.PrincipalHelper,acme.roles.Patron,acme.roles.Inventor"%>
+	import="acme.framework.helpers.PrincipalHelper"%>
 
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
@@ -9,13 +9,6 @@
 	<acme:menu-left>
 	
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
-      		<acme:menu-suboption code="master.menu.anonymous.toolkit.list" action="/any/toolkit/list"/>
-			<acme:menu-suboption code="master.menu.anonymous.user-account.list" action="/any/user-account/list" />
-			<acme:menu-suboption code="master.menu.anonymous.chirp.list" action="/any/chirp/list"/>
-			<acme:menu-suboption code="master.menu.anonymous.peep.list" action="/any/peep/list"/>
-			<acme:menu-suboption code="master.menu.anonymous.component.list" action="/any/item/list-component"/>
-			<acme:menu-suboption code="master.menu.anonymous.tool.list" action="/any/item/list-tool"/>
-			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.user-account.list" action="/any/user-account/list" />
 			<acme:menu-suboption code="master.menu.anonymous.ingredient.list" action="/any/kitchenware/list-ingredient"/>
 			<acme:menu-suboption code="master.menu.anonymous.kitchen-utensils.list" action="/any/kitchenware/list-utensils"/>
@@ -32,14 +25,6 @@
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
-		    <acme:menu-suboption code="master.menu.authenticated.toolkit.list" action="/any/toolkit/list"/>
-			<acme:menu-suboption code="master.menu.authenticated.user-account.list" action="/any/user-account/list" />
-			<acme:menu-suboption code="master.menu.authenticated.chirp.list" action="/any/chirp/list"/>
-      <acme:menu-suboption code="master.menu.authenticated.announcement.list" action="/authenticated/announcement/list" access="isAuthenticated()"/>
-      <acme:menu-suboption code="master.menu.authenticated.component.list" action="/any/item/list-component"/>
-			<acme:menu-suboption code="master.menu.authenticated.tool.list" action="/any/item/list-tool"/>
-			<acme:menu-suboption code="master.menu.authenticated.system-configuration.show" action="/authenticated/system-configuration/show"/>	
-			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.user-account.list" action="/any/user-account/list" />
 			<acme:menu-suboption code="master.menu.authenticated.bulletin.list" action="/authenticated/bulletin/list" access="isAuthenticated()"/>
 			<acme:menu-suboption code="master.menu.anonymous.ingredient.list" action="/any/kitchenware/list-ingredient"/>
@@ -53,11 +38,8 @@
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 
 			<acme:menu-suboption code="master.menu.administrator.user-accounts"	action="/administrator/user-account/list" />
-			<acme:menu-suboption code="master.menu.administrator.system-configuration" action="/administrator/system-configuration/show"/>
 			<acme:menu-suboption code="master.menu.administrator.system-configuration-sep" action="/administrator/system-configuration-sep/show"/>
-			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/admin-dashboard/show"/>
 			<acme:menu-suboption code="master.menu.administrator.dashboard.sep" action="/administrator/administrator-dashboard/show"/>
-			<acme:menu-suboption code="master.menu.administrator.announcement.create" action="/administrator/announcement/create"/>
 			<acme:menu-suboption code="master.menu.administrator.bulletin.create" action="/administrator/bulletin/create"/>
 			<acme:menu-separator />
 			<acme:menu-suboption code="master.menu.administrator.populate-initial" action="/administrator/populate-initial" />
@@ -67,12 +49,6 @@
 
 		</acme:menu-option>
 
-		<acme:menu-option code="master.menu.inventor" access="hasRole('Inventor')">
-			<acme:menu-suboption code="master.menu.inventor.toolkit.list" action="/inventor/toolkit/list"/>
-			<acme:menu-suboption code="master.menu.inventor.component.list" action="/inventor/item/list-component"/>
-			<acme:menu-suboption code="master.menu.inventor.tool.list" action="/inventor/item/list-tool"/>
-			<acme:menu-suboption code="master.menu.inventor.patronage.list" action="/inventor/patronage/list"/>
-		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.chef" access="hasRole('Chef')">
 			<acme:menu-suboption code="master.menu.chef.memoranda.list" action="/chef/memoranda/list"/>
@@ -99,10 +75,6 @@
 		<acme:menu-suboption code="master.menu.user-account.chef" action="/authenticated/chef/update" access="hasRole('Chef')"/>
 		<acme:menu-suboption code="master.menu.user-account.become-epicure" action="/authenticated/epicure/create" access="!hasRole('Epicure')"/> 
 		<acme:menu-suboption code="master.menu.user-account.epicure" action="/authenticated/epicure/update" access="hasRole('Epicure')"/>
-		<acme:menu-suboption code="master.menu.user-account.become-patron" action="/authenticated/patron/create" access="!hasRole('Patron')"/>
-		<acme:menu-suboption code="master.menu.user-account.patron" action="/authenticated/patron/update" access="hasRole('Patron')"/>
-		<acme:menu-suboption code="master.menu.user-account.become-inventor" action="/authenticated/inventor/create" access="!hasRole('Inventor')"/> 
-		<acme:menu-suboption code="master.menu.user-account.inventor" action="/authenticated/inventor/update" access="hasRole('Inventor')"/>
 		</acme:menu-option>
      	
      	<acme:menu-option code="master.menu.sign-up" action="/anonymous/user-account/create" access="isAnonymous()" />

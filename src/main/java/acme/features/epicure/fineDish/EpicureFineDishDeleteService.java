@@ -6,10 +6,10 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.Memoranda;
 import acme.entities.fineDish.DishStatus;
 import acme.entities.fineDish.FineDish;
-import acme.features.administrator.systemConfiguration.AdministratorSystemConfigurationRepository;
+import acme.entities.fineDish.Memoranda;
+import acme.features.administrator.systemConfigurationSep.AdministratorSystemConfigurationSepRepository;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
@@ -24,7 +24,7 @@ public class EpicureFineDishDeleteService implements AbstractDeleteService<Epicu
 	public EpicureFineDishRepository repository;
 	
 	@Autowired
-	protected AdministratorSystemConfigurationRepository administratorSystemConfigurationRepository;
+	protected AdministratorSystemConfigurationSepRepository administratorSystemConfigurationRepository;
 
 	@Override
 	public boolean authorise(final Request<FineDish> request) {

@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 import acme.components.configuration.SystemConfigurationSep;
 import acme.entities.fineDish.FineDish;
-import acme.features.authenticated.moneyExchange.AuthenticatedMoneyExchangePerformService;
+import acme.features.authenticated.moneyExchangeSep.AuthenticatedMoneyExchangeSepPerformService;
 import acme.features.authenticated.systemConfigurationSep.AuthenticatedSystemConfigurationSepRepository;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
@@ -23,7 +23,7 @@ public class ChefFineDishShowService implements AbstractShowService<Chef, FineDi
 	protected AuthenticatedSystemConfigurationSepRepository	systemConfigurationRepository;
 	
 	@Autowired
-	protected AuthenticatedMoneyExchangePerformService		moneyExchangeService;
+	protected AuthenticatedMoneyExchangeSepPerformService		moneyExchangeService;
 	
 	@Override
 	public boolean authorise(final Request<FineDish> request) {
