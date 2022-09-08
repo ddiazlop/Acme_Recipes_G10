@@ -14,11 +14,11 @@ public class ChefKitchenwareUpdateTest extends TestHarness{
 	public void positiveKitchenwareUpdateTest(final String name,  
 		final String description, final String retailPrice, final String info) {
 
-		super.signIn("chef1", "chef1");
+		super.signIn("chef2", "chef2");
 		super.clickOnMenu("Chef", "My Kitchenwares");
 
 		super.checkListingExists();
-		super.clickOnListingRecord(0);
+		super.clickOnListingRecord(4);
 		super.checkFormExists();
 		super.checkSubmitExists("Update");
 		
@@ -39,11 +39,11 @@ public class ChefKitchenwareUpdateTest extends TestHarness{
 	public void negativeKitchenwareUpdateTest(final int recordIndex, final String name, 
 		final String description, final String retailPrice, final String info) {
 
-		super.signIn("chef1", "chef1");
+		super.signIn("chef2", "chef2");
 		super.clickOnMenu("Chef", "My Kitchenwares");
 
 		super.checkListingExists();
-		super.clickOnListingRecord(0);
+		super.clickOnListingRecord(4);
 		super.checkFormExists();
 		super.checkSubmitExists("Update");
 		

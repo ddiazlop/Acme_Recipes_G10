@@ -13,7 +13,7 @@ public class ChefKitchenwareCreateTest extends TestHarness{
 	@CsvFileSource(resources = "/chef/kitchenware/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(40)
 	public void positiveKitchenwareCreateTest(final String name, final String code, 
-		final String description, final String retailPrice, final String info) {
+		final String description, final String originalPrice, final String info) {
 
 		super.signIn("chef1", "chef1");
 		super.clickOnMenu("Chef", "My Kitchenwares");
@@ -26,10 +26,11 @@ public class ChefKitchenwareCreateTest extends TestHarness{
 		super.fillInputBoxIn("code", code);
 		super.fillInputBoxIn("name", name);
 		super.fillInputBoxIn("description", description);
-		super.fillInputBoxIn("retailPrice", retailPrice);
 		super.fillInputBoxIn("info", info);
+		super.fillInputBoxIn("retailPrice", originalPrice);
+
+
 		super.clickOnSubmit("Create");
-		
 		super.checkNotErrorsExist();
 		super.signOut();
 

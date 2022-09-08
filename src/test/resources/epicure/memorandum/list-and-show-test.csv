@@ -1,7 +1,4 @@
-recordIndex,moment,sequenceNumber,report,info
-0,2020/02/02,AAA-044,APROBADO,htps://youtube.com
-1,2020/02/03,AAA-042,LISTO
-2,2020/02/04,AAA-045,NO VALIDO,
-"",,
-""
-""
+recordIndex,moment,secuence,report,info,chef,fDcode
+0,"2022/05/08 10:00","AA:ZZZ-666:0004","comenzando la fiesta sin intencion de terminar","http://www.ev.us.es.com","chef2","AA:ZZZ-666"
+1,"2022/05/08 10:00","AA:AAA-000:0000","comenzando la fiesta","http://www.memorandum.com","chef1","AA:AAA-000"
+2,"2022/05/08 10:00","BB:ZZZ-333:0003","Imposible hacer esta wea loko",,"chef2","BB:ZZZ-333"

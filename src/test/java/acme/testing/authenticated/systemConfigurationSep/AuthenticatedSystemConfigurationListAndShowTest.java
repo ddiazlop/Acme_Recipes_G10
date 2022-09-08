@@ -12,7 +12,7 @@ public class AuthenticatedSystemConfigurationListAndShowTest extends TestHarness
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/authenticated/systemConfigurationSep/show-system-configuration-sep.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(10)
+	@Order(100)
 	public void positiveSystemConfigurationTestShow(final int recordIndex, final String systemCurrency, final String acceptedCurrencies) {
 
 		super.signIn("epicure1", "epicure1");
@@ -25,7 +25,7 @@ public class AuthenticatedSystemConfigurationListAndShowTest extends TestHarness
 	}
 	
 	@Test
-	@Order(30)
+	@Order(60)
 	public void hackingTest() {
 		
 		super.navigate("/authenticated/system-configuration-sep/show");

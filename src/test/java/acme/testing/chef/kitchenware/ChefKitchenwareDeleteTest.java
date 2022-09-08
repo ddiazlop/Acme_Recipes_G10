@@ -13,12 +13,12 @@ public class ChefKitchenwareDeleteTest extends TestHarness{
 	@Order(30)
 	public void positiveKitchenwareDeleteTest(final int recordIndex) {
 
-		super.signIn("chef1", "chef1");
+		super.signIn("chef3", "chef3");
 		super.clickOnMenu("Chef", "My Kitchenwares");
 
 		super.checkListingExists();
 
-		super.clickOnListingRecord(recordIndex);
+		super.clickOnListingRecord(3);
 		super.checkFormExists();
 		super.clickOnSubmit("Delete");
 		super.checkNotErrorsExist();

@@ -10,7 +10,7 @@ public class AuthenticatedBulletinListAndShowTest extends TestHarness{
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/authenticated/bulletin/list.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(10)
+	@Order(100)
 	public void positiveBulletinTest(final int recordIndex, final String heading, final String moment,
 		final String text, final String critical, final String link) {
 

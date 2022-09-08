@@ -9,12 +9,13 @@ import acme.testing.TestHarness;
 
 public class ChefKitchenwareListAndShowTest extends TestHarness{
 
+	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/chef/kitchenware/list.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(10)
+	@Order(100)
 	public void positiveChefKitchenwaresTest(final int recordIndex, final String wareType, 
 		final String name, final String code, final String description, 
-		final String retailPrice, final String info, final String published) {
+		final String retailPrice, final String info) {
 		
 		super.signIn("chef3", "chef3");
 		
@@ -25,7 +26,7 @@ public class ChefKitchenwareListAndShowTest extends TestHarness{
 		super.checkColumnHasValue(recordIndex, 0, code);
 		super.checkColumnHasValue(recordIndex, 1, name);
 		super.checkColumnHasValue(recordIndex, 2, wareType);
-		super.checkColumnHasValue(recordIndex, 3, published);
+
 
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
@@ -42,7 +43,7 @@ public class ChefKitchenwareListAndShowTest extends TestHarness{
 	}
 	
 	@Test
-	@Order(20)
+	@Order(100)
 	public void hackingTest() {
 		final String pathShowKitchenware= "/chef/kitchenware/show";
 		

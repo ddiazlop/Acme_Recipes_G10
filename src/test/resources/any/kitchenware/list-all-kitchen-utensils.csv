@@ -1,5 +1,3 @@
-recordIndex,name,code,description,retail-price,info
-0,Sarten basica,AA:CCC-000,Muy confiable,EUR 7.00,
-1,Tenedor basico,BB:AAA-000,Demasiado confiable,USD 50.30,
-2,Cuchillo basico,BB:ABB-000,Extremadamente confiable,EUR 80.30,https://ev.us.es/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_29_1
-3,Robot de cocina,CC:CCC-000,Demasiado confiable,USD 8.00, 
+recordIndex,name,code,description,retailPrice,info,converted,type
+0,Sarten basica,AA:CCC-000,"Muy confiable","EUR 7.00",,"EUR 7.00","KITCHEN_UTENSIL"
+1,Cuchara basica,AAA-000,"Muy confiable","EUR 22.30","https://ev.us.es/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_29_1","EUR 22.30","KITCHEN_UTENSIL"
