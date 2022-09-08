@@ -16,10 +16,10 @@ public class ChefMemorandaCreateTest extends TestHarness{
 		super.clickOnMenu("Chef", "My Dishes");
 
 		super.checkListingExists();
-		super.clickOnListingRecord(redordIndex+1);
+		super.clickOnListingRecord(0);
 		
-		super.checkButtonExists("Create New Memoranda");
-		super.clickOnButton("Create New Memoranda");
+		super.checkButtonExists("Create New Memorandum");
+		super.clickOnButton("Create New Memorandum");
 		super.checkFormExists();
 
 		super.fillInputBoxIn("report", report);
@@ -43,8 +43,8 @@ public class ChefMemorandaCreateTest extends TestHarness{
 		super.checkListingExists();
 		super.clickOnListingRecord(2);
 		
-		super.checkButtonExists("Create New Memoranda");
-		super.clickOnButton("Create New Memoranda");
+		super.checkButtonExists("Create New Memorandum");
+		super.clickOnButton("Create New Memorandum");
 		super.checkFormExists();
 
 		super.fillInputBoxIn("report", report);

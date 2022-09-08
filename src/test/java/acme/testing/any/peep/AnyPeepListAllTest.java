@@ -18,7 +18,7 @@ public class AnyPeepListAllTest extends TestHarness{
 		super.clickOnMenu("Anonymous", "Peeps");
 		
 		super.checkListingExists();
-		super.sortListing(0, "asc");
+		super.sortListing(0, "desc");
 
 
 		super.checkColumnHasValue(recordIndex, 1, heading);

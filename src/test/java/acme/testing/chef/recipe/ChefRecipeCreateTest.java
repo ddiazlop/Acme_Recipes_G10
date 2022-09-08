@@ -43,7 +43,6 @@ public class ChefRecipeCreateTest extends TestHarness{
 		super.checkInputBoxHasValue("heading", heading);
 		super.checkInputBoxHasValue("description", description);
 		super.checkInputBoxHasValue("preparationNotes", preparationNotes);
-		super.checkInputBoxHasValue("chef", "Chef7Surname, Chef7Name");
 		super.checkInputBoxHasValue("price", "EUR 0.00");
 		super.checkInputBoxHasValue("info", info);
 		
@@ -88,7 +87,7 @@ public class ChefRecipeCreateTest extends TestHarness{
 		super.checkPanicExists();
 
 		super.signIn("administrator", "administrator");
-		super.navigate("/inventor/toolkit/create");
+		super.navigate("/chef/recipe/create");
 		super.checkPanicExists();
 		super.signOut();
 
