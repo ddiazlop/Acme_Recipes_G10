@@ -5,7 +5,7 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import acme.entities.Memoranda;
+import acme.entities.fineDish.Memoranda;
 import acme.framework.controllers.AbstractController;
 import acme.roles.Epicure;
 

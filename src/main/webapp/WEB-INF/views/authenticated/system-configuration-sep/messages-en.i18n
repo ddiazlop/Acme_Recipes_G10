@@ -6,3 +6,5 @@ authenticated.system-configuration-sep.form.label.acceptedCurrencies = Accepted 
 authenticated.system-configuration-sep.form.title.exchange = Exchange rate:
 authenticated.system-configuration-sep.form.label.USDexchange = 1 EUR to USD:
 authenticated.system-configuration-sep.form.label.GBPexchange = 1 EUR to GBP:
+
+authenticated.money-exchange-sep.form.button.perform = Perform exchange

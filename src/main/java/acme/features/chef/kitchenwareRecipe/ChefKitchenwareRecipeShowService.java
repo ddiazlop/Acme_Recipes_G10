@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import acme.components.configuration.SystemConfigurationSep;
 import acme.entities.recipes.KitchenwareRecipe;
 import acme.entities.recipes.UnitType;
-import acme.features.authenticated.moneyExchange.AuthenticatedMoneyExchangePerformService;
+import acme.features.authenticated.moneyExchangeSep.AuthenticatedMoneyExchangeSepPerformService;
 import acme.features.authenticated.systemConfigurationSep.AuthenticatedSystemConfigurationSepRepository;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
@@ -21,7 +21,7 @@ public class ChefKitchenwareRecipeShowService implements AbstractShowService<Che
 	protected ChefKitchenwareRecipeRepository  repository;
 	
 	@Autowired
-	protected AuthenticatedMoneyExchangePerformService moneyExchange;
+	protected AuthenticatedMoneyExchangeSepPerformService moneyExchange;
 	
 	@Autowired
 	protected AuthenticatedSystemConfigurationSepRepository config;
