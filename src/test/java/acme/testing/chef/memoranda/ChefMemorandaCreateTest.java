@@ -10,7 +10,7 @@ public class ChefMemorandaCreateTest extends TestHarness{
 	@ParameterizedTest
 	@CsvFileSource(resources = "/chef/memoranda/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(40)
-	public void positiveMemorandaCreateTest(final String report, final String info) {
+	public void positiveMemorandaCreateTest(final int redordIndex ,final String report, final String info) {
 
 		super.signIn("chef2", "chef2");
 		super.clickOnMenu("Chef", "My Dishes");
@@ -18,8 +18,8 @@ public class ChefMemorandaCreateTest extends TestHarness{
 		super.checkListingExists();
 		super.clickOnListingRecord(0);
 		
-		super.checkButtonExists("Create New Memoranda");
-		super.clickOnButton("Create New Memoranda");
+		super.checkButtonExists("Create New Memorandum");
+		super.clickOnButton("Create New Memorandum");
 		super.checkFormExists();
 
 		super.fillInputBoxIn("report", report);
@@ -41,23 +41,18 @@ public class ChefMemorandaCreateTest extends TestHarness{
 		super.clickOnMenu("Chef", "My Dishes");
 
 		super.checkListingExists();
-		super.clickOnListingRecord(0);
+		super.clickOnListingRecord(2);
 		
-		super.checkButtonExists("Create New Memoranda");
-		super.clickOnButton("Create New Memoranda");
+		super.checkButtonExists("Create New Memorandum");
+		super.clickOnButton("Create New Memorandum");
 		super.checkFormExists();
 
-		super.fillInputBoxIn("report", report);
-		super.fillInputBoxIn("info", info);
-		super.fillInputBoxIn("confirmation", "false");
-		super.clickOnSubmit("Create Memoranda");
-		super.checkErrorsExist();
-		
 		super.fillInputBoxIn("report", report);
 		super.fillInputBoxIn("info", info);
 		super.fillInputBoxIn("confirmation", "true");
 		super.clickOnSubmit("Create Memoranda");
 		super.checkErrorsExist();
+		
 		super.signOut();
 		
 

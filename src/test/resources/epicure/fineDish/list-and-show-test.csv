@@ -1,9 +1,5 @@
-recordIndex,code,request,budget,creationDate,startDate,endDate,info
-0,AA:CCC-000,Solomillo,"10,00",2022/05/20,2022/06/22,2022/07/21,Solomillo al whisky
-1,BB:AAA-000,Queso,"5,00",2022/04/20,2022/06/2022,2022/07/23,Queso payoyo
-2,BB:ABB-000,Parrillada,"8,00",2022/06/20,2022/07/24,2022/08/25,Parrillada de verdidas
-3,CC:CCC-000,Lubina,"9,00",2022/05/23,2022/08/26,2022/09/29,Lubina al horno
-4,AA:CCC-001,Salmon,"8,50",2022/05/28,2022/06/29,2022/07/30,Salmón ahumado
-5,BB:ABC-000,Sopa,"9,50",2022/05/12,2022/06/13,2022/06/14,Sopa de picadillo
-6,BB:ACB-000,Tarta,"15,6",2022/06/12,2022/07/13,2022/07/15,Tarta de queso
-7,BB:BBB-000,Helado,"2,00",2022/07/12,2022/08/12,2022/08/18,Helado de fresa
+recordIndex,code,request,status,budget,creationDate,startDate,endDate,info,published,chef
+0,AA:AAA-000,"Unos buenos espaguetis con tomatico","ACCEPTED","EUR 75.55",2022/03/08 10:00,2022/05/08 10:00,2022/10/08 10:00,https://ev.us.es/,"Not published","chef1"
+1,AA:ZZZ-666,"Unos buenos espaguetis con mayonesa","PROPOSED","EUR 19.99",2022/03/08 10:00,2022/05/08 10:00,2022/10/08 10:00,http://www.chef02.com,"Published","chef2"
+
+

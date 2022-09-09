@@ -19,3 +19,5 @@ epicure.memorandum.list.button.create = Create
 epicure.memorandum.form.button.create = Create
 epicure.memoranda.form.create.confirm = By selecting this checkbox you acknowledge that creating a memoranda is an irreversible action and thus, cannot be further edited nor deleted after its creation
 epicure.memoranda.form.create.confirmed-warning = You must confirm that you want to create the memoranda
+
+epicure.memoranda.form.error.null-kitchenwareCode = Invalid or null kitchenware

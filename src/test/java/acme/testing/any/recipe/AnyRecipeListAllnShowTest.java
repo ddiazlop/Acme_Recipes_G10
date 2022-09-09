@@ -11,7 +11,7 @@ public class AnyRecipeListAllnShowTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/any/recipe/list-and-show-recipes.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(10)
+	@Order(100)
 	public void positiveRecipeTest(final int recordIndex, final String code, final String heading, final String description, final String price, final String preparationNotes, final String chef, final String info) {
 		super.clickOnMenu("Anonymous", "Recipes");
 		super.checkListingExists();
@@ -37,7 +37,7 @@ public class AnyRecipeListAllnShowTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/any/recipe/list-and-show-ingredients-from-recipe.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(11)
+	@Order(1)
 	public void positiveRecipeIngredientTest(final int recordIndex, final String code, final String name, final String quantity, final String unitType, final String price, final String description, final String totalPrice, final String info) {
 		super.clickOnMenu("Anonymous", "Recipes");
 		super.clickOnListingRecord(recordIndex);
@@ -66,7 +66,7 @@ public class AnyRecipeListAllnShowTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/any/recipe/list-and-show-utensils-from-recipe.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(11)
+	@Order(100)
 	public void positiveRecipeUtensilsTest(final int recordIndex, final String code, final String name, final String quantity, final String price, final String description, final String info) {
 		super.clickOnMenu("Anonymous", "Recipes");
 		super.clickOnListingRecord(recordIndex);

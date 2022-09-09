@@ -133,7 +133,7 @@ public class EpicureFineDishUpdateService implements AbstractUpdateService<Epicu
 			errors.state(request, entity.getStartDate().after(minimunDate), "startDate", "epicure.fine-dish.form.error.too-close-start");
 		}
 		
-		if(!errors.hasErrors("endDate")) {
+		if(!errors.hasErrors("endDate") && entity.getStartDate() != null) {
 			Calendar calendar;
 			Date minimunDate;
 			

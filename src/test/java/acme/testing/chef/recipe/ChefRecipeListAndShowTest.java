@@ -11,7 +11,7 @@ public class ChefRecipeListAndShowTest extends TestHarness{
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/chef/recipe/list-and-show-test.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(10)
+	@Order(100)
 	public void positiveRecipeTest(final int recordIndex, final String code, final String heading, final String description, 
 		final String preparationNotes, final String info, final String state) {
 		

@@ -7,5 +7,5 @@
 	<acme:input-textbox code="authenticated.system-configuration-sep.form.label.systemCurrency" path="systemCurrency"/>
 	<acme:input-textbox code="authenticated.system-configuration-sep.form.label.acceptedCurrencies" path="acceptedCurrencies"/>
 	
-	<acme:button code="authenticated.money-exchange.form.button.perform" action="/authenticated/money-exchange-sep/perform"/>
+	<acme:button code="authenticated.money-exchange-sep.form.button.perform" action="/authenticated/money-exchange-sep/perform"/>
 </acme:form>

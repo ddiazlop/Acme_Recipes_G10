@@ -11,5 +11,4 @@
 		width="20%" />
 		
 </acme:list>
-
-	<acme:button code="epicure.memorandum.list.button.create" action="/epicure/memoranda/create"/>
+<acme:button code="epicure.memorandum.list.button.create" action="/epicure/memoranda/create"/>

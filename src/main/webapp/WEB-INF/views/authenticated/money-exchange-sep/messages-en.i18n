@@ -19,3 +19,5 @@ authenticated.money-exchange-sep.form.label.api-error = Sorry, couldn't perform 
 
 authenticated.money-exchange-sep.form.error.source.currency-not-supported = Currency not supported. Please, do check previous page
 authenticated.money-exchange-sep.form.error.source.negative = Negative amount is not accepted
+authenticated.money-exchange.form.error.target-currency.currency-not-supported = Currency not supported
+authenticated.money-exchange-sep.form.error.target-currency.negative = Negative amount is not accepted
