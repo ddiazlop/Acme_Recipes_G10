@@ -26,29 +26,26 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Pimpam extends AbstractEntity{
+public class Delor extends AbstractEntity{
 	// Serialisation identifier -----------------------------------------------
 
 			protected static final long	serialVersionUID	= 1L;
 
 			// Attributes -------------------------------------------------------------
 
-			@Pattern(regexp = "^([A-Z]{2}:)?[A-Z]{3}-[0-9]{3}$")
-			@NotBlank
-			protected String code;
+		
+			
+			@Pattern(regexp = "^([0-9]{6}:)?[0-9]{2}[0-1]{1}[0-9]{1}[0-3]{1}[0-9]{1}$")
+			@NotNull
+			@Column(unique = true)
+			protected String			keyLet;
+			
+			
 			
 			@Temporal(TemporalType.TIMESTAMP)
 			@NotNull
 			protected Date instantiationMoment;
-			
-			@Length(max=100)
-			@NotBlank
-			protected String title;
-
-			@NotBlank
-			@Length(min = 1, max = 255)
-			protected String			description;
-			
+				
 			@Temporal(TemporalType.TIMESTAMP)
 			@NotNull
 			protected Date startDate;
@@ -57,13 +54,21 @@ public class Pimpam extends AbstractEntity{
 			@NotNull
 			protected Date finishDate;
 
+			@NotBlank
+			@Length(min = 1, max = 100)
+			protected String			subject;
+			
+			@NotBlank
+			@Length(min = 1, max = 255)
+			protected String			explanation;
+
 			@Valid
 			@NotNull
-			protected Money				budget;
-
+			protected Money				income;
+			
 			@URL
-			@Column(name = "further_information")
-			protected String			info;
+			protected String			moreInfo;
+
 		
 
 			// Derived attributes -----------------------------------------------------

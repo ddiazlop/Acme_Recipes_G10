@@ -5,17 +5,17 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.Pimpam;
+import acme.entities.Delor;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractListService;
 import acme.roles.Chef;
 
 @Service
-public class ChefPimpamListService implements AbstractListService<Chef, Pimpam>{
+public class ChefDelorListService implements AbstractListService<Chef, Delor>{
 
 	@Autowired
-	protected ChefPimpamRepository 	repository;
+	protected ChefDelorRepository 	repository;
 	
 	/*@Autowired
 	protected AuthenticatedMoneyExchangeSepPerformService moneyExchange;
@@ -25,23 +25,23 @@ public class ChefPimpamListService implements AbstractListService<Chef, Pimpam>{
 	
 	
 	@Override
-	public boolean authorise(final Request<Pimpam> request) {
+	public boolean authorise(final Request<Delor> request) {
 		assert request != null;
 		return request.getPrincipal().hasRole(Chef.class);
 	}
 
 	@Override
-	public Collection<Pimpam> findMany(final Request<Pimpam> request) {
+	public Collection<Delor> findMany(final Request<Delor> request) {
 		assert request != null;
 		final int chefId = request.getPrincipal().getActiveRoleId();
-		final Collection<Pimpam> pimpam;
-		pimpam = this.repository.findPIMPAMByChefId(chefId);
+		final Collection<Delor> delor;
+		delor = this.repository.findDelorByChefId(chefId);
 		
-		return pimpam;
+		return delor;
 	}
 
 	@Override
-	public void unbind(final Request<Pimpam> request, final Pimpam entity, final Model model) {
+	public void unbind(final Request<Delor> request, final Delor entity, final Model model) {
 		assert entity != null;
 		assert request != null;
 		assert model != null;

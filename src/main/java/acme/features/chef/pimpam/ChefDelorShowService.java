@@ -3,7 +3,7 @@ package acme.features.chef.pimpam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.Pimpam;
+import acme.entities.Delor;
 import acme.features.authenticated.moneyExchangeSep.AuthenticatedMoneyExchangeSepPerformService;
 import acme.features.authenticated.systemConfigurationSep.AuthenticatedSystemConfigurationSepRepository;
 import acme.framework.components.models.Model;
@@ -12,10 +12,10 @@ import acme.framework.services.AbstractShowService;
 import acme.roles.Chef;
 
 @Service
-public class ChefPimpamShowService implements AbstractShowService<Chef, Pimpam>{
+public class ChefDelorShowService implements AbstractShowService<Chef, Delor>{
 	
 	@Autowired
-	protected ChefPimpamRepository 					repository;
+	protected ChefDelorRepository 					repository;
 	
 	@Autowired
 	protected AuthenticatedMoneyExchangeSepPerformService moneyExchange;
@@ -25,31 +25,31 @@ public class ChefPimpamShowService implements AbstractShowService<Chef, Pimpam>{
 	
 	
 	@Override
-	public boolean authorise(final Request<Pimpam> request) {
+	public boolean authorise(final Request<Delor> request) {
 		
 		assert request != null;
 		
 		final int chefId = request.getPrincipal().getActiveRoleId();
-		final int pimpamId = request.getModel().getInteger("id");
+		final int delorId = request.getModel().getInteger("id");
 		
-		final Pimpam pimpam = this.repository.findOnePIMPAMById(pimpamId);
+		final Delor delor = this.repository.findOneDelorById(delorId);
 		
-		return pimpam.getChef().getId() == chefId;
+		return delor.getChef().getId() == chefId;
 	}
 
 	@Override
-	public Pimpam findOne(final Request<Pimpam> request) {
+	public Delor findOne(final Request<Delor> request) {
 		
 		assert request != null;
-		Pimpam result;
-		final int pimpamId = request.getModel().getInteger("id");
+		Delor result;
+		final int delorId = request.getModel().getInteger("id");
 		
-		result = this.repository.findOnePIMPAMById(pimpamId);
+		result = this.repository.findOneDelorById(delorId);
 		return result;
 	}
 
 	@Override
-	public void unbind(final Request<Pimpam> request, final Pimpam entity, final Model model) {
+	public void unbind(final Request<Delor> request, final Delor entity, final Model model) {
 
 		assert request != null;
 		assert model != null;
@@ -60,7 +60,7 @@ public class ChefPimpamShowService implements AbstractShowService<Chef, Pimpam>{
 		//this.unbindConvertedMoney(entity, model);
 	}
 	/*
-	private void unbindConvertedMoney(final Pimpam entity, final Model model) {
+	private void unbindConvertedMoney(final Delor entity, final Model model) {
 		final SystemConfigurationSep sc = this.config.findSystemConfiguration();
 		final Money money = this.moneyExchange.computeMoneyExchange(entity.getBudget(), sc.getSystemCurrency()).getChange();
 		model.setAttribute("budgetConverted", money);

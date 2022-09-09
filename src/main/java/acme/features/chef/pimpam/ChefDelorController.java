@@ -5,18 +5,18 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import acme.entities.Pimpam;
+import acme.entities.Delor;
 import acme.framework.controllers.AbstractController;
 import acme.roles.Chef;
 
 @Controller
-public class ChefPimpamController extends AbstractController<Chef, Pimpam>{
+public class ChefDelorController extends AbstractController<Chef, Delor>{
 	
 	@Autowired
-	protected ChefPimpamListService listService;
+	protected ChefDelorListService listService;
 	
 	@Autowired
-	protected ChefPimpamShowService showService;
+	protected ChefDelorShowService showService;
 	
 	
 	@PostConstruct

@@ -40,6 +40,14 @@ public interface AdministratorDashboardRepositorySep extends AbstractRepository 
 	
 	@Query("select sum(fd.budget.amount), avg(fd.budget.amount), stddev(fd.budget.amount), min(fd.budget.amount), max(fd.budget.amount) from FineDish fd where fd.status=:status and fd.budget.currency=:currency")
 	Tuple getDishesBudgetDataByStatusAndCurrency(DishStatus status, String currency);
+	
+	//SEPTIEMBRE CONTROLCHECK
+	
+	@Query("SELECT count(d) FROM Delor d ")
+	Integer getNumDelors();
 
-
+	@Query("select sum(d.income.amount), avg(d.income.amount), stddev(d.income.amount),min(d.income.amount),"
+		+ " max(d.income.amount) from Delor d where d.income.currency=:currency")
+	Tuple deliorDataByCurrency(String currency);
+	
 }

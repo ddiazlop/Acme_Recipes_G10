@@ -22,12 +22,18 @@ public class AdministratorDashboard implements Serializable {
 	Integer											numDishesRequested;
 	Integer											numDishesAccepted;
 	Integer											numDishesDenied;
+	Integer 										numOfDelors;
+	
 
 	//StatData=[Sum, Average, Desviation, Minimum, Maximum]
 
 	Map<String, StatData>							ingredientsDataByCurrency;
 
 	Map<String, StatData>							kitchenUtensilsDataByCurrency;
+	
+	Map<String,StatData> deliorDataByCurrency;
 
 	Map<Pair<DishStatus, String>, StatData>	dishesBudgetData;
+	
+
 }

@@ -1,0 +1,3 @@
+key,keyLet,instantiationMoment,startDate,finishDate,subject,explanation,income,moreInfo,key:chef,key:kitchenware
+Delor-01,000001:220308,2022/03/08 10:00,2022/04/01 10:00,2022/04/07 10:00,First Delor,This is the first,EUR 75.55,,chef-02,kitchenware-02
+Delor-02,000002:220308,2022/03/08 10:00,2022/04/01 10:00,2022/04/07 10:00,First Delor,This is the first,EUR 75.55,,chef-02,kitchenware-03

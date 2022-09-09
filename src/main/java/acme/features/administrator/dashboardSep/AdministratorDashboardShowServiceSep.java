@@ -44,15 +44,18 @@ public class AdministratorDashboardShowServiceSep implements AbstractShowService
 		Integer numFDishRequested;
 		Integer numFDishAccepted;
 		Integer numFDishDenied;
+		Integer numDelors;
 
 		numIngredients = this.repository.getNumIngredients();
 		numKitchenUtensils = this.repository.getNumKitchenUtensils();
 		numFDishRequested = this.repository.getNumDishes(DishStatus.PROPOSED);
 		numFDishAccepted = this.repository.getNumDishes(DishStatus.ACCEPTED);
 		numFDishDenied = this.repository.getNumDishes(DishStatus.DENIED);
-
+		numDelors = this.repository.getNumDelors();
+		
 		final Map<String, StatData> ingredientsDataByCurrency = new HashMap<>();
 		final Map<String, StatData> kitchenUtensilsDataByCurrency = new HashMap<>();
+		final Map<String, StatData> numDelorsDataByCurrency = new HashMap<>();
 		final Map<Pair<DishStatus, String>, StatData> fDishesBudgetData = new HashMap<>();
 
 		final SystemConfigurationSep sc = this.repository.findSystemConfigurationSep();
@@ -62,7 +65,10 @@ public class AdministratorDashboardShowServiceSep implements AbstractShowService
 
 		acceptedCurrencies.forEach(x -> ingredientsDataByCurrency.put(x, StatData.of(this.repository.getKitchenwareDataByCurrency(WareType.INGREDIENT, x), x)));
 		acceptedCurrencies.forEach(x -> kitchenUtensilsDataByCurrency.put(x, StatData.of(this.repository.getKitchenwareDataByCurrency(WareType.KITCHEN_UTENSIL, x), x)));
+		//---------DELOR on INGREDITENS Data By Currency--------------
 
+		acceptedCurrencies.forEach(x -> numDelorsDataByCurrency.put(x, StatData.of(this.repository.deliorDataByCurrency(x),x )));
+		
 
 		//---------FineDish Data By Status and Currency-----------------------
 
@@ -80,6 +86,7 @@ public class AdministratorDashboardShowServiceSep implements AbstractShowService
 		result.setIngredientsDataByCurrency(ingredientsDataByCurrency);
 		result.setKitchenUtensilsDataByCurrency(kitchenUtensilsDataByCurrency);
 		result.setDishesBudgetData(fDishesBudgetData);
+		result.setDeliorDataByCurrency(numDelorsDataByCurrency);
 
 		return result;
 	}
@@ -96,6 +103,7 @@ public class AdministratorDashboardShowServiceSep implements AbstractShowService
 		final Map<String, StatData> pendings=new HashMap<String, StatData>();
 		final Map<String, StatData> ingredients=new HashMap<String, StatData>();
 		final Map<String, StatData> kitchenUtensils=new HashMap<String, StatData>();
+		final Map<String, StatData> delors=new HashMap<String, StatData>();
 		
 		for(final String curr:this.repository.findSystemConfigurationSep().getAcceptedCurrencies().split(",")) {
 			model.setAttribute("dataIngredient"+curr,  entity.getIngredientsDataByCurrency().get(curr));
@@ -112,6 +120,9 @@ public class AdministratorDashboardShowServiceSep implements AbstractShowService
 			model.setAttribute("kitchenUtensils", kitchenUtensils);
 			ingredients.put(curr, entity.getIngredientsDataByCurrency().get(curr));
 			model.setAttribute("ingredients",ingredients);
+		
+			
+			
 		};
 }
 
