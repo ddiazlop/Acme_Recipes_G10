@@ -72,6 +72,8 @@ public class Memoranda extends AbstractEntity{
 	@Valid
 	@ManyToOne(optional = false)
 	protected FineDish 			fineDish;
+	
+	
 }
 
 
